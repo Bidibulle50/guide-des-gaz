@@ -13,10 +13,10 @@
     {
       "path": "styles.css",
       "status": 200,
-      "bytes": 22460,
+      "bytes": 26105,
       "matchesLocal": true,
       "contentType": "text/css; charset=utf-8",
-      "sha256": "5aa339074d3bf1ea683499e19c4f367dd3570a423ba7aaf3e6514ad235a1a137"
+      "sha256": "c86cafdb47321847e248fd7b3b0a5265877fcabb44f0a53355345cd150019c6f"
     },
     {
       "path": "theme.js",
@@ -29,10 +29,10 @@
     {
       "path": "app.js",
       "status": 200,
-      "bytes": 27744,
+      "bytes": 33875,
       "matchesLocal": true,
       "contentType": "application/javascript; charset=utf-8",
-      "sha256": "9c6843f55f46bf515a5466a6e7e327392933f681b5969f27818116036865d717"
+      "sha256": "33eeb6832aba375374e30122e60b4593cfc8b6944037d143882090cd67544ffa"
     },
     {
       "path": "core.js",
@@ -61,10 +61,10 @@
     {
       "path": "data/gases.json",
       "status": 200,
-      "bytes": 258036,
+      "bytes": 368684,
       "matchesLocal": true,
       "contentType": "application/json; charset=utf-8",
-      "sha256": "698a5ca5c829540d5b29b466041210b2841121bde52818af99c72be87057f918"
+      "sha256": "21ec24aecdb1fba5f9e4b7b17fcce25138591b85bbb01037a8753549d9d3035a"
     },
     {
       "path": "manifest.webmanifest",
@@ -80,7 +80,7 @@
       "bytes": 1858,
       "matchesLocal": true,
       "contentType": "application/javascript; charset=utf-8",
-      "sha256": "9c91fe3038ac484cb3ba9f68ab4a64eb4dc4c91eb150c926f86e11eb72a4f264"
+      "sha256": "66db14c0f09e6eaf8d3d5bc2828478b10f5f9ab6cad423138b0318342fb4780e"
     },
     {
       "path": "icons/icon.svg",
@@ -116,34 +116,62 @@
     }
   ],
   "indexRoute": true,
-  "scope": "HTTPS static delivery only; no real browser or iPhone test",
-  "applicationVersion": "1.3.2",
-  "applicationCommit": "14fdeb0728a5cab4b7f3ff2ce1d98ebab5f915e5",
-  "pagesWorkflow": "success",
-  "browserChecks": {
-    "homeQuickLinks": 4,
-    "essentialListCount": 12,
-    "otherListCount": 97,
-    "aligalResults": 12,
-    "favoriteSurvivedUpdate": true,
-    "testFavoriteRemoved": true,
-    "homeNavigationResetsScroll": true,
-    "searchOutline": "none",
-    "searchContainerRadius": "16px",
-    "lightAndDarkCaptured": true,
-    "themeRestored": "system",
-    "consoleErrorsAndWarnings": [],
-    "windowCSS": [
-      1233,
-      1234
+  "scope": "Static HTTPS byte verification, isolated automated tests and desktop browser checks; limits are explicit",
+  "version": "1.4.1",
+  "applicationCommit": "22c1a959d8f8e5dd30254a1f3b2e039bbb7dae7d",
+  "pagesWorkflow": {
+    "id": 39669065806,
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "automatedTests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "browser": {
+    "edition": "1.4.1",
+    "publicHttps": true,
+    "cacheStatus": "Hors ligne disponible",
+    "viewport": {
+      "width": 1233,
+      "height": 1234,
+      "contentWidth": 1218,
+      "screenshotWidth": 1218,
+      "screenshotHeight": 1219,
+      "devicePixelRatio": 1
+    },
+    "checked": [
+      "21 ARCAL products grouped 4 + 17",
+      "Chrome six exact supply combinations",
+      "SKU search I2531M20E2A001 => Chrome among 115",
+      "in-page supply and FDS buttons",
+      "connection details",
+      "favorite and theme persist across cache update",
+      "31 v2 two bottle rows without head inference",
+      "R1-5 UN1954 / 1F / RAL3000 / AFNOR E left",
+      "legacy He20microc link",
+      "light and dark screenshots inspected",
+      "console: no errors or warnings",
+      "test favorite removed and system theme restored"
     ],
-    "contentCSSWidth": 1218,
-    "screenshotPixels": [
-      1218,
-      1219
-    ],
-    "devicePixelRatio": 1,
-    "iPhoneVerified": false,
-    "realOfflineReloadVerified": false
-  }
+    "limits": [
+      "No effective iPhone viewport",
+      "Safari iOS and home screen installation not verified",
+      "No real network disconnection test"
+    ]
+  },
+  "screenshots": [
+    {
+      "file": "Guide-des-gaz-1.4-utilisations-clair.png",
+      "sha256": "aed6d060fee4454aceab2a4748c40380134a869df1abcbe115c04aee595ac939"
+    },
+    {
+      "file": "Guide-des-gaz-1.4-formats-sombre.png",
+      "sha256": "d7c066d4136b5010b5fc1bf1da62fd7e6acaf5b094d50f299c0305a27c566aad"
+    },
+    {
+      "file": "Guide-des-gaz-1.4-formats-clair.png",
+      "sha256": "ce849c679bb90913ca5421ab466df9496e6bb822f3285af5a2feda0cf1c1f126"
+    }
+  ]
 }

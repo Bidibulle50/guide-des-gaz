@@ -1,3 +1,21 @@
+# Revue ciblée — fiches ARCAL 1.4.1
+
+Extension de la présentation existante, sans nouvelle maquette ni photo : procédés et matériaux, accès directs, utilisations, conditionnements par référence, composition et documents.
+
+- Typographie : hiérarchie des titres et labels, références sélectionnables, indices chimiques et noms de marque distincts. Inspection lisible au viewport bureau fourni.
+- Espacement : fiches d’utilisation ouvertes et cartes de conditionnement ; accès directs fonctionnels, sans changement de route. Aucun débordement horizontal observé.
+- Couleurs : palette existante clair/sombre ; bleu pour la pression et les actions. L’ogive est une donnée fabricant, sans couleur de marque inventée. Signal inflammable propre au produit.
+- Assets : aucun nouveau média ; icônes existantes et marque originale du guide conservées.
+- Contenu : 21 fiches / 76 lignes source, aucune association de chapeau ou pression déduite par analogie. Absences et divergences visibles. Limites de qualification et de disponibilité explicites.
+
+Captures du site public, inspectées : `Guide-des-gaz-1.4-utilisations-clair.png`, `Guide-des-gaz-1.4-formats-clair.png`, `Guide-des-gaz-1.4-formats-sombre.png` (dans les outputs du workspace). Capture 1218 × 1219 pixels, fenêtre 1233 × 1234 CSS px, densité 1. Le thème automatique a été restauré après la recette.
+
+23 tests isolés réussis. Contrôles navigateur : mise à jour 1.4.1, favori persistant puis retiré, recherche de référence, accès directs, détail de raccord, exceptions 31/R1-5, ancien lien He20µC, console sans erreur ou alerte. La recette n’est pas une comparaison mobile ni un essai Safari iOS. Coupure réseau réelle non testée.
+
+Résultat : revue bureau passée ; validation iPhone en attente. L’ancienne revue de fidélité mobile ci-dessous reste un historique, avec son blocage propre au viewport.
+
+---
+
 # Design QA — édition 1.3.2
 
 Source visual truth: `outputs/Guide-des-gaz-maquette-3.png` (workspace), 853 × 1844 pixels, cible 390 × 844 CSS px.
