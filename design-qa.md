@@ -1,65 +1,42 @@
-# Revue ciblée — Soudage et formules 1.5.1
+# Revue des fiches 1.6.0 — 21 octobre 2026
 
-Le parcours prolonge le design existant : titre, une question à la fois, listes ouvertes, bleu d’action, quatre onglets. Aucun nouvel asset média ; icône Feather « tool » sous la licence existante.
+## État et périmètre
 
-- Copie : matériaux, procédés et besoins cohérents avec les règles ; conditions client explicites. Aucun classement « meilleur gaz » ou réglage inventé.
-- Structure : séquence matériau / procédé / besoin, puis résultats sourcés et accès aux fiches. Confirmation fil plein / automatique et demande inconnue exercées.
-- Typographie : formules normales 26 px dans 72 px ; formules longues 16 px. Le constat de rognage à 48 px a été corrigé sur le composant de liste.
-- Espacement et conteneurs : listes et séparateurs conformes à l’interface existante. Résultats lisibles ; navigation à quatre entrées sans débordement au viewport disponible.
-- Couleurs / assets : palette et symboles existants, pas d’illustration de bouteille. Référence commerciale et formule restent distinctes.
+Maquette Oxygène validée par « Go », intégrée dans les 115 fiches. Référence visuelle : `outputs/Guide-des-gaz-maquette-oxygene-v2.png` dans le workspace. Implémentation : https://bidibulle50.github.io/guide-des-gaz/#gaz/oxygene, commit applicatif `06a4199f58683b37bdcbe3153c108fffa8ea8289`.
 
-Captures inspectées dans les outputs : `Guide-des-gaz-1.5-soudage.jpg`, `Guide-des-gaz-1.5-aluminium-mig.jpg`, `Guide-des-gaz-1.5.1-formules.jpg`. Contrôle navigateur public ; aucun overlay d’erreur, aucun écran vide, aucune erreur ou alerte console. Les 64 formules ont été mesurées dans le DOM après correction, sans dépassement. Le navigateur ne fournit toujours pas de viewport iPhone effectif : aucun passage de recette Safari iOS n’est revendiqué.
+Le contrôle fonctionnel et visuel au format bureau est passé. La validation de fidélité mobile reste bloquée : le navigateur disponible n’expose pas de changement de viewport effectif et l’aperçu local avait été refusé par le contrôle de sécurité. Aucun autre navigateur ni contournement de cette restriction n’a été utilisé.
 
-Résultat : revue bureau passée ; recette iPhone et coupure réseau réelle en attente. Les revues précédentes restent un historique.
+## Preuves visuelles et comparaison
 
----
+- Source : 853 × 1844 pixels, cible mobile 390 × 844 CSS px, contenu d’application seul.
+- Implémentation sombre et claire : 1233 × 1234 pixels, fenêtre 1233 × 1234 CSS px, densité 1. Fiche de 620 px de large sur ordinateur.
+- Captures réelles du workspace : `outputs/Guide-des-gaz-1.6-oxygene.png`, `outputs/Guide-des-gaz-1.6-oxygene-clair.png`, `outputs/Guide-des-gaz-1.6-arcal-formats.png`.
+- Comparaison réunissant la source et le rendu : `work/fiche-design-audit/1.6-comparison.png`. Images réduites proportionnellement à 390 et 780 px de large pour une lecture qualitative uniquement. Il ne s’agit pas d’une comparaison à viewport identique ni d’une preuve mobile.
+- Les valeurs, identifiants, libellés et références ont également été lus dans le DOM et l’arbre accessible ; les captures bureau permettent de lire les régions de synthèse et d’applications sans recadrage supplémentaire.
 
-# Revue ciblée — fiches ARCAL 1.4.1
+## Surfaces vérifiées
 
-Extension de la présentation existante, sans nouvelle maquette ni photo : procédés et matériaux, accès directs, utilisations, conditionnements par référence, composition et documents.
+- **Typographie** : police système locale, titres hiérarchisés, valeurs alignées et indices chimiques conservés. Les noms longs et les formules gardent leurs règles d’adaptation ; la lisibilité au viewport iPhone n’est pas encore vérifiée.
+- **Espacements et structure** : identité, quatre onglets, synthèse, FDS, usages, sources repliables. Aucun débordement horizontal dans les vues bureau contrôlées. Les sections longues défilent ; aucune hauteur fixe copiée des exports.
+- **Couleurs** : palette sombre #111217 / #1c1d24, bleu d’action, badge de risque discret ; thème clair inspecté, thème automatique initial rétabli.
+- **Assets** : formules et données en texte, icônes Feather sous licence existante. Aucun logo, photographie ni illustration de bouteille ajouté. La pastille d’ogive indique une donnée de couleur ; elle ne sert pas à identifier seule un gaz.
+- **Copie** : trois applications O₂ reformulées depuis l’encyclopédie publique ; états comprimé/liquide associés chacun à leur ONU. Les applications ne portent pas de chevrons trompeurs : leur texte est intégralement présenté. FDS portail, document individuel et lien fabricant restent distingués.
 
-- Typographie : hiérarchie des titres et labels, références sélectionnables, indices chimiques et noms de marque distincts. Inspection lisible au viewport bureau fourni.
-- Espacement : fiches d’utilisation ouvertes et cartes de conditionnement ; accès directs fonctionnels, sans changement de route. Aucun débordement horizontal observé.
-- Couleurs : palette existante clair/sombre ; bleu pour la pression et les actions. L’ogive est une donnée fabricant, sans couleur de marque inventée. Signal inflammable propre au produit.
-- Assets : aucun nouveau média ; icônes existantes et marque originale du guide conservées.
-- Contenu : 21 fiches / 76 lignes source, aucune association de chapeau ou pression déduite par analogie. Absences et divergences visibles. Limites de qualification et de disponibilité explicites.
+## Interactions vérifiées
 
-Captures du site public, inspectées : `Guide-des-gaz-1.4-utilisations-clair.png`, `Guide-des-gaz-1.4-formats-clair.png`, `Guide-des-gaz-1.4-formats-sombre.png` (dans les outputs du workspace). Capture 1218 × 1219 pixels, fenêtre 1233 × 1234 CSS px, densité 1. Le thème automatique a été restauré après la recette.
+Dans le navigateur HTTPS : ancienne édition → proposition « Actualiser » → nouvelle fiche ; quatre rubriques ; sécurité et propriétés techniques ; numéros ONU ; touche Home depuis Transport → Essentiel ; ajout d’un favori dans Technique sans réinitialiser l’onglet, persistance après rechargement puis retrait du favori de test ; ouverture des quatre sources O₂ dans le bloc déplié ; recherche `I2531M20E2A001` → une fiche Chrome ; accès Formats → Technique et focus `product-supply`, six associations de conditionnement exactes ; thème clair puis retour au thème automatique ; édition 1.6.0 dans Repères. Les liens FDS ont été contrôlés comme destinations, sans revérification de chaque document externe.
 
-23 tests isolés réussis. Contrôles navigateur : mise à jour 1.4.1, favori persistant puis retiré, recherche de référence, accès directs, détail de raccord, exceptions 31/R1-5, ancien lien He20µC, console sans erreur ou alerte. La recette n’est pas une comparaison mobile ni un essai Safari iOS. Coupure réseau réelle non testée.
+Aucun écran vide, overlay d’erreur, erreur ou avertissement console observé. L’application indique « Hors ligne disponible » après actualisation. Le cache est confirmé, mais aucune coupure réseau réelle n’a été effectuée.
 
-Résultat : revue bureau passée ; validation iPhone en attente. L’ancienne revue de fidélité mobile ci-dessous reste un historique, avec son blocage propre au viewport.
+## Historique des corrections et écarts
 
----
+- Revue avant publication : code fabricant ARCAL rétabli dans l’identité ; focus placé sur la cible après ouverture du panneau contenant les formats. Assertions ajoutées, puis comportement de Chrome confirmé dans le navigateur.
+- Aucun défaut visuel certain P0/P1/P2 au format bureau inspecté.
+- Blocage restant : absence de capture à 390 × 844 et 320 px ; la comparaison stricte de la maquette et du rendu mobile ne peut pas être déclarée passée. Safari iOS, clavier de recherche, zoom de texte, installation et réouverture sans réseau restent à vérifier sur appareil.
+- P3 : le texte historique de la note LOX mentionne « ci-dessous » alors que les propriétés apparaissent avant cette note dans Technique ; il s’agit d’une précision éditoriale à reprendre lors d’une prochaine révision.
 
-# Design QA — édition 1.3.2
+## Vérification automatisée et livraison
 
-Source visual truth: `outputs/Guide-des-gaz-maquette-3.png` (workspace), 853 × 1844 pixels, cible 390 × 844 CSS px.
-
-Implementation screenshots: `outputs/Guide-des-gaz-1.3-clair.png`, `outputs/Guide-des-gaz-1.3-sombre.png`, `outputs/Guide-des-gaz-1.3-commercial.png` (workspace). Rendu du site public, thème clair/sombre, accueil sans requête et fiche Prime.
-
-Viewport: fenêtre 1233 × 1234 CSS px, contenu 1218 px, devicePixelRatio 1 ; capture 1218 × 1219 pixels. Aucun viewport mobile n’a pu être obtenu. La comparaison `outputs/Guide-des-gaz-1.3-comparaison.png` place maquette et capture dans la même image pour revue de contexte ; les miniatures sont ramenées à 844 pixels de haut. Ce montage ne simule pas un rendu mobile ni une comparaison 1:1.
-
-## Findings et cinq surfaces
-
-- Typography: police système conservée, hiérarchie titre/recherche/sections, formules en indices et noms commerciaux distincts. Rendu lisible au viewport large. Vérification des retours de ligne à 390 px restant bloquée.
-- Spacing/layout: recherche puis grille à quatre raccourcis, gammes et navigation dans le même ordre que la maquette. Écart intentionnel : lien explicite vers les 12 essentiels et actions Favoris/thème pour préserver les fonctionnalités. Aucun débordement horizontal au viewport observé ; rendu mobile non conclu.
-- Colors/tokens: fond blanc, encre sombre, surfaces grises et bleu d’action ; mode sombre décliné avec mêmes positions. Marque bleue restaurée après premier contrôle. Pas de code couleur inventé pour une marque commerciale.
-- Asset quality: marque originale de l’application réutilisée ; icônes Feather MIT intégrées localement. Aucune photo ou illustration de bouteille utilisée après décision de sobriété. Les premières icônes étaient dépourvues de classe et d’attributs décoratifs ; correction contrôlée visuellement et par l’arbre accessible en 1.3.2.
-- Copy/content: recherche, quatre gaz, gammes et compte de 109 fiches cohérents avec les données ; catalogue commercial explicitement partiel. Applications présentées avant composition pour les échanges en clientèle. Sources et FDS disponibles sans transformer les propriétés des constituants en propriétés de mélange.
-
-## Historique
-
-1. Première capture `outputs/Guide-des-gaz-1.3-clair-premier.png`, édition 1.3.0 : [P2] classe de présentation des SVG non injectée et icônes décoratives exposées ; [P2] marque noire au lieu de bleue.
-2. Corrections : injection d’attributs au nœud SVG fourni par Feather et remplissage bleu de l’asset de marque. Tests ciblés ajoutés. Captures finales clair/sombre et arbre accessible inspectés : problèmes corrigés.
-3. Revue de contexte dans la comparaison combinée : structure et palette conformes à la direction choisie au viewport large ; la fidélité au viewport mobile ne peut pas être jugée. Les détails de recherche, marque, grille et navigation restent lisibles dans ce montage ; une comparaison focalisée mobile ne serait pas valide avec ces dimensions.
-
-## Contrôles fonctionnels
-
-17 tests réussis ; navigateur public : accueil, 12 essentiels, liste 12+97, recherche globale ALIGAL depuis Favoris, fiche Prime/FDS, favori maintenu à travers la mise à jour puis retiré, navigation en haut, focus arrondi, thèmes. Console : aucune erreur ou alerte. Préférence automatique restaurée.
-
-## Limite et suite
-
-Inspection bureau réalisée. Validation de fidélité mobile formelle bloquée par les dimensions fournies par l’outil ; recette Safari/iPhone et coupure réseau réelle à effectuer. Aucun passage de QA mobile n’est revendiqué.
+34 tests réussis, aucun échec. Couverture des 64 substances, 51 produits, onglets et relations ARIA, clavier, focus de raccourci, 21 ARCAL/76 conditionnements, recherche, favoris, Soudage, manifest et cache simulé. Syntaxe JavaScript vérifiée. Les 15 fichiers applicatifs et l’accueil servis en HTTPS sont identiques aux octets locaux. Workflow Pages `39679203101` terminé avec succès.
 
 final result: blocked

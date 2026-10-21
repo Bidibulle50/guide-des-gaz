@@ -1,3 +1,25 @@
+# Vérification — édition 1.6.0 — 21 octobre 2026
+
+- Refonte des 115 fiches selon la maquette Oxygène approuvée : quatre rubriques accessibles, synthèse et FDS prioritaires, usages en dessous. Toutes les données existantes sont conservées ; seules les trois applications détaillées O₂ et la version sont ajoutées au catalogue.
+- **34 tests réussis, zéro échec**, dont quatre nouveaux tests des 115 fiches et des interactions d’onglets/focus ; syntaxe JavaScript vérifiée. Les simulations ne constituent pas une preuve Safari iOS.
+- Commit applicatif `06a4199f58683b37bdcbe3153c108fffa8ea8289`, workflow Pages `39679203101` réussi. Accueil et 15 fichiers applicatifs HTTPS comparés aux octets locaux : identiques.
+- Navigateur public : actualisation 1.5.1 → 1.6.0, fiches O₂ et Chrome, quatre onglets, Home au clavier, favori persisté puis retiré, recherche SKU, sources dépliables, thèmes clair et automatique, six conditionnements Chrome avec focus de destination. Aucune erreur ni alerte console. Cache confirmé par « Hors ligne disponible ».
+- Captures inspectées : O₂ sombre/clair, Chrome formats. **Viewport bureau uniquement : 1233 × 1234 CSS px, densité 1**. Aucun rendu iPhone effectif ni coupure réseau réelle testé ; recette mobile et fidélité au viewport de la maquette encore en attente. Le rapport `design-qa.md` conserve donc `final result: blocked` pour cette validation mobile.
+- Principaux fichiers modifiés : `app.js`, `styles.css`, `data/gases.json`, `sw.js`, `package.json`, `tests/templates.test.js`, documentation.
+- Dépôt et site toujours publics. Aucun document interne, logo ni nouvelle photographie ajouté ; aucune modification des autorisations ou de l’authentification.
+
+## Recette iPhone restante
+
+1. Appliquer « Actualiser » et vérifier l’édition 1.6.0 dans Repères.
+2. Ouvrir Oxygène, utiliser les quatre rubriques, vérifier les bords des formules et la lisibilité à 320/390 px et avec texte agrandi.
+3. Ouvrir Chrome, Formats, pression & chapeau ; vérifier les six références. Tester une recherche avec le clavier ouvert et un favori après rechargement.
+4. Attendre « Hors ligne disponible », fermer puis rouvrir la PWA après coupure des réseaux ; ouvrir plusieurs fiches.
+5. Rétablir Internet pour les FDS et sources externes.
+
+---
+
+## Historique 1.5.1
+
 # Vérification — édition 1.5.1 — 21 octobre 2026
 
 ## Ajouts 1.5 / correctif 1.5.1

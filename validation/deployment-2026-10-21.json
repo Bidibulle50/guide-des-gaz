@@ -13,10 +13,10 @@
     {
       "path": "styles.css",
       "status": 200,
-      "bytes": 29484,
+      "bytes": 37651,
       "matchesLocal": true,
       "contentType": "text/css; charset=utf-8",
-      "sha256": "e12e8bcfe6039f194855b48dbdf49255774a2702f986cf51205e20a20f58db12"
+      "sha256": "76a6c5f89d544fecfcb685a9951ec04d2bbaabb4235b73e7da7673a62a6a117a"
     },
     {
       "path": "theme.js",
@@ -29,10 +29,10 @@
     {
       "path": "app.js",
       "status": 200,
-      "bytes": 42289,
+      "bytes": 47890,
       "matchesLocal": true,
       "contentType": "application/javascript; charset=utf-8",
-      "sha256": "ef742fa88c98f9159c8ebb501b3e13f3f1c2f4f36b1caf4245e16fe5a039fc28"
+      "sha256": "8b29833c84906b202ef91323490241010ecff26512108209da412e94890625b5"
     },
     {
       "path": "core.js",
@@ -69,10 +69,10 @@
     {
       "path": "data/gases.json",
       "status": 200,
-      "bytes": 368684,
+      "bytes": 369258,
       "matchesLocal": true,
       "contentType": "application/json; charset=utf-8",
-      "sha256": "5319dbd78f9763a0b4712ff612c7eb5e9e0838da89c4ac5dc1bfa7bcd30b40e5"
+      "sha256": "2e05e0a4ed54e2aa25762a412973ccf19134005560fc3e28240977ce50e1038d"
     },
     {
       "path": "manifest.webmanifest",
@@ -88,7 +88,7 @@
       "bytes": 1873,
       "matchesLocal": true,
       "contentType": "application/javascript; charset=utf-8",
-      "sha256": "7d1963e5458c1faade4239f78f223452a0ca4b7b1f91edc808dadab582b4ef3b"
+      "sha256": "cd5d6236fd8b8e3464124641d504453e0d4e53928cbdee7eae42c3b608872d8c"
     },
     {
       "path": "icons/icon.svg",
@@ -124,58 +124,46 @@
     }
   ],
   "indexRoute": true,
-  "scope": "Static HTTPS delivery, isolated logic/cache tests and desktop UI checks; not a mobile or private-access acceptance test",
-  "version": "1.5.1",
-  "applicationCommit": "acf63ffb67f8c3f804a6b8344d7e850e64879c65",
+  "scope": "HTTPS static delivery only; no real browser or iPhone test",
+  "version": "1.6.0",
+  "applicationCommit": "06a4199f58683b37bdcbe3153c108fffa8ea8289",
   "pagesWorkflow": {
-    "id": 39671710034,
+    "id": 39679203101,
     "status": "completed",
     "conclusion": "success"
   },
   "automatedTests": {
-    "uniquePassed": 30,
-    "failed": 0,
-    "targetedAfterCssFix": 12
+    "passed": 34,
+    "failed": 0
   },
   "browser": {
-    "publicHttps": true,
-    "edition": "1.5.1",
     "viewport": {
       "width": 1233,
       "height": 1234,
-      "contentWidth": 1218,
       "devicePixelRatio": 1
     },
-    "checks": [
-      "Soudage tab and three-step flow",
-      "Aluminium MIG: Prime, 31, He20 and conditional He70",
-      "Automatic mode confirmation",
-      "Carbon steel MAG cadence: full-wire condition then Speed",
-      "Speed fiche with eleven supply variants",
-      "Unknown material: questions, no proposal",
-      "No blank page or error overlay",
-      "No horizontal overflow",
-      "Console: no error or warning",
-      "System theme retained"
+    "checked": [
+      "Oxygène 4 tabs",
+      "Home key",
+      "Favorite persists after reload",
+      "Source disclosure",
+      "Chrome SKU search",
+      "Chrome 6 variants and focus",
+      "Light and system themes",
+      "Service worker update accepted",
+      "No console errors or warnings"
     ],
-    "formulaGeometry": {
-      "checked": 64,
-      "beforeColumnPx": 48,
-      "beforeClipped": 16,
-      "afterColumnPx": 72,
-      "afterClipped": 0,
-      "maxTextWidthPx": 60.84375
-    },
     "limits": [
-      "Desktop viewport only",
-      "Safari iPhone and home-screen installation not verified",
-      "Real network-disconnection reopening not verified"
-    ]
+      "No effective mobile viewport",
+      "No Safari iPhone",
+      "No real network disconnection"
+    ],
+    "designQA": "blocked: mobile capture unavailable"
   },
   "privacy": {
     "repository": "public",
-    "application": "public",
-    "visibilityChanged": false,
+    "site": "public",
+    "changed": false,
     "internalDocumentsAdded": false
   }
 }
