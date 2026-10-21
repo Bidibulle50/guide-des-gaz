@@ -7,11 +7,12 @@ import {iconMarkup} from '../ui-icons.js';
 import {MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection} from '../welding.js';
 import {ESSENTIAL_IDS,catalogueSelection,readFavorites,escapeHtml} from '../core.js';
 const data=JSON.parse(readFileSync(new URL('../data/gases.json',import.meta.url)));
-function renderContext(){
+function renderContext(documentOverrides={}){
   const elements=new Map();const element=key=>{if(!elements.has(key))elements.set(key,{innerHTML:'',textContent:'',addEventListener(){}});return elements.get(key);};
-  const context=vm.createContext({MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection,iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,matchMedia:()=>({addEventListener(){}}),document:{querySelector:element,addEventListener(){}},window:{addEventListener(){}}});
+  const handlers={};
+  const context=vm.createContext({MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection,iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,matchMedia:()=>({addEventListener(){}}),document:{querySelector:element,addEventListener:(type,handler)=>{handlers[type]=handler;},...documentOverrides},window:{addEventListener(){}}});
   const script=readFileSync(new URL('../app.js',import.meta.url),'utf8').replace(/^import.*\n/gm,'').replace(/start\(\);\s*$/,'');
-  vm.runInContext(script,context);context.payload=data;vm.runInContext('data=payload;',context);return {context,element};
+  vm.runInContext(script,context);context.payload=data;vm.runInContext('data=payload;',context);return {context,element,handlers};
 }
 test('Les 64 fiches produisent les propriétés, risques, sources et notes sans valeur factice',()=>{
   const {context,element}=renderContext();
@@ -81,4 +82,101 @@ test('Onglet Soudage : parcours guidé, conditions client et fiche source access
   vm.runInContext("weldingJourney.need='courant';weldingGuide()",context);const html=element('#main').innerHTML;
   assert.match(html,/#gaz\/arcal-prime/);assert.match(html,/Le client confirme le mode automatique/);assert.match(html,/Source Air Liquide/);assert.doesNotMatch(html,/undefined|NaN/);
   vm.runInContext("weldingJourney={material:'unknown',process:'unknown',need:'unknown',confirmed:[]};weldingGuide()",context);assert.match(element('#main').innerHTML,/Précisons la demande/);assert.doesNotMatch(element('#main').innerHTML,/class="welding-result"/);
+});
+
+function tagAttributes(tag){
+  return Object.fromEntries([...tag.matchAll(/([\w-]+)="([^"]*)"/g)].map(([,name,value])=>[name,value]));
+}
+function fichePanel(html,id){
+  const start=html.indexOf(`id="panel-${id}"`);
+  assert.ok(start>=0,`Panneau ${id} absent`);
+  const contentStart=html.indexOf('>',start)+1;
+  const next=html.indexOf('<div class="fiche-panel"',contentStart);
+  return html.slice(contentStart,next<0?html.indexOf('<details class="fiche-sources"',contentStart):next);
+}
+test('Les 115 fiches relient quatre onglets et panneaux ARIA avec Essentiel seul actif',()=>{
+  const {context,element}=renderContext();
+  const ids=['essential','safety','transport','technical'];
+  const entries=[...data.gases,...data.products];assert.equal(entries.length,115);
+  for(const entry of entries){
+    context.entry=entry;vm.runInContext('detail(entry)',context);const html=element('#main').innerHTML;
+    assert.equal((html.match(/role="tablist"/g)||[]).length,1,entry.id);
+    const tabs=[...html.matchAll(/<button\b[^>]*role="tab"[^>]*>/g)].map(([tag])=>tagAttributes(tag));
+    const panels=[...html.matchAll(/<div\b[^>]*role="tabpanel"[^>]*>/g)].map(([tag])=>({attributes:tagAttributes(tag),hidden:/\shidden(?:\s|>)/.test(tag)}));
+    assert.deepEqual(tabs.map(tab=>tab['data-sheet-tab']),ids,entry.id);
+    assert.deepEqual(panels.map(panel=>panel.attributes['data-panel']),ids,entry.id);
+    for(let i=0;i<ids.length;i++){
+      assert.equal(tabs[i]['aria-controls'],panels[i].attributes.id,entry.id);
+      assert.equal(panels[i].attributes['aria-labelledby'],tabs[i].id,entry.id);
+      assert.equal(tabs[i]['aria-selected'],String(i===0),entry.id);
+      assert.equal(tabs[i].tabindex,i===0?'0':'-1',entry.id);
+      assert.equal(panels[i].hidden,i!==0,entry.id);
+    }
+    assert.ok(fichePanel(html,'essential').includes(escapeHtml(entry.fds.url)),`${entry.id} : FDS visible dans Essentiel`);
+    assert.ok(fichePanel(html,'transport').includes(escapeHtml(entry.fds.note)),`${entry.id} : portée de la FDS conservée`);
+    for(const source of entry.sources)assert.ok(html.includes(escapeHtml(source.url)),`${entry.id} : source conservée`);
+    const elementIds=[...html.matchAll(/\sid="([^"]*)"/g)].map(([,id])=>id);
+    assert.equal(new Set(elementIds).size,elementIds.length,`${entry.id} : identifiants uniques`);
+  }
+});
+test('Oxygène expose ses applications détaillées et conserve états ONU et conditions physiques',()=>{
+  const {context,element}=renderContext();const oxygen=data.gases.find(g=>g.id==='oxygene');
+  context.entry=oxygen;vm.runInContext('detail(entry)',context);const html=element('#main').innerHTML;
+  const essential=fichePanel(html,'essential'),technical=fichePanel(html,'technical');
+  assert.ok(oxygen.applicationDetails.length>=3);
+  for(const application of oxygen.applicationDetails){
+    assert.ok(essential.includes(escapeHtml(application.title)));
+    assert.ok(essential.includes(escapeHtml(application.detail)));
+    assert.ok(oxygen.sources.some(source=>source.id===application.sourceId));
+  }
+  assert.match(essential,/UN 1072/);assert.match(essential,/Oxygène comprimé/);
+  assert.match(essential,/UN 1073/);assert.match(essential,/Oxygène liquide réfrigéré/);
+  assert.match(essential,/15 °C · 1,013 bar abs\./);assert.match(essential,/1,354/);
+  assert.match(technical,/31,999/);assert.match(technical,/−182,96/);
+  assert.match(technical,/Phase gazeuse · 15 °C · 1,013 bar absolu/);
+  assert.match(technical,/À 1,013 bar absolu/);assert.ok(technical.includes(escapeHtml(oxygen.note)));
+});
+test('Les sections ARCAL restent dans les bons panneaux et gardent leurs références après découpage',()=>{
+  const {context,element}=renderContext();
+  for(const product of data.products.filter(g=>g.welding)){
+    context.product=product;
+    const parts=vm.runInContext('weldingDetail(product)',context);
+    assert.deepEqual(Object.keys(parts).sort(),['checklist','overview','safety','technical','uses']);
+    assert.ok(Object.values(parts).every(value=>typeof value==='string'&&!/undefined|\[object Object\]/.test(value)));
+    vm.runInContext('detail(product)',context);const html=element('#main').innerHTML;
+    const kicker=html.match(/<p class="fiche-kicker">([^<]*)<\/p>/)?.[1];
+    assert.ok(kicker?.endsWith(' · '+escapeHtml(product.welding.manufacturerCode)),`${product.id} : code fabricant visible dans l’en-tête`);
+    const essential=fichePanel(html,'essential'),technical=fichePanel(html,'technical'),safety=fichePanel(html,'safety');
+    for(const use of product.welding.uses)assert.ok(essential.includes(escapeHtml(use.detail)),product.id);
+    for(const variant of product.welding.variants)assert.ok(technical.includes(variant.reference),product.id);
+    assert.ok(technical.includes(escapeHtml(product.welding.sheet.url)),product.id);
+    assert.ok(technical.includes(escapeHtml(product.composition)),product.id);
+    assert.ok(safety.includes(escapeHtml(product.welding.safety.flammability)),product.id);
+    assert.match(essential,/data-jump="product-supply"/);assert.match(technical,/id="product-supply"/);
+    assert.match(essential,/ne remplace pas une validation technique/);
+  }
+});
+test('Le changement d’onglet, le clavier et le raccourci Formats rendent le bon panneau accessible',()=>{
+  const keys=['essential','safety','transport','technical'];let focused,scrolled=false,supplyFocused=false;
+  const tabs=keys.map(key=>({dataset:{sheetTab:key},attributes:{},tabIndex:-1,setAttribute(name,value){this.attributes[name]=value;},focus(){focused=key;}}));
+  const panels=keys.map(key=>({dataset:{panel:key},hidden:true}));
+  const tablist={querySelectorAll:()=>tabs};
+  for(const tab of tabs)tab.closest=selector=>selector==='[role=tablist]'?tablist:tab;
+  const supply={closest:()=>panels[3],scrollIntoView(){scrolled=true;},focus(options){assert.equal(options.preventScroll,true);supplyFocused=true;}};
+  const {context,handlers}=renderContext({querySelectorAll:selector=>selector.includes('tabpanel')?panels:tabs,getElementById:id=>id==='product-supply'?supply:null});
+  const assertSelection=key=>{
+    assert.deepEqual(tabs.filter(tab=>tab.attributes['aria-selected']==='true').map(tab=>tab.dataset.sheetTab),[key]);
+    assert.deepEqual(tabs.filter(tab=>tab.tabIndex===0).map(tab=>tab.dataset.sheetTab),[key]);
+    assert.deepEqual(panels.filter(panel=>!panel.hidden).map(panel=>panel.dataset.panel),[key]);
+  };
+  for(const key of keys){context.key=key;vm.runInContext('selectSheetTab(key)',context);assertSelection(key);}
+  vm.runInContext("selectSheetTab('inconnu')",context);assertSelection('technical');
+  for(const [from,key,to] of [['technical','ArrowRight','essential'],['essential','ArrowLeft','technical'],['safety','Home','essential'],['safety','End','technical']]){
+    let prevented=false;handlers.keydown({target:tabs[keys.indexOf(from)],key,preventDefault(){prevented=true;}});
+    assert.equal(prevented,true);assert.equal(focused,to);assertSelection(to);
+  }
+  vm.runInContext("selectSheetTab('essential')",context);assertSelection('essential');
+  const jump={dataset:{jump:'product-supply'},closest(){return this;},hasAttribute(){return false;},matches(){return false;}};
+  handlers.click({target:jump});assertSelection('technical');assert.equal(scrolled,true);
+  assert.equal(supplyFocused,true);assert.equal(supply.tabIndex,-1);
 });

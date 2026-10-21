@@ -2,6 +2,16 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 1.6 — fiches de consultation
+
+La maquette Oxygène validée est déclinée sur les **115 fiches** : identité, quatre rubriques **Essentiel / Sécurité / Transport / Technique**, synthèse ONU–ogive–propriété de référence et accès FDS immédiatement accessibles, applications en dessous. Les onglets exposent leur sélection, le panneau associé et le parcours au clavier (flèches, Début, Fin).
+
+- Les 64 fiches de substances conservent toutes leurs propriétés, notes, précautions et sources. Les informations non vérifiées restent signalées. Les trois applications de l’oxygène sont développées en courtes synthèses de l’[encyclopédie publique](https://encyclopedia.airliquide.com/fr/oxygene).
+- Les 51 produits commerciaux gardent leurs compositions et constituants séparés. Pour ARCAL, utilisations et procédés restent dans Essentiel ; un accès direct ouvre les **formats, pression et chapeau** dans Technique, avec les 76 associations exactes taille/pression/tête/référence.
+- Les états comprimé et liquide réfrigéré sont associés explicitement à leur numéro ONU. Une absence de donnée ou un lien FDS vers un portail n’est pas présenté comme un document individuel vérifié.
+- Les favoris, thèmes, recherche, liens historiques et parcours Soudage sont conservés. L’édition 1.6.0 renouvelle le cache de l’application ; utiliser « Actualiser » lorsqu’une ancienne édition est ouverte.
+- Aucun visuel de marque ou nouveau document interne n’est ajouté. Les couleurs affichées restent indicatives et l’étiquette du produit fait foi.
+
 ## Nouveautés 1.5 — aide Soudage
 
 Un onglet **Soudage** guide la discussion : matériau → procédé → besoin → présélection ARCAL. Dix familles de matériaux sont proposées. Chaque résultat expose le domaine publié, les conditions à préciser et un accès à la fiche, aux formats et à la source.

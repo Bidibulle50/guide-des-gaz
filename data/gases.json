@@ -1,5 +1,5 @@
 {
-  "version": "1.5.1",
+  "version": "1.6.0",
   "verifiedAt": "2026-10-21",
   "gases": [
     {
@@ -3023,7 +3023,24 @@
         "ral": "9010",
         "css": "#eeeeea",
         "sourceUrl": "https://fr.airliquide.com/product-assets/b/e/2/5/be2530e635daa516fc031f02e6ab12331d9f7e93_OXYGENE_fr_FR_v1.8.pdf"
-      }
+      },
+      "applicationDetails": [
+        {
+          "title": "Travail des métaux",
+          "detail": "Oxycoupage, coupage laser et traitements thermiques.",
+          "sourceId": "encyclopedie"
+        },
+        {
+          "title": "Sidérurgie",
+          "detail": "Enrichissement de l’air et décarburation de l’acier.",
+          "sourceId": "encyclopedie"
+        },
+        {
+          "title": "Traitement de l’eau",
+          "detail": "Apport d’oxygène au traitement biologique des eaux usées.",
+          "sourceId": "encyclopedie"
+        }
+      ]
     },
     {
       "id": "ozone",

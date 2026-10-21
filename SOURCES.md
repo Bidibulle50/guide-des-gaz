@@ -158,3 +158,7 @@ Les 45 références sont documentées dans `data/gases.json`, avec leur source. 
 - FDS individuelles : ARCAL Prime (argon comprimé), ainsi que le document français commun ARCAL Chrome/Speed/Force (30015L02, révision du 20 décembre 2022). Liens observés sur les pages officielles, titre et PDF consultés le 21 octobre 2026 ; cette consultation ne garantit pas l’absence d’une révision ultérieure.
 - Numéros ONU de molécules : références de l’encyclopédie, avec avertissement sur le conditionnement et la rubrique 14. Argon et oxygène : gaz comprimé et liquide réfrigéré distingués.
 - Couleurs : ogives argon/ARCAL Prime vert foncé RAL 6001 et oxygène blanc RAL 9010 recoupées dans les fiches fournisseur. Les autres couleurs restent non documentées dans cette édition ; aucune couleur générique attribuée à une gamme commerciale. Certains PDF fournisseur sont indexés mais leur téléchargement direct peut être refusé ou leur lien évoluer.
+
+## Complément de présentation 1.6
+
+Les applications détaillées de l’oxygène (`applicationDetails`) sont des synthèses originales des rubriques Automobile, Fabrication métallique, Fonderie métallique et Gestion des déchets et de l’eau de l’[encyclopédie Air Liquide](https://encyclopedia.airliquide.com/fr/oxygene), relue le 21 octobre 2026. Chaque entrée conserve `sourceId: encyclopedie`. Aucune nouvelle propriété, pression de bouteille ou prescription d’emploi n’est déduite de cette présentation.
