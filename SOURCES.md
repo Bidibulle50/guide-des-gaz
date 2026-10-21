@@ -1,5 +1,15 @@
 # Sources et couverture — édition du 21 octobre 2026
 
+## Édition 1.5 — règles de l’aide Soudage
+
+La table de règles dans `welding.js` associe chaque code fabricant aux matériaux et procédés **explicitement publiés** dans les sources de l’édition 1.4 ci-dessous. Chaque règle renvoie aux cas d’usage de la fiche et à sa page Air Liquide. Le guide est déterministe : aucun modèle génératif ni appel externe n’invente de résultat.
+
+Portée de la présélection : 10 familles de matériaux, procédés documentés et 6 besoins de discussion. Ce n’est pas un moteur de qualification de DMOS. Le score technique d’une soudure, l’interchangeabilité des gaz, le coût et les paramètres ne sont pas calculés. L’ordre place les usages ciblant le matériau avant les usages généraux, puis les quatre Référents ; cet ordre est éditorial et ne prouve pas une supériorité.
+
+Les conditions de fil ou de mode automatique restent visibles jusqu’à confirmation dans le parcours. Une réponse inconnue mène à des questions de qualification sans proposition automatique. Le TIG alternatif n’est exposé que pour l’aluminium. Une nuance inox non précisée n’est pas assimilée à une nuance austénitique ou Duplex. Le brasage MAG de Chrome reste décrit dans sa fiche mais n’est pas utilisé comme règle matériau : le support y est insuffisamment détaillé.
+
+Les documents internes annoncés par l’utilisateur ne sont pas encore reçus et ne font pas partie de cette édition. Des documents futurs pourront compléter la couverture après vérification de leur portée et des conditions de diffusion. La privatisation du dépôt ne constitue pas, à elle seule, un contrôle d’accès au site ; aucune modification de visibilité ou d’hébergement n’a été effectuée.
+
 ## Édition 1.4 — vérification ARCAL France du 21 octobre 2026
 
 Les deux pages de la gamme publique consultées dans le navigateur donnent 21 produits, dont 4 Référents et 17 Techniques. Les 21 pages produit et leurs 21 PDF techniques liés ont été ouverts / lus ; les 76 lignes de conditionnement sont conservées par référence. Les résultats d’indexation anciens ne remplacent pas les documents actuellement liés. ARCAL C et He50 ne sont pas ajoutés : ils ne figurent pas dans ces deux pages observées.

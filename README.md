@@ -2,6 +2,16 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 1.5 — aide Soudage
+
+Un onglet **Soudage** guide la discussion : matériau → procédé → besoin → présélection ARCAL. Dix familles de matériaux sont proposées. Chaque résultat expose le domaine publié, les conditions à préciser et un accès à la fiche, aux formats et à la source.
+
+- Les 21 produits ARCAL ont des cas d’usage explicitement reliés aux fiches vérifiées. Les cas particuliers (mode automatique, fil plein, MAG pulsé / fil plein, fil fourré inox) restent conditionnels jusqu’à information du client.
+- Les usages visant la nuance choisie sont présentés avant les domaines « tous matériaux ». Un objectif sans détail publié reste signalé. Aucun « meilleur gaz », débit, réglage ou gain calculé n’est inventé.
+- Exemple aluminium / MIG : Prime, 31 et He20 ; He70 demande le mode automatique. Duplex / TIG : 39 et N2-2 apparaissent avant les références tous matériaux. Ces correspondances documentaires ne constituent pas une qualification de soudage.
+- Les réponses restent en mémoire pendant la consultation ; elles ne contiennent aucun nom de client et ne sont pas envoyées à un serveur. Le parcours et les règles sont enregistrés avec l’application pour la consultation hors ligne. Les documents externes nécessitent Internet.
+- Aucun document interne n’est intégré. Le dépôt et le site restent publics dans cette édition ; aucune restriction d’accès n’est revendiquée.
+
 ## Nouveautés 1.4 — ARCAL en clientèle
 
 - **21 produits ARCAL France**, soit les deux pages du catalogue public observées le 21 octobre 2026 : 4 Référents en premier, puis 17 Techniques. Le guide compte désormais **115 fiches**, dont 51 produits commerciaux.

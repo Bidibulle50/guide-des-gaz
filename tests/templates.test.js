@@ -4,11 +4,12 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
 import {iconMarkup} from '../ui-icons.js';
+import {MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection} from '../welding.js';
 import {ESSENTIAL_IDS,catalogueSelection,readFavorites,escapeHtml} from '../core.js';
 const data=JSON.parse(readFileSync(new URL('../data/gases.json',import.meta.url)));
 function renderContext(){
   const elements=new Map();const element=key=>{if(!elements.has(key))elements.set(key,{innerHTML:'',textContent:'',addEventListener(){}});return elements.get(key);};
-  const context=vm.createContext({iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,matchMedia:()=>({addEventListener(){}}),document:{querySelector:element,addEventListener(){}},window:{addEventListener(){}}});
+  const context=vm.createContext({MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection,iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,matchMedia:()=>({addEventListener(){}}),document:{querySelector:element,addEventListener(){}},window:{addEventListener(){}}});
   const script=readFileSync(new URL('../app.js',import.meta.url),'utf8').replace(/^import.*\n/gm,'').replace(/start\(\);\s*$/,'');
   vm.runInContext(script,context);context.payload=data;vm.runInContext('data=payload;',context);return {context,element};
 }
@@ -71,4 +72,13 @@ test('Chaque fiche ARCAL affiche ses utilisations et toutes ses références, sa
       assert.ok(html.includes(g.welding.sheet.url));
     } else {assert.match(html,/Applications principales/);assert.doesNotMatch(html,/Formats, pression & chapeau/);}
   }
+});
+test('Onglet Soudage : parcours guidé, conditions client et fiche source accessibles',()=>{
+  const {context,element}=renderContext();vm.runInContext('weldingGuide()',context);
+  assert.match(element('.bottom-nav').innerHTML,/href="#soudage" aria-current="page"/);assert.match(element('#main').innerHTML,/Quel matériau/);
+  vm.runInContext("weldingJourney={material:'aluminium',process:null,need:null,confirmed:[]};weldingGuide()",context);assert.match(element('#main').innerHTML,/Avec quel procédé/);
+  vm.runInContext("weldingJourney.process='mig';weldingGuide()",context);assert.match(element('#main').innerHTML,/besoin principal/);
+  vm.runInContext("weldingJourney.need='courant';weldingGuide()",context);const html=element('#main').innerHTML;
+  assert.match(html,/#gaz\/arcal-prime/);assert.match(html,/Le client confirme le mode automatique/);assert.match(html,/Source Air Liquide/);assert.doesNotMatch(html,/undefined|NaN/);
+  vm.runInContext("weldingJourney={material:'unknown',process:'unknown',need:'unknown',confirmed:[]};weldingGuide()",context);assert.match(element('#main').innerHTML,/Précisons la demande/);assert.doesNotMatch(element('#main').innerHTML,/class="welding-result"/);
 });

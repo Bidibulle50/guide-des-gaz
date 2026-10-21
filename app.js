@@ -1,10 +1,12 @@
 import { iconMarkup } from './ui-icons.js';
 import { ESSENTIAL_IDS, catalogueSelection, readFavorites, escapeHtml as esc } from './core.js';
+import { MATERIALS, PROCESSES, NEEDS, availableProcesses, weldingSelection } from './welding.js';
 const $ = s => document.querySelector(s);
 const icon = (key, cls='') => (iconMarkup[key] || '').replace('<svg ', `<svg aria-hidden="true" focusable="false" class="icon ${cls}" `);
 const brand = '<img class="brand" src="./icons/brand.svg" alt="" width="36" height="36">';
 const allEntries = () => [...data.gases, ...(data.products || [])];
 let data, favorites = new Set(), query = '', mode = 'essentials', catalogueScroll = 0, catalogueOverview = true, toastTimer, offlineReady = false, waitingWorker;
+let weldingJourney={material:null,process:null,need:null,confirmed:[]};
 const fmt = n => new Intl.NumberFormat('fr-FR', {maximumFractionDigits:4}).format(n).replace('-', '−');
 const themeNames = {system:'Automatique',light:'Clair',dark:'Sombre'};
 function theme() { return document.documentElement.dataset.theme || 'system'; }
@@ -24,7 +26,7 @@ function toast(message) { clearTimeout(toastTimer); $('#toast').textContent=mess
 const formulaClass = g => g.displayFormula.length > 4 ? 'formula compact' : 'formula';
 const themeButton = () => '<button class="icon-button theme-button" data-theme-cycle aria-label="Changer le thème"></button>';
 function bookmark(g) { return `<button class="icon-button favorite ${favorites.has(g.id)?'is-saved':''}" data-favorite="${g.id}" aria-pressed="${favorites.has(g.id)}" aria-label="${favorites.has(g.id)?'Retirer des favoris':'Ajouter aux favoris'} : ${esc(g.name)}">${icon('bookmark')}</button>`; }
-function nav(active) { $('.bottom-nav').innerHTML = `<a href="#catalogue" data-home ${active==='catalogue'?'aria-current="page"':''}>${icon('book')}<span>Catalogue</span></a><a href="#gammes" ${active==='gammes'?'aria-current="page"':''}>${icon('layers')}<span>Gammes</span></a><a href="#reperes" ${active==='reperes'?'aria-current="page"':''}>${icon('compass')}<span>Repères</span></a>`; }
+function nav(active) { $('.bottom-nav').innerHTML = `<a href="#catalogue" data-home ${active==='catalogue'?'aria-current="page"':''}>${icon('book')}<span>Catalogue</span></a><a href="#soudage" ${active==='soudage'?'aria-current="page"':''}>${icon('tool')}<span>Soudage</span></a><a href="#gammes" ${active==='gammes'?'aria-current="page"':''}>${icon('layers')}<span>Gammes</span></a><a href="#reperes" ${active==='reperes'?'aria-current="page"':''}>${icon('compass')}<span>Repères</span></a>`; }
 function intro(title, subtitle) { return `<div class="topbar">${brand}${themeButton()}</div><header class="page-title"><h1 tabindex="-1">${title}</h1><p>${subtitle}</p></header>`; }
 function catalogue() {
   const quick=['oxygene','azote','argon','dioxyde-carbone'].map(id=>data.gases.find(g=>g.id===id));
@@ -56,6 +58,31 @@ function renderList() {
   $('#empty').innerHTML=mode==='favorites'&&!searching?`${icon('bookmark')}<h2>Vos essentiels, ici.</h2><p>Ouvrez une fiche et touchez le marque-page pour la retrouver rapidement.</p><button class="text-button" data-mode="essentials">Explorer les essentiels</button>`:`${icon('search')}<h2>Aucun gaz trouvé</h2><p>Essayez un nom, O2, CO₂, LOX ou un numéro CAS. La recherche couvre les ${allEntries().length} fiches.</p><button class="text-button" data-clear>Effacer la recherche</button>`;
 }
 function sourceLinks(sources) { return sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${icon('external')}<span><strong>${esc(s.title)}</strong><small>${esc(s.scope)}</small></span>${icon('chevron','chevron')}</a></li>`).join(''); }
+const selectionName=(options,id)=>options.find(x=>x.id===id)?.name||'';
+function weldingChoice(options,field){
+  return `<ul class="choice-list">${options.map(o=>`<li><button data-welding-field="${field}" data-value="${esc(o.id)}"><span><strong>${esc(o.name)}</strong><small>${esc(o.detail)}</small></span>${icon('chevron','chevron')}</button></li>`).join('')}</ul>`;
+}
+function weldingCards(matches){
+  const confirmations={'automatique':'Le client confirme le mode automatique','fil-plein':'Le client confirme le fil plein','pulse-fil-plein':'Le client confirme : MAG pulsé et fil plein','fil-fourre-inox':'Le client confirme le fil fourré inox'};
+  return matches.map(m=>`<article class="welding-result"><div class="welding-result-heading"><h3>${esc(m.product.name)}</h3><span>${esc(m.product.welding.category==='Référents'?'Référent':'Technique')}</span></div><p>${esc(m.why)}</p>${m.needMatch?'<p class="need-evidence">Le besoin choisi est mentionné dans la source.</p>':''}${m.condition?`<div class="condition-note"><strong>À préciser avec le client</strong><p>${esc(m.condition.text)}</p>${confirmations[m.condition.key]?`<button class="text-button" data-welding-confirm="${esc(m.condition.key)}">${esc(confirmations[m.condition.key])}</button>`:''}</div>`:''}${m.confirmedCondition?`<p class="footnote">Information client retenue : ${esc(m.confirmedCondition.text)}</p>`:''}${m.product.welding.safety.classificationCode==='1F'?'<p class="welding-risk">Produit déclaré extrêmement inflammable · voir sa FDS.</p>':''}<div class="result-links"><a href="#gaz/${esc(m.product.id)}">Fiche, formats & FDS ${icon('chevron','chevron')}</a><a href="${esc(m.product.sourceUrl)}" target="_blank" rel="noopener noreferrer">Source Air Liquide ${icon('external')}</a></div></article>`).join('');
+}
+function weldingGuide(){
+  const s=weldingJourney,step=!s.material?1:!s.process?2:!s.need?3:4;
+  const material=selectionName(MATERIALS,s.material),process=selectionName(PROCESSES,s.process),need=selectionName(NEEDS,s.need);
+  let content='';
+  if(step===1)content=`<h2 id="welding-question" tabindex="-1">Quel matériau veut souder le client ?</h2>${weldingChoice(MATERIALS,'material')}<button class="quiet-action" data-welding-unknown>Le matériau n’est pas encore connu ${icon('chevron')}</button>`;
+  else if(step===2)content=`<h2 id="welding-question" tabindex="-1">Avec quel procédé ?</h2><p class="list-caption">Les procédés ci-dessous sont ceux documentés pour ce matériau.</p>${weldingChoice(availableProcesses(s.material),'process')}<button class="quiet-action" data-welding-unknown>Le procédé reste à préciser ${icon('chevron')}</button>`;
+  else if(step===3)content=`<h2 id="welding-question" tabindex="-1">Quel est son besoin principal ?</h2><p class="list-caption">Un besoin sans détail publié sera signalé dans les résultats.</p>${weldingChoice(NEEDS,'need')}`;
+  else if(s.process==='unknown'||s.material==='unknown')content=`<h2 id="welding-question" tabindex="-1">Précisons la demande</h2><div class="reading"><p>Le matériau et le procédé sont nécessaires pour établir une présélection documentée.</p><ul class="client-questions"><li>Quelle nuance ou référence matière ?</li><li>Quel poste et quel procédé le client utilise-t-il ?</li><li>Quel fil, quelle épaisseur et quelle position de soudage ?</li><li>Travail manuel, automatique ou robotisé ?</li></ul><p><a href="#gamme/arcal">Consulter les 21 fiches ARCAL</a></p></div>`;
+  else {
+    const result=weldingSelection(data.products,s),total=result.focused.length+result.other.length+result.conditional.length;
+    content=`<h2 id="welding-question" tabindex="-1">Les pistes ARCAL</h2><p class="list-caption">${total} fiche(s) avec un domaine publié pour ce matériau et ce procédé. Les produits ayant un usage explicitement ciblé sont présentés avant les usages généraux.</p>${s.material==='inox'?'<p class="guide-callout">La nuance inox reste à identifier. Les produits spécifiques aux inox austénitiques ou Duplex ne sont pas proposés sur ce seul libellé.</p>':''}${result.needsClarification?'<p class="guide-callout">Aucune correspondance documentée dans cette édition. Faire préciser l’application avec un technicien soudage.</p>':''}${result.focused.length?`<section><h3 class="results-label">${s.need==='courant'?'Usages documentés':'Besoin mentionné par le fabricant'}</h3>${weldingCards(result.focused)}</section>`:s.need!=='courant'&&!result.needsClarification?'<p class="guide-callout">Les fiches consultées ne permettent pas encore de retenir un produit pour ce besoin sans précision supplémentaire. Examinez les usages et conditions ci-dessous.</p>':''}${result.conditional.length?`<section><h3 class="results-label">Conditions à préciser</h3>${weldingCards(result.conditional)}</section>`:''}${result.other.length?`<section><h3 class="results-label">Autres usages publiés à examiner</h3><p class="list-caption">Le domaine matériau/procédé est cité. Le besoin choisi ou la nuance précise n’est pas détaillé pour tous ces produits.</p>${weldingCards(result.other)}</section>`:''}<details class="technical-details"><summary>Questions à poser avant la proposition</summary><ul class="client-questions"><li>Nuance exacte et état de surface ; épaisseur et préparation.</li><li>Procédé, régime, métal d’apport et position.</li><li>Objectif de qualité, corrosion, cadence ou finition.</li><li>Consommation, mobilité et conditionnement souhaité.</li><li>Validation du mode opératoire de soudage avec le référent technique.</li></ul></details><button class="quiet-action" data-welding-edit="need">Modifier le besoin et les informations client ${icon('chevron')}</button>`;
+  }
+  const summary=s.material?`<div class="journey-summary"><button data-welding-edit="material">${esc(material||'Matériau à préciser')}</button>${s.process?`<button data-welding-edit="process">${esc(process||'Procédé à préciser')}</button>`:''}${s.need&&s.need!=='unknown'?`<span>${esc(need)}</span>`:''}</div>`:'';
+  $('#main').innerHTML=`${intro('Soudage','Préparer la réponse au client avec ARCAL.')}<div class="journey-progress"><p>${step<4?`Étape ${step} sur 3`:'Votre présélection'}</p>${s.material?'<button class="reset-journey" data-welding-reset>Nouvelle demande</button>':''}</div>${summary}<section class="welding-guide">${content}</section><p class="footnote guide-limit">Aide à la présélection fondée sur les fiches publiques Air Liquide France consultées le 21 octobre 2026. Les résultats explicitent les usages et les conditions publiés. Le choix final et les réglages nécessitent la validation du mode opératoire et la FDS du produit livré.</p><a class="home-link" href="#gamme/arcal">Toute la gamme ARCAL ${icon('chevron')}</a><p class="catalogue-note">Guide indépendant · Aucun partenariat ni validation d’Air Liquide.</p>`;
+  nav('soudage');
+}
+function refreshWeldingGuide(){weldingGuide();syncTheme();window.scrollTo(0,0);$('#welding-question')?.focus({preventScroll:true});}
 function documents(g) {
   if(!g.fds)return '';
   return `<section id="product-documents"><h2>Identification & FDS</h2><a class="document-action" href="${esc(g.fds.url)}" target="_blank" rel="noopener noreferrer">${icon('external')}<span>${esc(g.fds.label)}<small>${g.fds.kind==='individual'?'Document individuel · connexion nécessaire':g.fds.kind==='manufacturer_link'?'Lien fabricant · révision à vérifier':'Portail fournisseur · sélection du produit nécessaire'}</small></span></a><p class="footnote">${esc(g.fds.note)}</p><dl class="identifiers"><div><dt>Numéro ONU</dt><dd>${g.transport?.length?g.transport.map(t=>`<strong>UN ${esc(t.number)}</strong><small>${esc(t.state)}</small>`).join(''):'<small>Non vérifié pour ce produit. Consulter la rubrique 14 de sa FDS.</small>'}</dd></div><div><dt>Couleur d’ogive</dt><dd>${g.shoulder?`<span class="colour-swatch ral-${esc(g.shoulder.ral)}" aria-hidden="true"></span><strong>${esc(g.shoulder.name)} · RAL ${esc(g.shoulder.ral)}</strong><small><a href="${esc(g.shoulder.sourceUrl)}" target="_blank" rel="noopener noreferrer">Référence fabricant</a></small>`:'<small>Non documentée pour ce produit.</small>'}</dd></div></dl><p class="footnote">La couleur concerne l’ogive de la bouteille, selon le produit et le référentiel applicable (EN 1089-3 en Europe, GPL exclus). La marque n’a pas une couleur unique. L’étiquette identifie le contenu ; la teinte à l’écran reste indicative. Les références ONU ne remplacent pas les documents de transport du produit livré.</p></section>`;
@@ -96,7 +123,8 @@ function render() {
     const g=allEntries().find(g=>g.id===route.slice(5)||g.legacyIds?.includes(route.slice(5)));
     if(g) {detail(g);document.title=`${g.name} · Guide des gaz`;}
     else {$('#main').innerHTML=`${intro('Fiche introuvable','Ce gaz ne figure pas dans cette édition.')}<a class="text-button" href="#catalogue">Ouvrir le catalogue</a>`;nav('catalogue');}
-  } else if(route==='#gammes') {ranges();document.title='Gammes · Guide des gaz';}
+  } else if(route==='#soudage') {weldingGuide();document.title='Soudage · Guide des gaz';}
+  else if(route==='#gammes') {ranges();document.title='Gammes · Guide des gaz';}
   else if(route.startsWith('#gamme/')) {const r=data.ranges.find(r=>r.id===route.slice(7));if(r)rangeDetail(r);else ranges();document.title=(r?.name||'Gammes')+' · Guide des gaz';}
   else if(route==='#reperes') {reperes();document.title='Repères · Guide des gaz';}
   else {catalogue();document.title='Guide des gaz';}
@@ -106,6 +134,11 @@ function render() {
 }
 document.addEventListener('click', e=> {
   const t=e.target.closest('button,a');if(!t)return;
+  if(t.dataset.weldingField){const field=t.dataset.weldingField;weldingJourney[field]=t.dataset.value;if(field==='material'){weldingJourney.process=null;weldingJourney.need=null;}if(field==='process')weldingJourney.need=null;weldingJourney.confirmed=[];refreshWeldingGuide();}
+  if(t.hasAttribute('data-welding-reset')){weldingJourney={material:null,process:null,need:null,confirmed:[]};refreshWeldingGuide();}
+  if(t.dataset.weldingEdit){const field=t.dataset.weldingEdit;weldingJourney[field]=null;if(field==='material')weldingJourney.process=null;if(field!=='need')weldingJourney.need=null;weldingJourney.confirmed=[];refreshWeldingGuide();}
+  if(t.dataset.weldingConfirm){weldingJourney.confirmed=[...new Set([...weldingJourney.confirmed,t.dataset.weldingConfirm])];refreshWeldingGuide();}
+  if(t.hasAttribute('data-welding-unknown')){if(!weldingJourney.material)weldingJourney.material='unknown';weldingJourney.process='unknown';weldingJourney.need='unknown';refreshWeldingGuide();}
   if(t.dataset.jump) document.getElementById(t.dataset.jump)?.scrollIntoView({block:'start',behavior:'instant'});
   if(t.matches('[data-theme-cycle]')) {const options=['system','light','dark'];applyTheme(options[(options.indexOf(theme())+1)%3]);toast(`Thème : ${themeNames[theme()]}`);}
   if(t.hasAttribute('data-home')) {catalogueOverview=true;catalogueScroll=0;mode='essentials';query='';if(location.hash==='#catalogue'||!location.hash){catalogue();syncTheme();window.scrollTo(0,0);}}
