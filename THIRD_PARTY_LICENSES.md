@@ -23,3 +23,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Inter Variable 4.1
+
+Police officielle non modifiée : https://rsms.me/inter/ ; fichier `fonts/InterVariable.woff2`, chargé localement et mis en cache. Licence SIL Open Font License 1.1 complète : `fonts/OFL.txt`. Source : https://rsms.me/inter/font-files/InterVariable.woff2?v=4.1.
+
+## Pictogrammes SGH03 et SGH04
+
+Source INRS outil30 : https://www.inrs.fr/media.html?refINRS=outil30. Utilisation et reproduction sur tout support autorisées sans modification. Les PDF vectoriels originaux du kit ont été rendus en PNG sans recadrage, changement de géométrie ni changement de couleur. Aucun logo INRS ajouté.
+
+## Illustrations ADR
+
+Les fichiers ADR2.2 et ADR5.1 proviennent exactement du HTML de référence fourni par l’utilisateur ; géométrie conservée et xmlns SVG ajouté. Ils servent d’illustrations dans le guide et ne sont pas fournis comme fichiers d’étiquetage réglementaire. Aucune qualité officielle ni licence publique générale de ces dessins n’est revendiquée.

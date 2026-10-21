@@ -2,6 +2,16 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 1.7 — références visuelles conservées
+
+Les écrans d’accueil, de catalogue et de fiche fournis par l’utilisateur constituent la référence : quatre cartes de gaz, gammes regroupées, accès au catalogue complet, recherche arrondie, filtres de risques, lettres alphabétiques, fiches à quatre rubriques avec cartes de sécurité et de transport. Le guide conserve les **115 fiches**, les 12 essentiels en premier et l’onglet Soudage.
+
+- Les filtres portent uniquement sur les risques déjà décrits. « Ininflammable » n’est pas assimilé à « inflammable » ; les produits non détaillés sont signalés. Une recherche parcourt toujours le catalogue complet, même si un filtre était actif.
+- Oxygène : mentions H/P synthétisées par état, tableaux gaz/liquide, points remarquables, repères ADR et sources supplémentaires. Les deux FDS documentaires sont francophones **Benelux**, sans prétendre identifier le produit France livré ; le portail France reste l’accès FDS proposé.
+- Les illustrations de la référence ne valent pas validation technique : code ADR **1O/3O** avec lettre O, expansion publiée **843,57** avec conditions ; le seuil bas 19,5 % non confirmé dans les sources Air Liquide consultées n’est pas affiché comme un seuil vérifié et aucune bande verte ne garantit une atmosphère sûre. Aucun conditionnement 200/300 bar générique n’est inventé.
+- Police Inter 4.1 conservée localement avec sa licence OFL. SGH03/04 reproduits depuis les fichiers officiels INRS, rendus sans modification graphique ; illustrations ADR reprises du HTML utilisateur. Aucun logo tiers.
+- La page `validation/mobile.html` permet un contrôle sur ordinateur avec un vrai viewport CSS intégré de 390 ou 320 px. Elle reste une surface de vérification distincte du parcours utilisateur et ne simule pas Safari iOS ni son clavier.
+
 ## Nouveautés 1.6 — fiches de consultation
 
 La maquette Oxygène validée est déclinée sur les **115 fiches** : identité, quatre rubriques **Essentiel / Sécurité / Transport / Technique**, synthèse ONU–ogive–propriété de référence et accès FDS immédiatement accessibles, applications en dessous. Les onglets exposent leur sélection, le panneau associé et le parcours au clavier (flèches, Début, Fin).

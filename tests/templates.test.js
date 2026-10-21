@@ -8,9 +8,11 @@ import {MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection} from '../
 import {ESSENTIAL_IDS,catalogueSelection,readFavorites,escapeHtml} from '../core.js';
 const data=JSON.parse(readFileSync(new URL('../data/gases.json',import.meta.url)));
 function renderContext(documentOverrides={}){
-  const elements=new Map();const element=key=>{if(!elements.has(key))elements.set(key,{innerHTML:'',textContent:'',addEventListener(){}});return elements.get(key);};
+  const elements=new Map();const element=key=>{if(!elements.has(key)){
+    const classes=new Set();elements.set(key,{innerHTML:'',textContent:'',hidden:false,value:'',addEventListener(){},focus(){},classList:{toggle(name,force){const active=force??!classes.has(name);active?classes.add(name):classes.delete(name);return active;},contains:name=>classes.has(name)}});
+  }return elements.get(key);};
   const handlers={};
-  const context=vm.createContext({MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection,iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,matchMedia:()=>({addEventListener(){}}),document:{querySelector:element,addEventListener:(type,handler)=>{handlers[type]=handler;},...documentOverrides},window:{addEventListener(){}}});
+  const context=vm.createContext({MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection,iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,location:{hash:'#catalogue'},matchMedia:()=>({addEventListener(){}}),document:{documentElement:{dataset:{}},querySelector:element,querySelectorAll:()=>[],addEventListener:(type,handler)=>{const previous=handlers[type];handlers[type]=previous?event=>{previous(event);handler(event);}:handler;},...documentOverrides},window:{addEventListener(){},scrollTo(){}}});
   const script=readFileSync(new URL('../app.js',import.meta.url),'utf8').replace(/^import.*\n/gm,'').replace(/start\(\);\s*$/,'');
   vm.runInContext(script,context);context.payload=data;vm.runInContext('data=payload;',context);return {context,element,handlers};
 }
@@ -51,7 +53,10 @@ test('Les gammes sont accessibles et une marque se recherche sans être confondu
 
 test('L’accueil ouvre la recherche, quatre raccourcis et les gammes sans masquer les listes complètes',()=>{
   const {context,element}=renderContext();vm.runInContext('catalogue()',context);assert.equal(element('#catalogue-home').hidden,false);assert.equal(element('#catalogue-results').hidden,true);
-  assert.match(element('#main').innerHTML,/Quel gaz cherchez-vous/);assert.match(element('#main').innerHTML,/#gamme\/arcal/);assert.match(element('#main').innerHTML,/Voir les 12 essentiels/);
+  assert.match(element('#main').innerHTML,/Quel gaz cherchez-vous/);assert.match(element('#main').innerHTML,/#gamme\/arcal/);assert.match(element('#main').innerHTML,/12 essentiels/);
+  assert.match(element('#main').innerHTML,/Guide indépendant/);assert.match(element('#main').innerHTML,/Catalogue complet/);
+  assert.ok(element('#main').innerHTML.includes('Édition '+data.version));
+  const quick=vm.runInContext('catalogueHomeMarkup()',context);assert.equal((quick.match(/href="#gaz\//g)||[]).length,4);
   vm.runInContext("query='arcal';renderList()",context);assert.equal(element('#catalogue-home').hidden,true);assert.equal(element('#catalogue-results').hidden,false);assert.equal((element('#gas-list').innerHTML.match(/href="#gaz\//g)||[]).length,21);
   vm.runInContext("query='';catalogueOverview=false;mode='essentials';renderList()",context);assert.equal(element('#catalogue-results').hidden,false);assert.equal((element('#gas-list').innerHTML.match(/href="#gaz\//g)||[]).length,12);
 });
@@ -119,21 +124,29 @@ test('Les 115 fiches relient quatre onglets et panneaux ARIA avec Essentiel seul
     assert.equal(new Set(elementIds).size,elementIds.length,`${entry.id} : identifiants uniques`);
   }
 });
-test('Oxygène expose ses applications détaillées et conserve états ONU et conditions physiques',()=>{
+test('Oxygène sépare risques, transport et technique avec applications et conditions explicites',()=>{
   const {context,element}=renderContext();const oxygen=data.gases.find(g=>g.id==='oxygene');
   context.entry=oxygen;vm.runInContext('detail(entry)',context);const html=element('#main').innerHTML;
-  const essential=fichePanel(html,'essential'),technical=fichePanel(html,'technical');
+  const essential=fichePanel(html,'essential'),technical=fichePanel(html,'technical'),safety=fichePanel(html,'safety'),transport=fichePanel(html,'transport');
   assert.ok(oxygen.applicationDetails.length>=3);
   for(const application of oxygen.applicationDetails){
-    assert.ok(essential.includes(escapeHtml(application.title)));
-    assert.ok(essential.includes(escapeHtml(application.detail)));
+    assert.ok(technical.includes(escapeHtml(application.title)));
+    assert.ok(technical.includes(escapeHtml(application.detail)));
     assert.ok(oxygen.sources.some(source=>source.id===application.sourceId));
   }
-  assert.match(essential,/UN 1072/);assert.match(essential,/Oxygène comprimé/);
-  assert.match(essential,/UN 1073/);assert.match(essential,/Oxygène liquide réfrigéré/);
-  assert.match(essential,/15 °C · 1,013 bar abs\./);assert.match(essential,/1,354/);
+  assert.match(essential,/UN 1072/);assert.match(essential,/Gaz comprimé/);
+  assert.match(essential,/UN 1073/);assert.match(essential,/Liquide \(LOX\)/);
+  assert.match(essential,/Repères atmosphère/);assert.match(essential,/SGH03/);assert.match(essential,/SGH04/);
+  assert.match(transport,/Oxygène comprimé/);assert.match(transport,/Oxygène liquide réfrigéré/);
+  assert.match(transport,/1O/);assert.match(transport,/3O/);
+  assert.ok(transport.includes(escapeHtml(oxygen.referenceSheet.scopeLimit)));
+  assert.ok(safety.includes(escapeHtml(oxygen.referenceSheet.scopeLimit)));
+  for(const hazard of oxygen.referenceSheet.hazards){assert.ok(safety.includes(hazard.code));assert.ok(safety.includes(escapeHtml(hazard.scope)));}
+  assert.doesNotMatch(essential,/19,5/);
+  assert.match(technical,/15 °C · 1,013 bar abs\./);assert.match(technical,/1,354/);
   assert.match(technical,/31,999/);assert.match(technical,/−182,96/);
-  assert.match(technical,/Phase gazeuse · 15 °C · 1,013 bar absolu/);
+  assert.match(technical,/À l’ébullition · 1,013 bar abs\./);assert.match(technical,/1[\s\u202f]141,2/);
+  assert.match(technical,/1 L liquide à l’ébullition → gaz à 15 °C · 1,013 bar abs\./);assert.match(technical,/843,57/);
   assert.match(technical,/À 1,013 bar absolu/);assert.ok(technical.includes(escapeHtml(oxygen.note)));
 });
 test('Les sections ARCAL restent dans les bons panneaux et gardent leurs références après découpage',()=>{
@@ -179,4 +192,67 @@ test('Le changement d’onglet, le clavier et le raccourci Formats rendent le bo
   const jump={dataset:{jump:'product-supply'},closest(){return this;},hasAttribute(){return false;},matches(){return false;}};
   handlers.click({target:jump});assertSelection('technical');assert.equal(scrolled,true);
   assert.equal(supplyFocused,true);assert.equal(supply.tabIndex,-1);
+});
+
+function catalogueIds(html){return [...html.matchAll(/href="#gaz\/([^"]+)"/g)].map(([,id])=>id);}
+function catalogueButton(dataset){return {dataset,closest(selector){return selector==='button[data-risk]'&&!('risk' in dataset)?null:this;},hasAttribute(){return false;},matches(){return false;}};}
+test('Les filtres distinguent inflammable et ininflammable sans déduire le danger d’un mélange',()=>{
+  const {context}=renderContext();
+  const flammable=vm.runInContext("data.products.filter(g=>matchesCatalogueRisk(g,'inflammable')).map(g=>g.id)",context);
+  assert.deepEqual(Array.from(flammable).sort(),['arcal-r1-5','arcal-r1-5-he20']);
+  const nonflammable=data.products.filter(g=>g.welding?.safety.flammability.startsWith('Ininflammable'));
+  assert.equal(nonflammable.length,19);
+  for(const product of nonflammable){context.product=product;assert.equal(vm.runInContext("matchesCatalogueRisk(product,'inflammable')",context),false);}
+  context.product={kind:'product',family:'Inflammable',components:['hydrogene'],composition:'H₂'};
+  assert.equal(vm.runInContext("matchesCatalogueRisk(product,'inflammable')",context),false);
+  assert.equal(vm.runInContext("matchesCatalogueRisk(product,'undocumented')",context),true);
+  const undocumented=vm.runInContext("data.products.filter(g=>matchesCatalogueRisk(g,'undocumented'))",context);
+  assert.equal(undocumented.length,30);
+  for(const product of undocumented){context.product=product;assert.match(vm.runInContext('catalogueRiskMarkup(product)',context),/Dangers non détaillés · voir FDS/);}
+});
+test('Le filtre Asphyxiant reprend une mention explicite sans l’inférer d’un gaz inerte',()=>{
+  const {context}=renderContext();
+  for(const id of ['azote','argon','dioxyde-carbone']){
+    context.gas=data.gases.find(g=>g.id===id);
+    assert.equal(vm.runInContext("matchesCatalogueRisk(gas,'asphyxiant')",context),true,id);
+  }
+  context.gas={family:'Gaz noble',risks:[]};
+  assert.equal(vm.runInContext("matchesCatalogueRisk(gas,'asphyxiant')",context),false);
+  context.gas={family:'Inerte',risks:['Peut provoquer une asphyxie.']};
+  assert.equal(vm.runInContext("matchesCatalogueRisk(gas,'asphyxiant')",context),true);
+});
+test('Un filtre de risque actif laisse la recherche parcourir toutes les fiches et les favoris restent accessibles',()=>{
+  const {context,element,handlers}=renderContext();
+  vm.runInContext("catalogueOverview=false;mode='all';catalogue()",context);
+  handlers.click({target:catalogueButton({risk:'inflammable'})});
+  const filtered=[...catalogueIds(element('#gas-list').innerHTML),...catalogueIds(element('#other-gas-list').innerHTML)];
+  assert.ok(filtered.includes('arcal-r1-5'));assert.ok(!filtered.includes('arcal-chrome'));
+  assert.match(element('#catalogue-filters').innerHTML,/data-risk="inflammable" aria-pressed="true"/);
+  vm.runInContext("mode='favorites';query='I2531M20E2A001';renderList()",context);
+  assert.deepEqual(catalogueIds(element('#gas-list').innerHTML),['arcal-chrome']);
+  assert.equal(element('#catalogue-filters').hidden,true);assert.match(element('#list-caption').textContent,/115 fiches/);
+  vm.runInContext("query='krypton';renderList()",context);
+  assert.deepEqual(catalogueIds(element('#gas-list').innerHTML),['krypton']);
+  vm.runInContext("query='';favorites=new Set(['argon','arcal-chrome']);renderList()",context);
+  handlers.click({target:catalogueButton({mode:'favorites'})});
+  assert.deepEqual(catalogueIds(element('#gas-list').innerHTML),['argon','arcal-chrome']);
+  assert.equal(vm.runInContext('catalogueRisk',context),'all');
+  assert.match(element('#catalogue-active-scope').innerHTML,/Favoris/);
+});
+test('Le catalogue conserve les 12 essentiels avant 103 autres fiches réparties en lettres sans doublon',()=>{
+  const {context,element}=renderContext();
+  vm.runInContext("catalogueOverview=false;mode='all';catalogue()",context);
+  assert.deepEqual(catalogueIds(element('#gas-list').innerHTML),ESSENTIAL_IDS);
+  const otherHtml=element('#other-gas-list').innerHTML,otherIds=catalogueIds(otherHtml);
+  assert.equal(otherIds.length,103);assert.equal(new Set(otherIds).size,103);
+  assert.ok(otherIds.every(id=>!ESSENTIAL_IDS.includes(id)));
+  const letters=[...otherHtml.matchAll(/class="catalogue-letter"><h3>([^<]+)<\/h3>/g)].map(([,letter])=>letter);
+  assert.ok(letters.includes('0–9'));assert.ok(letters.includes('E'));assert.ok(!letters.includes('É'));
+  assert.equal(new Set(letters).size,letters.length);
+  assert.match(element('#main').innerHTML,/<h1 id="catalogue-heading"[^>]*>Catalogue<\/h1><span>115 fiches<\/span>/);
+  assert.equal(element('#catalogue-list-header').hidden,false);assert.equal(element('#catalogue-home-header').hidden,true);
+  assert.equal(element('#catalogue-search-hero').classList.contains('is-list'),true);
+  vm.runInContext("catalogueRisk='undocumented';renderList()",context);
+  assert.equal(catalogueIds(element('#gas-list').innerHTML).length,0);
+  assert.equal(catalogueIds(element('#other-gas-list').innerHTML).length,30);
 });

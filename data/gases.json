@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "verifiedAt": "2026-10-21",
   "gases": [
     {
@@ -2969,7 +2969,7 @@
         "Oxycoupage et travail des métaux.",
         "Oxygénation des eaux usées."
       ],
-      "note": "LOX désigne l’oxygène liquide. Les valeurs de masse volumique ci-dessous concernent le gaz.",
+      "note": "LOX désigne l’oxygène liquide. Les valeurs du gaz et du liquide sont présentées séparément avec leurs conditions.",
       "sources": [
         {
           "id": "encyclopedie",
@@ -2997,6 +2997,27 @@
           "title": "Air Liquide · Modes de fourniture",
           "url": "https://my.airliquide.com/products-services/our-supply-modes",
           "scope": "Abréviations LOX, LIN et LAR des formes liquides.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "sds-oxygen-gas",
+          "title": "Air Liquide Benelux — Oxygène",
+          "url": "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+          "scope": "FDS documentaire Benelux, révision 14/06/2024 ; ne désigne pas une référence France livrée. Rubriques 2, 4–9 et 14.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "sds-oxygen-liquid",
+          "title": "Air Liquide Benelux — Oxygène liquide réfrigéré",
+          "url": "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf",
+          "scope": "FDS documentaire Benelux, révision 14/06/2024 ; ne désigne pas une référence France livrée. Rubriques 2, 4–9 et 14.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "emergency112",
+          "title": "Service Public · Numéro d’urgence européen",
+          "url": "https://lannuaire.service-public.gouv.fr/centres-contact/R12069",
+          "scope": "Numéro 112 ; pas de déclenchement d’appel par le guide.",
           "checked": "2026-10-21"
         }
       ],
@@ -3040,7 +3061,354 @@
           "detail": "Apport d’oxygène au traitement biologique des eaux usées.",
           "sourceId": "encyclopedie"
         }
-      ]
+      ],
+      "referenceSheet": {
+        "checkedAt": "2026-10-21",
+        "purpose": "Faits supplémentaires pour la fiche Oxygène, vérifiés dans des publications publiques Air Liquide. Aucun changement de rendu ou publication.",
+        "scopeLimit": "Références documentaires Air Liquide Benelux, révisées le 14/06/2024. Elles ne remplacent pas la FDS de la référence France livrée ; la rechercher dans le portail fournisseur.",
+        "sources": {
+          "encyclopedia": {
+            "title": "Air Liquide — Encyclopédie des gaz : Oxygène",
+            "url": "https://encyclopedia.airliquide.com/fr/oxygene",
+            "sections": [
+              "Propriétés générales",
+              "Phase liquide, 1,013 bar",
+              "Phase gazeuse, onglet 15 °C, 1,013 bar"
+            ]
+          },
+          "compressedSds": {
+            "title": "Air Liquide Benelux — Oxygène",
+            "url": "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+            "reference": "EIGA097A",
+            "revision": "14/06/2024",
+            "version": "5.1",
+            "pages": 11
+          },
+          "liquidSds": {
+            "title": "Air Liquide Benelux — Oxygène liquide réfrigéré",
+            "url": "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf",
+            "reference": "EIGA097B",
+            "revision": "14/06/2024",
+            "version": "4.2",
+            "pages": 11
+          },
+          "enrichmentAlert": {
+            "title": "Air Liquide Healthcare Benelux — Alertes de sécurité",
+            "url": "https://be.healthcare.airliquide.com/alertes-de-securite",
+            "published": "18/10/2022",
+            "scope": "Établissements de santé ; synthèse EIGA publiée par Air Liquide."
+          }
+        },
+        "physical": {
+          "sourceUrl": "https://encyclopedia.airliquide.com/fr/oxygene",
+          "molarMass": {
+            "value": 31.999,
+            "unit": "g/mol"
+          },
+          "gasDensity": {
+            "value": 1.354,
+            "unit": "kg/m³",
+            "conditions": "15 °C ; 1,013 bar absolu ; phase gazeuse"
+          },
+          "gasRelativeDensityAir": {
+            "value": 1.11,
+            "unit": "air = 1",
+            "conditions": "Onglet phase gazeuse 15 °C ; 1,013 bar"
+          },
+          "boilingPoint": {
+            "value": -182.96,
+            "unit": "°C",
+            "conditions": "1,013 bar absolu"
+          },
+          "liquidDensity": {
+            "value": 1141.2,
+            "unit": "kg/m³",
+            "conditions": "Au point d’ébullition ; 1,013 bar absolu"
+          },
+          "gasLiquidVolumeRatio": {
+            "value": 843.57,
+            "unit": "vol/vol",
+            "liquidConditions": "Liquide au point d’ébullition à 1,013 bar",
+            "gasConditions": "Gaz à 15 °C et 1,013 bar",
+            "display": "1 L de liquide ≈ 844 L de gaz, dans ces conditions."
+          },
+          "criticalPoint": {
+            "temperatureC": -118.57,
+            "pressureBar": 50.43,
+            "densityKgM3": 435.95
+          },
+          "triplePoint": {
+            "temperatureC": -218.79,
+            "pressureBar": 0.0015
+          },
+          "dryAirContent": {
+            "publishedPpm": 209460,
+            "calculatedPercent": 20.946,
+            "displayRoundedPercent": 20.9,
+            "note": "La conversion ppm → % et l’arrondi sont explicitement des calculs."
+          }
+        },
+        "classification": {
+          "note": "Les libellés courts ci-dessous sont des synthèses, pas une transcription légale intégrale des phrases CLP. La rubrique 2 de chaque FDS fournit les mentions exactes.",
+          "compressed": {
+            "sourceUrl": "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+            "section": "2, p.2",
+            "signalWord": "Danger",
+            "pictograms": [
+              "GHS03",
+              "GHS04"
+            ],
+            "hazards": [
+              {
+                "code": "H270",
+                "summary": "Comburant : peut intensifier un incendie."
+              },
+              {
+                "code": "H280",
+                "summary": "Gaz comprimé : risque d’éclatement sous chaleur."
+              }
+            ],
+            "precautionCodes": [
+              "P220",
+              "P244",
+              "P370+P376",
+              "P403",
+              "P410+P403"
+            ]
+          },
+          "liquid": {
+            "sourceUrl": "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf",
+            "section": "2, p.2",
+            "signalWord": "Danger",
+            "pictograms": [
+              "GHS03",
+              "GHS04"
+            ],
+            "hazards": [
+              {
+                "code": "H270",
+                "summary": "Comburant : peut intensifier un incendie."
+              },
+              {
+                "code": "H281",
+                "summary": "Gaz réfrigéré : risque de blessures cryogéniques."
+              }
+            ],
+            "precautionCodes": [
+              "P220",
+              "P244",
+              "P282",
+              "P336+P315",
+              "P370+P376",
+              "P403"
+            ]
+          },
+          "precautions": [
+            {
+              "code": "P220",
+              "summary": "Éloigner les textiles et les autres combustibles.",
+              "scope": "Comprimé et liquide",
+              "sources": [
+                "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+                "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf"
+              ]
+            },
+            {
+              "code": "P244",
+              "summary": "Robinetterie et raccords exempts de graisse et d’huile.",
+              "scope": "Comprimé et liquide",
+              "sources": [
+                "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+                "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf"
+              ]
+            },
+            {
+              "code": "P370+P376",
+              "summary": "Incendie : interrompre une fuite uniquement sans danger.",
+              "scope": "Comprimé et liquide",
+              "sources": [
+                "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+                "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf"
+              ]
+            },
+            {
+              "code": "P403",
+              "summary": "Stockage avec ventilation adéquate.",
+              "scope": "Comprimé et liquide",
+              "sources": [
+                "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+                "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf"
+              ]
+            },
+            {
+              "code": "P282",
+              "summary": "Gants contre le froid ; protection oculaire ou faciale.",
+              "scope": "Liquide uniquement",
+              "sources": [
+                "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf"
+              ]
+            }
+          ]
+        },
+        "atmosphere": {
+          "sourceUrl": "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+          "section": "8.2.1, p.6",
+          "enrichedAbovePercent": 23.5,
+          "summary": "La FDS demande d’éviter une atmosphère enrichie au-delà de 23,5 % et prévoit la détection en cas de relâchement possible.",
+          "senses": {
+            "sourceUrl": "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+            "section": "9.1, p.6",
+            "gasAppearance": "Incolore",
+            "odour": "Non détectable à l’odeur"
+          },
+          "lower195": {
+            "verified": false,
+            "decision": "Ne pas afficher 19,5 % comme seuil Air Liquide confirmé : aucune source Air Liquide pertinente trouvée dans cette recherche."
+          },
+          "greenBand": {
+            "verified": false,
+            "decision": "Ne pas représenter toute la plage 19,5–23,5 % comme une garantie de sécurité."
+          }
+        },
+        "transport": [
+          {
+            "state": "Oxygène comprimé",
+            "sourceUrl": "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+            "section": "14, p.9",
+            "un": "1072",
+            "adrClass": "2",
+            "labels": [
+              "2.2",
+              "5.1"
+            ],
+            "classificationCode": "1O",
+            "hazardIdentificationNumber": "25"
+          },
+          {
+            "state": "Oxygène liquide réfrigéré",
+            "sourceUrl": "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf",
+            "section": "14, p.9",
+            "un": "1073",
+            "adrClass": "2",
+            "labels": [
+              "2.2",
+              "5.1"
+            ],
+            "classificationCode": "3O",
+            "hazardIdentificationNumber": "225"
+          }
+        ],
+        "operationalNotes": [
+          {
+            "topic": "Fuite",
+            "scope": "Comprimé et liquide",
+            "sourceUrls": [
+              "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+              "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf"
+            ],
+            "section": "6, p.3–4",
+            "summary": "Évacuation, suppression des sources d’ignition et ventilation selon le plan d’urgence local. Une intervention dépend de la formation et du contrôle de la zone."
+          },
+          {
+            "topic": "Incendie",
+            "scope": "Conseils aux pompiers, pas une procédure générale pour le commercial",
+            "sourceUrls": [
+              "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+              "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf"
+            ],
+            "section": "5.3, p.3",
+            "summary": "La FDS prévoit une eau pulvérisée depuis une position protégée pour refroidir des récipients exposés. Le LOX qui fuit impose une précaution distincte : ne pas arroser directement son récipient."
+          },
+          {
+            "topic": "Gelure cryogénique",
+            "scope": "Liquide uniquement",
+            "sourceUrls": [
+              "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf"
+            ],
+            "section": "2 (P336+P315) et 4.1, p.2–3",
+            "summary": "Dégel à l’eau tiède, sans friction, et assistance médicale immédiate. La rubrique 4 prévoit une aspersion d’au moins 15 min et un pansement stérile."
+          },
+          {
+            "topic": "Vêtements enrichis en oxygène",
+            "scope": "Alerte établissements de santé ; ne pas en faire une règle universelle sans autre validation",
+            "sourceUrls": [
+              "https://be.healthcare.airliquide.com/alertes-de-securite"
+            ],
+            "summary": "L’alerte recommande d’aérer vêtements et literie pendant au moins 15 min après une oxygénothérapie."
+          },
+          {
+            "topic": "Manipulation",
+            "sourceUrls": [
+              "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+              "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf"
+            ],
+            "section": "7, p.4–5",
+            "summary": "Ouverture progressive des robinets ; matériel propre, agréé pour oxygène et adapté à la pression. Stockage séparé des inflammables."
+          }
+        ],
+        "referenceCorrections": [
+          "Les codes ADR sont 1O et 3O : O majuscule, pas le chiffre zéro (10/30).",
+          "Expansion : 843,57 vol/vol à 15 °C et 1,013 bar ; afficher ≈844 L, plutôt que ≈850 sans conditions.",
+          "Point triple −218,79 °C ; ne pas confondre avec le point de fusion −218,78 °C à 1,013 bar.",
+          "La densité relative publiée est 1,11. Elle ne prouve pas à elle seule un scénario systématique d’accumulation en points bas.",
+          "La consigne générique de refroidissement des récipients ne doit pas masquer la réserve spécifique LOX en fuite.",
+          "Les variantes gaz comprimé et liquide ont des mentions H et des références ONU différentes ; maintenir leur champ visible."
+        ],
+        "unconfirmedOrExcluded": [
+          "Seuil bas 19,5 % dans une source primaire Air Liquide pertinente.",
+          "Formulation « seul un détecteur O2 le révèle » : trop absolue ; retenir incolore/non détectable à l’odeur et nécessité de détection selon le risque.",
+          "Ne pas retirer les vêtements collés à la peau : non confirmé dans les deux FDS consultées.",
+          "Numéros d’urgence français 15/18/112 : non vérifiés dans ces sources Benelux ; ne pas reprendre leurs numéros belges dans une app France.",
+          "Pressions commerciales 200/300 bar, taille du récipient et chapeau génériques : nécessitent une référence produit France précise.",
+          "Applications médicales : aucune équivalence d’un grade industriel avec un médicament."
+        ],
+        "hazards": [
+          {
+            "code": "H270",
+            "summary": "Comburant : peut intensifier un incendie.",
+            "scope": "Comprimé et liquide"
+          },
+          {
+            "code": "H280",
+            "summary": "Gaz comprimé : risque d’éclatement sous chaleur.",
+            "scope": "Gaz comprimé"
+          },
+          {
+            "code": "H281",
+            "summary": "Gaz réfrigéré : risque de blessures cryogéniques.",
+            "scope": "Liquide réfrigéré"
+          }
+        ],
+        "practices": [
+          "Utiliser du matériel propre et prévu pour l’oxygène.",
+          "Ouvrir progressivement les robinets.",
+          "Stocker à l’écart des combustibles et des gaz inflammables.",
+          "Ne pas fumer ni approcher de source d’inflammation."
+        ],
+        "actions": [
+          {
+            "title": "Gelure cryogénique (LOX)",
+            "steps": [
+              "La FDS prévoit un dégel à l’eau tiède, sans friction.",
+              "Une assistance médicale immédiate est nécessaire."
+            ]
+          },
+          {
+            "title": "Fuite",
+            "steps": [
+              "Évacuer la zone et alerter selon les consignes du site.",
+              "Ne pas intervenir sans formation et conditions de sécurité adaptées."
+            ]
+          },
+          {
+            "title": "Incendie",
+            "steps": [
+              "Alerter les secours et appliquer le plan d’urgence local.",
+              "Les consignes de refroidissement concernent des intervenants formés. La FDS exclut l’arrosage direct d’un récipient de LOX qui fuit."
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "ozone",

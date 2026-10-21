@@ -28,35 +28,116 @@ const themeButton = () => '<button class="icon-button theme-button" data-theme-c
 function bookmark(g) { return `<button class="icon-button favorite ${favorites.has(g.id)?'is-saved':''}" data-favorite="${g.id}" aria-pressed="${favorites.has(g.id)}" aria-label="${favorites.has(g.id)?'Retirer des favoris':'Ajouter aux favoris'} : ${esc(g.name)}">${icon('bookmark')}</button>`; }
 function nav(active) { $('.bottom-nav').innerHTML = `<a href="#catalogue" data-home ${active==='catalogue'?'aria-current="page"':''}>${icon('book')}<span>Catalogue</span></a><a href="#soudage" ${active==='soudage'?'aria-current="page"':''}>${icon('tool')}<span>Soudage</span></a><a href="#gammes" ${active==='gammes'?'aria-current="page"':''}>${icon('layers')}<span>Gammes</span></a><a href="#reperes" ${active==='reperes'?'aria-current="page"':''}>${icon('compass')}<span>Repères</span></a>`; }
 function intro(title, subtitle) { return `<div class="topbar">${brand}${themeButton()}</div><header class="page-title"><h1 tabindex="-1">${title}</h1><p>${subtitle}</p></header>`; }
-function catalogue() {
+/* Proposition d’intégration : remplacer catalogue(), renderList() et gasRows().
+ * Dépendances inchangées de app.js : $, icon, brand, data, allEntries,
+ * favorites, query, mode, catalogueOverview, ESSENTIAL_IDS,
+ * catalogueSelection(), formulaClass(), esc(), nav().
+ * Conserver les gestionnaires existants data-mode/data-home/data-clear.
+ * Le gestionnaire data-risk ci-dessous s’ajoute une seule fois.
+ * Dans les gestionnaires data-mode et data-home existants, ajouter
+ * catalogueRisk='all' pour qu’une nouvelle vue reparte sans filtre résiduel.
+ * Aucun code issu du runtime des exports HTML n’est requis.
+ */
+let catalogueRisk='all';
+const catalogueRiskOptions=[
+  ['all','Tous'],['inflammable','Inflammable'],['comburant','Comburant'],
+  ['toxique','Toxique'],['corrosif','Corrosif'],['asphyxiant','Asphyxiant'],
+  ['pyrophorique','Pyrophorique'],['undocumented','Dangers non détaillés']
+];
+const catalogueRiskKeys=new Set(catalogueRiskOptions.map(([key])=>key));
+function catalogueRiskLabels(g){
+  if(g.kind==='product'){
+    // Aucun transfert de danger depuis les constituants ou la composition.
+    // « Ininflammable » doit rester distinct d’« inflammable ».
+    return g.welding?.safety?.flammability?[g.welding.safety.flammability]:[];
+  }
+  const labels=g.family.split(' · ').map(label=>label.trim()).filter(Boolean);
+  // Synthèse d’un danger déjà écrit dans la fiche, jamais déduit d’« inerte ».
+  if(g.risks.some(text=>/asphyx/i.test(text))&&!labels.some(label=>/asphyx/i.test(label)))labels.push('Asphyxiant');
+  return labels;
+}
+function catalogueRiskKey(label){
+  const normalized=label.toLocaleLowerCase('fr').trim();
+  if(normalized==='extrêmement inflammable'||normalized==='extrêmement inflammable selon la fiche produit')return 'inflammable';
+  return catalogueRiskKeys.has(normalized)?normalized:'';
+}
+function matchesCatalogueRisk(g,key){
+  if(key==='all')return true;
+  const labels=catalogueRiskLabels(g);
+  if(key==='undocumented')return g.kind==='product'&&!labels.length;
+  return labels.some(label=>catalogueRiskKey(label)===key);
+}
+function catalogueRiskMarkup(g){
+  const labels=catalogueRiskLabels(g);
+  if(!labels.length)return '<span class="catalogue-risk-label undocumented">Dangers non détaillés · voir FDS</span>';
+  return labels.map(label=>{
+    const key=catalogueRiskKey(label)||'neutral';
+    return `<span class="catalogue-risk-label"><i class="risk-dot risk-${key}" aria-hidden="true"></i>${esc(label)}</span>`;
+  }).join('');
+}
+function catalogueFilterMarkup(){
+  return `<div class="catalogue-risk-filters" role="group" aria-label="Filtrer par libellé de risque publié">${catalogueRiskOptions.map(([key,label])=>`<button type="button" data-risk="${key}" aria-pressed="${catalogueRisk===key}">${key==='all'||key==='undocumented'?'':`<i class="risk-dot risk-${key}" aria-hidden="true"></i>`}${label}</button>`).join('')}</div>`;
+}
+function catalogueHomeMarkup(){
   const quick=['oxygene','azote','argon','dioxyde-carbone'].map(id=>data.gases.find(g=>g.id===id));
-  $('#main').innerHTML = `<div class="masthead"><div class="wordmark">${brand}<div><h1 tabindex="-1">Guide des gaz</h1><p>Guide indépendant</p></div></div><div class="header-actions"><button class="icon-button" data-mode="favorites" aria-label="Voir les favoris">${icon('bookmark')}</button>${themeButton()}</div></div><div class="search-hero"><h2>Quel gaz cherchez-vous ?</h2><div class="search-wrap">${icon('search')}<label class="sr-only" for="search">Rechercher un gaz ou une gamme</label><input id="search" type="search" placeholder="Nom, formule, gamme…" value="${esc(query)}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="search-help"><button id="clear-search" class="icon-button" aria-label="Effacer la recherche" ${query?'':'hidden'}>${icon('close')}</button></div><p id="search-help" class="search-help" hidden></p></div><div id="catalogue-home"><section class="quick-section"><div class="section-heading"><h2>Vos accès rapides</h2><p>12 essentiels · ${allEntries().length} fiches</p></div><ul class="quick-grid">${quick.map(g=>`<li><a href="#gaz/${g.id}"><strong>${g.displayFormula}</strong><span>${esc(g.name)}</span></a></li>`).join('')}</ul><button class="quiet-action" data-mode="essentials">Voir les 12 essentiels ${icon('chevron')}</button></section><section class="home-ranges"><h2>Explorer les gammes</h2><p class="list-caption">Des gaz pour vos applications.</p><ul class="gas-list"><li><a class="gas-row" href="#gamme/arcal"><span class="gas-text"><strong>ARCAL™</strong><span>Soudage</span></span>${icon('chevron','chevron')}</a></li><li><a class="gas-row" href="#gamme/aligal"><span class="gas-text"><strong>ALIGAL™</strong><span>Alimentaire</span></span>${icon('chevron','chevron')}</a></li></ul><a class="home-link" href="#gammes">Toutes les gammes ${icon('chevron')}</a><button class="home-link all-link" data-mode="all">Voir les ${allEntries().length} fiches ${icon('chevron')}</button></section></div><div id="catalogue-results" hidden><div class="segmented" role="group" aria-label="Afficher les gaz"><button data-mode="essentials" aria-pressed="${mode==='essentials'}">Essentiels</button><button data-mode="all" aria-pressed="${mode==='all'}">Tous <span class="segment-count">· ${allEntries().length}</span></button><button data-mode="favorites" aria-pressed="${mode==='favorites'}">Favoris</button></div><div class="list-heading"><h2 id="list-title" tabindex="-1"></h2><p id="result-count" role="status"></p></div><p id="list-caption" class="list-caption"></p><ul id="gas-list" class="gas-list"></ul><section id="other-gases" class="other-gases" hidden><div class="list-heading"><h2>Autres gaz & produits</h2><p>${allEntries().length-ESSENTIAL_IDS.length} fiches</p></div><p class="list-caption">Par ordre alphabétique.</p><ul id="other-gas-list" class="gas-list"></ul></section><div id="empty" class="empty" hidden></div><button class="quiet-action" data-home>Revenir à l’accueil ${icon('chevron')}</button></div><p class="catalogue-note">Guide indépendant · Catalogue commercial partiel.<br>Sources publiques · Édition ${esc(data.version)}</p>`;
-  nav('catalogue'); renderList();
-  $('#search').addEventListener('input', e=>{query=e.target.value;renderList();});
+  const quickRisk=g=>{const label=catalogueRiskLabels(g).find(value=>catalogueRiskKey(value))||g.family;return `<span class="catalogue-risk-label"><i class="risk-dot risk-${catalogueRiskKey(label)||'neutral'}" aria-hidden="true"></i>${esc(label)}</span>`;};
+  return `<section class="reference-quick"><div class="reference-section-heading"><h2>Accès rapides</h2><button type="button" data-mode="essentials">12 essentiels ${icon('chevron')}</button></div><ul class="reference-quick-grid">${quick.map(g=>`<li><a href="#gaz/${g.id}"><strong>${esc(g.displayFormula)}</strong><span>${esc(g.name)}</span><small>${quickRisk(g)}</small></a></li>`).join('')}</ul></section><section class="reference-ranges"><div class="reference-section-heading"><h2>Gammes</h2><a href="#gammes">Toutes ${icon('chevron')}</a></div><ul class="reference-range-list"><li><a href="#gamme/arcal"><span><strong>ARCAL™</strong><small>Soudage</small></span>${icon('chevron')}</a></li><li><a href="#gamme/aligal"><span><strong>ALIGAL™</strong><small>Alimentaire</small></span>${icon('chevron')}</a></li></ul></section><button type="button" class="reference-all-catalogue" data-mode="all">${icon('book')}<span><strong>Catalogue complet</strong><small>${allEntries().length} fiches · essentiels puis A à Z</small></span>${icon('chevron')}</button>`;
+}
+function catalogue(){
+  $('#main').innerHTML=`<div class="reference-catalogue"><header id="catalogue-home-header" class="reference-masthead"><div class="reference-wordmark">${brand}<div><p>Guide des gaz</p><small>Guide indépendant</small></div></div><button type="button" class="icon-button reference-favorites" data-mode="favorites" aria-label="Voir les favoris">${icon('bookmark')}</button></header><header id="catalogue-list-header" class="reference-catalogue-header" hidden><a href="#catalogue" data-home aria-label="Retour à l’accueil">${icon('back')}</a><h1 id="catalogue-heading" tabindex="-1">Catalogue</h1><span>${allEntries().length} fiches</span></header><div id="catalogue-search-hero" class="reference-search-hero"><h1 id="catalogue-home-heading" tabindex="-1">Quel gaz cherchez-vous ?</h1><div class="search-wrap reference-search">${icon('search')}<label class="sr-only" for="search">Rechercher dans les ${allEntries().length} fiches par nom, formule, gamme ou référence</label><input id="search" type="search" placeholder="Nom, formule, gamme…" value="${esc(query)}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="search-help"><button type="button" id="clear-search" class="icon-button" aria-label="Effacer la recherche" ${query?'':'hidden'}>${icon('close')}</button></div><p id="search-help" class="search-help" hidden></p></div><div id="catalogue-home">${catalogueHomeMarkup()}</div><div id="catalogue-results" hidden><div id="catalogue-filters">${catalogueFilterMarkup()}</div><div id="catalogue-active-scope" class="catalogue-active-scope"></div><div class="list-heading reference-list-heading"><h2 id="list-title" tabindex="-1"></h2><p id="result-count" role="status"></p></div><p id="list-caption" class="list-caption"></p><ul id="gas-list" class="gas-list reference-gas-list"></ul><section id="other-gases" class="reference-other-gases" hidden><h2 class="sr-only">Autres gaz et produits par ordre alphabétique</h2><ul id="other-gas-list" class="gas-list reference-gas-list"></ul></section><div id="empty" class="empty" hidden></div><p class="catalogue-risk-coverage">Filtres fondés sur les libellés déjà documentés. Les produits dont les dangers ne sont pas détaillés ne sont pas inclus dans un filtre de danger ciblé. Consulter leur FDS.</p></div><p class="reference-catalogue-footer">Édition ${esc(data.version)} · Sources publiques</p></div>`;
+  nav('catalogue');renderList();
+  $('#search').addEventListener('input',e=>{query=e.target.value;renderList();});
   $('#clear-search').addEventListener('click',()=>{query='';$('#search').value='';renderList();$('#search').focus();});
 }
-function gasRows(gases) {
-  return gases.map(g=>`<li><a class="gas-row" href="#gaz/${g.id}">${g.kind==='product'?'':`<span class="${formulaClass(g)}" aria-label="${g.kind==='product'?'Produit commercial':g.formula ? `Formule ${esc(g.formula)}` : 'Air, mélange'}">${g.displayFormula}</span>`}<span class="gas-text"><strong>${esc(g.name)}</strong><span>${esc(g.family)}</span></span>${favorites.has(g.id)?icon('bookmark','saved-indicator'):''}${icon('chevron','chevron')}</a></li>`).join('');
+function gasRows(gases){
+  return gases.map(g=>`<li><a class="gas-row" href="#gaz/${g.id}">${g.kind==='product'?'<span class="formula commercial-mark" aria-hidden="true">'+icon('layers')+'</span>':`<span class="${formulaClass(g)}" aria-label="${g.formula?'Formule '+esc(g.formula):'Air, mélange'}">${esc(g.displayFormula)}</span>`}<span class="gas-text"><strong>${esc(g.name)}</strong>${g.kind==='product'?`<span class="commercial-family">${esc(g.family)}</span>`:''}<span class="catalogue-row-risks">${catalogueRiskMarkup(g)}</span></span>${favorites.has(g.id)?icon('bookmark','saved-indicator'):''}${icon('chevron','chevron')}</a></li>`).join('');
 }
-function renderList() {
-  const searching=!!query.trim();
-  const overview=catalogueOverview&&!searching;
-  $('#catalogue-home').hidden=!overview;$('#catalogue-results').hidden=overview;
-  const result=catalogueSelection(allEntries(),query,mode,favorites);
+function catalogueAlphabetRows(entries){
+  let previous='';
+  return entries.map(g=>{
+    // orderGases() place déjà les entrées restantes dans l’ordre français.
+    // Les chiffres restent un groupe explicite ; aucune normalisation d’identité.
+    const letter=g.name.normalize('NFD').replace(/[\u0300-\u036f]/g,'').charAt(0).toLocaleUpperCase('fr');
+    const group=/\d/.test(letter)?'0–9':letter;
+    const heading=group!==previous?`<li class="catalogue-letter"><h3>${esc(group)}</h3></li>`:'';
+    previous=group;return heading+gasRows([g]);
+  }).join('');
+}
+function renderList(){
+  const searching=!!query.trim(),overview=catalogueOverview&&!searching;
+  $('#catalogue-home-header').hidden=!overview;$('#catalogue-home-heading').hidden=!overview;
+  $('#catalogue-list-header').hidden=overview;$('#catalogue-home').hidden=!overview;
+  $('#catalogue-results').hidden=overview;
+  $('#catalogue-search-hero').classList.toggle('is-list',!overview);
+  $('#search').placeholder=overview?'Nom, formule, gamme…':'Nom ou formule';
+  // Ne jamais laisser un ancien filtre cacher les résultats d’une nouvelle recherche.
+  // Les saisies couvrent toujours les 115 fiches, conformément à core.js.
+  const risk=searching?'all':catalogueRisk;
+  const result=catalogueSelection(allEntries(),query,mode,favorites).filter(g=>matchesCatalogueRisk(g,risk));
   const grouped=mode==='all'&&!searching;
   const primary=grouped?result.filter(g=>ESSENTIAL_IDS.includes(g.id)):result;
   const other=grouped?result.filter(g=>!ESSENTIAL_IDS.includes(g.id)):[];
-  $('#list-title').textContent=searching?'Résultats':mode==='favorites'?'Vos favoris':'Les principaux gaz';
-  $('#result-count').textContent=searching?`${result.length} résultat${result.length!==1?'s':''}`:mode==='favorites'?`${result.length} fiche${result.length!==1?'s':''}`:`${primary.length} fiches`;
-  $('#list-caption').textContent=searching?`Recherche dans les ${allEntries().length} fiches du catalogue.`:mode==='favorites'?'Les fiches que vous avez enregistrées.':'Une sélection pour l’industrie.';
+  $('#catalogue-filters').innerHTML=catalogueFilterMarkup();
+  $('#catalogue-filters').hidden=searching;
+  $('#list-title').textContent=searching?'Résultats':mode==='favorites'?'Vos favoris':mode==='essentials'?'Les 12 essentiels':primary.length?'Les essentiels':'Autres gaz & produits';
+  $('#result-count').textContent=searching?`${result.length} résultat${result.length!==1?'s':''}`:`${result.length} fiche${result.length!==1?'s':''}`;
+  $('#list-caption').textContent=searching?`Recherche dans les ${allEntries().length} fiches du catalogue.`:mode==='favorites'?'Les fiches que vous avez enregistrées.':mode==='essentials'?'Une sélection pour l’industrie.':'Les principaux gaz d’abord, puis les autres fiches par ordre alphabétique.';
+  $('#catalogue-active-scope').innerHTML=!searching&&mode!=='all'?`<span>${mode==='favorites'?'Favoris':'Sélection essentielle'}</span><button type="button" data-mode="all">Voir tout</button>`:'';
   $('#clear-search').hidden=!query;
   const atomic={O:'O désigne l’élément oxygène. Le gaz de cette fiche est O₂ (saisir O2).',N:'N désigne l’élément azote. Le gaz de cette fiche est N₂ (saisir N2).',H:'H désigne l’élément hydrogène. Le gaz de cette fiche est H₂ (saisir H2).',Co:'Co est le symbole du cobalt. Pour le monoxyde de carbone, saisir CO (deux majuscules).'};
-  $('#search-help').textContent=atomic[query.trim()] || '';$('#search-help').hidden=!atomic[query.trim()];
+  $('#search-help').textContent=atomic[query.trim()]||'';$('#search-help').hidden=!atomic[query.trim()];
   $('#gas-list').innerHTML=gasRows(primary);$('#gas-list').hidden=!primary.length;
-  $('#other-gas-list').innerHTML=gasRows(other);$('#other-gases').hidden=!other.length;
+  $('#other-gas-list').innerHTML=catalogueAlphabetRows(other);$('#other-gases').hidden=!other.length;
   $('#empty').hidden=!!result.length;
-  $('#empty').innerHTML=mode==='favorites'&&!searching?`${icon('bookmark')}<h2>Vos essentiels, ici.</h2><p>Ouvrez une fiche et touchez le marque-page pour la retrouver rapidement.</p><button class="text-button" data-mode="essentials">Explorer les essentiels</button>`:`${icon('search')}<h2>Aucun gaz trouvé</h2><p>Essayez un nom, O2, CO₂, LOX ou un numéro CAS. La recherche couvre les ${allEntries().length} fiches.</p><button class="text-button" data-clear>Effacer la recherche</button>`;
+  $('#empty').innerHTML=mode==='favorites'&&!searching&&catalogueRisk==='all'?`${icon('bookmark')}<h2>Vos essentiels, ici.</h2><p>Ouvrez une fiche et touchez le marque-page pour la retrouver rapidement.</p><button class="text-button" data-mode="essentials">Explorer les essentiels</button>`:`${icon('search')}<h2>Aucun gaz trouvé</h2><p>${searching?`Essayez un nom, O2, CO₂, LOX ou un numéro CAS. La recherche couvre les ${allEntries().length} fiches.`:'Aucune fiche de cette sélection ne porte le libellé choisi.'}</p><button class="text-button" ${searching?'data-clear':'data-risk="all"'}>${searching?'Effacer la recherche':'Retirer le filtre de risque'}</button>`;
 }
+document.addEventListener('click',e=>{
+  const button=e.target.closest('button[data-risk]');if(!button)return;
+  const next=button.dataset.risk;if(!catalogueRiskKeys.has(next))return;
+  catalogueRisk=next;renderList();
+  document.querySelector(`[data-risk="${next}"]`)?.focus({preventScroll:true});
+});
+
 function sourceLinks(sources) { return sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${icon('external')}<span><strong>${esc(s.title)}</strong><small>${esc(s.scope)}</small></span>${icon('chevron','chevron')}</a></li>`).join(''); }
 const selectionName=(options,id)=>options.find(x=>x.id===id)?.name||'';
 function weldingChoice(options,field){
@@ -120,8 +201,8 @@ function sheetPanels(panels) {
 }
 function fdsAction(g) {
   if(!g.fds)return '';
-  const label=g.fds.kind==='portal'?'Rechercher la FDS':g.fds.kind==='individual'?'Ouvrir la FDS':'Consulter la FDS';
-  const note=g.fds.kind==='portal'?'Produit et conditionnement exacts':g.fds.kind==='individual'?'Document individuel · connexion nécessaire':'Lien fabricant · révision à vérifier';
+  const label='Fiche de données de sécurité';
+  const note=g.fds.kind==='portal'?'Portail fournisseur · choisir le conditionnement':g.fds.kind==='individual'?'Document individuel · connexion nécessaire':'Lien fabricant · révision à vérifier';
   return `<a class="document-action fiche-fds" href="${esc(g.fds.url)}" target="_blank" rel="noopener noreferrer"><span>${label}<small>${note}</small></span>${icon('external')}</a>`;
 }
 function identificationSummary(g,physical=false) {
@@ -152,21 +233,54 @@ function productDetail(g) {
     technical:`${parts?parts.technical:composition}${constituents}`
   },`#gamme/${g.range}`,range.name);nav('gammes');
 }
-function detail(g) {
-  if(g.kind==='product'){productDetail(g);return;}
+function gasTechnical(g) {
   const molecular=g.formula!==g.elements[0]||g.elements.length>1;
-  const badges=g.family.split(' · ').map(label=>`<span class="fiche-badge ${/comburant|inflammable|toxique|corrosif/i.test(label)?'hazard':''}">${esc(label)}</span>`).join('');
-  const pressure=g.transport?.some(t=>/comprimé/i.test(t.state))?'<span class="fiche-badge pressure-badge">Sous pression</span>':'';
-  const header=`<header class="fiche-title"><span class="${formulaClass(g)} large" aria-label="${g.formula?'Formule '+esc(g.formula):'Air, mélange'}">${esc(g.displayFormula)}</span><div><h1 tabindex="-1">${esc(g.name)}</h1><p>${esc(g.subtitle)} · CAS ${esc(g.cas)}</p><div class="fiche-badges">${badges}${pressure}</div></div></header>`;
   const physical=`<section><h2>Propriétés physiques</h2><dl class="properties"><div><dt>Masse molaire<small>Valeur de référence de la substance</small></dt><dd>${fmt(g.molarMass)} <span>g/mol</span></dd></div><div><dt>Masse volumique<small>Phase gazeuse · 15 °C · 1,013 bar absolu</small></dt><dd>${g.density===null?'<span>Non retenue¹</span>':`${fmt(g.density)} <span>kg/m³</span>`}</dd></div><div><dt>${!g.transition?'Transition de phase':g.transition.kind==='sublimation'?'Sublimation':'Ébullition'}<small>À 1,013 bar absolu</small></dt><dd>${g.transition?`${fmt(g.transition.temperatureC)} <span>°C</span>`:'<span>Voir note²</span>'}</dd></div></dl><p class="footnote">Valeurs de l’<a href="${esc(g.sources[0].url)}" target="_blank" rel="noopener noreferrer">Encyclopédie des gaz Air Liquide</a>${g.id==='air'?' ; mélange de référence':' ; substance de référence'}. Elles ne décrivent pas les conditions d’une bouteille.</p>${g.densityNote?`<p class="footnote">¹ ${esc(g.densityNote)}</p>`:''}${g.transitionNote?`<p class="footnote">² ${esc(g.transitionNote)}</p>`:''}</section>`;
   const formula=`<section><h2>Bien lire la formule</h2><div class="reading"><p>${g.formulaNote?esc(g.formulaNote):molecular?`<strong>${esc(g.displayFormula)}</strong> est une formule moléculaire. Symboles des éléments : <strong>${g.elements.map(esc).join(', ')}</strong>.`:`<strong>${esc(g.displayFormula)}</strong> désigne un gaz monoatomique et le symbole de son élément.`}</p><p>${esc(g.note)}</p><p>État de référence : ${esc(g.phaseAtReference)} à 15 °C et 1,013 bar.</p></div></section>`;
-  const safety=`<section><h2>Risques & précautions</h2><div class="risk-panel">${icon('alert')}<div><h3>${esc(g.family)}</h3>${g.risks.map(x=>`<p>${esc(x)}</p>`).join('')}</div></div><ul class="precautions">${g.precautions.map(x=>`<li>${esc(x)}</li>`).join('')}<li>Adapter les précautions à l’état physique, à la température et au conditionnement réellement utilisés. Suivre la FDS et les consignes du site.</li></ul><p class="footnote">Synthèse non exhaustive ; les risques dépendent aussi de la pureté, du mélange et du conditionnement.</p></section>${fdsAction(g)}`;
-  ficheShell(g,header,{
-    essential:`${identificationSummary(g,true)}${fdsAction(g)}${applicationSection(g)}`,
-    safety,
-    transport:documents(g),
-    technical:physical+formula
-  },'#catalogue','Catalogue');nav('catalogue');
+  return physical+formula+applicationSection(g);
+}
+function referenceRiskCard(g) {
+  const oxygen=g.referenceSheet;
+  const symbols=oxygen?`<div class="reference-risk-symbols"><div><img src="./icons/hazards/ghs03.png" alt="Pictogramme SGH03, comburant" width="48" height="48"><span><strong>Comburant</strong><small>SGH03</small></span></div><div><img src="./icons/hazards/ghs04.png" alt="Pictogramme SGH04, gaz sous pression" width="48" height="48"><span><strong>Sous pression</strong><small>SGH04</small></span></div></div>`:`<div class="reference-risk-heading">${icon('alert')}<h2>${esc(g.family)}</h2></div>`;
+  const precautions=oxygen?oxygen.practices.slice(0,3):g.precautions;
+  return `<section class="reference-risk-card" aria-label="Risques principaux">${symbols}${g.risks.map(r=>`<p>${esc(r)}</p>`).join('')}<ul>${precautions.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></section>`;
+}
+function referenceAtmosphere(g) {
+  if(!g.referenceSheet)return '';
+  return `<section class="reference-atmosphere"><h2>Repères atmosphère</h2><div class="atmosphere-scale" role="img" aria-label="Air : environ 20,9 % d’oxygène. Éviter un enrichissement au-delà de 23,5 %. Cette échelle schématique ne garantit pas la sécurité d’une atmosphère."><div class="atmosphere-air">Air 20,9 %</div><div class="atmosphere-bar"><span></span><span></span><span></span><i></i></div><div class="atmosphere-values"><span>Appauvrissement</span><span>23,5 %</span></div><div class="atmosphere-captions"><span>Moins d’oxygène</span><span>Enrichissement</span></div></div><div class="atmosphere-notes"><p>Incolore et non détectable à l’odeur : prévoir une détection adaptée au risque.</p><p>Densité par rapport à l’air : <strong>1,11</strong> à 15 °C et 1,013 bar. La ventilation et la configuration du lieu restent déterminantes.</p></div><p class="footnote">Repères schématiques de prévention ; ils ne constituent pas une autorisation d’accès. <a href="${esc(g.referenceSheet.atmosphere.sourceUrl)}" target="_blank" rel="noopener noreferrer">Source, rubrique 8</a>.</p></section>`;
+}
+function referenceIdentityTiles(g) {
+  const items=(g.transport||[]).map(t=>`<div><dt>${g.id==='oxygene'?(t.number==='1072'?'Gaz comprimé':'Liquide (LOX)'):esc(t.state)}</dt><dd>UN ${esc(t.number)}</dd></div>`);
+  if(g.referenceSheet)items.push('<div><dt>Étiquettes ADR</dt><dd>2.2 + 5.1</dd></div>');
+  if(!items.length)items.push('<div><dt>Numéro ONU</dt><dd class="unknown">À vérifier dans la FDS</dd></div>');
+  items.push(`<div><dt>Ogive</dt><dd>${g.shoulder?`<span class="colour-swatch ral-${esc(g.shoulder.ral)}" aria-hidden="true"></span>${esc(g.shoulder.name)}`:'<span class="unknown">Non documentée</span>'}</dd></div>`);
+  return `<dl class="reference-identity-tiles">${items.join('')}</dl>`;
+}
+function referenceCodeRows(title,items,kind) {
+  return `<section class="reference-code-section"><h2>${title}</h2><ul class="reference-code-rows ${kind}">${items.map(r=>`<li><strong>${esc(r.code)}</strong><div><p>${esc(r.summary)}</p><small>${esc(r.scope)}</small></div></li>`).join('')}</ul></section>`;
+}
+function referenceSafety(g) {
+  const ref=g.referenceSheet;
+  if(!ref)return `<section><h2>Risques & précautions</h2>${referenceRiskCard(g)}<ul class="precautions">${g.precautions.map(p=>`<li>${esc(p)}</li>`).join('')}<li>Adapter les précautions au produit livré et aux consignes du site.</li></ul><p class="footnote">Synthèse non exhaustive. Les mentions H et P de cette référence ne sont pas détaillées ici : consulter sa FDS.</p></section>${fdsAction(g)}`;
+  return `${referenceCodeRows('Mentions de danger',ref.hazards,'hazard-codes')}${referenceCodeRows('Conseils de prudence',ref.classification.precautions,'precaution-codes')}<section><h2>Bonnes pratiques</h2><ul class="reference-practices">${ref.practices.map(p=>`<li>${icon('check')}<span>${esc(p)}</span></li>`).join('')}</ul></section><section class="reference-emergency"><h2>Conduite à tenir</h2><a class="emergency-call" href="tel:112">Appeler le 112</a>${ref.actions.map(a=>`<div class="emergency-card"><h3>${esc(a.title)}</h3><ol>${a.steps.map(p=>`<li>${esc(p)}</li>`).join('')}</ol></div>`).join('')}<p class="footnote">Repères issus des FDS, pas une procédure d’intervention. Suivre le plan d’urgence du site. <a href="https://lannuaire.service-public.gouv.fr/centres-contact/R12069" target="_blank" rel="noopener noreferrer">Numéro d’urgence européen</a>.</p></section><p class="footnote reference-scope">${esc(ref.scopeLimit)} Mentions H/P synthétisées : les libellés réglementaires complets figurent dans les FDS citées.</p>${fdsAction(g)}`;
+}
+function referenceTransport(g) {
+  const ref=g.referenceSheet;
+  if(!ref)return documents(g);
+  return `<div id="product-documents"><div class="reference-adr-heading"><img src="./icons/hazards/adr-2-2.svg" alt="Illustration de l’étiquette ADR 2.2" width="56" height="56"><img src="./icons/hazards/adr-5-1.svg" alt="Illustration de l’étiquette ADR 5.1" width="56" height="56"><span><strong>Classe 2 · Gaz</strong><small>Étiquettes 2.2 + 5.1</small></span></div>${ref.transport.map(t=>`<section class="reference-transport-card"><div class="transport-card-heading"><dl class="un-plate" aria-label="Numéro d’identification du danger ${esc(t.hazardIdentificationNumber)}, numéro ONU ${esc(t.un)}"><dt>${esc(t.hazardIdentificationNumber)}</dt><dd>${esc(t.un)}</dd></dl><div><h2>UN ${esc(t.un)}</h2><p>${esc(t.state)}</p></div></div><dl class="transport-card-meta"><div><dt>Code</dt><dd>${esc(t.classificationCode)}</dd></div><div><dt>N° danger</dt><dd>${esc(t.hazardIdentificationNumber)}</dd></div><div><dt>Forme</dt><dd>${t.un==='1072'?'Gaz':'LOX'}</dd></div></dl></section>`).join('')}<div class="reference-shoulder"><span>Couleur d’ogive<small>EN 1089-3 · l’étiquette fait foi</small></span><span class="colour-swatch ral-${esc(g.shoulder.ral)}" aria-hidden="true"></span><strong>${esc(g.shoulder.name)} · RAL ${esc(g.shoulder.ral)}</strong></div><p class="footnote">Repères ADR : ils ne remplacent pas les documents de transport du produit livré. Les codes sont 1O et 3O, avec la lettre O.</p><p class="footnote">${esc(ref.scopeLimit)}</p><p class="footnote">Illustrations ADR issues des visuels fournis ; elles ne sont pas destinées à l’étiquetage d’un colis. <a href="${esc(g.shoulder.sourceUrl)}" target="_blank" rel="noopener noreferrer">Source de la couleur d’ogive</a>.</p>${fdsAction(g)}<p class="footnote">${esc(g.fds.note)}</p></div>`;
+}
+function referenceTechnical(g) {
+  if(!g.referenceSheet)return gasTechnical(g);
+  const p=g.referenceSheet.physical;
+  const row=(label,condition,value,unit)=>`<div><dt>${label}<small>${condition}</small></dt><dd>${value} <span>${unit}</span></dd></div>`;
+  return `<section><h2>Gaz</h2><dl class="properties">${row('Masse molaire','Substance de référence',fmt(g.molarMass),'g/mol')}${row('Masse volumique','15 °C · 1,013 bar abs.',fmt(g.density),'kg/m³')}${row('Densité / air','15 °C · 1,013 bar abs.',fmt(p.gasRelativeDensityAir.value),'')}</dl></section><section><h2>Liquide</h2><dl class="properties">${row('Ébullition','À 1,013 bar absolu',fmt(p.boilingPoint.value),'°C')}${row('Masse volumique','À l’ébullition · 1,013 bar abs.',fmt(p.liquidDensity.value),'kg/m³')}${row('Expansion','1 L liquide à l’ébullition → gaz à 15 °C · 1,013 bar abs.',fmt(p.gasLiquidVolumeRatio.value),'L')}</dl></section><section><h2>Points remarquables</h2><dl class="properties">${row('Point critique','Température · pression',fmt(p.criticalPoint.temperatureC)+' °C · '+fmt(p.criticalPoint.pressureBar),'bar')}${row('Point triple','Pression : 0,0015 bar',fmt(p.triplePoint.temperatureC),'°C')}</dl></section><section><h2>Conditionnements</h2><div class="reference-pack-grid"><div><h3>Bouteille</h3><p>Gaz comprimé ; taille et pression selon référence.</p></div><div><h3>Cadre</h3><p>Bouteilles assemblées ; caractéristiques à confirmer.</p></div><div><h3>Réservoir LOX</h3><p>Oxygène liquide réfrigéré, stockage cryogénique.</p></div><div><h3>Récipient mobile</h3><p>Liquide cryogénique ; équipement selon fourniture.</p></div></div><p class="footnote">Modes de fourniture génériques ; aucune taille, pression ni tête d’une bouteille France n’est déduite de la substance. Confirmer le conditionnement proposé avec le fournisseur.</p></section>${applicationSection(g)}<details class="technical-details"><summary>Bien lire la formule</summary><p><strong>O₂</strong> est une formule moléculaire ; <strong>O</strong> est le symbole de l’élément. LOX désigne l’oxygène liquide. Les masses volumiques du gaz et du liquide sont distinguées ci-dessus.</p><p>${esc(g.note)}</p></details><p class="footnote">Valeurs de l’<a href="${esc(g.sources[0].url)}" target="_blank" rel="noopener noreferrer">Encyclopédie des gaz Air Liquide</a>. Elles ne décrivent pas les conditions d’une bouteille.</p>`;
+}
+function detail(g) {
+  if(g.kind==='product'){productDetail(g);return;}
+  const badges=g.family.split(' · ').map(label=>`<span class="fiche-badge ${/comburant|inflammable|toxique|corrosif/i.test(label)?'hazard':''}">${esc(label)}</span>`).join('');
+  const pressure=g.transport?.some(t=>/comprimé/i.test(t.state))?'<span class="fiche-badge pressure-badge">Sous pression</span>':'';
+  const header=`<header class="fiche-title"><span class="${formulaClass(g)} large" aria-label="${g.formula?'Formule '+esc(g.formula):'Air, mélange'}">${esc(g.displayFormula)}</span><div><h1 tabindex="-1">${esc(g.name)}</h1><p>${esc(g.subtitle)} · CAS ${esc(g.cas)}</p><div class="fiche-badges">${g.referenceSheet?'<span class="fiche-badge danger-word">DANGER</span>':''}${badges}${pressure}</div></div></header>`;
+  ficheShell(g,header,{essential:referenceRiskCard(g)+referenceAtmosphere(g)+referenceIdentityTiles(g)+fdsAction(g),safety:'<div role="group" aria-label="Risques & précautions">'+referenceSafety(g)+'</div>',transport:referenceTransport(g),technical:referenceTechnical(g)},'#catalogue','Catalogue');nav('catalogue');
 }
 
 function reperes() {
@@ -187,7 +301,7 @@ function render() {
   else if(route==='#reperes') {reperes();document.title='Repères · Guide des gaz';}
   else {catalogue();document.title='Guide des gaz';}
   syncTheme();
-  if(lastRoute) $('h1')?.focus({preventScroll:true});
+  if(lastRoute) (route==='#catalogue'?$(catalogueOverview&&!query.trim()?'#catalogue-home-heading':'#catalogue-heading'):$('h1'))?.focus({preventScroll:true});
   window.scrollTo(0,route==='#catalogue'?catalogueScroll:0);lastRoute=route;
 }
 document.addEventListener('click', e=> {
@@ -200,8 +314,8 @@ document.addEventListener('click', e=> {
   if(t.dataset.sheetTab) selectSheetTab(t.dataset.sheetTab);
   if(t.dataset.jump){const target=document.getElementById(t.dataset.jump);const panel=target?.closest('[role=tabpanel]');if(panel)selectSheetTab(panel.dataset.panel);if(target){target.tabIndex=-1;target.scrollIntoView({block:'start',behavior:'instant'});target.focus({preventScroll:true});}}
   if(t.matches('[data-theme-cycle]')) {const options=['system','light','dark'];applyTheme(options[(options.indexOf(theme())+1)%3]);toast(`Thème : ${themeNames[theme()]}`);}
-  if(t.hasAttribute('data-home')) {catalogueOverview=true;catalogueScroll=0;mode='essentials';query='';if(location.hash==='#catalogue'||!location.hash){catalogue();syncTheme();window.scrollTo(0,0);}}
-  if(t.dataset.mode) {catalogueOverview=false;mode=t.dataset.mode;query='';$('#search').value='';document.querySelectorAll('.segmented [data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));renderList();window.scrollTo(0,0);}
+  if(t.hasAttribute('data-home')) {catalogueRisk='all';catalogueOverview=true;catalogueScroll=0;mode='essentials';query='';if(location.hash==='#catalogue'||!location.hash){catalogue();syncTheme();window.scrollTo(0,0);}}
+  if(t.dataset.mode) {catalogueRisk='all';catalogueOverview=false;mode=t.dataset.mode;query='';$('#search').value='';document.querySelectorAll('.segmented [data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));renderList();window.scrollTo(0,0);}
   if(t.hasAttribute('data-clear')) {query='';$('#search').value='';renderList();$('#search').focus();}
   if(t.dataset.favorite) {
     const id=t.dataset.favorite;favorites.has(id)?favorites.delete(id):favorites.add(id);
