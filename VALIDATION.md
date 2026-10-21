@@ -7,6 +7,16 @@
 - Manifest et fichiers PNG vérifiés, dont dimensions 192 et 512 pixels. Chemins relatifs adaptés à `/guide-des-gaz/`.
 - Données physiques transcrites des références publiques avec les conditions associées. Les valeurs ambiguës et les données absentes sont signalées ; voir `SOURCES.md`.
 
+## Publication vérifiée
+
+- Dépôt public : https://github.com/Bidibulle50/guide-des-gaz
+- Site : https://bidibulle50.github.io/guide-des-gaz/
+- Commit applicatif : `57ee16a2473ef7ac5acd3c0dea4182b24e683ef7`.
+- GitHub Pages : état `built`, branche `main`, racine `/`, HTTPS imposé.
+- Les 20 fichiers déposés ont été relus par leurs empreintes Git et comparés à la copie locale.
+- Accueil et 12 fichiers applicatifs servis en HTTPS : réponses 200, types de contenu appropriés et octets identiques à la copie testée. Certificat TLS vérifié avec le magasin système macOS ; aucun contrôle TLS désactivé.
+- Preuve détaillée : [validation/deployment-2026-10-21.json](validation/deployment-2026-10-21.json). Ces contrôles vérifient la livraison statique, pas l’exécution dans un navigateur.
+
 ## Vérifications non réalisées
 
 Le contrôle de sécurité de l’outil navigateur a refusé l’ouverture locale, y compris après l’autorisation de l’utilisateur. Ce refus n’a pas été contourné.

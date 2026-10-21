@@ -1,0 +1,104 @@
+{
+  "url": "https://bidibulle50.github.io/guide-des-gaz/",
+  "verifiedAt": "2026-10-21",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 1859,
+      "matchesLocal": true,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "6c2b56a3ab1265a484665fb50c51dd7defd8c1984bc7eeb9fdc73cfb27fe6328"
+    },
+    {
+      "path": "styles.css",
+      "status": 200,
+      "bytes": 11118,
+      "matchesLocal": true,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "46ce6db961d1b9baadaf712f4acc5293d86ef9b57da16b44598c65ab300177f6"
+    },
+    {
+      "path": "theme.js",
+      "status": 200,
+      "bytes": 227,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "375c30c63b47563de7f0a53367234b60343d63c89c9fe55b4e345d373854c749"
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 19683,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "d2ff028ae5e0154d2feb985352dc4e8be0efd9c07cc5be4c7cd62f6e49c2b5bd"
+    },
+    {
+      "path": "core.js",
+      "status": 200,
+      "bytes": 1008,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "3656b15b938ebac3441a4be42830aab21a5d4e2a51bd1500e60374a1e38ee33d"
+    },
+    {
+      "path": "data/gases.json",
+      "status": 200,
+      "bytes": 155634,
+      "matchesLocal": true,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "d4f94e93f5d2e657c1c12e301f8c832283b3e581ddfa6a6ef7d903ef8172224a"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "status": 200,
+      "bytes": 564,
+      "matchesLocal": true,
+      "contentType": "application/manifest+json; charset=utf-8",
+      "sha256": "89e523de12eb59d27228565c0e6f903b5be29240bb7bcd2bdb629f5091f86348"
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "bytes": 1822,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "f4e015b2b692ce55cfe3696175a7a75dca74bd929022d5ac420165ce798f6605"
+    },
+    {
+      "path": "icons/icon.svg",
+      "status": 200,
+      "bytes": 360,
+      "matchesLocal": true,
+      "contentType": "image/svg+xml",
+      "sha256": "dc4a8f1e183982acdb7623e7e003ed3fdd1344ea51a7e86e7d6e5e08ef0fdbfd"
+    },
+    {
+      "path": "icons/icon-192.png",
+      "status": 200,
+      "bytes": 3446,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "2479e2ffe38415eef533918d131f045e46199adca45baafe403fc508787807c9"
+    },
+    {
+      "path": "icons/icon-512.png",
+      "status": 200,
+      "bytes": 12574,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "ce74cc974b0a977342f7257a5bfa91958084c1a788c49734ed0e48d7e228d70e"
+    },
+    {
+      "path": "icons/apple-touch-icon.png",
+      "status": 200,
+      "bytes": 3284,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "1ceb5deb7a08a0ae8161969b2b645740d5640ea343f3ad4504c730dfc05569ca"
+    }
+  ],
+  "indexRoute": true,
+  "scope": "HTTPS static delivery only; no real browser or iPhone test"
+}

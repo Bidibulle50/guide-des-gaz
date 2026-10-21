@@ -43,13 +43,13 @@ Servir le répertoire en HTTP local (`python3 -m http.server 8080`) puis ouvrir 
 
 `npm test` exécute les tests Node (Node 18+ ; aucune installation nécessaire). Les tests de cache et de gabarits simulent les interfaces du navigateur : ils ne prouvent pas le fonctionnement dans Safari ou sur un iPhone. Voir [VALIDATION.md](VALIDATION.md).
 
-Pour une modification : vérifier recherche, favoris après rechargement, thèmes, navigation, dimensions mobiles et rechargement sans réseau. Incrémenter `VERSION` dans `sw.js` à chaque publication, ainsi que la version du catalogue/package. Le nouveau cache est rempli intégralement avant activation. Une mise à jour attend l’action « Actualiser » si une ancienne édition est ouverte. Seuls les caches de cette application et de sa portée sont supprimés.
+Pour une modification : vérifier recherche, favoris après rechargement, thèmes, navigation, dimensions mobiles et rechargement sans réseau. Incrémenter `VERSION` dans `sw.js` à chaque modification des ressources mises en cache, ainsi que la version du catalogue/package. Le nouveau cache est rempli intégralement avant activation. Une mise à jour attend l’action « Actualiser » si une ancienne édition est ouverte. Seuls les caches de cette application et de sa portée sont supprimés.
 
 ## GitHub Pages
 
 Publier la branche `main`, dossier `/ (root)`, depuis Settings → Pages → Deploy from a branch. `.nojekyll` désactive le traitement Jekyll. Aucun workflow additionnel ou secret n’est nécessaire.
 
-Adresse prévue par cette configuration : https://bidibulle50.github.io/guide-des-gaz/ (sa disponibilité doit être vérifiée après déploiement).
+Site publié : [Guide des gaz](https://bidibulle50.github.io/guide-des-gaz/). Déploiement GitHub Pages réussi et livraison HTTPS des 12 fichiers applicatifs vérifiée le 21 octobre 2026 ; détails dans [VALIDATION.md](VALIDATION.md).
 
 ## Confidentialité et conservation
 
