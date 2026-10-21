@@ -1,0 +1,4102 @@
+{
+  "version": "1.0.0",
+  "verifiedAt": "2026-10-21",
+  "gases": [
+    {
+      "id": "1-butene",
+      "name": "1-Butène",
+      "subtitle": "1-Butène",
+      "formula": "C4H8",
+      "displayFormula": "C₄H₈",
+      "cas": "106-98-9",
+      "family": "Inflammable",
+      "aliases": [
+        "but-1-ène",
+        "butène"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 56.106,
+      "density": 2.4496,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -6.31,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Comonomère pour la production de polyoléfines."
+      ],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS.",
+      "sources": [
+        {
+          "id": "airliquide-1-butene",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/1-butene",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "cis-2-butene",
+      "name": "2-cis-Butène",
+      "subtitle": "2-cis-Butène",
+      "formula": "C4H8",
+      "displayFormula": "C₄H₈",
+      "cas": "590-18-1",
+      "family": "Inflammable",
+      "aliases": [
+        "cis-but-2-ène",
+        "butène"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 56.106,
+      "density": 2.4583,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 3.72,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Production de propylène et d’octènes."
+      ],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS.",
+      "sources": [
+        {
+          "id": "airliquide-cis-2-butene",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/2-cis-butene",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "trans-2-butene",
+      "name": "2-trans-Butène",
+      "subtitle": "2-trans-Butène",
+      "formula": "C4H8",
+      "displayFormula": "C₄H₈",
+      "cas": "624-64-6",
+      "family": "Inflammable",
+      "aliases": [
+        "trans-but-2-ène",
+        "butène"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 56.106,
+      "density": 2.4587,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 0.88,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Production de propylène et d’octènes."
+      ],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS.",
+      "sources": [
+        {
+          "id": "airliquide-trans-2-butene",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/2-trans-butene",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "acetylene",
+      "name": "Acétylène",
+      "subtitle": "Éthyne",
+      "formula": "C2H2",
+      "displayFormula": "C₂H₂",
+      "cas": "74-86-2",
+      "family": "Inflammable",
+      "aliases": [
+        "acétylène",
+        "éthyne",
+        "acetylene"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 26.037,
+      "density": 1.1086,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "sublimation",
+        "temperatureC": -84.05,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Inflammable et susceptible de se décomposer de façon explosive."
+      ],
+      "precautions": [
+        "Employer un équipement agréé pour l’acétylène ; maintenir les bouteilles debout et arrimées. Ne pas transvaser."
+      ],
+      "applications": [
+        "Soudage, brasage et coupage à la flamme.",
+        "Spectrométrie d’absorption atomique.",
+        "Dépôt de couches carbonées en électronique."
+      ],
+      "note": "À 1,013 bar, la transition indiquée est une sublimation. Le conditionnement industriel dissous n’est pas représenté par ces valeurs de gaz pur.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/acetylene",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-212",
+          "title": "INRS · FT 212 · Risques",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_212",
+          "scope": "Risques et mesures de prévention spécifiques.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-212-reco",
+          "title": "INRS · FT 212 · Prévention",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_212&section=recommandations",
+          "scope": "Risques et mesures de prévention spécifiques.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "air",
+      "name": "Air",
+      "subtitle": "Air",
+      "formula": "",
+      "displayFormula": "Air",
+      "cas": "132259-10-0",
+      "family": "Mélange gazeux",
+      "aliases": [
+        "air comprimé"
+      ],
+      "elements": [],
+      "molarMass": 28.96,
+      "density": 1.225,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": null,
+      "phaseAtReference": "gaz",
+      "risks": [
+        "L’air comprimé présente des risques liés à la pression et peut entretenir la combustion."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Apport d’oxygène pour la synthèse chimique et la combustion en métallurgie.",
+        "Étalonnage d’analyseurs et alimentation de détecteurs de laboratoire."
+      ],
+      "note": "La composition et les propriétés d’un air synthétique ou comprimé dépendent du produit livré.",
+      "sources": [
+        {
+          "id": "airliquide-air",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/air",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "transitionNote": "Mélange : pas de température d’ébullition unique retenue.",
+      "formulaNote": "L’air est un mélange, principalement de N₂ et O₂ : il n’a pas de formule moléculaire unique."
+    },
+    {
+      "id": "ammoniac",
+      "name": "Ammoniac",
+      "subtitle": "Ammoniac anhydre",
+      "formula": "NH3",
+      "displayFormula": "NH₃",
+      "cas": "7664-41-7",
+      "family": "Toxique · corrosif",
+      "aliases": [
+        "ammoniac",
+        "ammoniac anhydre",
+        "ammonia"
+      ],
+      "elements": [
+        "N",
+        "H"
+      ],
+      "molarMass": 17.03,
+      "density": 0.7289,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -33.33,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Toxique à l’inhalation, corrosif pour la peau et les yeux, inflammable. Très dangereux pour les organismes aquatiques."
+      ],
+      "precautions": [
+        "Prévoir confinement, captage et détection. Les protections doivent être choisies selon la FDS et l’évaluation du poste."
+      ],
+      "applications": [
+        "Traitements thermiques des métaux.",
+        "Dépôt de nitrure de silicium.",
+        "Réduction des oxydes d’azote dans les fumées."
+      ],
+      "note": "NH₃ désigne l’ammoniac anhydre ; l’ammoniaque est une solution dans l’eau et ne relève pas de ces propriétés.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/ammoniac",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-16",
+          "title": "INRS · FT 16 · Risques",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_16",
+          "scope": "Risques et mesures de prévention spécifiques.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-16-reco",
+          "title": "INRS · FT 16 · Prévention",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_16&section=recommandations",
+          "scope": "Risques et mesures de prévention spécifiques.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "argon",
+      "name": "Argon",
+      "subtitle": "Gaz monoatomique",
+      "formula": "Ar",
+      "displayFormula": "Ar",
+      "cas": "7440-37-1",
+      "family": "Gaz noble",
+      "aliases": [
+        "argon",
+        "LAR"
+      ],
+      "elements": [
+        "Ar"
+      ],
+      "molarMass": 39.948,
+      "density": 1.6903,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -185.85,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Gaz inerte pouvant déplacer l’oxygène de l’air : risque d’asphyxie, notamment en milieu confiné."
+      ],
+      "precautions": [
+        "Prévenir l’accumulation ; contrôler l’atmosphère avant toute entrée en espace confiné."
+      ],
+      "applications": [
+        "Protection des soudures à l’arc.",
+        "Inertage en métallurgie.",
+        "Isolation des doubles vitrages."
+      ],
+      "note": "LAR désigne l’argon liquide. Ar est à la fois le symbole de l’élément et la notation du gaz monoatomique.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/argon",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "abreviations",
+          "title": "Air Liquide · Modes de fourniture",
+          "url": "https://my.airliquide.com/products-services/our-supply-modes",
+          "scope": "Abréviations LOX, LIN et LAR des formes liquides.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "azote",
+      "name": "Azote",
+      "subtitle": "Diazote",
+      "formula": "N2",
+      "displayFormula": "N₂",
+      "cas": "7727-37-9",
+      "family": "Inerte",
+      "aliases": [
+        "azote",
+        "diazote",
+        "nitrogen",
+        "LIN"
+      ],
+      "elements": [
+        "N"
+      ],
+      "molarMass": 28.013,
+      "density": 1.1848,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -195.8,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Peut appauvrir l’air en oxygène et provoquer une asphyxie. Le liquide et le gaz froid peuvent causer des brûlures."
+      ],
+      "precautions": [
+        "Prévenir l’accumulation dans les espaces confinés ; prévoir ventilation et contrôle d’atmosphère."
+      ],
+      "applications": [
+        "Inertage et purge d’installations.",
+        "Surgélation et atmosphères protectrices alimentaires.",
+        "Coupage laser."
+      ],
+      "note": "LIN désigne l’azote liquide, distinct de la phase gazeuse des valeurs de masse volumique.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/azote",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "abreviations",
+          "title": "Air Liquide · Modes de fourniture",
+          "url": "https://my.airliquide.com/products-services/our-supply-modes",
+          "scope": "Abréviations LOX, LIN et LAR des formes liquides.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "bromochlorodifluoromethane",
+      "name": "Bromochlorodifluorométhane",
+      "subtitle": "Bromochlorodifluorométhane",
+      "formula": "CBrClF2",
+      "displayFormula": "CBrClF₂",
+      "cas": "353-59-3",
+      "family": "Gaz · vigilance",
+      "aliases": [
+        "halon 1211",
+        "R12B1"
+      ],
+      "elements": [
+        "C",
+        "Br",
+        "Cl",
+        "F"
+      ],
+      "molarMass": 165.365,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -4.01,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Les dangers détaillés ne sont pas renseignés dans la page de référence ; cette absence ne signifie pas innocuité.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Usage historique : extinction incendie (halon 1211)."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-bromochlorodifluoromethane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/bromochlorodifluoromethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-halons",
+          "title": "US EPA · Halons",
+          "url": "https://www.epa.gov/ozone-layer-protection/halons-program",
+          "scope": "Usages des halons pour la protection incendie.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "bromure-methyle",
+      "name": "Bromure de méthyle",
+      "subtitle": "Bromure de méthyle",
+      "formula": "CH3Br",
+      "displayFormula": "CH₃Br",
+      "cas": "74-83-9",
+      "family": "Inflammable · Toxique",
+      "aliases": [
+        "bromométhane"
+      ],
+      "elements": [
+        "C",
+        "H",
+        "Br"
+      ],
+      "molarMass": 94.939,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 3.51,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Toxicité aiguë signalée : une exposition peut être grave, voire mortelle.",
+        "Effets graves sur la santé signalés ; consulter les voies d’exposition et effets spécifiques dans la FDS.",
+        "Danger pour l’environnement signalé ; éviter les rejets.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés.",
+        "Prévoir confinement, détection et protections selon l’évaluation du risque ; intervention réservée au personnel formé."
+      ],
+      "applications": [
+        "Agent de méthylation en synthèse ; fumigation historiquement décrite."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-bromure-methyle",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/bromure-methyle",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "chlorure-methyle",
+      "name": "Chlorure de méthyle",
+      "subtitle": "Chlorure de méthyle",
+      "formula": "CH3Cl",
+      "displayFormula": "CH₃Cl",
+      "cas": "74-87-3",
+      "family": "Inflammable",
+      "aliases": [
+        "chlorométhane"
+      ],
+      "elements": [
+        "C",
+        "H",
+        "Cl"
+      ],
+      "molarMass": 50.488,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -24.2,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Effets graves sur la santé signalés ; consulter les voies d’exposition et effets spécifiques dans la FDS.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Production de silicones, de méthylcellulose et d’amines quaternaires."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-chlorure-methyle",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/chlorure-methyle",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur non retenue : la page publie la même masse volumique à trois températures différentes."
+    },
+    {
+      "id": "chlorure-hydrogene",
+      "name": "Chlorure d’hydrogène",
+      "subtitle": "Chlorure d’hydrogène",
+      "formula": "HCl",
+      "displayFormula": "HCl",
+      "cas": "7647-01-0",
+      "family": "Toxique · Corrosif",
+      "aliases": [
+        "chlorure d’hydrogène",
+        "acide chlorhydrique gazeux"
+      ],
+      "elements": [
+        "H",
+        "Cl"
+      ],
+      "molarMass": 36.461,
+      "density": 1.5524,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -85.0,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Toxicité aiguë signalée : une exposition peut être grave, voire mortelle.",
+        "Risque de brûlures chimiques et de lésions graves.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Prévoir confinement, détection et protections selon l’évaluation du risque ; intervention réservée au personnel formé.",
+        "Éviter tout contact ; vérifier les matériaux et les protections dans la FDS."
+      ],
+      "applications": [
+        "Synthèse de produits chlorés et hydrométallurgie.",
+        "Gravure et nettoyage de chambres en électronique."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-chlorure-hydrogene",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/chlorure-hydrogene",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "cyclopropane",
+      "name": "Cyclopropane",
+      "subtitle": "Cyclopropane",
+      "formula": "C3H6",
+      "displayFormula": "C₃H₆",
+      "cas": "75-19-4",
+      "family": "Inflammable",
+      "aliases": [],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 42.081,
+      "density": 1.8125,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -31.48,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS.",
+      "sources": [
+        {
+          "id": "airliquide-cyclopropane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/cyclopropane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition."
+    },
+    {
+      "id": "deuterium",
+      "name": "Deutérium",
+      "subtitle": "Deutérium",
+      "formula": "D2",
+      "displayFormula": "D₂",
+      "cas": "7782-39-0",
+      "family": "Inflammable",
+      "aliases": [
+        "hydrogène lourd",
+        "2H2"
+      ],
+      "elements": [
+        "H"
+      ],
+      "molarMass": 4.032,
+      "density": 0.1702,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -249.84,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Traitement de semi-conducteurs et fabrication de composés marqués.",
+        "Recherche sur la fusion nucléaire."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-deuterium",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/deuterium",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "formulaNote": "D₂ est la molécule de deutérium. D (ou ²H) désigne un isotope de l’hydrogène, pas un nouvel élément."
+    },
+    {
+      "id": "dimethylether",
+      "name": "Diméthyléther",
+      "subtitle": "Diméthyléther",
+      "formula": "C2H6O",
+      "displayFormula": "C₂H₆O",
+      "cas": "115-10-6",
+      "family": "Inflammable",
+      "aliases": [
+        "DME",
+        "éther diméthylique",
+        "(CH3)2O"
+      ],
+      "elements": [
+        "C",
+        "H",
+        "O"
+      ],
+      "molarMass": 46.068,
+      "density": 1.993,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -24.81,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Solvant dans les industries chimique et pétrochimique."
+      ],
+      "note": "C₂H₆O est la formule brute ; (CH₃)₂O précise la structure du diméthyléther. L’éthanol partage la formule brute mais est une autre substance.",
+      "sources": [
+        {
+          "id": "airliquide-dimethylether",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/dimethylether",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "dioxyde-carbone",
+      "name": "Dioxyde de carbone",
+      "subtitle": "Gaz carbonique",
+      "formula": "CO2",
+      "displayFormula": "CO₂",
+      "cas": "124-38-9",
+      "family": "Asphyxiant",
+      "aliases": [
+        "dioxyde de carbone",
+        "gaz carbonique",
+        "carbon dioxide"
+      ],
+      "elements": [
+        "C",
+        "O"
+      ],
+      "molarMass": 44.01,
+      "density": 1.8714,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "sublimation",
+        "temperatureC": -78.45,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Une concentration élevée peut provoquer une intoxication et une asphyxie. Le solide froid peut brûler la peau."
+      ],
+      "precautions": [
+        "Ventiler et prévoir une détection adaptée au CO₂ ; éviter le contact direct avec la glace carbonique."
+      ],
+      "applications": [
+        "Carbonatation des boissons.",
+        "Nettoyage par glace carbonique.",
+        "Réglage du pH des eaux."
+      ],
+      "note": "À 1,013 bar, le CO₂ solide passe directement à l’état gazeux : sublimation, sans phase liquide stable.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/carbon-dioxide",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "dioxyde-soufre",
+      "name": "Dioxyde de soufre",
+      "subtitle": "Dioxyde de soufre",
+      "formula": "SO2",
+      "displayFormula": "SO₂",
+      "cas": "7446-09-5",
+      "family": "Toxique · Corrosif",
+      "aliases": [],
+      "elements": [
+        "S",
+        "O"
+      ],
+      "molarMass": 64.064,
+      "density": 2.7633,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -10.02,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Toxicité aiguë signalée : une exposition peut être grave, voire mortelle.",
+        "Risque de brûlures chimiques et de lésions graves.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Prévoir confinement, détection et protections selon l’évaluation du risque ; intervention réservée au personnel formé.",
+        "Éviter tout contact ; vérifier les matériaux et les protections dans la FDS."
+      ],
+      "applications": [
+        "Traitement des pâtes à papier et conservation en œnologie.",
+        "Étalonnage d’analyseurs."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-dioxyde-soufre",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/dioxyde-soufre",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "dioxyde-azote",
+      "name": "Dioxyde d’azote",
+      "subtitle": "Dioxyde d’azote",
+      "formula": "NO2",
+      "displayFormula": "NO₂",
+      "cas": "10102-44-0",
+      "family": "Comburant · Toxique · Corrosif",
+      "aliases": [
+        "peroxyde d’azote"
+      ],
+      "elements": [
+        "N",
+        "O"
+      ],
+      "molarMass": 46.006,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 21.0,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "liquide",
+      "risks": [
+        "Peut provoquer ou intensifier un incendie.",
+        "Toxicité aiguë signalée : une exposition peut être grave, voire mortelle.",
+        "Risque de brûlures chimiques et de lésions graves."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Tenir à l’écart des matières combustibles et des corps gras ; utiliser des équipements compatibles.",
+        "Prévoir confinement, détection et protections selon l’évaluation du risque ; intervention réservée au personnel formé.",
+        "Éviter tout contact ; vérifier les matériaux et les protections dans la FDS."
+      ],
+      "applications": [
+        "Nitration et oxydation en chimie ; étalonnage d’analyseurs."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Cette substance est liquide à 15 °C et 1,013 bar ; elle figure néanmoins dans l’encyclopédie des gaz. NO₂ peut être en équilibre avec N₂O₄ ; la composition et les conditions doivent être précisées pour utiliser des propriétés de mélange.",
+      "sources": [
+        {
+          "id": "airliquide-dioxyde-azote",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/dioxyde-azote",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "eau",
+      "name": "Eau",
+      "subtitle": "Eau",
+      "formula": "H2O",
+      "displayFormula": "H₂O",
+      "cas": "7732-18-5",
+      "family": "Liquide / vapeur",
+      "aliases": [
+        "vapeur d’eau"
+      ],
+      "elements": [
+        "H",
+        "O"
+      ],
+      "molarMass": 18.015,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 99.97,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "liquide",
+      "risks": [
+        "La vapeur et l’eau chaude exposent aux brûlures ; une installation pressurisée présente un risque mécanique."
+      ],
+      "precautions": [
+        "Respecter les limites de température et de pression de l’installation et ses consignes de maintenance."
+      ],
+      "applications": [
+        "Sous forme de vapeur : transfert de chaleur, humidification et stérilisation industrielle."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Cette substance est liquide à 15 °C et 1,013 bar ; elle figure néanmoins dans l’encyclopédie des gaz.",
+      "sources": [
+        {
+          "id": "airliquide-eau",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/water",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "spirax-vapeur",
+          "title": "Spirax Sarco · Vapeur industrielle",
+          "url": "https://solutions.spiraxsarco.com/pharma-fr.html",
+          "scope": "Usages de la vapeur : échange thermique, humidification et stérilisation.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "spirax-securite",
+          "title": "Spirax Sarco · Température et pression",
+          "url": "https://www.spiraxsarco.com/-/media/spiraxsarco/international/documents/en/im/spiraheat-im-p661-02-en.ashx",
+          "scope": "Précautions relatives aux installations vapeur et eau chaude.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "ethylene",
+      "name": "Ethylène",
+      "subtitle": "Ethylène",
+      "formula": "C2H4",
+      "displayFormula": "C₂H₄",
+      "cas": "74-85-1",
+      "family": "Inflammable",
+      "aliases": [
+        "éthène"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 28.05,
+      "density": 1.1938,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -103.77,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Des effets nocifs ou irritants sont signalés par la source.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Production de polyéthylène et d’intermédiaires chimiques.",
+        "Mûrissement contrôlé des fruits."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-ethylene",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/ethylene",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "fluor",
+      "name": "Fluor",
+      "subtitle": "Fluor",
+      "formula": "F2",
+      "displayFormula": "F₂",
+      "cas": "7782-41-4",
+      "family": "Comburant · Toxique · Corrosif",
+      "aliases": [
+        "difluor"
+      ],
+      "elements": [
+        "F"
+      ],
+      "molarMass": 37.997,
+      "density": 1.6074,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -188.11,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Très puissant comburant, corrosif et mortel par inhalation."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Tenir à l’écart des matières combustibles et des corps gras ; utiliser des équipements compatibles.",
+        "Prévoir confinement, détection et protections selon l’évaluation du risque ; intervention réservée au personnel formé.",
+        "Éviter tout contact ; vérifier les matériaux et les protections dans la FDS."
+      ],
+      "applications": [
+        "Production de composés fluorés dans des installations spécialisées."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-fluor",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/fluor",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-203",
+          "title": "INRS · Fluor",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_203",
+          "scope": "Dangers : comburant, corrosif et toxicité aiguë.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "hexafluorure-soufre",
+      "name": "Hexafluorure de soufre",
+      "subtitle": "Hexafluorure de soufre",
+      "formula": "SF6",
+      "displayFormula": "SF₆",
+      "cas": "2551-62-4",
+      "family": "Gaz · vigilance",
+      "aliases": [
+        "hexafluorure de soufre"
+      ],
+      "elements": [
+        "S",
+        "F"
+      ],
+      "molarMass": 146.055,
+      "density": 6.2563,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": null,
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Les dangers détaillés ne sont pas renseignés dans la page de référence ; cette absence ne signifie pas innocuité.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante.",
+        "Des produits de décomposition dangereux peuvent se former sous l’effet de la chaleur ou d’un arc électrique."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Isolation électrique, détection de fuites et gravure plasma."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Limiter les émissions et récupérer le gaz selon les consignes du site.",
+      "sources": [
+        {
+          "id": "airliquide-hexafluorure-soufre",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/hexafluorure-soufre",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-102",
+          "title": "INRS · Fiche toxicologique 102",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_102&section=caracteristiques",
+          "scope": "Usages, sublimation et produits dangereux de décomposition.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "transitionNote": "L’INRS indique une sublimation à −63,8 °C, sans pression explicitée dans son tableau ; valeur non utilisée comme mesure à 1,013 bar."
+    },
+    {
+      "id": "hydrogene",
+      "name": "Hydrogène",
+      "subtitle": "Dihydrogène",
+      "formula": "H2",
+      "displayFormula": "H₂",
+      "cas": "1333-74-0",
+      "family": "Inflammable",
+      "aliases": [
+        "hydrogène",
+        "dihydrogène",
+        "hydrogen"
+      ],
+      "elements": [
+        "H"
+      ],
+      "molarMass": 2.016,
+      "density": 0.0852,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -252.78,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Gaz inflammable : un mélange avec l’air peut s’enflammer ou exploser."
+      ],
+      "precautions": [
+        "Écarter les sources d’ignition ; prévoir ventilation et détection adaptées."
+      ],
+      "applications": [
+        "Production d’ammoniac et de méthanol.",
+        "Atmosphères réductrices pour le verre.",
+        "Piles à combustible."
+      ],
+      "note": "H est le symbole de l’élément ; H₂ est la formule du dihydrogène.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/hydrogene",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "helium",
+      "name": "Hélium",
+      "subtitle": "Gaz monoatomique",
+      "formula": "He",
+      "displayFormula": "He",
+      "cas": "7440-59-7",
+      "family": "Gaz noble",
+      "aliases": [
+        "hélium",
+        "helium"
+      ],
+      "elements": [
+        "He"
+      ],
+      "molarMass": 4.003,
+      "density": 0.1692,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -268.93,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Peut provoquer une asphyxie en remplaçant l’air respirable. Sous forme liquide : risque de brûlure par le froid."
+      ],
+      "precautions": [
+        "Ne pas inhaler. Ventiler et prévenir l’accumulation de gaz."
+      ],
+      "applications": [
+        "Détection de fuites.",
+        "Gaz vecteur en chromatographie.",
+        "Refroidissement des aimants supraconducteurs."
+      ],
+      "note": "He est le symbole de l’élément et la notation du gaz monoatomique.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/helium",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "isobutane",
+      "name": "Isobutane",
+      "subtitle": "Isobutane",
+      "formula": "C4H10",
+      "displayFormula": "C₄H₁₀",
+      "cas": "75-28-5",
+      "family": "Inflammable",
+      "aliases": [
+        "2-méthylpropane",
+        "R600a"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 58.122,
+      "density": 2.5326,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -11.75,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Propulseur d’aérosols, réfrigération et solvant.",
+        "Mélanges d’étalonnage et détection en laboratoire."
+      ],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS.",
+      "sources": [
+        {
+          "id": "airliquide-isobutane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/isobutane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "isobutene",
+      "name": "Isobutène",
+      "subtitle": "Isobutène",
+      "formula": "C4H8",
+      "displayFormula": "C₄H₈",
+      "cas": "115-11-7",
+      "family": "Inflammable",
+      "aliases": [
+        "isobutylène",
+        "2-méthylpropène"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 56.106,
+      "density": 2.4496,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -7.0,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Production de caoutchouc butyle et d’intermédiaires chimiques."
+      ],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS.",
+      "sources": [
+        {
+          "id": "airliquide-isobutene",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/isobutene",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "isohexane",
+      "name": "Isohexane",
+      "subtitle": "Isohexane",
+      "formula": "C6H14",
+      "displayFormula": "C₆H₁₄",
+      "cas": "107-83-5",
+      "family": "Inflammable",
+      "aliases": [
+        "2-méthylpentane"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 86.175,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 60.21,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "liquide",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Effets graves sur la santé signalés ; consulter les voies d’exposition et effets spécifiques dans la FDS.",
+        "Des effets nocifs ou irritants sont signalés par la source.",
+        "Danger pour l’environnement signalé ; éviter les rejets."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS. Cette substance est liquide à 15 °C et 1,013 bar ; elle figure néanmoins dans l’encyclopédie des gaz.",
+      "sources": [
+        {
+          "id": "airliquide-isohexane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/isohexane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition."
+    },
+    {
+      "id": "isopentane",
+      "name": "Isopentane",
+      "subtitle": "Isopentane",
+      "formula": "C5H12",
+      "displayFormula": "C₅H₁₂",
+      "cas": "78-78-4",
+      "family": "Inflammable",
+      "aliases": [
+        "2-méthylbutane"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 72.149,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 27.83,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "liquide",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Effets graves sur la santé signalés ; consulter les voies d’exposition et effets spécifiques dans la FDS.",
+        "Danger pour l’environnement signalé ; éviter les rejets."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Agent d’expansion et composant de mélanges de pentanes pour l’industrie."
+      ],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS. Cette substance est liquide à 15 °C et 1,013 bar ; elle figure néanmoins dans l’encyclopédie des gaz.",
+      "sources": [
+        {
+          "id": "airliquide-isopentane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/isopentane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "shell-pentanes",
+          "title": "Shell · Pentanes",
+          "url": "https://www.shell.com/business-customers/chemicals/our-products/solvents-hydrocarbon/pentanes.html",
+          "scope": "Applications des n-pentane et isopentane et de leurs mélanges.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "krypton",
+      "name": "Krypton",
+      "subtitle": "Krypton",
+      "formula": "Kr",
+      "displayFormula": "Kr",
+      "cas": "7439-90-9",
+      "family": "Inerte · asphyxiant",
+      "aliases": [],
+      "elements": [
+        "Kr"
+      ],
+      "molarMass": 83.798,
+      "density": 3.5514,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -153.42,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Gaz non combustible ; une accumulation peut déplacer l’oxygène et entraîner une asphyxie."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Isolation des doubles vitrages.",
+        "Remplissage de lampes."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-krypton",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/krypton",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "monoxyde-azote",
+      "name": "Monoxyde d'azote",
+      "subtitle": "Monoxyde d'azote",
+      "formula": "NO",
+      "displayFormula": "NO",
+      "cas": "10102-43-9",
+      "family": "Comburant · Toxique · Corrosif",
+      "aliases": [
+        "oxyde nitrique"
+      ],
+      "elements": [
+        "N",
+        "O"
+      ],
+      "molarMass": 30.006,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -151.77,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Peut provoquer ou intensifier un incendie.",
+        "Toxicité aiguë signalée : une exposition peut être grave, voire mortelle.",
+        "Risque de brûlures chimiques et de lésions graves.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Tenir à l’écart des matières combustibles et des corps gras ; utiliser des équipements compatibles.",
+        "Prévoir confinement, détection et protections selon l’évaluation du risque ; intervention réservée au personnel formé.",
+        "Éviter tout contact ; vérifier les matériaux et les protections dans la FDS."
+      ],
+      "applications": [
+        "Mélanges d’étalonnage pour l’analyse des gaz."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-monoxyde-azote",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/monoxyde-azote",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "monoxyde-carbone",
+      "name": "Monoxyde de carbone",
+      "subtitle": "Oxyde de carbone",
+      "formula": "CO",
+      "displayFormula": "CO",
+      "cas": "630-08-0",
+      "family": "Toxique · inflammable",
+      "aliases": [
+        "monoxyde de carbone",
+        "oxyde de carbone",
+        "carbon monoxide"
+      ],
+      "elements": [
+        "C",
+        "O"
+      ],
+      "molarMass": 28.01,
+      "density": 1.1849,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -191.5,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Toxique à l’inhalation et très inflammable ; risque pour le fœtus et d’atteinte aux organes lors d’expositions répétées."
+      ],
+      "precautions": [
+        "Prévoir un circuit clos, un captage et une détection du CO. Ne pas se fier à l’odeur pour évaluer l’exposition."
+      ],
+      "applications": [
+        "Réactions de carbonylation en chimie.",
+        "Mélanges d’étalonnage pour analyseurs."
+      ],
+      "note": "CO (C puis O majuscules) est une molécule. Co (o minuscule) est le symbole du cobalt, un autre élément.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/carbon-monoxide",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-47",
+          "title": "INRS · FT 47 · Risques",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_47",
+          "scope": "Risques et mesures de prévention spécifiques.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-47-reco",
+          "title": "INRS · FT 47 · Prévention",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_47&section=recommandations",
+          "scope": "Risques et mesures de prévention spécifiques.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "methane",
+      "name": "Méthane",
+      "subtitle": "Hydrocarbure",
+      "formula": "CH4",
+      "displayFormula": "CH₄",
+      "cas": "74-82-8",
+      "family": "Inflammable",
+      "aliases": [
+        "méthane",
+        "methane"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 16.043,
+      "density": 0.6797,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -161.48,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Gaz inflammable pouvant former une atmosphère explosive avec l’air."
+      ],
+      "precautions": [
+        "Éliminer les sources d’ignition ; assurer ventilation et détection adaptées."
+      ],
+      "applications": [
+        "Production de gaz de synthèse.",
+        "Étalonnage d’analyseurs de gaz.",
+        "Source de carbone en électronique."
+      ],
+      "note": "Le gaz naturel est un mélange riche en méthane : ses propriétés ne sont pas celles du méthane pur.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/methane",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "methanol",
+      "name": "Méthanol",
+      "subtitle": "Méthanol",
+      "formula": "CH3OH",
+      "displayFormula": "CH₃OH",
+      "cas": "67-56-1",
+      "family": "Inflammable · Toxique",
+      "aliases": [
+        "alcool méthylique",
+        "CH4O"
+      ],
+      "elements": [
+        "C",
+        "H",
+        "O"
+      ],
+      "molarMass": 32.042,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 64.48,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "liquide",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Toxicité aiguë signalée : une exposition peut être grave, voire mortelle.",
+        "Effets graves sur la santé signalés ; consulter les voies d’exposition et effets spécifiques dans la FDS."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés.",
+        "Prévoir confinement, détection et protections selon l’évaluation du risque ; intervention réservée au personnel formé."
+      ],
+      "applications": [
+        "Fabrication de formaldéhyde, d’acide acétique et de résines.",
+        "Solvant de laboratoire et traitement des métaux."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Cette substance est liquide à 15 °C et 1,013 bar ; elle figure néanmoins dans l’encyclopédie des gaz.",
+      "sources": [
+        {
+          "id": "airliquide-methanol",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/methanol",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "n-butane",
+      "name": "n-Butane",
+      "subtitle": "n-Butane",
+      "formula": "C4H10",
+      "displayFormula": "C₄H₁₀",
+      "cas": "106-97-8",
+      "family": "Inflammable",
+      "aliases": [
+        "butane",
+        "R600"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 58.122,
+      "density": 2.5436,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -0.49,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Mélanges d’étalonnage d’analyseurs.",
+        "Propulsion d’aérosols."
+      ],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS.",
+      "sources": [
+        {
+          "id": "airliquide-n-butane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/butane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "n-heptane",
+      "name": "n-Heptane",
+      "subtitle": "n-Heptane",
+      "formula": "C7H16",
+      "displayFormula": "C₇H₁₆",
+      "cas": "142-82-5",
+      "family": "Inflammable",
+      "aliases": [
+        "heptane"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 100.202,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 98.38,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "liquide",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Effets graves sur la santé signalés ; consulter les voies d’exposition et effets spécifiques dans la FDS.",
+        "Danger pour l’environnement signalé ; éviter les rejets."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Solvant pour colles, encres et fabrication de polymères.",
+        "Extraction et intermédiaire de synthèse."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Cette substance est liquide à 15 °C et 1,013 bar ; elle figure néanmoins dans l’encyclopédie des gaz.",
+      "sources": [
+        {
+          "id": "airliquide-n-heptane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/heptane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-168",
+          "title": "INRS · Fiche toxicologique 168",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_168&section=caracteristiques",
+          "scope": "Applications et prévention.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "n-hexane",
+      "name": "n-Hexane",
+      "subtitle": "n-Hexane",
+      "formula": "C6H14",
+      "displayFormula": "C₆H₁₄",
+      "cas": "110-54-3",
+      "family": "Inflammable",
+      "aliases": [
+        "hexane"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 86.175,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 68.71,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "liquide",
+      "risks": [
+        "Liquide très inflammable ; aspiration dangereuse en cas d’ingestion.",
+        "Risque neurologique en exposition répétée ; atteinte possible à la fertilité, irritation et effets narcotiques.",
+        "Toxique pour le milieu aquatique."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "n-Hexane pur : réactif et étalon d’analyse."
+      ],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS. Cette substance est liquide à 15 °C et 1,013 bar ; elle figure néanmoins dans l’encyclopédie des gaz. Les risques sont recoupés avec l’INRS FT 113 ; les pictogrammes incohérents de la page Air Liquide ne sont pas repris.",
+      "sources": [
+        {
+          "id": "airliquide-n-hexane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/hexane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-113",
+          "title": "INRS · Fiche toxicologique 113",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_113&section=caracteristiques",
+          "scope": "Usages du n-hexane pur, distinction avec l’hexane commercial.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-113-dangers",
+          "title": "INRS · n-Hexane, dangers",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_113",
+          "scope": "Dangers retenus en priorité sur les pictogrammes incohérents de l’encyclopédie.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "n-pentane",
+      "name": "n-Pentane",
+      "subtitle": "n-Pentane",
+      "formula": "C5H12",
+      "displayFormula": "C₅H₁₂",
+      "cas": "109-66-0",
+      "family": "Inflammable",
+      "aliases": [
+        "pentane"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 72.149,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 36.06,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "liquide",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Effets graves sur la santé signalés ; consulter les voies d’exposition et effets spécifiques dans la FDS.",
+        "Des effets nocifs ou irritants sont signalés par la source.",
+        "Danger pour l’environnement signalé ; éviter les rejets."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Agent d’expansion de mousses, propulseur et milieu réactionnel."
+      ],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS. Cette substance est liquide à 15 °C et 1,013 bar ; elle figure néanmoins dans l’encyclopédie des gaz.",
+      "sources": [
+        {
+          "id": "airliquide-n-pentane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/pentane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "shell-pentanes",
+          "title": "Shell · Pentanes",
+          "url": "https://www.shell.com/business-customers/chemicals/our-products/solvents-hydrocarbon/pentanes.html",
+          "scope": "Applications des n-pentane et isopentane et de leurs mélanges.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "neon",
+      "name": "Néon",
+      "subtitle": "Gaz monoatomique",
+      "formula": "Ne",
+      "displayFormula": "Ne",
+      "cas": "7440-01-9",
+      "family": "Gaz noble",
+      "aliases": [
+        "néon",
+        "neon"
+      ],
+      "elements": [
+        "Ne"
+      ],
+      "molarMass": 20.179,
+      "density": 0.8528,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -246.05,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Gaz inerte pouvant appauvrir l’air en oxygène. Le conditionnement sous pression ajoute un risque mécanique."
+      ],
+      "precautions": [
+        "Prévoir une ventilation adaptée ; maintenir les bouteilles et protéger leur robinetterie."
+      ],
+      "applications": [
+        "Lasers à excimères et hélium-néon.",
+        "Éclairage et enseignes.",
+        "Recherche sur les particules ionisées."
+      ],
+      "note": "Ne est le symbole de l’élément et la notation du gaz monoatomique.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/neon",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "neopentane",
+      "name": "Néopentane",
+      "subtitle": "Néopentane",
+      "formula": "C5H12",
+      "displayFormula": "C₅H₁₂",
+      "cas": "463-82-1",
+      "family": "Inflammable",
+      "aliases": [
+        "2,2-diméthylpropane"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 72.149,
+      "density": 3.1839,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 9.5,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Danger pour l’environnement signalé ; éviter les rejets.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS.",
+      "sources": [
+        {
+          "id": "airliquide-neopentane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/neopentane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition."
+    },
+    {
+      "id": "oxygene",
+      "name": "Oxygène",
+      "subtitle": "Dioxygène",
+      "formula": "O2",
+      "displayFormula": "O₂",
+      "cas": "7782-44-7",
+      "family": "Comburant",
+      "aliases": [
+        "oxygène",
+        "dioxygène",
+        "oxygen",
+        "LOX"
+      ],
+      "elements": [
+        "O"
+      ],
+      "molarMass": 31.999,
+      "density": 1.354,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -182.96,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Intensifie la combustion ; les matières grasses augmentent le risque d’incendie."
+      ],
+      "precautions": [
+        "Tenir les équipements à l’écart des huiles, graisses et combustibles. Utiliser du matériel prévu pour l’oxygène."
+      ],
+      "applications": [
+        "Élaboration de l’acier.",
+        "Oxycoupage et travail des métaux.",
+        "Oxygénation des eaux usées."
+      ],
+      "note": "LOX désigne l’oxygène liquide. Les valeurs de masse volumique ci-dessous concernent le gaz.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/oxygene",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "abreviations",
+          "title": "Air Liquide · Modes de fourniture",
+          "url": "https://my.airliquide.com/products-services/our-supply-modes",
+          "scope": "Abréviations LOX, LIN et LAR des formes liquides.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "ozone",
+      "name": "Ozone",
+      "subtitle": "Ozone",
+      "formula": "O3",
+      "displayFormula": "O₃",
+      "cas": "10028-15-6",
+      "family": "Comburant · Toxique · Corrosif",
+      "aliases": [
+        "trioxygène"
+      ],
+      "elements": [
+        "O"
+      ],
+      "molarMass": 47.998,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -111.3,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Peut provoquer ou intensifier un incendie.",
+        "Toxicité aiguë signalée : une exposition peut être grave, voire mortelle.",
+        "Risque de brûlures chimiques et de lésions graves.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Tenir à l’écart des matières combustibles et des corps gras ; utiliser des équipements compatibles.",
+        "Prévoir confinement, détection et protections selon l’évaluation du risque ; intervention réservée au personnel formé.",
+        "Éviter tout contact ; vérifier les matériaux et les protections dans la FDS."
+      ],
+      "applications": [
+        "Traitement de l’eau, procédés électroniques et traitement des pâtes à papier."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-ozone",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/ozone",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "para-hydrogene",
+      "name": "Para-hydrogène",
+      "subtitle": "Para-hydrogène",
+      "formula": "H2",
+      "displayFormula": "H₂",
+      "cas": "1333-74-0",
+      "family": "Inflammable",
+      "aliases": [
+        "p-H2",
+        "parahydrogen",
+        "hydrogène para"
+      ],
+      "elements": [
+        "H"
+      ],
+      "molarMass": 2.016,
+      "density": 0.0852,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -252.88,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Recherche : préparation d’états de spin en résonance magnétique nucléaire."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-para-hydrogene",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/para-hydrogen",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "parahydrogen-nmr",
+          "title": "Recherche · Parahydrogène et RMN",
+          "url": "https://arxiv.org/abs/quant-ph/0312014",
+          "scope": "Exemple de recherche en résonance magnétique nucléaire.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "formulaNote": "H₂, forme para : une configuration de spin de la molécule d’hydrogène. « p » n’est pas un symbole d’élément."
+    },
+    {
+      "id": "propane",
+      "name": "Propane",
+      "subtitle": "Hydrocarbure",
+      "formula": "C3H8",
+      "displayFormula": "C₃H₈",
+      "cas": "74-98-6",
+      "family": "Inflammable",
+      "aliases": [
+        "propane"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 44.096,
+      "density": 1.8988,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -42.11,
+        "pressureBar": 1.013
+      },
+      "risks": [
+        "Gaz inflammable ; un mélange avec l’air peut exploser."
+      ],
+      "precautions": [
+        "Éloigner chaleur et sources d’ignition ; prévenir les fuites et les accumulations de gaz."
+      ],
+      "applications": [
+        "Oxycoupage.",
+        "Étalonnage pour la mesure des hydrocarbures totaux."
+      ],
+      "note": "La fiche concerne le propane pur. Les mélanges commerciaux de GPL peuvent avoir une composition différente.",
+      "sources": [
+        {
+          "id": "encyclopedie",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/propane",
+          "scope": "Identité, propriétés physiques, applications et risques majeurs. Les tableaux gaz sont lus à 15 °C et 1,013 bar.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "prevention",
+          "title": "Air Liquide · Prévention des risques liés aux gaz",
+          "url": "https://fr.airliquide.com/statics/2025-05/support-pedagogique-v1.pdf",
+          "scope": "Familles de risques et cryogénie, pages 6–7.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "bouteilles",
+          "title": "INRS · Les bouteilles de gaz (ED 6369)",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention liée au stockage, à la pression et à la manipulation.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "phaseAtReference": "gaz"
+    },
+    {
+      "id": "propyne",
+      "name": "Propyne",
+      "subtitle": "Propyne",
+      "formula": "C3H4",
+      "displayFormula": "C₃H₄",
+      "cas": "74-99-7",
+      "family": "Inflammable",
+      "aliases": [
+        "méthylacétylène"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 40.06,
+      "density": 1.7272,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -25.15,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Recherche : combustible étudié pour la propulsion spatiale."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-propyne",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/propyne",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "propene",
+      "name": "Propène",
+      "subtitle": "Propène",
+      "formula": "C3H6",
+      "displayFormula": "C₃H₆",
+      "cas": "115-07-1",
+      "family": "Inflammable",
+      "aliases": [
+        "propylène",
+        "R1270"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 42.08,
+      "density": 1.8083,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -47.62,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Production de polypropylène et d’intermédiaires chimiques.",
+        "Étalonnage et procédés de dépôt."
+      ],
+      "note": "Les isomères peuvent partager une formule brute : vérifier aussi le nom et le numéro CAS.",
+      "sources": [
+        {
+          "id": "airliquide-propene",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/propene",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "protoxyde-azote",
+      "name": "Protoxyde d'azote",
+      "subtitle": "Protoxyde d'azote",
+      "formula": "N2O",
+      "displayFormula": "N₂O",
+      "cas": "10024-97-2",
+      "family": "Comburant",
+      "aliases": [
+        "oxyde nitreux",
+        "hémioxyde d’azote"
+      ],
+      "elements": [
+        "N",
+        "O"
+      ],
+      "molarMass": 44.013,
+      "density": 1.8724,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -88.47,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Peut provoquer ou intensifier un incendie.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Tenir à l’écart des matières combustibles et des corps gras ; utiliser des équipements compatibles."
+      ],
+      "applications": [
+        "Dépôt d’oxydes dans les procédés électroniques.",
+        "Propulsion d’aérosols et spectrométrie d’absorption atomique."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-protoxyde-azote",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/protoxyde-azote",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "r11",
+      "name": "R-11",
+      "subtitle": "Trichloromonofluorométhane",
+      "formula": "CCl3F",
+      "displayFormula": "CCl₃F",
+      "cas": "75-69-4",
+      "family": "Liquide · vigilance",
+      "aliases": [
+        "R-11",
+        "Trichloromonofluorométhane"
+      ],
+      "elements": [
+        "C",
+        "Cl",
+        "F"
+      ],
+      "molarMass": 137.368,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 23.71,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "liquide",
+      "risks": [
+        "Les dangers détaillés ne sont pas renseignés dans la page de référence ; cette absence ne signifie pas innocuité.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Usages historiques : réfrigération, expansion de mousses et solvants de nettoyage."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Cette substance est liquide à 15 °C et 1,013 bar ; elle figure néanmoins dans l’encyclopédie des gaz. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-r11",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/trichloromonofluoromethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "r113",
+      "name": "R-113",
+      "subtitle": "1,1,2-Trichloro-1,2,2-trifluoroéthane",
+      "formula": "C2F3Cl3",
+      "displayFormula": "C₂F₃Cl₃",
+      "cas": "76-13-1",
+      "family": "Liquide · vigilance",
+      "aliases": [
+        "R-113",
+        "1,1,2-Trichloro-1,2,2-trifluoroéthane"
+      ],
+      "elements": [
+        "C",
+        "F",
+        "Cl"
+      ],
+      "molarMass": 187.376,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 47.59,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "liquide",
+      "risks": [
+        "Danger pour l’environnement signalé ; éviter les rejets.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Usages historiques : réfrigération, aérosols et nettoyage en électronique."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Cette substance est liquide à 15 °C et 1,013 bar ; elle figure néanmoins dans l’encyclopédie des gaz. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-r113",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/112-trichloro-122-trifluoroethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "r114",
+      "name": "R-114",
+      "subtitle": "1,2-Dichloro-1,1,2,2-tétrafluoroéthane",
+      "formula": "C2Cl2F4",
+      "displayFormula": "C₂Cl₂F₄",
+      "cas": "76-14-2",
+      "family": "Gaz · vigilance",
+      "aliases": [
+        "R-114",
+        "1,2-Dichloro-1,1,2,2-tétrafluoroéthane"
+      ],
+      "elements": [
+        "C",
+        "Cl",
+        "F"
+      ],
+      "molarMass": 170.921,
+      "density": 7.4836,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 3.59,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Danger pour l’environnement signalé ; éviter les rejets.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Usage historique : réfrigération."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-r114",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/12-dichloro-1122-tetrafluoroethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "unep-cfc",
+          "title": "PNUE · Usages historiques des CFC",
+          "url": "https://digitallibrary.un.org/nanna/record/504620/files/control_ozone_depleting_substances.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+          "scope": "Chapitre 5.1 : CFC-12, 13, 114 et 115 employés en réfrigération ; document historique.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "r115",
+      "name": "R-115",
+      "subtitle": "Chloropentafluoroéthane",
+      "formula": "C2ClF5",
+      "displayFormula": "C₂ClF₅",
+      "cas": "76-15-3",
+      "family": "Gaz · vigilance",
+      "aliases": [
+        "R-115",
+        "Chloropentafluoroéthane"
+      ],
+      "elements": [
+        "C",
+        "Cl",
+        "F"
+      ],
+      "molarMass": 154.466,
+      "density": 6.6711,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -39.22,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Les dangers détaillés ne sont pas renseignés dans la page de référence ; cette absence ne signifie pas innocuité.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Usage historique : réfrigération."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-r115",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/chloropentafluoroethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "unep-cfc",
+          "title": "PNUE · Usages historiques des CFC",
+          "url": "https://digitallibrary.un.org/nanna/record/504620/files/control_ozone_depleting_substances.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+          "scope": "Chapitre 5.1 : CFC-12, 13, 114 et 115 employés en réfrigération ; document historique.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "r12",
+      "name": "R-12",
+      "subtitle": "Dichlorodifluorométhane",
+      "formula": "CCl2F2",
+      "displayFormula": "CCl₂F₂",
+      "cas": "75-71-8",
+      "family": "Gaz · vigilance",
+      "aliases": [
+        "R-12",
+        "Dichlorodifluorométhane"
+      ],
+      "elements": [
+        "C",
+        "Cl",
+        "F"
+      ],
+      "molarMass": 120.914,
+      "density": 5.2252,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -29.75,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Danger pour l’environnement signalé ; éviter les rejets.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Usage historique : réfrigération."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-r12",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/dichlorodifluoromethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "unep-cfc",
+          "title": "PNUE · Usages historiques des CFC",
+          "url": "https://digitallibrary.un.org/nanna/record/504620/files/control_ozone_depleting_substances.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+          "scope": "Chapitre 5.1 : CFC-12, 13, 114 et 115 employés en réfrigération ; document historique.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "r13",
+      "name": "R-13",
+      "subtitle": "Chlorotrifluorométhane",
+      "formula": "CClF3",
+      "displayFormula": "CClF₃",
+      "cas": "75-72-9",
+      "family": "Gaz · vigilance",
+      "aliases": [
+        "R-13",
+        "Chlorotrifluorométhane"
+      ],
+      "elements": [
+        "C",
+        "Cl",
+        "F"
+      ],
+      "molarMass": 104.459,
+      "density": 4.4617,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -81.48,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Danger pour l’environnement signalé ; éviter les rejets.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Usage historique : réfrigération."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-r13",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/chlorotrifluoromethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "unep-cfc",
+          "title": "PNUE · Usages historiques des CFC",
+          "url": "https://digitallibrary.un.org/nanna/record/504620/files/control_ozone_depleting_substances.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+          "scope": "Chapitre 5.1 : CFC-12, 13, 114 et 115 employés en réfrigération ; document historique.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "r133a",
+      "name": "R-133A",
+      "subtitle": "2-Chloro-1,1,1-trifluroéthane",
+      "formula": "C2H2ClF3",
+      "displayFormula": "C₂H₂ClF₃",
+      "cas": "75-88-7",
+      "family": "Gaz · vigilance",
+      "aliases": [
+        "R-133A",
+        "2-Chloro-1,1,1-trifluroéthane"
+      ],
+      "elements": [
+        "C",
+        "H",
+        "Cl",
+        "F"
+      ],
+      "molarMass": 118.485,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 6.1,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Les dangers détaillés ne sont pas renseignés dans la page de référence ; cette absence ne signifie pas innocuité.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Intermédiaire de synthèse chimique."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Le rapprochement avec l’halothane figurant dans la page source n’est pas repris : ce sont des substances distinctes.",
+      "sources": [
+        {
+          "id": "airliquide-r133a",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/2-chloro-111-trifluroethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "r13b1",
+      "name": "R-13B1",
+      "subtitle": "Bromotrifluorométhane",
+      "formula": "CBrF3",
+      "displayFormula": "CBrF₃",
+      "cas": "75-63-8",
+      "family": "Gaz · vigilance",
+      "aliases": [
+        "halon 1301",
+        "bromotrifluorométhane",
+        "R-13B1",
+        "Bromotrifluorométhane"
+      ],
+      "elements": [
+        "C",
+        "Br",
+        "F"
+      ],
+      "molarMass": 148.91,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -57.89,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Les dangers détaillés ne sont pas renseignés dans la page de référence ; cette absence ne signifie pas innocuité.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Usage historique : extinction incendie (halon 1301)."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-r13b1",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/bromotrifluoromethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-halons",
+          "title": "US EPA · Halons",
+          "url": "https://www.epa.gov/ozone-layer-protection/halons-program",
+          "scope": "Usages des halons pour la protection incendie.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "r142b",
+      "name": "R-142B",
+      "subtitle": "1-Chloro-1,1-difluoroéthane",
+      "formula": "C2H3ClF2",
+      "displayFormula": "C₂H₃ClF₂",
+      "cas": "75-68-3",
+      "family": "Inflammable",
+      "aliases": [
+        "R-142B",
+        "1-Chloro-1,1-difluoroéthane"
+      ],
+      "elements": [
+        "C",
+        "H",
+        "Cl",
+        "F"
+      ],
+      "molarMass": 100.495,
+      "density": null,
+      "densityReference": null,
+      "transition": null,
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Usage décrit : agent d’expansion des mousses de polymères."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-r142b",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/1-chloro-11-difluoroethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "transitionNote": "Transition non renseignée dans le tableau de la source."
+    },
+    {
+      "id": "r21",
+      "name": "R-21",
+      "subtitle": "Dichlorofluorométhane",
+      "formula": "CHCl2F",
+      "displayFormula": "CHCl₂F",
+      "cas": "75-43-4",
+      "family": "Gaz · vigilance",
+      "aliases": [
+        "R-21",
+        "Dichlorofluorométhane"
+      ],
+      "elements": [
+        "C",
+        "H",
+        "Cl",
+        "F"
+      ],
+      "molarMass": 102.923,
+      "density": 4.5025,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 8.86,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Danger pour l’environnement signalé ; éviter les rejets.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-r21",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/dichlorofluoromethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition."
+    },
+    {
+      "id": "r22",
+      "name": "R-22",
+      "subtitle": "Chlorodifluorométhane",
+      "formula": "CHClF2",
+      "displayFormula": "CHClF₂",
+      "cas": "75-45-6",
+      "family": "Gaz · vigilance",
+      "aliases": [
+        "R-22",
+        "Chlorodifluorométhane"
+      ],
+      "elements": [
+        "C",
+        "H",
+        "Cl",
+        "F"
+      ],
+      "molarMass": 86.468,
+      "density": 3.7182,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -40.81,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Les dangers détaillés ne sont pas renseignés dans la page de référence ; cette absence ne signifie pas innocuité.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante.",
+        "Enjeu environnemental : appauvrissement de la couche d’ozone."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Usage historique : fluide frigorigène."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Substance appauvrissant la couche d’ozone : les usages cités ne constituent pas une autorisation actuelle d’emploi.",
+      "sources": [
+        {
+          "id": "airliquide-r22",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/chlorodifluoromethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "epa-ods",
+          "title": "US EPA · Substances appauvrissant la couche d’ozone",
+          "url": "https://www.epa.gov/ozone-layer-protection/ozone-depleting-substances",
+          "scope": "Identification des CFC, HCFC et halons ; enjeux environnementaux. Ce lien ne constitue pas un avis réglementaire français.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "silane",
+      "name": "Silane",
+      "subtitle": "Silane",
+      "formula": "SiH4",
+      "displayFormula": "SiH₄",
+      "cas": "7803-62-5",
+      "family": "Pyrophorique · inflammable",
+      "aliases": [
+        "monosilane"
+      ],
+      "elements": [
+        "Si",
+        "H"
+      ],
+      "molarMass": 32.117,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -112.15,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Peut s’enflammer spontanément au contact de l’air.",
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Des effets nocifs ou irritants sont signalés par la source.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Manipulation uniquement dans une installation spécialement conçue pour les gaz pyrophoriques.",
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Dépôt de silicium pour les semi-conducteurs, cellules photovoltaïques et revêtements du verre."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-silane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/silane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "silane-fds",
+          "title": "Air Liquide · FDS silane",
+          "url": "https://nl.airliquide.com/statics/2023-02/sds_eiga107-albnl_fr_silane_eu_albi_5.0_validated_20221010_134245.pdf",
+          "scope": "Pyrophoricité et précautions spécifiques. Vérifier la FDS actuelle du produit livré.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "sulfure-hydrogene",
+      "name": "Sulfure d’hydrogène",
+      "subtitle": "Sulfure d’hydrogène",
+      "formula": "H2S",
+      "displayFormula": "H₂S",
+      "cas": "7783-06-4",
+      "family": "Inflammable · Toxique",
+      "aliases": [
+        "hydrogène sulfuré",
+        "sulfure de dihydrogène"
+      ],
+      "elements": [
+        "H",
+        "S"
+      ],
+      "molarMass": 34.081,
+      "density": 1.4534,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -60.3,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Toxicité aiguë signalée : une exposition peut être grave, voire mortelle.",
+        "Danger pour l’environnement signalé ; éviter les rejets.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés.",
+        "Prévoir confinement, détection et protections selon l’évaluation du risque ; intervention réservée au personnel formé."
+      ],
+      "applications": [
+        "Source de soufre en fabrication de semi-conducteurs.",
+        "Synthèse chimique et mélanges d’étalonnage."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-sulfure-hydrogene",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/sulfure-hydrogene",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "toluene",
+      "name": "Toluène",
+      "subtitle": "Toluène",
+      "formula": "C7H8",
+      "displayFormula": "C₇H₈",
+      "cas": "108-88-3",
+      "family": "Inflammable",
+      "aliases": [
+        "méthylbenzène"
+      ],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 92.138,
+      "density": null,
+      "densityReference": null,
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": 110.6,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "liquide",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Effets graves sur la santé signalés ; consulter les voies d’exposition et effets spécifiques dans la FDS.",
+        "Des effets nocifs ou irritants sont signalés par la source."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Solvant pour peintures, encres, colles et résines.",
+        "Intermédiaire de synthèse et extraction."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement. Cette substance est liquide à 15 °C et 1,013 bar ; elle figure néanmoins dans l’encyclopédie des gaz.",
+      "sources": [
+        {
+          "id": "airliquide-toluene",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/toluene",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-74",
+          "title": "INRS · Fiche toxicologique 74",
+          "url": "https://www.inrs.fr/publications/bdd/fichetox/fiche.html?refINRS=FICHETOX_74&section=caracteristiques",
+          "scope": "Usages et propriétés.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+    },
+    {
+      "id": "trifluoroiodomethane",
+      "name": "Trifluoroiodométhane",
+      "subtitle": "Trifluoroiodométhane",
+      "formula": "CF3I",
+      "displayFormula": "CF₃I",
+      "cas": "2314-97-8",
+      "family": "Toxique",
+      "aliases": [],
+      "elements": [
+        "C",
+        "F",
+        "I"
+      ],
+      "molarMass": 195.91,
+      "density": 8.5003,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -21.85,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Toxicité aiguë signalée : une exposition peut être grave, voire mortelle.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Prévoir confinement, détection et protections selon l’évaluation du risque ; intervention réservée au personnel formé."
+      ],
+      "applications": [
+        "Agent étudié comme substitut dans la protection incendie."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-trifluoroiodomethane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/trifluoroiodomethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "trifluorure-azote",
+      "name": "Trifluorure d'azote",
+      "subtitle": "Trifluorure d'azote",
+      "formula": "NF3",
+      "displayFormula": "NF₃",
+      "cas": "7783-54-2",
+      "family": "Comburant",
+      "aliases": [
+        "trifluorure d’azote"
+      ],
+      "elements": [
+        "N",
+        "F"
+      ],
+      "molarMass": 71.019,
+      "density": 3.0158,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -129.01,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Peut provoquer ou intensifier un incendie.",
+        "Des effets nocifs ou irritants sont signalés par la source.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Tenir à l’écart des matières combustibles et des corps gras ; utiliser des équipements compatibles."
+      ],
+      "applications": [
+        "Nettoyage des chambres de dépôt et gravure en microélectronique."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-trifluorure-azote",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/trifluorure-azote",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "xenon",
+      "name": "Xénon",
+      "subtitle": "Xénon",
+      "formula": "Xe",
+      "displayFormula": "Xe",
+      "cas": "7440-63-3",
+      "family": "Inerte · asphyxiant",
+      "aliases": [
+        "xénon"
+      ],
+      "elements": [
+        "Xe"
+      ],
+      "molarMass": 131.29,
+      "density": 5.584,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -108.1,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Gaz non combustible ; une accumulation peut déplacer l’oxygène et entraîner une asphyxie."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré."
+      ],
+      "applications": [
+        "Éclairage spécialisé et gravure plasma en électronique.",
+        "Propulsion ionique des satellites."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-xenon",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/fr/xenon",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    {
+      "id": "ethane",
+      "name": "Éthane",
+      "subtitle": "Éthane",
+      "formula": "C2H6",
+      "displayFormula": "C₂H₆",
+      "cas": "74-84-0",
+      "family": "Inflammable",
+      "aliases": [],
+      "elements": [
+        "C",
+        "H"
+      ],
+      "molarMass": 30.069,
+      "density": 1.2822,
+      "densityReference": {
+        "temperatureC": 15,
+        "pressureBar": 1.013,
+        "phase": "gaz"
+      },
+      "transition": {
+        "kind": "ebullition",
+        "temperatureC": -88.58,
+        "pressureBar": 1.013
+      },
+      "phaseAtReference": "gaz",
+      "risks": [
+        "Risque d’incendie et de mélange inflammable avec l’air.",
+        "Une accumulation peut déplacer l’oxygène de l’air et créer une atmosphère asphyxiante."
+      ],
+      "precautions": [
+        "Éviter l’exposition ; prévoir une ventilation adaptée et consulter la FDS du produit livré.",
+        "Éloigner les sources d’allumage et les oxydants ; employer des équipements adaptés."
+      ],
+      "applications": [
+        "Matière première pour des intermédiaires de synthèse organique."
+      ],
+      "note": "La formule identifie la substance, pas sa pureté, son grade commercial ni son conditionnement.",
+      "sources": [
+        {
+          "id": "airliquide-ethane",
+          "title": "Air Liquide · Encyclopédie des gaz",
+          "url": "https://encyclopedia.airliquide.com/ethane",
+          "scope": "Identité, propriétés et indications de dangers ; applications lorsqu’elles sont renseignées.",
+          "checked": "2026-10-21"
+        },
+        {
+          "id": "inrs-ed6369",
+          "title": "INRS · ED 6369",
+          "url": "https://inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6369/ed6369.pdf",
+          "scope": "Prévention des risques des gaz et bouteilles sous pression.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    }
+  ],
+  "coverage": {
+    "source": "https://encyclopedia.airliquide.com/fr",
+    "count": 64,
+    "checked": "2026-10-21",
+    "description": "Toutes les entrées de l’index public consulté, dont air, substances liquides, isomères et formes isotopiques. Ce périmètre ne représente pas tous les produits ou mélanges commercialisés."
+  }
+}
