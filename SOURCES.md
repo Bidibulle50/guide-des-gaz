@@ -1,5 +1,53 @@
 # Sources et couverture — édition du 21 octobre 2026
 
+## Édition 1.4 — vérification ARCAL France du 21 octobre 2026
+
+Les deux pages de la gamme publique consultées dans le navigateur donnent 21 produits, dont 4 Référents et 17 Techniques. Les 21 pages produit et leurs 21 PDF techniques liés ont été ouverts / lus ; les 76 lignes de conditionnement sont conservées par référence. Les résultats d’indexation anciens ne remplacent pas les documents actuellement liés. ARCAL C et He50 ne sont pas ajoutés : ils ne figurent pas dans ces deux pages observées.
+
+Le catalogue total passe à 115 fiches (64 encyclopédiques inchangées, 51 commerciales). Les 30 produits hors ARCAL sont inchangés. L’ensemble du catalogue commercial Air Liquide reste partiel. Les tableaux et formulations de cette édition sont des transcriptions factuelles et synthèses originales ; les PDF, photographies et logos ne sont pas redistribués.
+
+| Produit | Code | PDF : révision | Conditionnements |
+|---|---|---|---:|
+| [ARCAL™ Prime](https://fr.airliquide.com/gaz/arcaltm-prime/I2013) | I2013 | [V1.4 · 23/12/2024](https://fr.airliquide.com/product-assets/7/c/3/8/7c38cc61abf1b9b1f9033a3d222e76e837cabb45_ARCAL%E2%84%A2_Prime_fr_FR_v1.4.pdf) | 13 |
+| [ARCAL™ Chrome](https://fr.airliquide.com/gaz/arcaltm-chrome/I2531) | I2531 | [V1.4 · 04/08/2026](https://fr.airliquide.com/product-assets/0/e/7/a/0e7a2aec8313af331a71d30842fa900093dcdf12_ARCAL%E2%84%A2_Chrome_fr_FR_v1.4.pdf) | 6 |
+| [ARCAL™ Speed](https://fr.airliquide.com/gaz/arcaltm-speed/I2561) | I2561 | [V1.5 · 23/12/2024](https://fr.airliquide.com/product-assets/e/5/0/6/e506d23cb56bb91a137f337ef469ae700fccfabb_ARCAL%E2%84%A2_Speed_fr_FR_v1.5.pdf) | 11 |
+| [ARCAL™ Force](https://fr.airliquide.com/gaz/arcaltm-force/I2506) | I2506 | [V1.4 · 23/12/2024](https://fr.airliquide.com/product-assets/d/8/1/f/d81fefd6bdd14a4e355ed0619d2e37ede5be7c20_ARCAL%E2%84%A2_Force_fr_FR_v1.4.pdf) | 10 |
+| [ARCAL™ M14](https://fr.airliquide.com/gaz/arcaltm-m14/I2541) | I2541 | [V1.4 · 23/12/2024](https://fr.airliquide.com/product-assets/0/f/1/f/0f1f73f510792e49139e25792c6f03d3482a396b_ARCAL%E2%84%A2_M14_fr_FR_v1.4.pdf) | 4 |
+| [ARCAL™ M22](https://fr.airliquide.com/gaz/arcaltm-m22/I2576) | I2576 | [V1.5 · 23/12/2024](https://fr.airliquide.com/product-assets/e/8/b/c/e8bcfface88e7ad10562b2e8b81b8746d3084d60_ARCAL%E2%84%A2_M22_fr_FR_v1.5.pdf) | 3 |
+| [ARCAL™ M23](https://fr.airliquide.com/gaz/arcaltm-m23/I2577) | I2577 | [V1.6 · 23/12/2024](https://fr.airliquide.com/product-assets/1/d/9/5/1d95bb9c529c70b5f703370ef4ef4117523a9cfd_ARCAL%E2%84%A2_M23_fr_FR_v1.6.pdf) | 2 |
+| [ARCAL™ M24-7](https://fr.airliquide.com/gaz/arcaltm-m24-7/I2539) | I2539 | [V2.0 · 22/11/2024](https://fr.airliquide.com/product-assets/b/8/e/a/b8ea843098e8c6d958b0940eadfab3eaf1b33db3_ARCAL%E2%84%A2_M24-7_fr_FR_v2.0.pdf) | 2 |
+| [ARCAL™ 31](https://fr.airliquide.com/gaz/arcaltm-31/I2580) | I2580 | [V2.0 · 05/10/2026](https://fr.airliquide.com/product-assets/a/6/a/a/a6aa59e31d1693a4259d39aff270e85ebb82abfc_ARCAL%E2%84%A2_31_fr_FR_v2.0.pdf) | 2 |
+| [ARCAL™ 39](https://fr.airliquide.com/gaz/arcaltm-39/I2610) | I2610 | [V1.6 · 22/11/2024](https://fr.airliquide.com/product-assets/c/7/d/b/c7db99367b8e866a5292bda801017862d0c4065c_ARCAL%E2%84%A2_39_fr_FR_v1.6.pdf) | 1 |
+| [ARCAL™ He20](https://fr.airliquide.com/gaz/arcaltm-he20/I2594) | I2594 | [V1.6 · 22/11/2024](https://fr.airliquide.com/product-assets/c/7/c/7/c7c70764fff7def4d260f8be9e0fd803de4686c5_ARCAL%E2%84%A2_He20_fr_FR_v1.6.pdf) | 2 |
+| [ARCAL™ He20µC](https://fr.airliquide.com/gaz/arcaltm-he20mc/I2598) | I2598 | [V1.8 · 22/11/2024](https://fr.airliquide.com/product-assets/c/b/7/5/cb75c62d8b64f0888cf8fe905f62cd07c12d00f0_ARCAL%E2%84%A2_He20%C2%B5C_fr_FR_v1.8.pdf) | 1 |
+| [ARCAL™ He70](https://fr.airliquide.com/gaz/arcaltm-he70/I2605) | I2605 | [V1.7 · 22/11/2024](https://fr.airliquide.com/product-assets/e/2/b/3/e2b35dc5006017d6a9aa53ee045f5dcca76a49e7_ARCAL%E2%84%A2_He70_fr_FR_v1.7.pdf) | 3 |
+| [ARCAL™ M11](https://fr.airliquide.com/gaz/arcaltm-m11/I2642) | I2642 | [V1.7 · 22/11/2024](https://fr.airliquide.com/product-assets/e/1/4/2/e14263c8f661b5d46ed10a2569e4096e109828a9_ARCAL%E2%84%A2_M11_fr_FR_v1.7.pdf) | 3 |
+| [ARCAL™ M12 He18](https://fr.airliquide.com/gaz/arcaltm-m12-he18/I2631) | I2631 | [V1.2 · 22/11/2024](https://fr.airliquide.com/product-assets/e/c/8/a/ec8a32870595f4dc37bdc48e56999e79eba069a3_ARCAL%E2%84%A2_M12_He18_fr_FR_v1.2.pdf) | 2 |
+| [ARCAL™ M12 He5 N](https://fr.airliquide.com/gaz/arcaltm-m12-he5-n/I2641) | I2641 | [V1.4 · 22/11/2024](https://fr.airliquide.com/product-assets/b/6/f/7/b6f78b1362b4771cffcd317c16cf290893a7b878_ARCAL%E2%84%A2_M12_He5_N_fr_FR_v1.4.pdf) | 1 |
+| [ARCAL™ M20 He5](https://fr.airliquide.com/gaz/arcaltm-m20-he5/I2651) | I2651 | [V1.7 · 22/11/2024](https://fr.airliquide.com/product-assets/3/2/1/3/3213305666cf82b6973fadb283837cf2c09a91d7_ARCAL%E2%84%A2_M20_He5_fr_FR_v1.7.pdf) | 2 |
+| [ARCAL™ N2-2](https://fr.airliquide.com/gaz/arcaltm-n2-2/I2612) | I2612 | [V1.7 · 23/12/2024](https://fr.airliquide.com/product-assets/9/f/7/4/9f74ec712e9b6d671da3d9f5123104b0f170b77c_ARCAL%E2%84%A2_N2-2_fr_FR_v1.7.pdf) | 1 |
+| [ARCAL™ R1-2](https://fr.airliquide.com/gaz/arcaltm-r1-2/I2512) | I2512 | [V1.2 · 22/11/2024](https://fr.airliquide.com/product-assets/0/6/4/8/064826300f38fd96e3499e90d3ace13c8f822df0_ARCAL%E2%84%A2_R1-2_fr_FR_v1.2.pdf) | 3 |
+| [ARCAL™ R1-5](https://fr.airliquide.com/gaz/arcaltm-r1-5/I2552) | I2552 | [V1.1 · 22/11/2024](https://fr.airliquide.com/product-assets/9/4/7/e/947e30f96f8f1c3361afed24633868a6ed70e4bb_ARCAL%E2%84%A2_R1-5_fr_FR_v1.1.pdf) | 2 |
+| [ARCAL™ R1-5 He20](https://fr.airliquide.com/gaz/arcaltm-r1-5-he20/I2521) | I2521 | [V1.6 · 22/11/2024](https://fr.airliquide.com/product-assets/b/0/9/d/b09d064f19aeab1c1c5be4db251ac68836949ec3_ARCAL%E2%84%A2_R1-5_He20_fr_FR_v1.6.pdf) | 2 |
+
+Points de fidélité aux sources :
+
+- Chrome : fiche V1.4 du 4 août 2026 ; 6 conditionnements tous à 200 bar. Pas de déclinaison 300 bar attribuée par analogie avec Prime ou Speed.
+- ARCAL 31 : fiche V2.0 du 5 octobre 2026 ; deux bouteilles 20/50 L, sans chapeau nommé. L’ancien cadre n’est pas maintenu.
+- Prime : le liquide est une ligne distincte I2143RG, sans pression ni taille ; l’ONU 1006 présenté pour le produit gazeux ne qualifie pas le transport du liquide.
+- R1-2 : H₂ nominal 2,4 %, non 2 %. R1-5 et R1-5 He20 : UN 1954, code ADR 1F, ogive rouge RAL 3000, raccord AFNOR E à gauche, inflammabilité annoncée. Aucun calcul de danger à partir des constituants.
+- M23 : désignation actuelle M23-ArCO-5/4 ; une ancienne brochure indiquait M22. La donnée actuelle de la page et du PDF est retenue.
+- M24-7 : tolérance CO₂ ± 0,6 % sur le PDF / page produit, contre ± 0,65 % dans la liste de gamme ; écart signalé sur la fiche.
+- He70 : en-tête de page ArHe-30, rubrique technique et PDF HeAr-30 ; le second est présenté avec mention de la divergence.
+- M11 : coquille M1 dans le texte commercial, M11 dans les spécifications et PDF. Destination inox austénitique / fil plein conservée.
+- M12 He18 : une phrase ambiguë « soudage au carbone des aciers inoxydables » n’est pas transformée en conseil.
+- Le type de chapeau est celui de la ligne du PDF. Une connexion décrite globalement sur la page n’est pas attribuée automatiquement à chaque SKU. Aucune dimension physique de chapeau n’est inventée.
+- Les conditions de référence des contenus m³ ne figurent pas dans les tableaux lus : valeur annoncée conservée, sans extrapolation. Les pourcentages et tolérances suivent la notation fabricant. M23 : impuretés 40 et 200 sans signe ≤, conservées sans inventer une limite.
+- Lien FDS recopié de la page produit quand le document n’est pas identifié individuellement. Des liens du fabricant utilisent encore HTTP ; leur validité et révision ne sont pas présentées comme vérifiées. Les quatre fiches dont la FDS a déjà été identifiée gardent leurs notes propres.
+
+Traçabilité technique : `validation/arcal-sources-2026-10-21.json` conserve les URL, révisions et empreintes des PDF lus, sans les redistribuer. Les éléments ci-dessous décrivent les éditions antérieures et leur périmètre à cette date.
+
+
 Index de référence : [Encyclopédie Air Liquide](https://encyclopedia.airliquide.com/fr), 64 entrées consultées. Les formules sont celles des substances ; les codes R sont des désignations de réfrigérants. Toutes les données de provenance détaillées sont dans `data/gases.json`.
 
 Les valeurs transcrites ne sont pas des caractéristiques garanties d’un produit livré. Les textes de synthèse sont originaux. Aucun logo, photographie, tableau complet ou FDS de tiers n’est redistribué.

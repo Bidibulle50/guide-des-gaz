@@ -1,0 +1,308 @@
+{
+  "checkedAt": "2026-10-21",
+  "scope": "21 product pages observed in the normal browser and their 21 linked technical PDFs; no original PDF redistributed",
+  "products": [
+    {
+      "code": "I2013",
+      "product": "ARCAL™ Prime",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-prime/I2013",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/7/c/3/8/7c38cc61abf1b9b1f9033a3d222e76e837cabb45_ARCAL%E2%84%A2_Prime_fr_FR_v1.4.pdf",
+        "date": "23/12/2024",
+        "version": "1.4",
+        "tablePage": 2,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 13,
+      "pdfSha256": "ec7f9dda618abed86352ddbb9797fb53ca1a4dc4ad575aa73b9450f33f6a65a1"
+    },
+    {
+      "code": "I2531",
+      "product": "ARCAL™ Chrome",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-chrome/I2531",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/0/e/7/a/0e7a2aec8313af331a71d30842fa900093dcdf12_ARCAL%E2%84%A2_Chrome_fr_FR_v1.4.pdf",
+        "date": "04/08/2026",
+        "version": "1.4",
+        "tablePage": 2,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 6,
+      "pdfSha256": "b6ebe9f592be3dafb94ab456793173744b4bafaa8445ff27ed4db8b943a17b21"
+    },
+    {
+      "code": "I2561",
+      "product": "ARCAL™ Speed",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-speed/I2561",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/e/5/0/6/e506d23cb56bb91a137f337ef469ae700fccfabb_ARCAL%E2%84%A2_Speed_fr_FR_v1.5.pdf",
+        "date": "23/12/2024",
+        "version": "1.5",
+        "tablePage": 2,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 11,
+      "pdfSha256": "52fa37ccea354a10ec5ad6ce772c0214be5185e17df4f933a52d1f9af858e8f6"
+    },
+    {
+      "code": "I2506",
+      "product": "ARCAL™ Force",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-force/I2506",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/d/8/1/f/d81fefd6bdd14a4e355ed0619d2e37ede5be7c20_ARCAL%E2%84%A2_Force_fr_FR_v1.4.pdf",
+        "date": "23/12/2024",
+        "version": "1.4",
+        "tablePage": 2,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 10,
+      "pdfSha256": "7b878b8a74fdc3faa8f9147913f93d10ec67c61ed8ae35ca182ee545ae121f0d"
+    },
+    {
+      "code": "I2541",
+      "product": "ARCAL™ M14",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-m14/I2541",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/0/f/1/f/0f1f73f510792e49139e25792c6f03d3482a396b_ARCAL%E2%84%A2_M14_fr_FR_v1.4.pdf",
+        "date": "23/12/2024",
+        "version": "1.4",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 4,
+      "pdfSha256": "1b608d73d61e067552118ce402b1c04cc7a6f1f3e4b02914409875a07f7aabbb"
+    },
+    {
+      "code": "I2576",
+      "product": "ARCAL™ M22",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-m22/I2576",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/e/8/b/c/e8bcfface88e7ad10562b2e8b81b8746d3084d60_ARCAL%E2%84%A2_M22_fr_FR_v1.5.pdf",
+        "date": "23/12/2024",
+        "version": "1.5",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 3,
+      "pdfSha256": "41732cce4228092496928bd279763485358d55519d5bfc978f68ed158c9ace36"
+    },
+    {
+      "code": "I2577",
+      "product": "ARCAL™ M23",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-m23/I2577",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/1/d/9/5/1d95bb9c529c70b5f703370ef4ef4117523a9cfd_ARCAL%E2%84%A2_M23_fr_FR_v1.6.pdf",
+        "date": "23/12/2024",
+        "version": "1.6",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 2,
+      "pdfSha256": "24b86742a1510834bcf72cf45bf807710e9a82afcefe02fdb90f0b66efc498a2"
+    },
+    {
+      "code": "I2539",
+      "product": "ARCAL™ M24-7",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-m24-7/I2539",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/b/8/e/a/b8ea843098e8c6d958b0940eadfab3eaf1b33db3_ARCAL%E2%84%A2_M24-7_fr_FR_v2.0.pdf",
+        "date": "22/11/2024",
+        "version": "2.0",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 2,
+      "pdfSha256": "68901e19a35f0531f2e8e43f7a434dc2858641aa23892680bfc8b5883aee69e1"
+    },
+    {
+      "code": "I2580",
+      "product": "ARCAL™ 31",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-31/I2580",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/a/6/a/a/a6aa59e31d1693a4259d39aff270e85ebb82abfc_ARCAL%E2%84%A2_31_fr_FR_v2.0.pdf",
+        "date": "05/10/2026",
+        "version": "2.0",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 2,
+      "pdfSha256": "a249480a491379552de56d2f746f3b9c418d5ad7ebfe4862fe87f89cdc1860b8"
+    },
+    {
+      "code": "I2610",
+      "product": "ARCAL™ 39",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-39/I2610",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/c/7/d/b/c7db99367b8e866a5292bda801017862d0c4065c_ARCAL%E2%84%A2_39_fr_FR_v1.6.pdf",
+        "date": "22/11/2024",
+        "version": "1.6",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 1,
+      "pdfSha256": "f2287f8497cc71e8d771e82a97b3d05d26fcd6bca3db2d15b250751c28066a96"
+    },
+    {
+      "code": "I2594",
+      "product": "ARCAL™ He20",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-he20/I2594",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/c/7/c/7/c7c70764fff7def4d260f8be9e0fd803de4686c5_ARCAL%E2%84%A2_He20_fr_FR_v1.6.pdf",
+        "date": "22/11/2024",
+        "version": "1.6",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 2,
+      "pdfSha256": "83b3e56b9611f10cf9be65a3a1d1f277fcd1049975437eff233258332b8b7de6"
+    },
+    {
+      "code": "I2598",
+      "product": "ARCAL™ He20µC",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-he20mc/I2598",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/c/b/7/5/cb75c62d8b64f0888cf8fe905f62cd07c12d00f0_ARCAL%E2%84%A2_He20%C2%B5C_fr_FR_v1.8.pdf",
+        "date": "22/11/2024",
+        "version": "1.8",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 1,
+      "pdfSha256": "ba206ae0a696d1eae9994dbe29698e9fa55852faf529f8d8ed448995bea7888a"
+    },
+    {
+      "code": "I2605",
+      "product": "ARCAL™ He70",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-he70/I2605",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/e/2/b/3/e2b35dc5006017d6a9aa53ee045f5dcca76a49e7_ARCAL%E2%84%A2_He70_fr_FR_v1.7.pdf",
+        "date": "22/11/2024",
+        "version": "1.7",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 3,
+      "pdfSha256": "30e7f5013762b8968f7e7b1ae74ec150041e90d26520243310cee4eb5685fcc4"
+    },
+    {
+      "code": "I2642",
+      "product": "ARCAL™ M11",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-m11/I2642",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/e/1/4/2/e14263c8f661b5d46ed10a2569e4096e109828a9_ARCAL%E2%84%A2_M11_fr_FR_v1.7.pdf",
+        "date": "22/11/2024",
+        "version": "1.7",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 3,
+      "pdfSha256": "abe0da3be38fc057449fe97498347805b8723ce3a8c175d322034933694b1aa4"
+    },
+    {
+      "code": "I2631",
+      "product": "ARCAL™ M12 He18",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-m12-he18/I2631",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/e/c/8/a/ec8a32870595f4dc37bdc48e56999e79eba069a3_ARCAL%E2%84%A2_M12_He18_fr_FR_v1.2.pdf",
+        "date": "22/11/2024",
+        "version": "1.2",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 2,
+      "pdfSha256": "0f566fff6c29bbe9fe8b5cb09d129e9c0ea7ba44406698d15219e9a259185e74"
+    },
+    {
+      "code": "I2641",
+      "product": "ARCAL™ M12 He5 N",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-m12-he5-n/I2641",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/b/6/f/7/b6f78b1362b4771cffcd317c16cf290893a7b878_ARCAL%E2%84%A2_M12_He5_N_fr_FR_v1.4.pdf",
+        "date": "22/11/2024",
+        "version": "1.4",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 1,
+      "pdfSha256": "bde39f8e70454fec90e5fa640fd0ea03c28d18241cb81db8c5c7e8228da8df82"
+    },
+    {
+      "code": "I2651",
+      "product": "ARCAL™ M20 He5",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-m20-he5/I2651",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/3/2/1/3/3213305666cf82b6973fadb283837cf2c09a91d7_ARCAL%E2%84%A2_M20_He5_fr_FR_v1.7.pdf",
+        "date": "22/11/2024",
+        "version": "1.7",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 2,
+      "pdfSha256": "f79ac553ce037f5854650997d8cf3a47d798041dafa368595de6c1ef31b85bb3"
+    },
+    {
+      "code": "I2612",
+      "product": "ARCAL™ N2-2",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-n2-2/I2612",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/9/f/7/4/9f74ec712e9b6d671da3d9f5123104b0f170b77c_ARCAL%E2%84%A2_N2-2_fr_FR_v1.7.pdf",
+        "date": "23/12/2024",
+        "version": "1.7",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 1,
+      "pdfSha256": "98c016d75448788907660a180178f1bf8e5fe21b7f33e9f5fae12778c60fdc5a"
+    },
+    {
+      "code": "I2512",
+      "product": "ARCAL™ R1-2",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-r1-2/I2512",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/0/6/4/8/064826300f38fd96e3499e90d3ace13c8f822df0_ARCAL%E2%84%A2_R1-2_fr_FR_v1.2.pdf",
+        "date": "22/11/2024",
+        "version": "1.2",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 3,
+      "pdfSha256": "76b401a3f31c89bd77f527696343bced8a708591d13b87013fca74764432d833"
+    },
+    {
+      "code": "I2552",
+      "product": "ARCAL™ R1-5",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-r1-5/I2552",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/9/4/7/e/947e30f96f8f1c3361afed24633868a6ed70e4bb_ARCAL%E2%84%A2_R1-5_fr_FR_v1.1.pdf",
+        "date": "22/11/2024",
+        "version": "1.1",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 2,
+      "pdfSha256": "90ec1c1de5dbd309dc2270b731ad4504392ee69ae7a6e6cdee046e8935cbd9d7"
+    },
+    {
+      "code": "I2521",
+      "product": "ARCAL™ R1-5 He20",
+      "url": "https://fr.airliquide.com/gaz/arcaltm-r1-5-he20/I2521",
+      "sheet": {
+        "url": "https://fr.airliquide.com/product-assets/b/0/9/d/b09d064f19aeab1c1c5be4db251ac68836949ec3_ARCAL%E2%84%A2_R1-5_He20_fr_FR_v1.6.pdf",
+        "date": "22/11/2024",
+        "version": "1.6",
+        "tablePage": 1,
+        "checked": "2026-10-21"
+      },
+      "variantCount": 2,
+      "pdfSha256": "eb271dbd82b6d2a23b70b4ae94e26ad7abb2924521cdd1b217b829743663bc74"
+    }
+  ],
+  "variantCount": 76,
+  "unchangedScientificEntries": 64,
+  "unchangedOtherCommercialProducts": 30,
+  "limits": [
+    "FDS revision verified individually only where specified in each record",
+    "No stock, contract or welding-procedure qualification",
+    "Sources are external and unavailable offline"
+  ]
+}

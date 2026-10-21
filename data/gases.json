@@ -1,5 +1,5 @@
 {
-  "version": "1.3.2",
+  "version": "1.4.0",
   "verifiedAt": "2026-10-21",
   "gases": [
     {
@@ -4905,16 +4905,39 @@
       "formula": "",
       "displayFormula": "Ar",
       "cas": "",
-      "family": "Soudage TIG et plasma ; MIG aluminium/cuivre.",
+      "family": "TIG · MIG · Tous métaux en TIG/plasma",
       "aliases": [
         "ARCAL",
         "Prime",
         "Ar ≥ 99,998 %",
-        "Soudage TIG et plasma ; MIG aluminium/cuivre."
+        "Soudage TIG et plasma ; MIG aluminium/cuivre.",
+        "I2013",
+        "EN ISO 14175-I1-Ar",
+        "TIG",
+        "MIG",
+        "Plasma",
+        "Protection envers",
+        "Tous métaux en TIG/plasma",
+        "Aluminium et cuivre en MIG",
+        "I2013M20A2A001",
+        "I2013M20E2A001",
+        "I2013M20S2A001",
+        "I2013L33E3A001",
+        "I2013L50A2A001",
+        "I2013L50Z2A001",
+        "I2013L50E2A001",
+        "I2013L50S2A001",
+        "I2013L50E3A001",
+        "I2013V09R2A001",
+        "I2013V12U3A001",
+        "I2013V18R2A001",
+        "I2143RG"
       ],
       "composition": "Ar ≥ 99,998 %",
       "applications": [
-        "Soudage TIG et plasma ; MIG aluminium/cuivre."
+        "TIG et plasma · tous métaux : Protection au soudage des différents métaux, avec un argon de pureté publiée ≥ 99,998 %.",
+        "MIG · aluminium et cuivre : Assemblage de l’aluminium, du cuivre et de leurs alliages. La fiche distingue cet emploi du MAG des aciers.",
+        "Protection envers : Protection de la face opposée au soudage, pour tous matériaux selon le fabricant."
       ],
       "components": [
         "argon"
@@ -4923,9 +4946,15 @@
       "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-prime/I2013",
+          "title": "Air Liquide · ARCAL™ Prime",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/7/c/3/8/7c38cc61abf1b9b1f9033a3d222e76e837cabb45_ARCAL%E2%84%A2_Prime_fr_FR_v1.4.pdf",
+          "title": "Fiche technique fabricant · V1.4",
+          "scope": "Révision du 23/12/2024 · composition, ogive et conditionnements (tableau p. 2).",
           "checked": "2026-10-21"
         }
       ],
@@ -4939,18 +4968,209 @@
       "transport": [
         {
           "number": "1006",
-          "state": "Argon comprimé"
-        },
-        {
-          "number": "1951",
-          "state": "Argon liquide réfrigéré"
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-prime/I2013"
         }
       ],
       "shoulder": {
-        "name": "Vert foncé",
         "ral": "6001",
-        "css": "#366735",
+        "name": "Vert foncé",
         "sourceUrl": "https://fr.airliquide.com/product-assets/7/c/3/8/7c38cc61abf1b9b1f9033a3d222e76e837cabb45_ARCAL%E2%84%A2_Prime_fr_FR_v1.4.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2013",
+        "category": "Référents",
+        "processes": [
+          "TIG",
+          "MIG",
+          "Plasma",
+          "Protection envers"
+        ],
+        "materials": [
+          "Tous métaux en TIG/plasma",
+          "Aluminium et cuivre en MIG"
+        ],
+        "uses": [
+          {
+            "title": "TIG et plasma · tous métaux",
+            "detail": "Protection au soudage des différents métaux, avec un argon de pureté publiée ≥ 99,998 %.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-prime/I2013"
+          },
+          {
+            "title": "MIG · aluminium et cuivre",
+            "detail": "Assemblage de l’aluminium, du cuivre et de leurs alliages. La fiche distingue cet emploi du MAG des aciers.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-prime/I2013"
+          },
+          {
+            "title": "Protection envers",
+            "detail": "Protection de la face opposée au soudage, pour tous matériaux selon le fabricant.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-prime/I2013"
+          }
+        ],
+        "benefits": [
+          "Air Liquide met en avant la faible teneur en impuretés et la réduction des opérations de finition."
+        ],
+        "standard": "EN ISO 14175-I1-Ar",
+        "specifications": [
+          {
+            "component": "Ar",
+            "value": "≥ 99,998 %",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 5 ppm v/v"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 5 ppm v/v"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 10 ppm v/v"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "ALTOP",
+            "pressure": "200 bar",
+            "content": "4,2 m³",
+            "reference": "I2013M20A2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "4,2 m³",
+            "reference": "I2013M20E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "4,2 m³",
+            "reference": "I2013M20S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "33 L",
+            "head": "EXELTOP",
+            "pressure": "300 bar",
+            "content": "10 m³",
+            "reference": "I2013L33E3A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "ALTOP",
+            "pressure": "200 bar",
+            "content": "10,5 m³",
+            "reference": "I2013L50A2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "ALTOP",
+            "pressure": "200 bar",
+            "content": "10,5 m³",
+            "reference": "I2013L50Z2A001",
+            "note": "Grand débit"
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "10,5 m³",
+            "reference": "I2013L50E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,5 m³",
+            "reference": "I2013L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "EXELTOP",
+            "pressure": "300 bar",
+            "content": "15 m³",
+            "reference": "I2013L50E3A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "95 m³",
+            "reference": "I2013V09R2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V12 × 50 L",
+            "head": null,
+            "pressure": "300 bar",
+            "content": "182 m³",
+            "reference": "I2013V12U3A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V18 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "189 m³",
+            "reference": "I2013V18R2A001",
+            "note": ""
+          },
+          {
+            "mode": "Liquide",
+            "size": null,
+            "head": null,
+            "pressure": null,
+            "content": null,
+            "reference": "I2143RG",
+            "note": ""
+          }
+        ],
+        "connections": "ALTOP : Quick Argon SMARTOP : AFNOR C (21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-prime/I2013"
+        },
+        "notes": [
+          "La page signale un déploiement des références EXELTOP/COMPACT : disponibilité à confirmer.",
+          "I2013L50Z2A001 est identifié « L50 Grand débit » sur la page produit.",
+          "La fourniture liquide I2143RG est publiée sans taille ni pression dans ce tableau."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/7/c/3/8/7c38cc61abf1b9b1f9033a3d222e76e837cabb45_ARCAL%E2%84%A2_Prime_fr_FR_v1.4.pdf",
+          "date": "23/12/2024",
+          "version": "1.4",
+          "tablePage": 2,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -4958,32 +5178,51 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ Chrome",
-      "subtitle": "Ar + 2 % CO₂",
+      "subtitle": "CO₂ 2 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Soudage MAG des aciers inoxydables.",
+      "family": "MAG · Brasage MAG · Aciers inoxydables",
       "aliases": [
         "ARCAL",
         "Chrome",
         "Ar + 2 % CO₂",
-        "Soudage MAG des aciers inoxydables."
+        "Soudage MAG des aciers inoxydables.",
+        "I2531",
+        "EN ISO 14175-M12-ArC-2",
+        "MAG",
+        "Brasage MAG",
+        "Aciers inoxydables",
+        "I2531M20A2A001",
+        "I2531M20E2A001",
+        "I2531L50A2A001",
+        "I2531L50E2A001",
+        "I2531L50S2A001",
+        "I2531V09R2A001"
       ],
-      "composition": "Ar + 2 % CO₂",
+      "composition": "CO₂ 2 % + Ar Complément",
       "applications": [
-        "Soudage MAG des aciers inoxydables."
+        "MAG · assemblages inox : Soudage des inox en toutes positions, en manuel, semi-automatique, automatique ou robotisé.",
+        "Aspect et corrosion : Pour les travaux inox où l’aspect du cordon et la conservation de la résistance à la corrosion comptent ; bénéfices mis en avant par Air Liquide.",
+        "Brasage MAG · fils CuSi ou CuAl : La page référence le brasage avec ces deux familles de fils électrodes. Vérifier le fil et le support avec le mode opératoire retenu."
       ],
       "components": [
-        "argon",
-        "dioxyde-carbone"
+        "dioxyde-carbone",
+        "argon"
       ],
       "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-chrome/I2531",
       "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-chrome/I2531",
+          "title": "Air Liquide · ARCAL™ Chrome",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/0/e/7/a/0e7a2aec8313af331a71d30842fa900093dcdf12_ARCAL%E2%84%A2_Chrome_fr_FR_v1.4.pdf",
+          "title": "Fiche technique fabricant · V1.4",
+          "scope": "Révision du 04/08/2026 · composition, ogive et conditionnements (tableau p. 2).",
           "checked": "2026-10-21"
         }
       ],
@@ -4993,6 +5232,148 @@
         "url": "https://www.quickfds.com/fds/7126522-11172-24850-011291",
         "label": "Ouvrir la FDS du mélange",
         "note": "FDS française 30015L02 partagée par ARCAL Force, Chrome et Speed. Révision affichée : 20 décembre 2022. Lien et titre vérifiés le 21 octobre 2026 ; vérifier la version applicable au produit livré."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-chrome/I2531"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/0/e/7/a/0e7a2aec8313af331a71d30842fa900093dcdf12_ARCAL%E2%84%A2_Chrome_fr_FR_v1.4.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2531",
+        "category": "Référents",
+        "processes": [
+          "MAG",
+          "Brasage MAG"
+        ],
+        "materials": [
+          "Aciers inoxydables"
+        ],
+        "uses": [
+          {
+            "title": "MAG · assemblages inox",
+            "detail": "Soudage des inox en toutes positions, en manuel, semi-automatique, automatique ou robotisé.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-chrome/I2531"
+          },
+          {
+            "title": "Aspect et corrosion",
+            "detail": "Pour les travaux inox où l’aspect du cordon et la conservation de la résistance à la corrosion comptent ; bénéfices mis en avant par Air Liquide.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-chrome/I2531"
+          },
+          {
+            "title": "Brasage MAG · fils CuSi ou CuAl",
+            "detail": "La page référence le brasage avec ces deux familles de fils électrodes. Vérifier le fil et le support avec le mode opératoire retenu.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-chrome/I2531"
+          }
+        ],
+        "benefits": [
+          "Le fabricant annonce peu de projections et moins de finition grâce au contrôle de la composition et des impuretés."
+        ],
+        "standard": "EN ISO 14175-M12-ArC-2",
+        "specifications": [
+          {
+            "component": "CO₂",
+            "value": "2 %",
+            "tolerance": "±0,5 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 50"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 200"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "ALTOP",
+            "pressure": "200 bar",
+            "content": "4,3 m³",
+            "reference": "I2531M20A2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "4,3 m³",
+            "reference": "I2531M20E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "ALTOP",
+            "pressure": "200 bar",
+            "content": "10,7 m³",
+            "reference": "I2531L50A2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "10,7 m³",
+            "reference": "I2531L50E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,7 m³",
+            "reference": "I2531L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "96 m³",
+            "reference": "I2531V09R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "ALTOP/EXELTOP : Quick Argon SMARTOP : AFNOR C (21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-chrome/I2531"
+        },
+        "notes": [],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/0/e/7/a/0e7a2aec8313af331a71d30842fa900093dcdf12_ARCAL%E2%84%A2_Chrome_fr_FR_v1.4.pdf",
+          "date": "04/08/2026",
+          "version": "1.4",
+          "tablePage": 2,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5000,32 +5381,54 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ Speed",
-      "subtitle": "Ar + 8 % CO₂",
+      "subtitle": "CO₂ 8 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Soudage MAG rapide des aciers carbone.",
+      "family": "MAG · Aciers carbone",
       "aliases": [
         "ARCAL",
         "Speed",
         "Ar + 8 % CO₂",
-        "Soudage MAG rapide des aciers carbone."
+        "Soudage MAG rapide des aciers carbone.",
+        "I2561",
+        "EN ISO 14175-M20-ArC-8",
+        "MAG",
+        "Aciers carbone",
+        "I2561M20A2A001",
+        "I2561M20E2A001",
+        "I2561M20S2A001",
+        "I2561L33E3A001",
+        "I2561L50A2A001",
+        "I2561L50E2A001",
+        "I2561L50S2A001",
+        "I2561L50E3A001",
+        "I2561V09R2A001",
+        "I2561V12U3A001",
+        "I2561V18R2A001"
       ],
-      "composition": "Ar + 8 % CO₂",
+      "composition": "CO₂ 8 % + Ar Complément",
       "applications": [
-        "Soudage MAG rapide des aciers carbone."
+        "MAG · fil plein : Assemblages en acier carbone lorsque la vitesse de soudage est un objectif de production.",
+        "Lignes automatiques et robots : La page décrit aussi le soudage manuel semi-automatique ; le mélange est présenté pour les vitesses et taux de dépôt élevés."
       ],
       "components": [
-        "argon",
-        "dioxyde-carbone"
+        "dioxyde-carbone",
+        "argon"
       ],
       "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-speed/I2561",
       "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-speed/I2561",
+          "title": "Air Liquide · ARCAL™ Speed",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/e/5/0/6/e506d23cb56bb91a137f337ef469ae700fccfabb_ARCAL%E2%84%A2_Speed_fr_FR_v1.5.pdf",
+          "title": "Fiche technique fabricant · V1.5",
+          "scope": "Révision du 23/12/2024 · composition, ogive et conditionnements (tableau p. 2).",
           "checked": "2026-10-21"
         }
       ],
@@ -5035,6 +5438,187 @@
         "url": "https://www.quickfds.com/fds/7126522-11172-24850-011291",
         "label": "Ouvrir la FDS du mélange",
         "note": "FDS française 30015L02 partagée par ARCAL Force, Chrome et Speed. Révision affichée : 20 décembre 2022. Lien et titre vérifiés le 21 octobre 2026 ; vérifier la version applicable au produit livré."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-speed/I2561"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/e/5/0/6/e506d23cb56bb91a137f337ef469ae700fccfabb_ARCAL%E2%84%A2_Speed_fr_FR_v1.5.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2561",
+        "category": "Référents",
+        "processes": [
+          "MAG"
+        ],
+        "materials": [
+          "Aciers carbone"
+        ],
+        "uses": [
+          {
+            "title": "MAG · fil plein",
+            "detail": "Assemblages en acier carbone lorsque la vitesse de soudage est un objectif de production.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-speed/I2561"
+          },
+          {
+            "title": "Lignes automatiques et robots",
+            "detail": "La page décrit aussi le soudage manuel semi-automatique ; le mélange est présenté pour les vitesses et taux de dépôt élevés.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-speed/I2561"
+          }
+        ],
+        "benefits": [
+          "Air Liquide annonce moins de fumées, projections et silicates que pour des mélanges davantage chargés en CO₂. Aucun gain chiffré universel n’est publié."
+        ],
+        "standard": "EN ISO 14175-M20-ArC-8",
+        "specifications": [
+          {
+            "component": "CO₂",
+            "value": "8 %",
+            "tolerance": "±0,8 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 50"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 200"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "ALTOP",
+            "pressure": "200 bar",
+            "content": "4,4 m³",
+            "reference": "I2561M20A2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "4,4 m³",
+            "reference": "I2561M20E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "4,4 m³",
+            "reference": "I2561M20S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "33 L",
+            "head": "EXELTOP",
+            "pressure": "300 bar",
+            "content": "10,4 m³",
+            "reference": "I2561L33E3A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "ALTOP",
+            "pressure": "200 bar",
+            "content": "11 m³",
+            "reference": "I2561L50A2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "11 m³",
+            "reference": "I2561L50E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "11 m³",
+            "reference": "I2561L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "EXELTOP",
+            "pressure": "300 bar",
+            "content": "15,8 m³",
+            "reference": "I2561L50E3A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "99 m³",
+            "reference": "I2561V09R2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V12 × 50 L",
+            "head": null,
+            "pressure": "300 bar",
+            "content": "189 m³",
+            "reference": "I2561V12U3A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V18 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "198 m³",
+            "reference": "I2561V18R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "ALTOP/EXELTOP : Quick Argon SMARTOP : AFNOR C (21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-speed/I2561"
+        },
+        "notes": [],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/e/5/0/6/e506d23cb56bb91a137f337ef469ae700fccfabb_ARCAL%E2%84%A2_Speed_fr_FR_v1.5.pdf",
+          "date": "23/12/2024",
+          "version": "1.5",
+          "tablePage": 2,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5042,32 +5626,56 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ Force",
-      "subtitle": "18 % CO₂ / Ar",
+      "subtitle": "CO₂ 18 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Soudage MAG des aciers carbone.",
+      "family": "MAG · Court-circuit · Aciers carbone",
       "aliases": [
         "ARCAL",
         "Force",
         "18 % CO₂ / Ar",
-        "Soudage MAG des aciers carbone."
+        "Soudage MAG des aciers carbone.",
+        "I2506",
+        "EN ISO 14175-M21-ArC-18",
+        "MAG",
+        "Court-circuit",
+        "Aciers carbone",
+        "Inox avec fil fourré adapté",
+        "I2506M20A2A001",
+        "I2506M20E2A001",
+        "I2506M20S2A001",
+        "I2506L33E3A001",
+        "I2506L50A2A001",
+        "I2506L50E2A001",
+        "I2506L50S2A001",
+        "I2506V09R2A001",
+        "I2506V12U3A001",
+        "I2506V18R2A001"
       ],
-      "composition": "18 % CO₂ / Ar",
+      "composition": "CO₂ 18 % + Ar Complément",
       "applications": [
-        "Soudage MAG des aciers carbone."
+        "Pièces épaisses ou sollicitées : MAG des aciers carbone, notamment les assemblages soumis à des efforts mécaniques ; emploi en toutes positions publié.",
+        "Tôles fines · court-circuit : Le fabricant cite également ce régime pour les faibles épaisseurs. Il ne publie pas ici de réglage électrique.",
+        "Préparation et fils : Page produit : tôles oxydées, fil plein et fil fourré métallique. L’emploi inox est expressément associé au fil fourré inox. Manuel, automatique et robotisé sont cités."
       ],
       "components": [
-        "argon",
-        "dioxyde-carbone"
+        "dioxyde-carbone",
+        "argon"
       ],
       "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-force/I2506",
       "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-force/I2506",
+          "title": "Air Liquide · ARCAL™ Force",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/d/8/1/f/d81fefd6bdd14a4e355ed0619d2e37ede5be7c20_ARCAL%E2%84%A2_Force_fr_FR_v1.4.pdf",
+          "title": "Fiche technique fabricant · V1.4",
+          "scope": "Révision du 23/12/2024 · composition, ogive et conditionnements (tableau p. 2).",
           "checked": "2026-10-21"
         }
       ],
@@ -5077,6 +5685,185 @@
         "url": "https://www.quickfds.com/fds/7126522-11172-24850-011291",
         "label": "Ouvrir la FDS du mélange",
         "note": "FDS française 30015L02 partagée par ARCAL Force, Chrome et Speed. Révision affichée : 20 décembre 2022. Lien et titre vérifiés le 21 octobre 2026 ; vérifier la version applicable au produit livré."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-force/I2506"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/d/8/1/f/d81fefd6bdd14a4e355ed0619d2e37ede5be7c20_ARCAL%E2%84%A2_Force_fr_FR_v1.4.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2506",
+        "category": "Référents",
+        "processes": [
+          "MAG",
+          "Court-circuit"
+        ],
+        "materials": [
+          "Aciers carbone",
+          "Inox avec fil fourré adapté"
+        ],
+        "uses": [
+          {
+            "title": "Pièces épaisses ou sollicitées",
+            "detail": "MAG des aciers carbone, notamment les assemblages soumis à des efforts mécaniques ; emploi en toutes positions publié.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-force/I2506"
+          },
+          {
+            "title": "Tôles fines · court-circuit",
+            "detail": "Le fabricant cite également ce régime pour les faibles épaisseurs. Il ne publie pas ici de réglage électrique.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-force/I2506"
+          },
+          {
+            "title": "Préparation et fils",
+            "detail": "Page produit : tôles oxydées, fil plein et fil fourré métallique. L’emploi inox est expressément associé au fil fourré inox. Manuel, automatique et robotisé sont cités.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-force/I2506"
+          }
+        ],
+        "benefits": [
+          "Air Liquide met en avant la pénétration, la compacité et la tolérance aux défauts de préparation."
+        ],
+        "standard": "EN ISO 14175-M21-ArC-18",
+        "specifications": [
+          {
+            "component": "CO₂",
+            "value": "18 %",
+            "tolerance": "± 1,8 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 50"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 200"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "ALTOP",
+            "pressure": "200 bar",
+            "content": "4,6 m³",
+            "reference": "I2506M20A2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "4,6 m³",
+            "reference": "I2506M20E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "4,6 m³",
+            "reference": "I2506M20S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "33 L",
+            "head": "EXELTOP",
+            "pressure": "300 bar",
+            "content": "11 m³",
+            "reference": "I2506L33E3A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "ALTOP",
+            "pressure": "200 bar",
+            "content": "11,6 m³",
+            "reference": "I2506L50A2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "11,6 m³",
+            "reference": "I2506L50E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "11,6 m³",
+            "reference": "I2506L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "104 m³",
+            "reference": "I2506V09R2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V12 × 50 L",
+            "head": null,
+            "pressure": "300 bar",
+            "content": "200 m³",
+            "reference": "I2506V12U3A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V18 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "209 m³",
+            "reference": "I2506V18R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "ALTOP/EXELTOP : Quick Argon SMARTOP : AFNOR C(21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-force/I2506"
+        },
+        "notes": [],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/d/8/1/f/d81fefd6bdd14a4e355ed0619d2e37ede5be7c20_ARCAL%E2%84%A2_Force_fr_FR_v1.4.pdf",
+          "date": "23/12/2024",
+          "version": "1.4",
+          "tablePage": 2,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5084,42 +5871,190 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ M14",
-      "subtitle": "3 % CO₂ + 1 % O₂ / Ar",
+      "subtitle": "O₂ 1 % + CO₂ 3 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Soudage MAG de tôles fines.",
+      "family": "MAG · Pulsé · Aciers carbone",
       "aliases": [
         "ARCAL",
         "M14",
         "3 % CO₂ + 1 % O₂ / Ar",
-        "Soudage MAG de tôles fines."
+        "Soudage MAG de tôles fines.",
+        "I2541",
+        "EN ISO 14175-M14-ArCO-3/1",
+        "MAG",
+        "Pulsé",
+        "Spray arc",
+        "Aciers carbone",
+        "Aciers revêtus",
+        "Aciers inoxydables",
+        "I2541L33E3A001",
+        "I2541L50E2A001",
+        "I2541L50S2A001",
+        "I2541V09R2A001"
       ],
-      "composition": "3 % CO₂ + 1 % O₂ / Ar",
+      "composition": "O₂ 1 % + CO₂ 3 % + Ar Complément",
       "applications": [
-        "Soudage MAG de tôles fines."
+        "Tôles fines · jusqu’à 5 mm : La description fabricant vise le MAG des tôles fines, en particulier lorsque la maîtrise de l’oxydation est recherchée.",
+        "Aciers galvanisés ou électrozingués : Les aciers revêtus sont explicitement cités, ainsi que les aciers carbone et les inox.",
+        "Pulsé et spray arc : Emploi manuel ou automatique ; le fabricant décrit une plage de fonctionnement en spray arc et une bonne aptitude au pulsé."
       ],
       "components": [
-        "argon",
+        "oxygene",
         "dioxyde-carbone",
-        "oxygene"
+        "argon"
       ],
-      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-      "sourceLabel": "Page officielle de la gamme",
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m14/I2541",
+      "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-m14/I2541",
+          "title": "Air Liquide · ARCAL™ M14",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/0/f/1/f/0f1f73f510792e49139e25792c6f03d3482a396b_ARCAL%E2%84%A2_M14_fr_FR_v1.4.pdf",
+          "title": "Fiche technique fabricant · V1.4",
+          "scope": "Révision du 23/12/2024 · composition, ogive et conditionnements (tableau p. 1).",
           "checked": "2026-10-21"
         }
       ],
       "verifiedAt": "2026-10-21",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/5106754-68529-02671-017836",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m14/I2541"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/0/f/1/f/0f1f73f510792e49139e25792c6f03d3482a396b_ARCAL%E2%84%A2_M14_fr_FR_v1.4.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2541",
+        "category": "Techniques",
+        "processes": [
+          "MAG",
+          "Pulsé",
+          "Spray arc"
+        ],
+        "materials": [
+          "Aciers carbone",
+          "Aciers revêtus",
+          "Aciers inoxydables"
+        ],
+        "uses": [
+          {
+            "title": "Tôles fines · jusqu’à 5 mm",
+            "detail": "La description fabricant vise le MAG des tôles fines, en particulier lorsque la maîtrise de l’oxydation est recherchée.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m14/I2541"
+          },
+          {
+            "title": "Aciers galvanisés ou électrozingués",
+            "detail": "Les aciers revêtus sont explicitement cités, ainsi que les aciers carbone et les inox.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m14/I2541"
+          },
+          {
+            "title": "Pulsé et spray arc",
+            "detail": "Emploi manuel ou automatique ; le fabricant décrit une plage de fonctionnement en spray arc et une bonne aptitude au pulsé.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m14/I2541"
+          }
+        ],
+        "benefits": [
+          "Mouillage et stabilité du transfert sont mis en avant pour limiter les projections et les reprises de finition."
+        ],
+        "standard": "EN ISO 14175-M14-ArCO-3/1",
+        "specifications": [
+          {
+            "component": "O₂",
+            "value": "1 %",
+            "tolerance": "±0,3 %"
+          },
+          {
+            "component": "CO₂",
+            "value": "3 %",
+            "tolerance": "±0,5 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 200"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "33 L",
+            "head": "EXELTOP",
+            "pressure": "300 bar",
+            "content": "10,13 m³",
+            "reference": "I2541L33E3A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "10,7 m³",
+            "reference": "I2541L50E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,7 m³",
+            "reference": "I2541L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "96 m³",
+            "reference": "I2541V09R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle) EXELTOP : Quick Argon Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m14/I2541"
+        },
+        "notes": [],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/0/f/1/f/0f1f73f510792e49139e25792c6f03d3482a396b_ARCAL%E2%84%A2_M14_fr_FR_v1.4.pdf",
+          "date": "23/12/2024",
+          "version": "1.4",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5127,41 +6062,162 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ M22",
-      "subtitle": "5 % O₂ / Ar",
+      "subtitle": "O₂ 5 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Protection gazeuse pour le soudage à l’arc.",
+      "family": "Soudage à l’arc · Fer à béton",
       "aliases": [
         "ARCAL",
         "M22",
         "5 % O₂ / Ar",
-        "Protection gazeuse pour le soudage à l’arc."
+        "Protection gazeuse pour le soudage à l’arc.",
+        "I2576",
+        "EN ISO 14175-M22-ArO-5",
+        "Soudage à l’arc",
+        "Fer à béton",
+        "Treillis métallique",
+        "I2576L50E2A001",
+        "I2576V09R2A001",
+        "I2576V18R2A001"
       ],
-      "composition": "5 % O₂ / Ar",
+      "composition": "O₂ 5 % + Ar Complément",
       "applications": [
-        "Protection gazeuse pour le soudage à l’arc."
+        "Fer à béton : Gaz référencé pour le soudage des armatures. La fiche ne détaille ni diamètre, ni nuance, ni mode de transfert.",
+        "Treillis métallique : L’assemblage de treillis est également cité. Procédé exact, fil et qualification de l’assemblage restent à préciser pour le dossier client."
       ],
       "components": [
-        "argon",
-        "oxygene"
+        "oxygene",
+        "argon"
       ],
-      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-      "sourceLabel": "Page officielle de la gamme",
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m22/I2576",
+      "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-m22/I2576",
+          "title": "Air Liquide · ARCAL™ M22",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/e/8/b/c/e8bcfface88e7ad10562b2e8b81b8746d3084d60_ARCAL%E2%84%A2_M22_fr_FR_v1.5.pdf",
+          "title": "Fiche technique fabricant · V1.5",
+          "scope": "Révision du 23/12/2024 · composition, ogive et conditionnements (tableau p. 1).",
           "checked": "2026-10-21"
         }
       ],
       "verifiedAt": "2026-10-21",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+        "kind": "manufacturer_link",
+        "url": "https://www.quickfds.com/fds/7108915-61476-32670-015568",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m22/I2576"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/e/8/b/c/e8bcfface88e7ad10562b2e8b81b8746d3084d60_ARCAL%E2%84%A2_M22_fr_FR_v1.5.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2576",
+        "category": "Techniques",
+        "processes": [
+          "Soudage à l’arc"
+        ],
+        "materials": [
+          "Fer à béton",
+          "Treillis métallique"
+        ],
+        "uses": [
+          {
+            "title": "Fer à béton",
+            "detail": "Gaz référencé pour le soudage des armatures. La fiche ne détaille ni diamètre, ni nuance, ni mode de transfert.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m22/I2576"
+          },
+          {
+            "title": "Treillis métallique",
+            "detail": "L’assemblage de treillis est également cité. Procédé exact, fil et qualification de l’assemblage restent à préciser pour le dossier client.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m22/I2576"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-M22-ArO-5",
+        "specifications": [
+          {
+            "component": "O₂",
+            "value": "5 %",
+            "tolerance": "±0.5 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "N₂",
+            "value": "≤ 200"
+          },
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          }
+        ],
+        "impurityUnit": "ppm",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "10,6 m³",
+            "reference": "I2576L50E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "95 m³",
+            "reference": "I2576V09R2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V18 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "190,2 m³",
+            "reference": "I2576V18R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m22/I2576"
+        },
+        "notes": [
+          "La source consultée reste succincte sur les applications ; aucun réglage ou domaine d’épaisseur n’est extrapolé."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/e/8/b/c/e8bcfface88e7ad10562b2e8b81b8746d3084d60_ARCAL%E2%84%A2_M22_fr_FR_v1.5.pdf",
+          "date": "23/12/2024",
+          "version": "1.5",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5169,42 +6225,152 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ M23",
-      "subtitle": "4 % O₂ + 5 % CO₂ / Ar",
+      "subtitle": "CO₂ 5 % + O₂ 4 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Protection gazeuse pour le soudage à l’arc.",
+      "family": "MAG · Aciers non alliés",
       "aliases": [
         "ARCAL",
         "M23",
         "4 % O₂ + 5 % CO₂ / Ar",
-        "Protection gazeuse pour le soudage à l’arc."
+        "Protection gazeuse pour le soudage à l’arc.",
+        "I2577",
+        "EN ISO 14175-M23-ArCO-5/4",
+        "MAG",
+        "Aciers non alliés",
+        "Aciers faiblement alliés",
+        "I2577L50S2A001",
+        "I2577V09R2A001"
       ],
-      "composition": "4 % O₂ + 5 % CO₂ / Ar",
+      "composition": "CO₂ 5 % + O₂ 4 % + Ar Complément",
       "applications": [
-        "Protection gazeuse pour le soudage à l’arc."
+        "MAG · aciers carbone : La fiche destine ce mélange aux aciers non alliés ou faiblement alliés. Elle ne distingue pas d’épaisseur, de position ou de type de fil."
       ],
       "components": [
-        "argon",
+        "dioxyde-carbone",
         "oxygene",
-        "dioxyde-carbone"
+        "argon"
       ],
-      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-      "sourceLabel": "Page officielle de la gamme",
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m23/I2577",
+      "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-m23/I2577",
+          "title": "Air Liquide · ARCAL™ M23",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/1/d/9/5/1d95bb9c529c70b5f703370ef4ef4117523a9cfd_ARCAL%E2%84%A2_M23_fr_FR_v1.6.pdf",
+          "title": "Fiche technique fabricant · V1.6",
+          "scope": "Révision du 23/12/2024 · composition, ogive et conditionnements (tableau p. 1).",
           "checked": "2026-10-21"
         }
       ],
       "verifiedAt": "2026-10-21",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+        "kind": "manufacturer_link",
+        "url": "https://www.quickfds.com/fds/5176790-61351-22750-015223",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m23/I2577"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/1/d/9/5/1d95bb9c529c70b5f703370ef4ef4117523a9cfd_ARCAL%E2%84%A2_M23_fr_FR_v1.6.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2577",
+        "category": "Techniques",
+        "processes": [
+          "MAG"
+        ],
+        "materials": [
+          "Aciers non alliés",
+          "Aciers faiblement alliés"
+        ],
+        "uses": [
+          {
+            "title": "MAG · aciers carbone",
+            "detail": "La fiche destine ce mélange aux aciers non alliés ou faiblement alliés. Elle ne distingue pas d’épaisseur, de position ou de type de fil.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m23/I2577"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-M23-ArCO-5/4",
+        "specifications": [
+          {
+            "component": "CO₂",
+            "value": "5 %",
+            "tolerance": "±0.5%"
+          },
+          {
+            "component": "O₂",
+            "value": "4 %",
+            "tolerance": "±0.5%"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "40"
+          },
+          {
+            "component": "N₂",
+            "value": "200"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,84 m³",
+            "reference": "I2577L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "97,5 m³",
+            "reference": "I2577V09R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m23/I2577"
+        },
+        "notes": [
+          "Les applications publiées sont générales : préciser nuance, fil, épaisseur et position avant toute proposition technique."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/1/d/9/5/1d95bb9c529c70b5f703370ef4ef4117523a9cfd_ARCAL%E2%84%A2_M23_fr_FR_v1.6.pdf",
+          "date": "23/12/2024",
+          "version": "1.6",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5212,42 +6378,152 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ M24-7",
-      "subtitle": "2 ± 0,5 % O₂ + 6,5 ± 0,65 % CO₂ / Ar",
+      "subtitle": "O₂ 2 % + CO₂ 6,5 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Protection gazeuse pour le soudage à l’arc.",
+      "family": "MAG · Aciers non alliés",
       "aliases": [
         "ARCAL",
         "M24-7",
         "2 ± 0,5 % O₂ + 6,5 ± 0,65 % CO₂ / Ar",
-        "Protection gazeuse pour le soudage à l’arc."
+        "Protection gazeuse pour le soudage à l’arc.",
+        "I2539",
+        "EN ISO 14175-M24-ArCO-6,5/2,0",
+        "MAG",
+        "Aciers non alliés",
+        "Aciers faiblement alliés",
+        "I2539L33E3A001",
+        "I2539V09R2A001"
       ],
-      "composition": "2 ± 0,5 % O₂ + 6,5 ± 0,65 % CO₂ / Ar",
+      "composition": "O₂ 2 % + CO₂ 6,5 % + Ar Complément",
       "applications": [
-        "Protection gazeuse pour le soudage à l’arc."
+        "MAG · aciers non ou faiblement alliés : Domaine d’emploi indiqué par la fiche fabricant. Aucun régime de transfert, seuil d’épaisseur ou gain de productivité n’y est détaillé."
       ],
       "components": [
-        "argon",
         "oxygene",
-        "dioxyde-carbone"
+        "dioxyde-carbone",
+        "argon"
       ],
-      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-      "sourceLabel": "Page officielle de la gamme",
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m24-7/I2539",
+      "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-m24-7/I2539",
+          "title": "Air Liquide · ARCAL™ M24-7",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/b/8/e/a/b8ea843098e8c6d958b0940eadfab3eaf1b33db3_ARCAL%E2%84%A2_M24-7_fr_FR_v2.0.pdf",
+          "title": "Fiche technique fabricant · V2.0",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
           "checked": "2026-10-21"
         }
       ],
       "verifiedAt": "2026-10-21",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+        "kind": "manufacturer_link",
+        "url": "https://www.quickfds.com/fds/5230093-63535-04451-010152",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m24-7/I2539"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/b/8/e/a/b8ea843098e8c6d958b0940eadfab3eaf1b33db3_ARCAL%E2%84%A2_M24-7_fr_FR_v2.0.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2539",
+        "category": "Techniques",
+        "processes": [
+          "MAG"
+        ],
+        "materials": [
+          "Aciers non alliés",
+          "Aciers faiblement alliés"
+        ],
+        "uses": [
+          {
+            "title": "MAG · aciers non ou faiblement alliés",
+            "detail": "Domaine d’emploi indiqué par la fiche fabricant. Aucun régime de transfert, seuil d’épaisseur ou gain de productivité n’y est détaillé.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m24-7/I2539"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-M24-ArCO-6,5/2,0",
+        "specifications": [
+          {
+            "component": "O₂",
+            "value": "2 %",
+            "tolerance": "± 0,5 %"
+          },
+          {
+            "component": "CO₂",
+            "value": "6,5 %",
+            "tolerance": "± 0,6%"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "N₂",
+            "value": "≤ 200 ppm"
+          },
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40 ppm"
+          }
+        ],
+        "impurityUnit": "Unité non précisée dans l’en-tête du tableau",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "33 L",
+            "head": "EXELTOP",
+            "pressure": "300 bar",
+            "content": "10,3 m³",
+            "reference": "I2539L33E3A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "98,3 m³",
+            "reference": "I2539V09R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m24-7/I2539"
+        },
+        "notes": [
+          "Tolérance du CO₂ : ± 0,6 % dans la fiche technique et la page produit, contre ± 0,65 % dans la liste de gamme. Faire confirmer la spécification contractuelle."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/b/8/e/a/b8ea843098e8c6d958b0940eadfab3eaf1b33db3_ARCAL%E2%84%A2_M24-7_fr_FR_v2.0.pdf",
+          "date": "22/11/2024",
+          "version": "2.0",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5255,41 +6531,168 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ 31",
-      "subtitle": "5 ± 0,5 % He / Ar",
+      "subtitle": "He 5 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Soudage TIG/MIG et gaz annulaire.",
+      "family": "MIG · TIG · Aluminium",
       "aliases": [
         "ARCAL",
         "31",
         "5 ± 0,5 % He / Ar",
-        "Soudage TIG/MIG et gaz annulaire."
+        "Soudage TIG/MIG et gaz annulaire.",
+        "I2580",
+        "EN ISO 14175-I3-ArHe-5",
+        "MIG",
+        "TIG",
+        "Plasma · gaz annulaire",
+        "Aluminium",
+        "Alliages cuivreux",
+        "Tous matériaux en TIG",
+        "I2580M20R2A001",
+        "I2580L50R2A001"
       ],
-      "composition": "5 ± 0,5 % He / Ar",
+      "composition": "He 5 % + Ar Complément",
       "applications": [
-        "Soudage TIG/MIG et gaz annulaire."
+        "MIG · aluminium et alliages cuivreux : Assemblage de l’aluminium, de ses alliages et des alliages cuivreux.",
+        "TIG · matériaux sensibles à l’hydrogène : Le fabricant cite le TIG de tous matériaux, et distingue expressément ceux sensibles à l’hydrogène.",
+        "Plasma · gaz annulaire : Emploi comme gaz annulaire pour les alliages d’aluminium ; ce rôle est distinct du gaz central de plasma."
       ],
       "components": [
-        "argon",
-        "helium"
+        "helium",
+        "argon"
       ],
-      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-      "sourceLabel": "Page officielle de la gamme",
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-31/I2580",
+      "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-31/I2580",
+          "title": "Air Liquide · ARCAL™ 31",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/a/6/a/a/a6aa59e31d1693a4259d39aff270e85ebb82abfc_ARCAL%E2%84%A2_31_fr_FR_v2.0.pdf",
+          "title": "Fiche technique fabricant · V2.0",
+          "scope": "Révision du 05/10/2026 · composition, ogive et conditionnements (tableau p. 1).",
           "checked": "2026-10-21"
         }
       ],
       "verifiedAt": "2026-10-21",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/1146754-68530-02671-015661",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-31/I2580"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/a/6/a/a/a6aa59e31d1693a4259d39aff270e85ebb82abfc_ARCAL%E2%84%A2_31_fr_FR_v2.0.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2580",
+        "category": "Techniques",
+        "processes": [
+          "MIG",
+          "TIG",
+          "Plasma · gaz annulaire"
+        ],
+        "materials": [
+          "Aluminium",
+          "Alliages cuivreux",
+          "Tous matériaux en TIG"
+        ],
+        "uses": [
+          {
+            "title": "MIG · aluminium et alliages cuivreux",
+            "detail": "Assemblage de l’aluminium, de ses alliages et des alliages cuivreux.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-31/I2580"
+          },
+          {
+            "title": "TIG · matériaux sensibles à l’hydrogène",
+            "detail": "Le fabricant cite le TIG de tous matériaux, et distingue expressément ceux sensibles à l’hydrogène.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-31/I2580"
+          },
+          {
+            "title": "Plasma · gaz annulaire",
+            "detail": "Emploi comme gaz annulaire pour les alliages d’aluminium ; ce rôle est distinct du gaz central de plasma.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-31/I2580"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-I3-ArHe-5",
+        "specifications": [
+          {
+            "component": "He",
+            "value": "5 %",
+            "tolerance": "± 0.5 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 5"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 5"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 10"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "4,2 m³",
+            "reference": "I2580M20R2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "10,7 m³",
+            "reference": "I2580L50R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-31/I2580"
+        },
+        "notes": [
+          "La fiche V2.0 du 5 octobre 2026 liste seulement les bouteilles 20 L et 50 L, sans nom de chapeau. Aucun cadre n’en est déduit."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/a/6/a/a/a6aa59e31d1693a4259d39aff270e85ebb82abfc_ARCAL%E2%84%A2_31_fr_FR_v2.0.pdf",
+          "date": "05/10/2026",
+          "version": "2.0",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5297,42 +6700,154 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ 39",
-      "subtitle": "Ar + 10 % He + 2 % N₂",
+      "subtitle": "N₂ 2 % + He 10 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Soudage TIG/plasma des inox.",
+      "family": "TIG · Plasma · Duplex",
       "aliases": [
         "ARCAL",
         "39",
         "Ar + 10 % He + 2 % N₂",
-        "Soudage TIG/plasma des inox."
+        "Soudage TIG/plasma des inox.",
+        "I2610",
+        "EN ISO 14175-N2-ArHeN-10/2",
+        "TIG",
+        "Plasma",
+        "Duplex",
+        "Superduplex",
+        "Inox dopés azote",
+        "Inox austénitiques",
+        "I2610L50R2A001"
       ],
-      "composition": "Ar + 10 % He + 2 % N₂",
+      "composition": "N₂ 2 % + He 10 % + Ar Complément",
       "applications": [
-        "Soudage TIG/plasma des inox."
+        "TIG et plasma · Duplex / Superduplex : Ces deux familles d’inox sont expressément citées dans la fiche.",
+        "Inox enrichis en azote : Le fabricant décrit le TIG des inox dopés N₂ ; les inox austénitiques figurent aussi parmi les applications."
       ],
       "components": [
-        "argon",
+        "azote",
         "helium",
-        "azote"
+        "argon"
       ],
-      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-      "sourceLabel": "Page officielle de la gamme",
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-39/I2610",
+      "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-39/I2610",
+          "title": "Air Liquide · ARCAL™ 39",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/c/7/d/b/c7db99367b8e866a5292bda801017862d0c4065c_ARCAL%E2%84%A2_39_fr_FR_v1.6.pdf",
+          "title": "Fiche technique fabricant · V1.6",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
           "checked": "2026-10-21"
         }
       ],
       "verifiedAt": "2026-10-21",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/8196790-46932-24978-018755",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-39/I2610"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/c/7/d/b/c7db99367b8e866a5292bda801017862d0c4065c_ARCAL%E2%84%A2_39_fr_FR_v1.6.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2610",
+        "category": "Techniques",
+        "processes": [
+          "TIG",
+          "Plasma"
+        ],
+        "materials": [
+          "Duplex",
+          "Superduplex",
+          "Inox dopés azote",
+          "Inox austénitiques"
+        ],
+        "uses": [
+          {
+            "title": "TIG et plasma · Duplex / Superduplex",
+            "detail": "Ces deux familles d’inox sont expressément citées dans la fiche.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-39/I2610"
+          },
+          {
+            "title": "Inox enrichis en azote",
+            "detail": "Le fabricant décrit le TIG des inox dopés N₂ ; les inox austénitiques figurent aussi parmi les applications.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-39/I2610"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-N2-ArHeN-10/2",
+        "specifications": [
+          {
+            "component": "N₂",
+            "value": "2 %",
+            "tolerance": "±0,2 %"
+          },
+          {
+            "component": "He",
+            "value": "10 %",
+            "tolerance": "±1 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 20"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "10,5 m³",
+            "reference": "I2610L50R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-39/I2610"
+        },
+        "notes": [
+          "Pas de gain chiffré, de plage d’épaisseur ni de réglage publiés dans cette fiche."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/c/7/d/b/c7db99367b8e866a5292bda801017862d0c4065c_ARCAL%E2%84%A2_39_fr_FR_v1.6.pdf",
+          "date": "22/11/2024",
+          "version": "1.6",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5340,84 +6855,322 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ He20",
-      "subtitle": "20 % He / Ar",
+      "subtitle": "He 20 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Soudage TIG/MIG et gaz annulaire.",
+      "family": "MIG · TIG · Aluminium",
       "aliases": [
         "ARCAL",
         "He20",
         "20 % He / Ar",
-        "Soudage TIG/MIG et gaz annulaire."
+        "Soudage TIG/MIG et gaz annulaire.",
+        "I2594",
+        "EN ISO 14175-I3-ArHe-20",
+        "MIG",
+        "TIG",
+        "Plasma · gaz annulaire",
+        "Aluminium",
+        "Alliages cuivreux",
+        "Tous matériaux en TIG",
+        "I2594L50S2A001",
+        "I2594V09R2A001"
       ],
-      "composition": "20 % He / Ar",
+      "composition": "He 20 % + Ar Complément",
       "applications": [
-        "Soudage TIG/MIG et gaz annulaire."
+        "MIG · aluminium et cuivreux : L’aluminium, ses alliages et les alliages cuivreux sont les matériaux nommés pour le MIG.",
+        "TIG · tous matériaux : Le TIG des matériaux sensibles à l’hydrogène est également cité par le fabricant.",
+        "Plasma · gaz annulaire : Gaz annulaire pour les alliages d’aluminium. La fiche ne donne pas de réglage de torche."
       ],
       "components": [
-        "argon",
-        "helium"
+        "helium",
+        "argon"
       ],
-      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-      "sourceLabel": "Page officielle de la gamme",
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20/I2594",
+      "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-he20/I2594",
+          "title": "Air Liquide · ARCAL™ He20",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/c/7/c/7/c7c70764fff7def4d260f8be9e0fd803de4686c5_ARCAL%E2%84%A2_He20_fr_FR_v1.6.pdf",
+          "title": "Fiche technique fabricant · V1.6",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
           "checked": "2026-10-21"
         }
       ],
       "verifiedAt": "2026-10-21",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/5106754-68530-02671-014779",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20/I2594"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/c/7/c/7/c7c70764fff7def4d260f8be9e0fd803de4686c5_ARCAL%E2%84%A2_He20_fr_FR_v1.6.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2594",
+        "category": "Techniques",
+        "processes": [
+          "MIG",
+          "TIG",
+          "Plasma · gaz annulaire"
+        ],
+        "materials": [
+          "Aluminium",
+          "Alliages cuivreux",
+          "Tous matériaux en TIG"
+        ],
+        "uses": [
+          {
+            "title": "MIG · aluminium et cuivreux",
+            "detail": "L’aluminium, ses alliages et les alliages cuivreux sont les matériaux nommés pour le MIG.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20/I2594"
+          },
+          {
+            "title": "TIG · tous matériaux",
+            "detail": "Le TIG des matériaux sensibles à l’hydrogène est également cité par le fabricant.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20/I2594"
+          },
+          {
+            "title": "Plasma · gaz annulaire",
+            "detail": "Gaz annulaire pour les alliages d’aluminium. La fiche ne donne pas de réglage de torche.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20/I2594"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-I3-ArHe-20",
+        "specifications": [
+          {
+            "component": "He",
+            "value": "20 %",
+            "tolerance": "±2 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 20"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 80"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,2 m³",
+            "reference": "I2594L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "92 m³",
+            "reference": "I2594V09R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20/I2594"
+        },
+        "notes": [],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/c/7/c/7/c7c70764fff7def4d260f8be9e0fd803de4686c5_ARCAL%E2%84%A2_He20_fr_FR_v1.6.pdf",
+          "date": "22/11/2024",
+          "version": "1.6",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
-      "id": "arcal-he20microc",
+      "id": "arcal-he20-muc",
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ He20µC",
-      "subtitle": "20 % He + 1 100 ppm CO₂ / Ar",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Soudage MIG.",
       "aliases": [
-        "ARCAL",
+        "I2598",
         "He20µC",
-        "20 % He + 1 100 ppm CO₂ / Ar",
-        "Soudage MIG."
+        "EN ISO 14175-Z-ArHeC-20/0,11",
+        "MIG pulsé",
+        "Rechargement",
+        "Alliages nickel",
+        "Matériaux sensibles à l’hydrogène",
+        "I2598L50S2A001"
       ],
-      "composition": "20 % He + 1 100 ppm CO₂ / Ar",
+      "subtitle": "CO₂ 1100 ppm + He 20 % + Ar Complément",
+      "composition": "CO₂ 1100 ppm + He 20 % + Ar Complément",
       "applications": [
-        "Soudage MIG."
+        "MIG pulsé · alliages nickel : La page vise les alliages de nickel, avec un mélange contenant 20 % d’hélium et une faible teneur publiée en CO₂.",
+        "Sensibilité à la fissuration à l’hydrogène : Ce cas de soudage MIG pulsé est explicitement référencé. La nuance et le mode opératoire restent à qualifier.",
+        "Rechargement : Application citée sans détail sur le support, le métal d’apport ou les paramètres ; ces points nécessitent une confirmation technique."
       ],
+      "family": "MIG pulsé · Rechargement · Alliages nickel",
       "components": [
-        "argon",
+        "dioxyde-carbone",
         "helium",
-        "dioxyde-carbone"
+        "argon"
       ],
-      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-      "sourceLabel": "Page officielle de la gamme",
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20mc/I2598",
+      "sourceLabel": "Fiche produit",
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/3176754-68529-02671-018696",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-he20mc/I2598",
+          "title": "Air Liquide · ARCAL™ He20µC",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/c/b/7/5/cb75c62d8b64f0888cf8fe905f62cd07c12d00f0_ARCAL%E2%84%A2_He20%C2%B5C_fr_FR_v1.8.pdf",
+          "title": "Fiche technique fabricant · V1.8",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21",
-      "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20mc/I2598"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/c/b/7/5/cb75c62d8b64f0888cf8fe905f62cd07c12d00f0_ARCAL%E2%84%A2_He20%C2%B5C_fr_FR_v1.8.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2598",
+        "category": "Techniques",
+        "processes": [
+          "MIG pulsé",
+          "Rechargement"
+        ],
+        "materials": [
+          "Alliages nickel",
+          "Matériaux sensibles à l’hydrogène"
+        ],
+        "uses": [
+          {
+            "title": "MIG pulsé · alliages nickel",
+            "detail": "La page vise les alliages de nickel, avec un mélange contenant 20 % d’hélium et une faible teneur publiée en CO₂.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20mc/I2598"
+          },
+          {
+            "title": "Sensibilité à la fissuration à l’hydrogène",
+            "detail": "Ce cas de soudage MIG pulsé est explicitement référencé. La nuance et le mode opératoire restent à qualifier.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20mc/I2598"
+          },
+          {
+            "title": "Rechargement",
+            "detail": "Application citée sans détail sur le support, le métal d’apport ou les paramètres ; ces points nécessitent une confirmation technique.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20mc/I2598"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-Z-ArHeC-20/0,11",
+        "specifications": [
+          {
+            "component": "CO₂",
+            "value": "1100 ppm",
+            "tolerance": "± 200 ppm"
+          },
+          {
+            "component": "He",
+            "value": "20 %",
+            "tolerance": "±2 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40 ppm"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 20 ppm"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 80 ppm"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,2 m³",
+            "reference": "I2598L50S2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he20mc/I2598"
+        },
+        "notes": [],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/c/b/7/5/cb75c62d8b64f0888cf8fe905f62cd07c12d00f0_ARCAL%E2%84%A2_He20%C2%B5C_fr_FR_v1.8.pdf",
+          "date": "22/11/2024",
+          "version": "1.8",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5425,41 +7178,180 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ He70",
-      "subtitle": "30 % Ar / He",
+      "subtitle": "Ar 30 % + He Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Soudage TIG/MIG et gaz annulaire.",
+      "family": "TIG · MIG automatique · Aluminium",
       "aliases": [
         "ARCAL",
         "He70",
         "30 % Ar / He",
-        "Soudage TIG/MIG et gaz annulaire."
+        "Soudage TIG/MIG et gaz annulaire.",
+        "I2605",
+        "EN ISO 14175-I3-HeAr-30",
+        "TIG",
+        "MIG automatique",
+        "TIG alternatif",
+        "Plasma · gaz annulaire",
+        "Aluminium",
+        "Cuivre",
+        "Nickel / Monel",
+        "I2605L50S2A001",
+        "I2605V09R2A001",
+        "I2605V18R2A001"
       ],
-      "composition": "30 % Ar / He",
+      "composition": "Ar 30 % + He Complément",
       "applications": [
-        "Soudage TIG/MIG et gaz annulaire."
+        "Aluminium · automatisation : TIG et MIG automatiques des alliages d’aluminium ; le TIG en courant alternatif est également cité.",
+        "Cuivre et nickel · TIG : La fiche nomme les alliages cuivreux et les alliages de nickel, dont le Monel.",
+        "Plasma · gaz annulaire : Emploi annulaire sur les alliages d’aluminium, à distinguer du rôle du gaz plasma central."
       ],
       "components": [
         "argon",
         "helium"
       ],
-      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-      "sourceLabel": "Page officielle de la gamme",
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he70/I2605",
+      "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-he70/I2605",
+          "title": "Air Liquide · ARCAL™ He70",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/e/2/b/3/e2b35dc5006017d6a9aa53ee045f5dcca76a49e7_ARCAL%E2%84%A2_He70_fr_FR_v1.7.pdf",
+          "title": "Fiche technique fabricant · V1.7",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
           "checked": "2026-10-21"
         }
       ],
       "verifiedAt": "2026-10-21",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/5146754-68530-02671-017156",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he70/I2605"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/e/2/b/3/e2b35dc5006017d6a9aa53ee045f5dcca76a49e7_ARCAL%E2%84%A2_He70_fr_FR_v1.7.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2605",
+        "category": "Techniques",
+        "processes": [
+          "TIG",
+          "MIG automatique",
+          "TIG alternatif",
+          "Plasma · gaz annulaire"
+        ],
+        "materials": [
+          "Aluminium",
+          "Cuivre",
+          "Nickel / Monel"
+        ],
+        "uses": [
+          {
+            "title": "Aluminium · automatisation",
+            "detail": "TIG et MIG automatiques des alliages d’aluminium ; le TIG en courant alternatif est également cité.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he70/I2605"
+          },
+          {
+            "title": "Cuivre et nickel · TIG",
+            "detail": "La fiche nomme les alliages cuivreux et les alliages de nickel, dont le Monel.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he70/I2605"
+          },
+          {
+            "title": "Plasma · gaz annulaire",
+            "detail": "Emploi annulaire sur les alliages d’aluminium, à distinguer du rôle du gaz plasma central.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he70/I2605"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-I3-HeAr-30",
+        "specifications": [
+          {
+            "component": "Ar",
+            "value": "30 %",
+            "tolerance": "±3 %"
+          },
+          {
+            "component": "He",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 20"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 80"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "9 m³",
+            "reference": "I2605L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "86 m³",
+            "reference": "I2605V09R2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V18 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "172 m³",
+            "reference": "I2605V18R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-he70/I2605"
+        },
+        "notes": [
+          "L’en-tête de la page indique ArHe-30 ; sa rubrique technique et le PDF indiquent HeAr-30, repris ici. Confirmation nécessaire si cette désignation figure au contrat."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/e/2/b/3/e2b35dc5006017d6a9aa53ee045f5dcca76a49e7_ARCAL%E2%84%A2_He70_fr_FR_v1.7.pdf",
+          "date": "22/11/2024",
+          "version": "1.7",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5467,42 +7359,183 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ M11",
-      "subtitle": "1 % H₂ + 3 % CO₂ / Ar",
+      "subtitle": "H₂ 1 % + CO₂ 3 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Soudage MAG de tôles fines en inox.",
+      "family": "MAG pulsé · Inox austénitiques",
       "aliases": [
         "ARCAL",
         "M11",
         "1 % H₂ + 3 % CO₂ / Ar",
-        "Soudage MAG de tôles fines en inox."
+        "Soudage MAG de tôles fines en inox.",
+        "I2642",
+        "EN ISO 14175-M11-ArCH-3/1",
+        "MAG pulsé",
+        "Inox austénitiques",
+        "Tôles fines",
+        "Cuverie / chaudronnerie inox",
+        "I2642M20E2A001",
+        "I2642L50S2A001",
+        "I2642V09R2A001"
       ],
-      "composition": "1 % H₂ + 3 % CO₂ / Ar",
+      "composition": "H₂ 1 % + CO₂ 3 % + Ar Complément",
       "applications": [
-        "Soudage MAG de tôles fines en inox."
+        "MAG pulsé · fil plein uniquement : Le fabricant précise le fil plein et les inox austénitiques, en manuel, automatique ou robotisé.",
+        "Tôles fines et cuverie : La description cite les tôles fines, la cuverie et la chaudronnerie en inox austénitique.",
+        "Finition du cordon : L’effet réducteur de l’hydrogène est présenté pour limiter l’oxydation et le temps de passivation. Cela ne constitue pas une qualification de soudage."
       ],
       "components": [
-        "argon",
         "hydrogene",
-        "dioxyde-carbone"
+        "dioxyde-carbone",
+        "argon"
       ],
-      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-      "sourceLabel": "Page officielle de la gamme",
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m11/I2642",
+      "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-m11/I2642",
+          "title": "Air Liquide · ARCAL™ M11",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/e/1/4/2/e14263c8f661b5d46ed10a2569e4096e109828a9_ARCAL%E2%84%A2_M11_fr_FR_v1.7.pdf",
+          "title": "Fiche technique fabricant · V1.7",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
           "checked": "2026-10-21"
         }
       ],
       "verifiedAt": "2026-10-21",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/4186790-61352-22750-018798",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m11/I2642"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/e/1/4/2/e14263c8f661b5d46ed10a2569e4096e109828a9_ARCAL%E2%84%A2_M11_fr_FR_v1.7.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2642",
+        "category": "Techniques",
+        "processes": [
+          "MAG pulsé"
+        ],
+        "materials": [
+          "Inox austénitiques",
+          "Tôles fines",
+          "Cuverie / chaudronnerie inox"
+        ],
+        "uses": [
+          {
+            "title": "MAG pulsé · fil plein uniquement",
+            "detail": "Le fabricant précise le fil plein et les inox austénitiques, en manuel, automatique ou robotisé.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m11/I2642"
+          },
+          {
+            "title": "Tôles fines et cuverie",
+            "detail": "La description cite les tôles fines, la cuverie et la chaudronnerie en inox austénitique.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m11/I2642"
+          },
+          {
+            "title": "Finition du cordon",
+            "detail": "L’effet réducteur de l’hydrogène est présenté pour limiter l’oxydation et le temps de passivation. Cela ne constitue pas une qualification de soudage.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m11/I2642"
+          }
+        ],
+        "benefits": [
+          "Air Liquide annonce du mouillage et des gains de préparation par rapport à un mélange binaire Ar–CO₂."
+        ],
+        "standard": "EN ISO 14175-M11-ArCH-3/1",
+        "specifications": [
+          {
+            "component": "H₂",
+            "value": "1 %",
+            "tolerance": "±0,2 %"
+          },
+          {
+            "component": "CO₂",
+            "value": "3 %",
+            "tolerance": "±0,2 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 20"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 80"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "4,2 m³",
+            "reference": "I2642M20E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,7 m³",
+            "reference": "I2642L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "96 m³",
+            "reference": "I2642V09R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle) EXELTOP : Quick Argon Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m11/I2642"
+        },
+        "notes": [
+          "Le texte commercial contient une coquille « M1 » ; la rubrique technique et le PDF indiquent M11, repris ici.",
+          "Ne pas élargir la destination austénitique aux autres familles d’inox sans validation."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/e/1/4/2/e14263c8f661b5d46ed10a2569e4096e109828a9_ARCAL%E2%84%A2_M11_fr_FR_v1.7.pdf",
+          "date": "22/11/2024",
+          "version": "1.7",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -5510,42 +7543,1118 @@
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ M12 He18",
-      "subtitle": "18 % He + 1 % CO₂ / Ar",
+      "subtitle": "CO₂ 1 % + He 18 % + Ar Complément",
       "formula": "",
       "displayFormula": "Mix",
       "cas": "",
-      "family": "Protection gazeuse pour le soudage à l’arc.",
+      "family": "MAG · Aciers inoxydables",
       "aliases": [
         "ARCAL",
         "M12 He18",
         "18 % He + 1 % CO₂ / Ar",
-        "Protection gazeuse pour le soudage à l’arc."
+        "Protection gazeuse pour le soudage à l’arc.",
+        "I2631",
+        "EN ISO 14175-M12-ArHeC-18/1",
+        "MAG",
+        "Aciers inoxydables",
+        "Inox ELC",
+        "Inox de forte épaisseur",
+        "I2631L50S2A001",
+        "I2631V09R2A001"
       ],
-      "composition": "18 % He + 1 % CO₂ / Ar",
+      "composition": "CO₂ 1 % + He 18 % + Ar Complément",
       "applications": [
-        "Protection gazeuse pour le soudage à l’arc."
+        "MAG · inox : Le fabricant présente ce mélange pour le MAG des aciers inoxydables à objectif de performance élevée.",
+        "Inox ELC : Les nuances à très faible carbone, dites Extra Low Carbon, sont expressément citées.",
+        "Inox de forte épaisseur : La fiche vise également ce cas, sans publier de seuil en millimètres ni de paramètres."
       ],
       "components": [
-        "argon",
+        "dioxyde-carbone",
         "helium",
-        "dioxyde-carbone"
+        "argon"
       ],
-      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-      "sourceLabel": "Page officielle de la gamme",
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m12-he18/I2631",
+      "sourceLabel": "Fiche produit",
       "sources": [
         {
-          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
-          "title": "Air Liquide · ARCAL™",
-          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "url": "https://fr.airliquide.com/gaz/arcaltm-m12-he18/I2631",
+          "title": "Air Liquide · ARCAL™ M12 He18",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/e/c/8/a/ec8a32870595f4dc37bdc48e56999e79eba069a3_ARCAL%E2%84%A2_M12_He18_fr_FR_v1.2.pdf",
+          "title": "Fiche technique fabricant · V1.2",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
           "checked": "2026-10-21"
         }
       ],
       "verifiedAt": "2026-10-21",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/3176754-68529-02671-018696",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m12-he18/I2631"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/e/c/8/a/ec8a32870595f4dc37bdc48e56999e79eba069a3_ARCAL%E2%84%A2_M12_He18_fr_FR_v1.2.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2631",
+        "category": "Techniques",
+        "processes": [
+          "MAG"
+        ],
+        "materials": [
+          "Aciers inoxydables",
+          "Inox ELC",
+          "Inox de forte épaisseur"
+        ],
+        "uses": [
+          {
+            "title": "MAG · inox",
+            "detail": "Le fabricant présente ce mélange pour le MAG des aciers inoxydables à objectif de performance élevée.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m12-he18/I2631"
+          },
+          {
+            "title": "Inox ELC",
+            "detail": "Les nuances à très faible carbone, dites Extra Low Carbon, sont expressément citées.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m12-he18/I2631"
+          },
+          {
+            "title": "Inox de forte épaisseur",
+            "detail": "La fiche vise également ce cas, sans publier de seuil en millimètres ni de paramètres.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m12-he18/I2631"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-M12-ArHeC-18/1",
+        "specifications": [
+          {
+            "component": "CO₂",
+            "value": "1 %",
+            "tolerance": "±0,2 %"
+          },
+          {
+            "component": "He",
+            "value": "18 %",
+            "tolerance": "±1,8 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 20"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 80"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,6 m³",
+            "reference": "I2631L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "95 m³",
+            "reference": "I2631V09R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m12-he18/I2631"
+        },
+        "notes": [
+          "Une formulation ambiguë sur le « soudage au carbone des inox » figure dans la source ; elle n’est pas transformée en recommandation."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/e/c/8/a/ec8a32870595f4dc37bdc48e56999e79eba069a3_ARCAL%E2%84%A2_M12_He18_fr_FR_v1.2.pdf",
+          "date": "22/11/2024",
+          "version": "1.2",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
+      }
+    },
+    {
+      "id": "arcal-m12-he5-n",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ M12 He5 N",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "aliases": [
+        "I2641",
+        "M12 He5 N",
+        "EN ISO 14175-Z-ArHeCN-5/1,8/1,7",
+        "MAG",
+        "Duplex",
+        "Superduplex",
+        "Inox dopés azote",
+        "Inox austénitiques",
+        "I2641L50S2A001"
+      ],
+      "subtitle": "N₂ 1,7% + CO₂ 1,8% + He 5% + Ar Complément",
+      "composition": "N₂ 1,7% + CO₂ 1,8% + He 5% + Ar Complément",
+      "applications": [
+        "MAG · Duplex / Superduplex : Ces nuances sont explicitement visées par la page, avec un mélange à quatre constituants.",
+        "MAG · autres inox cités : Le fabricant mentionne les inox enrichis en azote ainsi que les inox austénitiques. Il ne précise pas de plage d’épaisseur."
+      ],
+      "family": "MAG · Duplex",
+      "components": [
+        "azote",
+        "dioxyde-carbone",
+        "helium",
+        "argon"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m12-he5-n/I2641",
+      "sourceLabel": "Fiche produit",
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/7156754-68529-02671-018346",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/arcaltm-m12-he5-n/I2641",
+          "title": "Air Liquide · ARCAL™ M12 He5 N",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/b/6/f/7/b6f78b1362b4771cffcd317c16cf290893a7b878_ARCAL%E2%84%A2_M12_He5_N_fr_FR_v1.4.pdf",
+          "title": "Fiche technique fabricant · V1.4",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
+          "checked": "2026-10-21"
+        }
+      ],
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m12-he5-n/I2641"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/b/6/f/7/b6f78b1362b4771cffcd317c16cf290893a7b878_ARCAL%E2%84%A2_M12_He5_N_fr_FR_v1.4.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2641",
+        "category": "Techniques",
+        "processes": [
+          "MAG"
+        ],
+        "materials": [
+          "Duplex",
+          "Superduplex",
+          "Inox dopés azote",
+          "Inox austénitiques"
+        ],
+        "uses": [
+          {
+            "title": "MAG · Duplex / Superduplex",
+            "detail": "Ces nuances sont explicitement visées par la page, avec un mélange à quatre constituants.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m12-he5-n/I2641"
+          },
+          {
+            "title": "MAG · autres inox cités",
+            "detail": "Le fabricant mentionne les inox enrichis en azote ainsi que les inox austénitiques. Il ne précise pas de plage d’épaisseur.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m12-he5-n/I2641"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-Z-ArHeCN-5/1,8/1,7",
+        "specifications": [
+          {
+            "component": "N₂",
+            "value": "1,7%",
+            "tolerance": "±0,2 %"
+          },
+          {
+            "component": "CO₂",
+            "value": "1,8%",
+            "tolerance": "±0,2 %"
+          },
+          {
+            "component": "He",
+            "value": "5%",
+            "tolerance": "±0,5 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 20"
+          }
+        ],
+        "impurityUnit": "ppm",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,4 m³",
+            "reference": "I2641L50S2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m12-he5-n/I2641"
+        },
+        "notes": [],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/b/6/f/7/b6f78b1362b4771cffcd317c16cf290893a7b878_ARCAL%E2%84%A2_M12_He5_N_fr_FR_v1.4.pdf",
+          "date": "22/11/2024",
+          "version": "1.4",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
+      }
+    },
+    {
+      "id": "arcal-m20-he5",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ M20 He5",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "aliases": [
+        "I2651",
+        "M20 He5",
+        "EN ISO 14175-M20-ArCHe-10/5",
+        "MAG",
+        "Aciers non alliés",
+        "Aciers faiblement alliés",
+        "I2651L50S2A001",
+        "I2651V09R2A001"
+      ],
+      "subtitle": "CO₂ 10 % + He 5 % + Ar Complément",
+      "composition": "CO₂ 10 % + He 5 % + Ar Complément",
+      "applications": [
+        "MAG · aciers carbone : Destination publiée : aciers non alliés ou faiblement alliés. La présence d’hélium ne suffit pas à déduire un gain de vitesse ou une épaisseur adaptée."
+      ],
+      "family": "MAG · Aciers non alliés",
+      "components": [
+        "dioxyde-carbone",
+        "helium",
+        "argon"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m20-he5/I2651",
+      "sourceLabel": "Fiche produit",
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/6156790-61354-22750-013276",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/arcaltm-m20-he5/I2651",
+          "title": "Air Liquide · ARCAL™ M20 He5",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/3/2/1/3/3213305666cf82b6973fadb283837cf2c09a91d7_ARCAL%E2%84%A2_M20_He5_fr_FR_v1.7.pdf",
+          "title": "Fiche technique fabricant · V1.7",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
+          "checked": "2026-10-21"
+        }
+      ],
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m20-he5/I2651"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/3/2/1/3/3213305666cf82b6973fadb283837cf2c09a91d7_ARCAL%E2%84%A2_M20_He5_fr_FR_v1.7.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2651",
+        "category": "Techniques",
+        "processes": [
+          "MAG"
+        ],
+        "materials": [
+          "Aciers non alliés",
+          "Aciers faiblement alliés"
+        ],
+        "uses": [
+          {
+            "title": "MAG · aciers carbone",
+            "detail": "Destination publiée : aciers non alliés ou faiblement alliés. La présence d’hélium ne suffit pas à déduire un gain de vitesse ou une épaisseur adaptée.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m20-he5/I2651"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-M20-ArCHe-10/5",
+        "specifications": [
+          {
+            "component": "CO₂",
+            "value": "10 %",
+            "tolerance": "±1 %"
+          },
+          {
+            "component": "He",
+            "value": "5 %",
+            "tolerance": "±0,5 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "N₂",
+            "value": "≤ 200"
+          },
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          }
+        ],
+        "impurityUnit": "ppm",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,7 m³",
+            "reference": "I2651L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "97,4 m³",
+            "reference": "I2651V09R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle) Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-m20-he5/I2651"
+        },
+        "notes": [
+          "La fiche ne détaille ni type de fil, ni régime de transfert : ces choix nécessitent une confirmation pour l’application client."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/3/2/1/3/3213305666cf82b6973fadb283837cf2c09a91d7_ARCAL%E2%84%A2_M20_He5_fr_FR_v1.7.pdf",
+          "date": "22/11/2024",
+          "version": "1.7",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
+      }
+    },
+    {
+      "id": "arcal-n2-2",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ N2-2",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "aliases": [
+        "I2612",
+        "N2-2",
+        "EN ISO 14175-N2-ArN-2",
+        "TIG",
+        "Plasma",
+        "Duplex",
+        "Superduplex",
+        "Inox dopés azote",
+        "Inox austénitiques",
+        "I2612L50S2A001"
+      ],
+      "subtitle": "N₂ 2 % + Ar Complément",
+      "composition": "N₂ 2 % + Ar Complément",
+      "applications": [
+        "TIG et plasma · Duplex / Superduplex : Les deux familles d’inox sont visées par la fiche fabricant.",
+        "TIG · inox enrichis en azote : Les inox dopés N₂ et les inox austénitiques figurent aussi dans les applications publiées."
+      ],
+      "family": "TIG · Plasma · Duplex",
+      "components": [
+        "azote",
+        "argon"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-n2-2/I2612",
+      "sourceLabel": "Fiche produit",
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/7127319-68668-12165-014564",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/arcaltm-n2-2/I2612",
+          "title": "Air Liquide · ARCAL™ N2-2",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/9/f/7/4/9f74ec712e9b6d671da3d9f5123104b0f170b77c_ARCAL%E2%84%A2_N2-2_fr_FR_v1.7.pdf",
+          "title": "Fiche technique fabricant · V1.7",
+          "scope": "Révision du 23/12/2024 · composition, ogive et conditionnements (tableau p. 1).",
+          "checked": "2026-10-21"
+        }
+      ],
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-n2-2/I2612"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/9/f/7/4/9f74ec712e9b6d671da3d9f5123104b0f170b77c_ARCAL%E2%84%A2_N2-2_fr_FR_v1.7.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2612",
+        "category": "Techniques",
+        "processes": [
+          "TIG",
+          "Plasma"
+        ],
+        "materials": [
+          "Duplex",
+          "Superduplex",
+          "Inox dopés azote",
+          "Inox austénitiques"
+        ],
+        "uses": [
+          {
+            "title": "TIG et plasma · Duplex / Superduplex",
+            "detail": "Les deux familles d’inox sont visées par la fiche fabricant.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-n2-2/I2612"
+          },
+          {
+            "title": "TIG · inox enrichis en azote",
+            "detail": "Les inox dopés N₂ et les inox austénitiques figurent aussi dans les applications publiées.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-n2-2/I2612"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-N2-ArN-2",
+        "specifications": [
+          {
+            "component": "N₂",
+            "value": "2 %",
+            "tolerance": "±0.2 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 20"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,5 m³",
+            "reference": "I2612L50S2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-n2-2/I2612"
+        },
+        "notes": [],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/9/f/7/4/9f74ec712e9b6d671da3d9f5123104b0f170b77c_ARCAL%E2%84%A2_N2-2_fr_FR_v1.7.pdf",
+          "date": "23/12/2024",
+          "version": "1.7",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
+      }
+    },
+    {
+      "id": "arcal-r1-2",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ R1-2",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "aliases": [
+        "I2512",
+        "R1-2",
+        "EN ISO 14175-R1-ArH-2,4",
+        "TIG",
+        "Plasma",
+        "TIG orbital",
+        "Soudo-brasage TIG",
+        "Inox austénitiques",
+        "Aciers galvanisés en soudo-brasage",
+        "I2512M20E2A001",
+        "I2512L50S2A001",
+        "I2512V09R2A001"
+      ],
+      "subtitle": "H₂ 2,4 % + Ar Complément",
+      "composition": "H₂ 2,4 % + Ar Complément",
+      "applications": [
+        "TIG · inox austénitiques fins : La description vise les tôles fines et toutes positions, en manuel, automatisé ou robotisé. La teneur nominale en H₂ est 2,4 %, malgré le nom R1-2.",
+        "Plasma et TIG orbital : Le fabricant cite ces procédés sur les aciers austénitiques.",
+        "Soudo-brasage TIG : Les aciers galvanisés sont expressément mentionnés pour cet usage distinct du soudage inox."
+      ],
+      "family": "TIG · Plasma · Inox austénitiques",
+      "components": [
+        "hydrogene",
+        "argon"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-2/I2512",
+      "sourceLabel": "Fiche produit",
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/3146754-68529-02671-016753",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/arcaltm-r1-2/I2512",
+          "title": "Air Liquide · ARCAL™ R1-2",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/0/6/4/8/064826300f38fd96e3499e90d3ace13c8f822df0_ARCAL%E2%84%A2_R1-2_fr_FR_v1.2.pdf",
+          "title": "Fiche technique fabricant · V1.2",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
+          "checked": "2026-10-21"
+        }
+      ],
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Gaz comprimé · ADR 2 · 1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-2/I2512"
+        }
+      ],
+      "shoulder": {
+        "ral": "6018",
+        "name": "Vert clair",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/0/6/4/8/064826300f38fd96e3499e90d3ace13c8f822df0_ARCAL%E2%84%A2_R1-2_fr_FR_v1.2.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2512",
+        "category": "Techniques",
+        "processes": [
+          "TIG",
+          "Plasma",
+          "TIG orbital",
+          "Soudo-brasage TIG"
+        ],
+        "materials": [
+          "Inox austénitiques",
+          "Aciers galvanisés en soudo-brasage"
+        ],
+        "uses": [
+          {
+            "title": "TIG · inox austénitiques fins",
+            "detail": "La description vise les tôles fines et toutes positions, en manuel, automatisé ou robotisé. La teneur nominale en H₂ est 2,4 %, malgré le nom R1-2.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-2/I2512"
+          },
+          {
+            "title": "Plasma et TIG orbital",
+            "detail": "Le fabricant cite ces procédés sur les aciers austénitiques.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-2/I2512"
+          },
+          {
+            "title": "Soudo-brasage TIG",
+            "detail": "Les aciers galvanisés sont expressément mentionnés pour cet usage distinct du soudage inox.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-2/I2512"
+          }
+        ],
+        "benefits": [
+          "L’hydrogène est présenté comme stabilisant l’arc et limitant l’oxydation du cordon, avec moins de passivation."
+        ],
+        "standard": "EN ISO 14175-R1-ArH-2,4",
+        "specifications": [
+          {
+            "component": "H₂",
+            "value": "2,4 %",
+            "tolerance": "±0,5 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 20"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 80"
+          }
+        ],
+        "impurityUnit": "ppm v/v",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "20 L",
+            "head": "EXELTOP",
+            "pressure": "200 bar",
+            "content": "4,2 m³",
+            "reference": "I2512M20E2A001",
+            "note": ""
+          },
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,5 m³",
+            "reference": "I2512L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "94 m³",
+            "reference": "I2512V09R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR C (21,7 x 1,814 SI - à droite mâle) EXELTOP : Quick Argon Raccord cadre : 38x2 (S)",
+        "safety": {
+          "flammability": "Ininflammable selon la fiche produit",
+          "adrClass": "2",
+          "classificationCode": "1A",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-2/I2512"
+        },
+        "notes": [
+          "Ne pas étendre l’emploi aux matériaux sensibles à l’hydrogène sans validation."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/0/6/4/8/064826300f38fd96e3499e90d3ace13c8f822df0_ARCAL%E2%84%A2_R1-2_fr_FR_v1.2.pdf",
+          "date": "22/11/2024",
+          "version": "1.2",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
+      }
+    },
+    {
+      "id": "arcal-r1-5",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ R1-5",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "aliases": [
+        "I2552",
+        "R1-5",
+        "EN ISO 14175-R1-ArH-5",
+        "TIG",
+        "Plasma",
+        "Robotisé",
+        "Multi-cathodes",
+        "Protection envers",
+        "Inox austénitiques",
+        "Alliages nickel",
+        "I2552L50S2A001",
+        "I2552V09R2A001"
+      ],
+      "subtitle": "H₂ 5 % + Ar Complément",
+      "composition": "H₂ 5 % + Ar Complément",
+      "applications": [
+        "TIG et plasma : La fiche nomme les aciers austénitiques et les alliages de nickel. Le mélange contient 5 % d’hydrogène.",
+        "Robot et tuberie : Le soudage robotisé des aciers austénitiques et le soudage multi-cathodes en tuberie sont cités.",
+        "Protection envers : Protection de l’envers des aciers austénitiques également référencée."
+      ],
+      "family": "TIG · Plasma · Inox austénitiques",
+      "components": [
+        "hydrogene",
+        "argon"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-5/I2552",
+      "sourceLabel": "Fiche produit",
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/2126754-68530-02671-013535",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/arcaltm-r1-5/I2552",
+          "title": "Air Liquide · ARCAL™ R1-5",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/9/4/7/e/947e30f96f8f1c3361afed24633868a6ed70e4bb_ARCAL%E2%84%A2_R1-5_fr_FR_v1.1.pdf",
+          "title": "Fiche technique fabricant · V1.1",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
+          "checked": "2026-10-21"
+        }
+      ],
+      "transport": [
+        {
+          "number": "1954",
+          "state": "Gaz comprimé · ADR 2 · 1F",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-5/I2552"
+        }
+      ],
+      "shoulder": {
+        "ral": "3000",
+        "name": "Rouge",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/9/4/7/e/947e30f96f8f1c3361afed24633868a6ed70e4bb_ARCAL%E2%84%A2_R1-5_fr_FR_v1.1.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2552",
+        "category": "Techniques",
+        "processes": [
+          "TIG",
+          "Plasma",
+          "Robotisé",
+          "Multi-cathodes",
+          "Protection envers"
+        ],
+        "materials": [
+          "Inox austénitiques",
+          "Alliages nickel"
+        ],
+        "uses": [
+          {
+            "title": "TIG et plasma",
+            "detail": "La fiche nomme les aciers austénitiques et les alliages de nickel. Le mélange contient 5 % d’hydrogène.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-5/I2552"
+          },
+          {
+            "title": "Robot et tuberie",
+            "detail": "Le soudage robotisé des aciers austénitiques et le soudage multi-cathodes en tuberie sont cités.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-5/I2552"
+          },
+          {
+            "title": "Protection envers",
+            "detail": "Protection de l’envers des aciers austénitiques également référencée.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-5/I2552"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-R1-ArH-5",
+        "specifications": [
+          {
+            "component": "H₂",
+            "value": "5 %",
+            "tolerance": "±0,5 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 20"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 80"
+          }
+        ],
+        "impurityUnit": "Unité non précisée dans l’en-tête du tableau",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,4 m³",
+            "reference": "I2552L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "95 m³",
+            "reference": "I2552V09R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR E (21,7 x 1,814 SI - à gauche mâle)",
+        "safety": {
+          "flammability": "Extrêmement inflammable",
+          "adrClass": "2",
+          "classificationCode": "1F",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-5/I2552"
+        },
+        "notes": [
+          "Produit déclaré extrêmement inflammable : référence ONU et raccord différents de R1-2."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/9/4/7/e/947e30f96f8f1c3361afed24633868a6ed70e4bb_ARCAL%E2%84%A2_R1-5_fr_FR_v1.1.pdf",
+          "date": "22/11/2024",
+          "version": "1.1",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
+      }
+    },
+    {
+      "id": "arcal-r1-5-he20",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ R1-5 He20",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "aliases": [
+        "I2521",
+        "R1-5 He20",
+        "EN ISO 14175-R1-ArHeH-20/5",
+        "TIG automatique",
+        "Plasma automatique",
+        "Inox austénitiques",
+        "I2521L50S2A001",
+        "I2521V09R2A001"
+      ],
+      "subtitle": "H₂ 5 % + He 20 % + Ar Complément",
+      "composition": "H₂ 5 % + He 20 % + Ar Complément",
+      "applications": [
+        "TIG et plasma automatiques : Destination publiée : aciers austénitiques en automatique. La fiche ne détaille ni vitesse, ni épaisseur, ni régime de courant."
+      ],
+      "family": "TIG automatique · Plasma automatique · Inox austénitiques",
+      "components": [
+        "hydrogene",
+        "helium",
+        "argon"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-5-he20/I2521",
+      "sourceLabel": "Fiche produit",
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "manufacturer_link",
+        "url": "http://www.quickfds.com/fds/1176754-68529-02671-015863",
+        "label": "Ouvrir la FDS indiquée par Air Liquide",
+        "note": "Lien relevé sur la page produit française le 21 octobre 2026. Révision et correspondance à vérifier sur la FDS du produit livré ; document externe non enregistré hors ligne."
+      },
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/arcaltm-r1-5-he20/I2521",
+          "title": "Air Liquide · ARCAL™ R1-5 He20",
+          "scope": "Applications, caractéristiques, raccordement, sécurité et lien FDS. Synthèse originale du guide.",
+          "checked": "2026-10-21"
+        },
+        {
+          "url": "https://fr.airliquide.com/product-assets/b/0/9/d/b09d064f19aeab1c1c5be4db251ac68836949ec3_ARCAL%E2%84%A2_R1-5_He20_fr_FR_v1.6.pdf",
+          "title": "Fiche technique fabricant · V1.6",
+          "scope": "Révision du 22/11/2024 · composition, ogive et conditionnements (tableau p. 1).",
+          "checked": "2026-10-21"
+        }
+      ],
+      "transport": [
+        {
+          "number": "1954",
+          "state": "Gaz comprimé · ADR 2 · 1F",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-5-he20/I2521"
+        }
+      ],
+      "shoulder": {
+        "ral": "3000",
+        "name": "Rouge",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/b/0/9/d/b09d064f19aeab1c1c5be4db251ac68836949ec3_ARCAL%E2%84%A2_R1-5_He20_fr_FR_v1.6.pdf"
+      },
+      "welding": {
+        "manufacturerCode": "I2521",
+        "category": "Techniques",
+        "processes": [
+          "TIG automatique",
+          "Plasma automatique"
+        ],
+        "materials": [
+          "Inox austénitiques"
+        ],
+        "uses": [
+          {
+            "title": "TIG et plasma automatiques",
+            "detail": "Destination publiée : aciers austénitiques en automatique. La fiche ne détaille ni vitesse, ni épaisseur, ni régime de courant.",
+            "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-5-he20/I2521"
+          }
+        ],
+        "benefits": [],
+        "standard": "EN ISO 14175-R1-ArHeH-20/5",
+        "specifications": [
+          {
+            "component": "H₂",
+            "value": "5 %",
+            "tolerance": "±0,5 %"
+          },
+          {
+            "component": "He",
+            "value": "20 %",
+            "tolerance": "±2 %"
+          },
+          {
+            "component": "Ar",
+            "value": "Complément",
+            "tolerance": ""
+          }
+        ],
+        "impurities": [
+          {
+            "component": "H₂O (5 bar)",
+            "value": "≤ 40"
+          },
+          {
+            "component": "O₂",
+            "value": "≤ 20"
+          },
+          {
+            "component": "N₂",
+            "value": "≤ 80"
+          }
+        ],
+        "impurityUnit": "Unité non précisée dans l’en-tête du tableau",
+        "variants": [
+          {
+            "mode": "Bouteille",
+            "size": "50 L",
+            "head": "SMARTOP",
+            "pressure": "200 bar",
+            "content": "10,5 m³",
+            "reference": "I2521L50S2A001",
+            "note": ""
+          },
+          {
+            "mode": "Cadre",
+            "size": "V09 × 50 L",
+            "head": null,
+            "pressure": "200 bar",
+            "content": "94 m³",
+            "reference": "I2521V09R2A001",
+            "note": ""
+          }
+        ],
+        "connections": "AFNOR E (21,7 x 1,814 SI - à gauche mâle)",
+        "safety": {
+          "flammability": "Extrêmement inflammable",
+          "adrClass": "2",
+          "classificationCode": "1F",
+          "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-r1-5-he20/I2521"
+        },
+        "notes": [
+          "La présence de 20 % He et 5 % H₂ ne permet pas d’élargir les matériaux conseillés. Produit déclaré extrêmement inflammable."
+        ],
+        "sheet": {
+          "url": "https://fr.airliquide.com/product-assets/b/0/9/d/b09d064f19aeab1c1c5be4db251ac68836949ec3_ARCAL%E2%84%A2_R1-5_He20_fr_FR_v1.6.pdf",
+          "date": "22/11/2024",
+          "version": "1.6",
+          "tablePage": 1,
+          "checked": "2026-10-21"
+        }
       }
     },
     {
@@ -6790,9 +9899,15 @@
   "commercialCoverage": {
     "checked": "2026-10-21",
     "country": "France",
-    "documentedProducts": 45,
+    "documentedProducts": 51,
     "rangeCount": 10,
     "complete": false,
-    "note": "Références publiques documentées, pas un inventaire exhaustif. Les catalogues dynamiques et mélanges sur mesure peuvent contenir d’autres produits. Certaines pages sont consultables via l’index public mais leur téléchargement direct est refusé par le serveur."
+    "note": "Catalogue commercial global partiel. Les 21 références des deux pages ARCAL France observées le 21 octobre 2026 sont documentées, avec leurs fiches techniques liées ; cela ne garantit ni le stock ni la disponibilité contractuelle.",
+    "arcal": {
+      "count": 21,
+      "checked": "2026-10-21",
+      "source": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "scope": "Les deux pages du catalogue public France observées ; formats liés transcrits par référence."
+    }
   }
 }

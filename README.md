@@ -2,6 +2,17 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 1.4 — ARCAL en clientèle
+
+- **21 produits ARCAL France**, soit les deux pages du catalogue public observées le 21 octobre 2026 : 4 Référents en premier, puis 17 Techniques. Le guide compte désormais **115 fiches**, dont 51 produits commerciaux.
+- Utilisations précisées par procédé, matériau et cas réellement publié. Les sources succinctes restent signalées ; aucun réglage de soudage ni gain chiffré n’est inventé.
+- **76 références de conditionnement** : taille, pression publiée, tête/chapeau, contenu annoncé et référence exacte, associés ligne par ligne. Une tête absente n’est jamais déduite du code produit.
+- Composition, tolérances, impuretés, ISO 14175, raccords, ONU et couleur d’ogive repris des fiches liées. Différences R1-2 / R1-5 conservées ; divergences de source visibles.
+- Liens vers les 21 pages et PDF fabricant, dates de révision, lien FDS relevé sur chaque page. Seules les FDS dont la note le précise ont été ouvertes et identifiées individuellement.
+- Consultation rapide : accès Utilisations / Formats & chapeaux / FDS & ONU ; recherche par référence de bouteille, matériau ou procédé. Contenu disponible hors ligne avec le catalogue ; documents externes en ligne seulement.
+
+Les dimensions physiques d’un chapeau (hauteur, diamètre) ne sont pas publiées dans ces tableaux : le guide affiche son **type commercial**, sans inventer une cote. Le contenu en m³ est celui annoncé par le fabricant ; ses conditions de référence ne figurant pas dans le tableau, aucune conversion n’est calculée. La pression affichée n’est pas une pression d’utilisation. Ces fiches soutiennent l’échange commercial ; elles ne constituent ni un DMOS ni une qualification de l’application.
+
 ## Nouveautés 1.3
 
 - Accueil issu de la maquette « Recherche immédiate » : recherche prioritaire, quatre raccourcis, accès aux 12 essentiels et aux gammes ARCAL/ALIGAL.
@@ -73,7 +84,7 @@ Pour une modification : vérifier recherche, favoris après rechargement, thème
 
 Publier la branche `main`, dossier `/ (root)`, depuis Settings → Pages → Deploy from a branch. `.nojekyll` désactive le traitement Jekyll. Aucun workflow additionnel ou secret n’est nécessaire.
 
-Site publié : [Guide des gaz](https://bidibulle50.github.io/guide-des-gaz/). Déploiement GitHub Pages réussi et livraison HTTPS des 12 fichiers applicatifs vérifiée le 21 octobre 2026 ; détails dans [VALIDATION.md](VALIDATION.md).
+Site publié : [Guide des gaz](https://bidibulle50.github.io/guide-des-gaz/). Déploiement GitHub Pages réussi et livraison HTTPS des 14 fichiers applicatifs vérifiée le 21 octobre 2026 ; détails dans [VALIDATION.md](VALIDATION.md).
 
 ## Confidentialité et conservation
 
