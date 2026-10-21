@@ -2,6 +2,10 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 1.7.4 — icônes de navigation
+
+Les quatre pictogrammes du visuel fourni sont utilisés directement : molécule, torche, cartes superposées et information. Le PNG original reste intact ; son cadrage et ses couleurs d’affichage sont gérés dans la barre de navigation, avec état actif bleu et adaptation claire/sombre. Les libellés et destinations restent de vrais liens accessibles. Aucun changement du logo principal, des icônes d’installation ou des données métier.
+
 ## Nouveautés 1.7.3 — logo principal
 
 Visuel moléculaire platine et bleu cobalt fourni par l’utilisateur : logo d’accueil, favicon et icônes d’installation 180/192/512 px. Dessin conservé, sans recadrage ; fichiers locaux avec de nouveaux noms pour éviter la réutilisation d’une ancienne image en cache. L’identité du manifest et les données métier restent inchangées. Les installations existantes peuvent conserver leur ancienne icône jusqu’au rafraîchissement par le système ; mise à jour sur iPhone non vérifiée.

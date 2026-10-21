@@ -156,3 +156,14 @@ main{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env
 main:has(.fiche),main:has(.reference-catalogue){padding-top:max(56px,env(safe-area-inset-top))}.reference-catalogue{padding-top:0}.bottom-nav{min-height:84px;padding-bottom:max(22px,env(safe-area-inset-bottom))}.bottom-nav a{font-size:11px}
 
 .fiche .properties dd{white-space:normal;overflow-wrap:normal}.reference-risk-symbols img{padding:4px}
+
+/* Pictogrammes du visuel utilisateur : image d’origine, cadrage CSS et couleur du lien. */
+:root{--nav-art-blend:multiply;--nav-art-ink-blend:screen;--nav-art-image-filter:grayscale(1) brightness(1.5) contrast(2) invert(1)}
+:root[data-theme=dark]{--nav-art-blend:screen;--nav-art-ink-blend:multiply;--nav-art-image-filter:grayscale(1) brightness(1.5) contrast(2)}
+@media(prefers-color-scheme:dark){:root[data-theme=system]{--nav-art-blend:screen;--nav-art-ink-blend:multiply;--nav-art-image-filter:grayscale(1) brightness(1.5) contrast(2)}}
+.bottom-nav .nav-art{display:block;position:relative;isolation:isolate;width:40px;height:28px;flex:0 0 28px;background-color:currentColor;mix-blend-mode:var(--nav-art-blend)}
+.bottom-nav .nav-art::before{content:'';position:absolute;inset:0;background-image:url('./icons/navigation-reference-1.7.4.png');background-repeat:no-repeat;filter:var(--nav-art-image-filter);mix-blend-mode:var(--nav-art-ink-blend)}
+.bottom-nav .nav-art-catalogue::before{background-size:392.166667px 130.722222px;background-position:-37.055556px -48.291667px}
+.bottom-nav .nav-art-welding::before{background-size:373.986755px 124.662252px;background-position:-129.112583px -45.317881px}
+.bottom-nav .nav-art-ranges::before{background-size:397.690141px 132.563380px;background-position:-226.908451px -49.901408px}
+.bottom-nav .nav-art-references::before{background-size:357.417722px 119.139241px;background-position:-285.911392px -42.936709px}

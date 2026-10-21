@@ -62,9 +62,28 @@ test('L’accueil ouvre la recherche, quatre raccourcis et les gammes sans masqu
 });
 
 test('Les icônes de navigation ont une classe de présentation et sont exclues du nom accessible',()=>{
- const {context,element}=renderContext();vm.runInContext('catalogue()',context);
- assert.match(element('.bottom-nav').innerHTML,/<svg aria-hidden="true" focusable="false" class="icon /);
- assert.ok(!element('.bottom-nav').innerHTML.includes('<svg xmlns='));
+ const {context,element}=renderContext();
+ const routes=[['catalogue','Catalogue','catalogue'],['soudage','Soudage','welding'],['gammes','Gammes','ranges'],['reperes','Repères','references']];
+ const generic=Object.fromEntries(['book','layers','compass'].map(key=>[key,iconMarkup[key]]));
+ for(const [active] of routes){
+  context.active=active;vm.runInContext('nav(active)',context);
+  const html=element('.bottom-nav').innerHTML;
+  const links=[...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)];
+  assert.equal(links.length,4);
+  assert.equal((html.match(/aria-current="page"/g)||[]).length,1);
+  assert.equal((html.match(/class="nav-art nav-art-[a-z]+" aria-hidden="true"/g)||[]).length,4);
+  for(const [index,[route,label,art]] of routes.entries()){
+   const attributes=tagAttributes(links[index][1]);
+   assert.equal(attributes.href,'#'+route);
+   assert.equal(attributes['aria-current'],route===active?'page':undefined);
+   assert.ok(links[index][2].includes(`<span class="nav-art nav-art-${art}" aria-hidden="true"></span>`));
+   assert.ok(links[index][2].includes(`<span>${label}</span>`));
+  }
+  assert.match(links[0][1],/\bdata-home\b/);
+ }
+ for(const [key,markup] of Object.entries(generic)){
+  assert.match(markup,/<svg\b/);assert.equal(iconMarkup[key],markup);
+ }
 });
 test('Chaque fiche ARCAL affiche ses utilisations et toutes ses références, sans modifier les autres gammes',()=>{
   const {context,element}=renderContext();

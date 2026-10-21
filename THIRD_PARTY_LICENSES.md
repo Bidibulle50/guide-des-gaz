@@ -45,3 +45,7 @@ Icône « welding », Image# 147374, par Pablo Barros da Silveira, publiée le 2
 ## Logo principal fourni par l’utilisateur
 
 Visuel généré « Icône moléculaire platine et bleu cobalt », partagé et choisi par l’utilisateur le 22 octobre 2026 : https://chatgpt.com/s/m_6ad9387a01b08191b2f140eb07aaf56f . Utilisation expressément demandée pour l’application. Aucun logo officiel de fournisseur ; le dessin ne représente pas une formule chimique de référence. Les fichiers locaux dérivés sont uniquement redimensionnés depuis l’image carrée d’origine 1254 × 1254, sans recadrage ni modification du sujet. Aucune licence libre générale sur ce logo n’est revendiquée.
+
+## Icônes de navigation fournies par l’utilisateur
+
+Visuel « Barre de navigation industrielle minimaliste », partagé et choisi le 22 octobre 2026 : https://chatgpt.com/s/m_6ad93b9ca448819188ea5cb78e22af07 . Fichier d’origine conservé intact dans `icons/navigation-reference-1.7.4.png` (2172 × 724), sans redessin. Les quatre zones de pictogrammes sont affichées par cadrage et filtres CSS ; les mots dans l’image ne sont pas utilisés comme libellés interactifs. Utilisation expressément demandée pour cette application ; aucune licence libre générale revendiquée sur le visuel.
