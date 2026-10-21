@@ -3,7 +3,7 @@ import { ESSENTIAL_IDS, catalogueSelection, readFavorites, escapeHtml as esc } f
 import { MATERIALS, PROCESSES, NEEDS, availableProcesses, weldingSelection } from './welding.js';
 const $ = s => document.querySelector(s);
 const icon = (key, cls='') => (iconMarkup[key] || '').replace('<svg ', `<svg aria-hidden="true" focusable="false" class="icon ${cls}" `);
-const brand = '<img class="brand" src="./icons/brand.svg" alt="" width="36" height="36">';
+const brand = '<img class="brand" src="./icons/brand-cobalt-128.png" alt="" width="48" height="48">';
 const allEntries = () => [...data.gases, ...(data.products || [])];
 let data, favorites = new Set(), query = '', mode = 'essentials', catalogueScroll = 0, catalogueOverview = true, toastTimer, offlineReady = false, waitingWorker;
 let weldingJourney={material:null,process:null,need:null,confirmed:[]};

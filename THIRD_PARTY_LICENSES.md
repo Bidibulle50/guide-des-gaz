@@ -41,3 +41,7 @@ Les fichiers ADR2.2 et ADR5.1 proviennent exactement du HTML de référence four
 Icône « welding », Image# 147374, par Pablo Barros da Silveira, publiée le 29 avril 2015. La page primaire indique **Public Domain Icon** : https://thenounproject.com/icon/welding-147374/ . Vérifiée le 22 octobre 2026.
 
 `icons/welding-torch.png` provient du PNG transparent 512 px de cette page. Seules les marges transparentes sont retirées pour la lisibilité à 25 px ; dessin conservé. Un masque CSS l’affiche dans la couleur de navigation, sans service distant et sans photographie de fabricant.
+
+## Logo principal fourni par l’utilisateur
+
+Visuel généré « Icône moléculaire platine et bleu cobalt », partagé et choisi par l’utilisateur le 22 octobre 2026 : https://chatgpt.com/s/m_6ad9387a01b08191b2f140eb07aaf56f . Utilisation expressément demandée pour l’application. Aucun logo officiel de fournisseur ; le dessin ne représente pas une formule chimique de référence. Les fichiers locaux dérivés sont uniquement redimensionnés depuis l’image carrée d’origine 1254 × 1254, sans recadrage ni modification du sujet. Aucune licence libre générale sur ce logo n’est revendiquée.

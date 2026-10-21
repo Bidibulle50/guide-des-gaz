@@ -2,6 +2,10 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 1.7.3 — logo principal
+
+Visuel moléculaire platine et bleu cobalt fourni par l’utilisateur : logo d’accueil, favicon et icônes d’installation 180/192/512 px. Dessin conservé, sans recadrage ; fichiers locaux avec de nouveaux noms pour éviter la réutilisation d’une ancienne image en cache. L’identité du manifest et les données métier restent inchangées. Les installations existantes peuvent conserver leur ancienne icône jusqu’au rafraîchissement par le système ; mise à jour sur iPhone non vérifiée.
+
 ## Nouveautés 1.7.2 — références visuelles conservées
 
 Les écrans d’accueil, de catalogue et de fiche fournis par l’utilisateur constituent la référence : quatre cartes de gaz, gammes regroupées, accès au catalogue complet, recherche arrondie, filtres de risques, lettres alphabétiques, fiches à quatre rubriques avec cartes de sécurité et de transport. Le guide conserve les **115 fiches**, les 12 essentiels en premier et l’onglet Soudage.
