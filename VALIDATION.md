@@ -1,3 +1,17 @@
+# Vérification — édition 1.7.4 — icônes de navigation — 22 octobre 2026
+
+- Quatre pictogrammes du visuel choisi : molécule Catalogue, torche Soudage, cartes Gammes, information Repères. Le PNG original2172 ×724 est conservé intact ; cadrage et couleurs d’affichage gérés en CSS. Les deux essais de détourage généré n’ont pas été utilisés.
+- Les quatre routes, les libellés français, les cibles tactiles et `aria-current` sont conservés. Les décorations sont `aria-hidden` ; les glyphes génériques du contenu, le logo et les icônes d’installation sont inchangés.
+- **38 tests réussis, zéro échec**, dont navigation : quatre liens et quatre états actifs, un seul `aria-current`, quatre décorations ; icônes génériques préservées. Syntaxes JavaScript et identité des données métier vérifiées.
+- Contrôle du composant public avant intégration : clair/sombre, largeurs320/390px, chacun des quatre états actifs. Capture `work/navigation-icons/preview-light-dark.png` ; pictogrammes40 ×28 CSS px et liens de49px minimum. Cette page est une surface de contrôle, pas un parcours utilisateur.
+- Commit applicatif `562bb74cebb192e27cc5125b2d9ff63a59f87ea7` ; vérification finale publiée et limites consignées dans `validation/navigation-1.7.4-2026-10-22.json` après recette navigateur. Workflow Pages `39687493936` réussi ; **23 fichiers HTTPS et accueil identiques aux octets locaux**. Les quatre destinations ont été ouvertes dans le navigateur ; états actifs et thèmes clair/sombre/automatique contrôlés, thème automatique rétabli. Aucun message d’erreur ou d’avertissement provenant de la PWA relevé. Le cache affiche « Hors ligne disponible ». La recette Safari iPhone et la coupure réseau réelle restent non effectuées.
+
+Fichiers principaux : `app.js`, `styles.css`, `sw.js`, `icons/navigation-reference-1.7.4.png`, `tests/templates.test.js`, versions et notices. Aucune donnée de gaz ni règle de présélection modifiée.
+
+---
+
+## Historique 1.7.3
+
 # Vérification — édition 1.7.3 — logo principal — 22 octobre 2026
 
 - Image originale récupérée depuis le lien partagé par l’utilisateur : visuel moléculaire platine et bleu cobalt, 1254 × 1254. Redimensionnement seul, sans recadrage ni nouveau dessin.

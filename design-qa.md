@@ -1,3 +1,41 @@
+# Revue des icônes de navigation — édition 1.7.4 — 22 octobre 2026
+
+## Cible et périmètre
+
+Référence exacte choisie : https://chatgpt.com/s/m_6ad93b9ca448819188ea5cb78e22af07 . Quatre pictogrammes : molécule, torche, cartes, information. Le PNG source2172 ×724 est utilisé intact ; SHA-256 identique entre original et fichier applicatif. Les essais de détourage généré ne sont pas livrés. Aucun tracé SVG ou symbole de remplacement.
+
+Seule la navigation adopte ces dessins. Logo principal, favicons, contenu métier, icônes génériques et structure des écrans restent inchangés. Le texte demeure éditable et accessible ; l’image entière n’est pas utilisée comme une barre cliquable unique.
+
+## Preuves et comparaison
+
+- Composant préalablement contrôlé dans `validation/navigation.html` : quatre états actifs répartis sur thème clair/sombre et largeurs320/390 ; capture `work/navigation-icons/preview-light-dark.png` dans le workspace.
+- Application réelle publiée : 390 ×844 sombre Repères ; 320 ×844 sombre Soudage ; 320 ×844 clair Gammes ; 390 ×844 automatique Catalogue. Quatre rubriques ouvertes par leurs vrais liens, édition1.7.4 et cache prêt confirmés.
+- Captures finales recadrées sur la barre : `outputs/Guide-des-gaz-1.7.4-navigation.png`, `navigation-sombre.png`, `navigation-soudage.png`, `navigation-claire.png` avec même préfixe dans le workspace. Originaux complets sous `work/navigation-icons/app-*-full.png`.
+- Source/rendu réunis : `reference-comparison.png` et `reference-comparison-zoom.png` dans `work/navigation-icons/`. Source recadrée sur la zone de barre puis normalisée à390 ×84, rendu sombre Repères à390 ×84 ; agrandissement×4 réservé à l’examen des pictogrammes. L’alignement des colonnes et le texte gardent les mesures de l’application : la demande porte sur les icônes. Les positions exactes des pixels de la barre de référence ne sont pas imposées à la mise en page.
+- Document intégré à vrai viewport CSS, densité1, navigateur sur ordinateur. Ces preuves ne sont pas des captures de Safari iOS ou d’une PWA native installée.
+
+## Surfaces obligatoires
+
+- **Polices/copie** : Inter et libellés Catalogue/Soudage/Gammes/Repères conservés, textes HTML réels. L’image est décorative avec aria-hidden ; aucun nom accessible parasite.
+- **Espacement** : boîtes40 ×28, pictogrammes proportionnels avec hauteur optique26px, torche plus large comme la source. Coordonnées mesurées depuis les pixels de l’original ; pas de déformation ni de rognage visible. Liens de49px minimum,51px mesurés sur bureau ; hauteur de navigation et marges conservées.
+- **Couleurs** : onglet actif bleu ; autres gris. Filtres et modes de fusion d’affichage évalués dans les deux thèmes. Pas de rectangle de fond parasite dans les régions inspectées ; contrastes de l’interface préservés. Les pixels colorés de l’original ne figent pas l’état actif sur Repères.
+- **Assets** : PNG original local précaché, cadrage CSS ; aucun détourage destructif livré. Les contours de la molécule, du coude de torche, des trois cartes et du i encerclé correspondent à la référence. Le fichier source et ses textes non affichés restent dans l’asset, sans requête vers ChatGPT lors de l’usage.
+- **Fonctionnement** : quatre liens et un seul aria-current par état. Recherche, favoris et données inchangés. Thème automatique rétabli après contrôle.
+
+Aucun P0/P1/P2 restant détecté pour cette intégration. P3 : le lissage d’une source bitmap à26px peut varier selon le navigateur ; ces pictogrammes ne sont pas présentés comme des fichiers vectoriels. Aucun autre redesign engagé.
+
+## Validation et limites
+
+38 tests réussis, aucun échec ; nouveau contrôle des quatre liens/décorations/états actifs et conservation des glyphes génériques. Pages réussi pour `562bb74cebb192e27cc5125b2d9ff63a59f87ea7` ;23 fichiers HTTPS et accueil identiques aux octets locaux. Aucune erreur ni alerte provenant de la PWA relevée dans les journaux de l’onglet ; messages historiques ChatGPT exclus par leur origine.
+
+Recette sur Safari iPhone, défilement tactile et réouverture après coupure réseau réelle non effectués. Compatibilité observée du rendu web uniquement ; les filtres d’affichage doivent encore être constatés sur l’appareil de l’utilisateur.
+
+final result: passed
+
+---
+
+## Historique du logo 1.7.3
+
 # Revue du logo principal — édition 1.7.3 — 22 octobre 2026
 
 ## Cible et preuves
