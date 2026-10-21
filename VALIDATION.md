@@ -1,3 +1,12 @@
+# Vérification de l’édition 1.3.0 — en cours
+
+- 16 tests Node réussis : nouveau parcours d’accueil et recherche ARCAL, 12 essentiels, 109 fiches, favoris, gabarits et cache isolé.
+- Syntaxe JavaScript vérifiée. Les nouvelles ressources locales (`ui-icons.js`, `icons/brand.svg`) figurent dans le préchargement hors ligne.
+- Source visuelle retenue : maquette 3, Recherche immédiate. Les photos génériques ont été écartées après clarification de l’usage commercial.
+- Recette sur site public et rapport visuel en cours ; la preuve ci-dessous concerne l’édition précédente.
+
+---
+
 # Vérification — édition 1.2.0 — 21 octobre 2026
 
 ## Résultat

@@ -2,6 +2,14 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 1.3
+
+- Accueil issu de la maquette « Recherche immédiate » : recherche prioritaire, quatre raccourcis, accès aux 12 essentiels et aux gammes ARCAL/ALIGAL.
+- Consultation commerciale : applications présentées avant la composition ; FDS et sources conservées. Favoris, recherche complète, thèmes et mode hors ligne préservés.
+- Aucun visuel générique de bouteille intégré : ces images ne permettent pas d’identifier un produit réel ou son conditionnement. Les deux essais de visuels générés restent hors du site.
+- Icônes Feather 4.29.2 intégrées localement sous licence MIT ; avis conservé dans `THIRD_PARTY_LICENSES.md`. Aucun chargement externe de police ou d’icône.
+- Les favoris sont accessibles par le marque-page de l’en-tête et dans les filtres de liste. Le bouton Catalogue revient à l’accueil.
+
 ## Nouveautés 1.2
 
 - **109 fiches** : 64 entrées de molécules/substances et 45 références commerciales documentées (15 ARCAL, 12 ALIGAL, 15 ALPHAGAZ, 3 LASAL).
