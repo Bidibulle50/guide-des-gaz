@@ -1,0 +1,260 @@
+{
+  "url": "https://bidibulle50.github.io/guide-des-gaz/",
+  "verifiedAt": "2026-10-22",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 1904,
+      "matchesLocal": true,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "6f03048a974b32b3f0aa9f2d5b241311397d75ede847c64153dbc0cf1a5af8d1"
+    },
+    {
+      "path": "styles.css",
+      "status": 200,
+      "bytes": 58240,
+      "matchesLocal": true,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "d5b91467c1e73158f9c010a425222c62b0c4478f33cbf1a250fdcfa7bf6bca6e"
+    },
+    {
+      "path": "theme.js",
+      "status": 200,
+      "bytes": 227,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "375c30c63b47563de7f0a53367234b60343d63c89c9fe55b4e345d373854c749"
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 62312,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "053942941d1a3b1981c9710796f49f4885376e52baee3694448c17502a0536e9"
+    },
+    {
+      "path": "core.js",
+      "status": 200,
+      "bytes": 1989,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "4ade811c04de790f40020b750e7cc43a464a28194f9847f330d6ead32f2d182e"
+    },
+    {
+      "path": "welding.js",
+      "status": 200,
+      "bytes": 11157,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "b941caddde21c6cfc9c5f6d40810adee3325ff8ff90ae0106badfc00fb97d9a0"
+    },
+    {
+      "path": "ui-icons.js",
+      "status": 200,
+      "bytes": 5370,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "0405627bc6d6ff62eff327531783920eaccfd138629a7908fb7b2e97762707dc"
+    },
+    {
+      "path": "icons/brand-cobalt-128.png",
+      "status": 200,
+      "bytes": 17175,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "314b06df519500f643165f4de6a56cae9f5d564527c3a7247946fcb95cc60f96"
+    },
+    {
+      "path": "icons/welding-torch.png",
+      "status": 200,
+      "bytes": 6931,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "dd5a91d799eb036f2f550cdeeb8737a0729c96680f6be308a2d3fc4f82bf0f94"
+    },
+    {
+      "path": "data/gases.json",
+      "status": 200,
+      "bytes": 386180,
+      "matchesLocal": true,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "fd6ea279be0b009b683a1116efe2e4fb6b7c741a572641326a8852bf83683795"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "status": 200,
+      "bytes": 646,
+      "matchesLocal": true,
+      "contentType": "application/manifest+json; charset=utf-8",
+      "sha256": "4cfa22c440434795abe0cae3d1dd596fcdfa43ce9c8857dd73f9e951f6ee9575"
+    },
+    {
+      "path": "icons/favicon-cobalt-32.png",
+      "status": 200,
+      "bytes": 1855,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "9fdfdf8d8285c6343326280e67386d8e18605e4519b3b1b360b33ea1d7d9af7d"
+    },
+    {
+      "path": "icons/icon-cobalt-192.png",
+      "status": 200,
+      "bytes": 34943,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "11e4646d7b3f7f84920cb1939ecee0d28561b3064ce6996bb974162c8a8f413e"
+    },
+    {
+      "path": "icons/icon-cobalt-512.png",
+      "status": 200,
+      "bytes": 236877,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "2b7380b43b1248c0b5b1f3a1e1f1b2c9600b0fba8fb87740542870789b807db7"
+    },
+    {
+      "path": "icons/apple-touch-cobalt-180.png",
+      "status": 200,
+      "bytes": 31080,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "9a66889b686a61d9b0a4c1c9809910aff3cc21897ef63d1202d5a6ecd04b2678"
+    },
+    {
+      "path": "fonts/InterVariable.woff2",
+      "status": 200,
+      "bytes": 352240,
+      "matchesLocal": true,
+      "contentType": "font/woff2",
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+    },
+    {
+      "path": "icons/hazards/ghs03.png",
+      "status": 200,
+      "bytes": 40947,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "619d935948a15634c69410a993834c4cd7ecbec05e51444b4c23eade7d8d0bcb"
+    },
+    {
+      "path": "icons/hazards/ghs04.png",
+      "status": 200,
+      "bytes": 28532,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "9852e71ac553b72051e9c0c3c77ec1af5ec051b2920fa6bf17a2b9df989656fc"
+    },
+    {
+      "path": "icons/hazards/adr-2-2.svg",
+      "status": 200,
+      "bytes": 562,
+      "matchesLocal": true,
+      "contentType": "image/svg+xml",
+      "sha256": "49e9024f164d6cd9324228b11e6025f10c982716a5a08389d5159bf0e061518a"
+    },
+    {
+      "path": "icons/hazards/adr-5-1.svg",
+      "status": 200,
+      "bytes": 577,
+      "matchesLocal": true,
+      "contentType": "image/svg+xml",
+      "sha256": "e37d898f9fc259510af000253294ee0a7174f6ca775fc5aee3d94d64c32aa899"
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "bytes": 2091,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "722e7f3bf7aa0fe8693696481af9ec798a9090f997c43213f94e86bb933c1bcd"
+    },
+    {
+      "path": "validation/mobile.html",
+      "status": 200,
+      "bytes": 1638,
+      "matchesLocal": true,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "5ce76bf5bc257fcdc5de10fad2c664f7d74974c9fb62da8c25b9e03949d88128"
+    }
+  ],
+  "indexRoute": true,
+  "scope": "HTTPS static delivery only; no real browser or iPhone test",
+  "version": "1.7.3",
+  "appCommit": "0fd00d2f0fa121cfd36c91811da4f04979280ce5",
+  "pagesRun": 39685560309,
+  "pagesConclusion": "success",
+  "automatedTests": {
+    "passed": 38,
+    "failed": 0
+  },
+  "logo": {
+    "sourcePage": "https://chatgpt.com/s/m_6ad9387a01b08191b2f140eb07aaf56f",
+    "originalSize": [
+      1254,
+      1254
+    ],
+    "originalSha256": "780f133f089d95923062a6e0a806947d03e1c5a00fbfe7e57b4925558f57ee8f",
+    "version": "1.7.3",
+    "transform": "Proportional resampling only; no crop or redraw",
+    "files": {
+      "brand-cobalt-128.png": {
+        "size": [
+          128,
+          128
+        ],
+        "sha256": "314b06df519500f643165f4de6a56cae9f5d564527c3a7247946fcb95cc60f96"
+      },
+      "favicon-cobalt-32.png": {
+        "size": [
+          32,
+          32
+        ],
+        "sha256": "9fdfdf8d8285c6343326280e67386d8e18605e4519b3b1b360b33ea1d7d9af7d"
+      },
+      "apple-touch-cobalt-180.png": {
+        "size": [
+          180,
+          180
+        ],
+        "sha256": "9a66889b686a61d9b0a4c1c9809910aff3cc21897ef63d1202d5a6ecd04b2678"
+      },
+      "icon-cobalt-192.png": {
+        "size": [
+          192,
+          192
+        ],
+        "sha256": "11e4646d7b3f7f84920cb1939ecee0d28561b3064ce6996bb974162c8a8f413e"
+      },
+      "icon-cobalt-512.png": {
+        "size": [
+          512,
+          512
+        ],
+        "sha256": "2b7380b43b1248c0b5b1f3a1e1f1b2c9600b0fba8fb87740542870789b807db7"
+      }
+    }
+  },
+  "browser": {
+    "edition": "1.7.3",
+    "logoLoaded": true,
+    "naturalSize": [
+      128,
+      128
+    ],
+    "renderedCss": [
+      48,
+      48
+    ],
+    "responsiveWidthsCss": [
+      390,
+      320
+    ],
+    "desktopHomeInspected": true,
+    "installedOsIconVerified": false,
+    "nativeIPhoneVerified": false,
+    "realNetworkDisconnectVerified": false,
+    "note": "Retained ChatGPT GSI/FedCM messages are unrelated to this PWA."
+  }
+}

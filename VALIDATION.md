@@ -1,3 +1,19 @@
+# Vérification — édition 1.7.3 — logo principal — 22 octobre 2026
+
+- Image originale récupérée depuis le lien partagé par l’utilisateur : visuel moléculaire platine et bleu cobalt, 1254 × 1254. Redimensionnement seul, sans recadrage ni nouveau dessin.
+- Cinq fichiers PNG : logo128, favicon32, Apple180 et icônes192/512. Chemins nouveaux pour éviter les anciennes images en cache ; identité, portée et démarrage du manifest conservés. Purpose `any`, aucune garantie de cadrage `maskable` inventée. Logo affiché en 48 × 48 sur l’accueil, le bureau et les autres en-têtes utilisant la même identité.
+- **38 tests réussis, zéro échec** ; dimensions des cinq PNG, références HTML/manifest/cache et absence de modification des données métier vérifiées séparément. Seule la version du catalogue change.
+- Commit applicatif `0fd00d2f0fa121cfd36c91811da4f04979280ce5`. Workflow Pages `39685560309` terminé avec succès. **22 fichiers HTTPS et route d’accueil identiques aux octets locaux.** Preuve complémentaire : `validation/logo-1.7.3-2026-10-22.json`.
+- Navigateur : activation 1.7.2 → 1.7.3 ; logo visible à 390 et 320 CSS px et sur l’accueil bureau. DOM du bureau : image chargée, source locale `brand-cobalt-128.png`, dimensions naturelles128 ×128, rendu48 ×48. Captures et gros plans du logo inspectés ; aucune déformation ni rognage du sujet. Cache « Hors ligne disponible » affiché.
+- Les journaux du même onglet conservent deux messages GSI/FedCM de la page ChatGPT visitée pour récupérer l’image ; ils ne proviennent pas de la PWA. Aucune erreur applicative du guide relevée dans ces journaux.
+- **Limite** : aucune mise à jour d’une icône déjà installée sur un véritable bureau ou écran d’accueil vérifiée. Le système peut conserver l’ancienne image ; Safari iOS, installation et réouverture après coupure réseau réelle restent hors du périmètre prouvé. Les PNG d’installation sont publiés et contrôlés, leur application effective par le système ne l’est pas.
+
+Fichiers principaux : `app.js`, `styles.css`, `index.html`, `manifest.webmanifest`, `sw.js`, `icons/*cobalt*.png`, versions et notices. Aucune règle ARCAL ni donnée de gaz modifiée.
+
+---
+
+## Historique 1.7.2
+
 # Vérification — édition 1.7.2 — 22 octobre 2026
 
 - Références utilisateur reprises pour accueil, catalogue et quatre rubriques de fiche. Le pictogramme de clé puis le masque générique ont été remplacés par une torche de soudage avec étincelles, Noun Project #147374, domaine public indiqué sur la page primaire. Dessin conservé, marges transparentes recadrées ; affichage local de 30 × 25 px et cache inclus.

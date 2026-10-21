@@ -1,3 +1,27 @@
+# Revue du logo principal — édition 1.7.3 — 22 octobre 2026
+
+## Cible et preuves
+
+Visuel exact choisi par l’utilisateur : https://chatgpt.com/s/m_6ad9387a01b08191b2f140eb07aaf56f . Original1254 ×1254 conservé ; cinq PNG redimensionnés sans recadrage. Comparaison source/icône dans `work/logo-principal/comparison-icon.png`, source et rendu réunis à192 ×192. Image et cadrage identiques, aucune recréation.
+
+Rendu réel du site : `outputs/Guide-des-gaz-1.7.3-accueil-logo.png`, `Guide-des-gaz-1.7.3-accueil-bureau.png` et captures originales sous `work/logo-principal/` dans le workspace. Viewports intégrés390 ×940 et320 ×844 ; bureau également contrôlé. Gros plans des fichiers de capture vérifiés pour confirmer la présence du logo aux deux largeurs. Pas de capture d’une installation native.
+
+## Surfaces vérifiées
+
+- Typographie et textes : aucun changement ; logo décoratif à côté du nom lisible.
+- Espacement : boîte48 ×48, proportions carrées et object-fit:contain, angle12px uniquement pour l’affichage dans l’en-tête. Réserve de défilement de l’accueil conservée ; la page reste défilable selon sa hauteur.
+- Couleurs : platine, cobalt et fond du visuel original conservés ; palette de l’application inchangée.
+- Assets : véritable image fournie, redimensionnements128/32/180/192/512, sans dessin, recadrage ni image distante dans l’application. Versions locales mises en cache.
+- Contenu : seule l’identité graphique change. Aucun logo de fournisseur ajouté ; l’illustration n’est pas une formule scientifique.
+
+Aucun P0/P1/P2 détecté pour cette intégration. Tests38/38 et livraison HTTPS22 fichiers contrôlés ; logo bureau chargé à sa taille attendue. L’icône d’installation et le changement d’une icône déjà installée doivent être constatés sur l’appareil. Le résultat ci-dessous porte sur les fichiers et le rendu web inspectés.
+
+final result: passed
+
+---
+
+## Historique de la refonte 1.7.2
+
 # Revue visuelle — édition 1.7.2 — 22 octobre 2026
 
 ## Résultat et corrections
