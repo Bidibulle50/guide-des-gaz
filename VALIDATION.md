@@ -1,3 +1,28 @@
+# Vérification — édition 1.7.2 — 22 octobre 2026
+
+- Références utilisateur reprises pour accueil, catalogue et quatre rubriques de fiche. Le pictogramme de clé puis le masque générique ont été remplacés par une torche de soudage avec étincelles, Noun Project #147374, domaine public indiqué sur la page primaire. Dessin conservé, marges transparentes recadrées ; affichage local de 30 × 25 px et cache inclus.
+- **38 tests réussis, zéro échec** : recherche, risques, favoris, 115 fiches, quatre onglets, 21 ARCAL et 76 conditionnements, présélection Soudage, cache isolé. Syntaxes JavaScript vérifiées.
+- Commit applicatif `d4d3c829a6ec9ce11849f014a6d0ff09a99fee74`. Workflow Pages `39684587732` terminé avec succès. L’accueil et **22 fichiers** servis en HTTPS ont été comparés aux octets locaux : identiques. Preuve : `validation/deployment-2026-10-22.json`.
+- Navigateur public : activation 1.7.1 → 1.7.2, édition affichée, cache « Hors ligne disponible », torche visible et bleue lorsque Soudage est actif, ouverture du guide ARCAL. Aucune erreur ni alerte console. Mesure de l’icône : 30 × 25 CSS px ; masque chargé depuis le site. Aucun débordement horizontal sur la page finale bureau.
+- Contrôle responsive du même site dans un document intégré : largeurs réelles **390 et 320 CSS px**. Accueil 390 × 940, catalogue 390 × 1000, O₂ 390/320 × 2100 ; quatre onglets inspectés et point critique lisible sur deux lignes à 320 px. Comparaisons source/rendu enregistrées dans le workspace ; les grandes fiches sont capturées par régions, sans prétendre à une capture complète Safari.
+- Références, données chimiques et limites documentaires précisées dans `SOURCES.md` et `design-qa.md`. Les 64 gaz, 51 produits, règles de soudage et formats ARCAL sont conservés. Le catalogue reste partiel.
+- **Limites** : pas de test sur Safari iOS, de clavier iPhone, d’installation native ni de réouverture après coupure réelle du réseau. Le cadre intégré sans barre de défilement est une surface de contrôle, pas un appareil iOS ; certaines parties longues nécessitent plusieurs captures. Les FDS et sources externes nécessitent Internet. Dépôt et site restent publics.
+
+## Fichiers principaux
+
+`app.js`, `styles.css`, `ui-icons.js`, `icons/welding-torch.png`, `data/gases.json`, `sw.js`, `package.json`, assets sous licence et documentation. Aucune photographie de fabricant ni donnée interne ajoutée.
+
+## Recette iPhone restante
+
+1. Choisir « Actualiser » si proposé, puis vérifier l’édition 1.7.2.
+2. Vérifier la torche Soudage, la recherche avec clavier ouvert, les quatre rubriques et le défilement jusqu’aux sources.
+3. Attendre « Hors ligne disponible », couper les réseaux et rouvrir plusieurs fiches depuis l’écran d’accueil.
+4. Rétablir Internet pour consulter FDS et sources.
+
+---
+
+## Historique antérieur
+
 # Vérification — édition 1.6.0 — 21 octobre 2026
 
 - Refonte des 115 fiches selon la maquette Oxygène approuvée : quatre rubriques accessibles, synthèse et FDS prioritaires, usages en dessous. Toutes les données existantes sont conservées ; seules les trois applications détaillées O₂ et la version sont ajoutées au catalogue.

@@ -1,0 +1,222 @@
+{
+  "url": "https://bidibulle50.github.io/guide-des-gaz/",
+  "verifiedAt": "2026-10-22",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 1859,
+      "matchesLocal": true,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "0e6ad5ebdfc452ad94ed16e06b5355825abe4cb5a122b94b2c9e62999578f507"
+    },
+    {
+      "path": "styles.css",
+      "status": 200,
+      "bytes": 58237,
+      "matchesLocal": true,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "08fff51b11a24657b442b23c76cf09a55f111a23b499d69a697ef4f8864c7575"
+    },
+    {
+      "path": "theme.js",
+      "status": 200,
+      "bytes": 227,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "375c30c63b47563de7f0a53367234b60343d63c89c9fe55b4e345d373854c749"
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 62301,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "65070668ce42e0460f783fba6fc5ea8b6277667547629d441f07932472e75912"
+    },
+    {
+      "path": "core.js",
+      "status": 200,
+      "bytes": 1989,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "4ade811c04de790f40020b750e7cc43a464a28194f9847f330d6ead32f2d182e"
+    },
+    {
+      "path": "welding.js",
+      "status": 200,
+      "bytes": 11157,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "b941caddde21c6cfc9c5f6d40810adee3325ff8ff90ae0106badfc00fb97d9a0"
+    },
+    {
+      "path": "ui-icons.js",
+      "status": 200,
+      "bytes": 5370,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "0405627bc6d6ff62eff327531783920eaccfd138629a7908fb7b2e97762707dc"
+    },
+    {
+      "path": "icons/brand.svg",
+      "status": 200,
+      "bytes": 274,
+      "matchesLocal": true,
+      "contentType": "image/svg+xml",
+      "sha256": "c2ff1727e4df8ac4e4e33fe0d98e7a048649be1252315b1cae270f51c401cd0e"
+    },
+    {
+      "path": "icons/welding-torch.png",
+      "status": 200,
+      "bytes": 6931,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "dd5a91d799eb036f2f550cdeeb8737a0729c96680f6be308a2d3fc4f82bf0f94"
+    },
+    {
+      "path": "data/gases.json",
+      "status": 200,
+      "bytes": 386180,
+      "matchesLocal": true,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "3c91813fb03ae8ab4c076c7b9323f53803ae1c9c1b5ed49e132fb8b3428e7a72"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "status": 200,
+      "bytes": 564,
+      "matchesLocal": true,
+      "contentType": "application/manifest+json; charset=utf-8",
+      "sha256": "89e523de12eb59d27228565c0e6f903b5be29240bb7bcd2bdb629f5091f86348"
+    },
+    {
+      "path": "icons/icon.svg",
+      "status": 200,
+      "bytes": 360,
+      "matchesLocal": true,
+      "contentType": "image/svg+xml",
+      "sha256": "dc4a8f1e183982acdb7623e7e003ed3fdd1344ea51a7e86e7d6e5e08ef0fdbfd"
+    },
+    {
+      "path": "icons/icon-192.png",
+      "status": 200,
+      "bytes": 3446,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "2479e2ffe38415eef533918d131f045e46199adca45baafe403fc508787807c9"
+    },
+    {
+      "path": "icons/icon-512.png",
+      "status": 200,
+      "bytes": 12574,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "ce74cc974b0a977342f7257a5bfa91958084c1a788c49734ed0e48d7e228d70e"
+    },
+    {
+      "path": "icons/apple-touch-icon.png",
+      "status": 200,
+      "bytes": 3284,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "1ceb5deb7a08a0ae8161969b2b645740d5640ea343f3ad4504c730dfc05569ca"
+    },
+    {
+      "path": "fonts/InterVariable.woff2",
+      "status": 200,
+      "bytes": 352240,
+      "matchesLocal": true,
+      "contentType": "font/woff2",
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+    },
+    {
+      "path": "icons/hazards/ghs03.png",
+      "status": 200,
+      "bytes": 40947,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "619d935948a15634c69410a993834c4cd7ecbec05e51444b4c23eade7d8d0bcb"
+    },
+    {
+      "path": "icons/hazards/ghs04.png",
+      "status": 200,
+      "bytes": 28532,
+      "matchesLocal": true,
+      "contentType": "image/png",
+      "sha256": "9852e71ac553b72051e9c0c3c77ec1af5ec051b2920fa6bf17a2b9df989656fc"
+    },
+    {
+      "path": "icons/hazards/adr-2-2.svg",
+      "status": 200,
+      "bytes": 562,
+      "matchesLocal": true,
+      "contentType": "image/svg+xml",
+      "sha256": "49e9024f164d6cd9324228b11e6025f10c982716a5a08389d5159bf0e061518a"
+    },
+    {
+      "path": "icons/hazards/adr-5-1.svg",
+      "status": 200,
+      "bytes": 577,
+      "matchesLocal": true,
+      "contentType": "image/svg+xml",
+      "sha256": "e37d898f9fc259510af000253294ee0a7174f6ca775fc5aee3d94d64c32aa899"
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "bytes": 2047,
+      "matchesLocal": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "3f1c5c58785be417a7d7266f2f5644e298e746ac1a03241c6b4b180f062e2e15"
+    },
+    {
+      "path": "validation/mobile.html",
+      "status": 200,
+      "bytes": 1638,
+      "matchesLocal": true,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "5ce76bf5bc257fcdc5de10fad2c664f7d74974c9fb62da8c25b9e03949d88128"
+    }
+  ],
+  "indexRoute": true,
+  "scope": "HTTPS static delivery only; no real browser or iPhone test",
+  "version": "1.7.2",
+  "appCommit": "d4d3c829a6ec9ce11849f014a6d0ff09a99fee74",
+  "pagesRun": 39684587732,
+  "pagesConclusion": "success",
+  "automatedTests": {
+    "passed": 38,
+    "failed": 0
+  },
+  "browser": {
+    "version": "1.7.2",
+    "icon": "welding torch with arc",
+    "iconBoxCss": [
+      30,
+      25
+    ],
+    "consoleErrors": 0,
+    "consoleWarnings": 0,
+    "viewportsCss": [
+      [
+        390,
+        940
+      ],
+      [
+        390,
+        1000
+      ],
+      [
+        390,
+        2100
+      ],
+      [
+        320,
+        2100
+      ]
+    ],
+    "nativeIPhoneTest": false,
+    "realNetworkDisconnectTest": false
+  }
+}
