@@ -93,7 +93,7 @@ function render() {
   const route=location.hash || '#catalogue';
   if(lastRoute==='#catalogue') catalogueScroll=window.scrollY;
   if(route.startsWith('#gaz/')) {
-    const g=allEntries().find(g=>g.id===route.slice(5));
+    const g=allEntries().find(g=>g.id===route.slice(5)||g.legacyIds?.includes(route.slice(5)));
     if(g) {detail(g);document.title=`${g.name} · Guide des gaz`;}
     else {$('#main').innerHTML=`${intro('Fiche introuvable','Ce gaz ne figure pas dans cette édition.')}<a class="text-button" href="#catalogue">Ouvrir le catalogue</a>`;nav('catalogue');}
   } else if(route==='#gammes') {ranges();document.title='Gammes · Guide des gaz';}

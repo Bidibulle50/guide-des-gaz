@@ -51,6 +51,7 @@ test('Hydrogène : les références R1 ne partagent ni systématiquement ONU ni 
   assert.match(by('I2577').welding.standard,/M23-ArCO-5\/4/);
   assert.match(by('I2605').welding.standard,/I3-HeAr-30/);
   assert.ok(by('I2539').welding.notes.some(n=>n.includes('± 0,65 %')));
+  assert.equal(by('I2598').id,'arcal-he20microc'); // Preserve links and favorites from 1.2/1.3.
 });
 test('Recherche des références de bouteilles, procédés et matériaux, sans confusion Co/CO',()=>{
   assert.equal(searchGases(data.products,'I2531M20E2A001')[0].id,by('I2531').id);

@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.4.1",
   "verifiedAt": "2026-10-21",
   "gases": [
     {
@@ -7018,7 +7018,7 @@
       }
     },
     {
-      "id": "arcal-he20-muc",
+      "id": "arcal-he20microc",
       "kind": "product",
       "range": "arcal",
       "name": "ARCAL™ He20µC",
@@ -7171,7 +7171,10 @@
           "tablePage": 1,
           "checked": "2026-10-21"
         }
-      }
+      },
+      "legacyIds": [
+        "arcal-he20-muc"
+      ]
     },
     {
       "id": "arcal-he70",

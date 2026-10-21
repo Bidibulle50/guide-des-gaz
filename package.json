@@ -1,6 +1,6 @@
 {
   "name": "guide-des-gaz",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "private": true,
   "type": "module",
   "description": "Guide indépendant des gaz industriels, PWA statique en français.",
