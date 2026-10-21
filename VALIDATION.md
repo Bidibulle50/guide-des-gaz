@@ -1,53 +1,40 @@
-# Vérification de l’édition 1.3.2 — en cours
-
-- 17 tests Node réussis : nouveau parcours d’accueil et recherche ARCAL, 12 essentiels, 109 fiches, favoris, gabarits et cache isolé.
-- Syntaxe JavaScript vérifiée. Les nouvelles ressources locales (`ui-icons.js`, `icons/brand.svg`) figurent dans le préchargement hors ligne.
-- Source visuelle retenue : maquette 3, Recherche immédiate. Les photos génériques ont été écartées après clarification de l’usage commercial.
-- Recette sur site public et rapport visuel en cours ; la preuve ci-dessous concerne l’édition précédente.
-
----
-
-# Vérification — édition 1.2.0 — 21 octobre 2026
+# Vérification — édition 1.3.2 — 21 octobre 2026
 
 ## Résultat
 
-- 15 tests Node réussis : recherche, favoris, intégrité des 64 fiches encyclopédiques, gabarits des 45 produits commerciaux et navigation des gammes.
-- Cache testé dans un environnement isolé : préchargement, lecture sans réseau simulée, installation incomplète refusée, caches étrangers préservés, sources externes exclues, activation sur demande. Ce test ne constitue pas une coupure réseau dans Safari.
-- Commit applicatif : `1c8930af3614d88536d8b7861fd2e26444600297`.
-- GitHub Pages : `built`, branche `main`, racine `/`, site public https://bidibulle50.github.io/guide-des-gaz/.
-- Les 18 fichiers texte de l’arbre préparé ont été comparés par empreinte Git avant activation de la branche ; les 3 PNG sont conservés depuis la version précédente.
-- Accueil et 12 ressources applicatives servis en HTTPS : réponses 200 et octets identiques à la copie testée. TLS vérifié, aucun contrôle de certificat désactivé.
-- Rapport : [validation/deployment-2026-10-21.json](validation/deployment-2026-10-21.json).
+- 17 tests Node réussis, syntaxe JavaScript vérifiée : recherche, favoris, ordre des 12 essentiels, 109 fiches, accueil à quatre raccourcis, gammes, gabarits, cache isolé et présentation accessible des icônes.
+- Commit applicatif : `14fdeb0728a5cab4b7f3ff2ce1d98ebab5f915e5`. Workflow Pages terminé avec succès. Site : https://bidibulle50.github.io/guide-des-gaz/.
+- Accueil et 14 fichiers applicatifs servis en HTTPS : réponses 200, octets identiques à la copie testée. TLS vérifié.
+- Rapport détaillé : [validation/deployment-2026-10-21.json](validation/deployment-2026-10-21.json).
 
-## Parcours vérifiés sur le site public
+## Parcours du site public
 
-- Proposition « Actualiser », activation de l’édition de 109 fiches et affichage « Hors ligne disponible ».
-- Essentiels : 12 fiches prioritaires. Recherche ARCAL : 15 résultats ; ALIGAL : 12 résultats, depuis la sélection Essentiels.
-- Navigation Gammes : 10 gammes ; ARCAL : 15 références et ouverture d’ARCAL Prime.
-- Fiche Prime : composition, application, lien FDS individuel, références ONU avec états, couleur d’ogive RAL et lien fabricant, constituant séparé.
-- Ajout du favori Prime, rechargement : favori conservé ; retrait du favori de test effectué.
-- Recherche en focus : contour interne `none`, conteneur arrondi à 15 pixels avec repère de focus. Capture visuelle contrôlée.
-- Thèmes clair et sombre contrôlés visuellement ; préférence automatique restaurée. Aucune erreur ou alerte dans la console applicative après ces interactions.
+- Activation de la nouvelle édition par « Actualiser ». Mention « Hors ligne disponible » affichée.
+- Accueil : quatre raccourcis O₂, N₂, Ar, CO₂, recherche, liens ARCAL et ALIGAL, accès aux listes complètes.
+- « Voir les 12 essentiels » : 12 fiches prioritaires ; « Tous » : 12 prioritaires puis 97 autres fiches. Navigation et ouverture des listes remettent le défilement en haut.
+- Recherche ALIGAL depuis Favoris : 12 résultats sur l’ensemble du catalogue, sans confinement aux favoris. Recherche ARCAL contrôlée pendant la recette de la refonte : 15 résultats.
+- Fiche Prime : applications avant composition, sources, FDS et identification conservées, aucune photo de bouteille. Favori conservé après rechargement et activation de mise à jour, puis favori de test retiré.
+- Thèmes clair et sombre capturés ; automatique restauré. Aucune erreur ou alerte dans la console applicative. Icônes décoratives exclues du nom accessible.
+- Focus : contour interne supprimé, contour du conteneur arrondi à 16 pixels.
 
-## Données et limites
+## Périmètre et limites
 
-- Catalogue commercial partiel : 45 références, réparties entre ARCAL, ALIGAL, ALPHAGAZ et LASAL. Six autres gammes sont répertoriées sans composition documentée dans cette édition. Ce n’est pas l’ensemble des produits, variantes ou conditionnements Air Liquide.
-- Composition, applications et constituants commerciaux séparés. Aucune propriété de mélange calculée ou classification déduite des constituants.
-- FDS : 4 références ARCAL avec document individuel vérifié (2 URL distinctes). Pour les autres, accès au portail fournisseur explicitement nommé. Certains liens externes peuvent demander une sélection ou refuser un téléchargement ; ils ne sont pas disponibles hors ligne.
-- Numéros ONU : références de sources publiques ; état et conditionnement doivent être confirmés dans la rubrique 14 de la FDS du produit livré. Aucune validation d’un transport réel.
-- Couleurs : ogives argon/ARCAL Prime et oxygène documentées ; autres couleurs laissées non documentées. La teinte écran est indicative et ne remplace pas l’étiquette.
-- La date de consultation n’est pas la date de révision d’une FDS. Pas de surveillance ou synchronisation automatique des sites sources.
+Les 64 fiches encyclopédiques et 45 références commerciales restent documentées. Catalogue commercial partiel ; six des dix gammes répertoriées n’ont pas de composition de produit dans cette édition. Aucune propriété ou classification d’un mélange n’est déduite des constituants.
 
-## Vérifications non réalisées
+Les liens FDS, références ONU et couleurs restent ceux de l’édition 1.2. Quatre références ARCAL disposent de FDS individuelles vérifiées (deux URL distinctes), les autres fiches dirigent vers le portail fournisseur. Une FDS externe nécessite Internet. Les états et conditionnements doivent être confirmés dans la FDS du produit livré. La couleur ne remplace pas l’étiquette. Aucune nouvelle vérification des propriétés physiques n’est revendiquée pour cette refonte.
 
-L’aperçu local est refusé par le contrôle de sécurité du navigateur ; les essais ont porté sur le site public, sans contournement. Le viewport réellement fourni mesure 1218 pixels de largeur ; la demande de dimensions mobiles n’a pas été appliquée par l’outil. Aucun essai de ce navigateur n’est présenté comme une recette iPhone.
+Les deux essais d’illustrations de bouteilles générées sont conservés hors application et ne sont ni publiés ni mis en cache. Icônes Feather 4.29.2 sous MIT, avis dans `THIRD_PARTY_LICENSES.md`.
 
-Restent à vérifier sur un appareil : Safari iOS, installation à l’écran d’accueil, rendu avec clavier ouvert, accessibilité complète et rechargement après coupure réseau réelle. L’état de cache confirmé ne remplace pas ce dernier test. iOS peut effacer le stockage local et les favoris.
+## Limite de recette mobile
+
+L’accès à l’aperçu local a été refusé ; aucun contournement. Le navigateur public fournit une fenêtre de 1233 × 1234 CSS px, un contenu de 1218 px de large et des captures de 1218 × 1219 pixels à densité 1. Le réglage mobile demandé n’a pas été appliqué par l’outil. L’inspection large ne constitue pas une recette iPhone ni une comparaison de fidélité au même viewport.
+
+Voir `design-qa.md` : revue des cinq surfaces visuelles, corrections d’icônes et de marque contrôlées ; comparaison mobile formelle bloquée par l’outil. Restent à vérifier : Safari iOS, clavier ouvert, installation à l’écran d’accueil, accessibilité complète et réouverture après coupure réseau réelle. L’état du cache et les tests isolés ne remplacent pas ce dernier essai.
 
 ## Recette iPhone
 
-1. Ouvrir le site dans Safari ; chercher O2, CO₂, Co, ARCAL et ALIGAL ; vérifier les distinctions.
-2. Ajouter deux favoris, recharger et vérifier leur conservation.
-3. Attendre « Hors ligne disponible », installer sur l’écran d’accueil et couper les réseaux.
-4. Rouvrir plusieurs fiches, dont une encore non consultée, puis rétablir le réseau. Les FDS et sources externes nécessitent Internet.
-5. À la prochaine édition, appliquer « Actualiser » et vérifier la conservation des favoris.
+1. Ouvrir le site, appliquer « Actualiser » si proposé, vérifier l’édition 1.3.2.
+2. Ouvrir un raccourci, les 12 essentiels, puis ARCAL et ALIGAL. Vérifier la recherche avec clavier ouvert.
+3. Ajouter un favori, recharger ; contrôler les thèmes.
+4. Attendre « Hors ligne disponible », installer sur l’écran d’accueil, couper les réseaux et rouvrir plusieurs fiches.
+5. Rétablir Internet pour ouvrir les FDS et sources ; les données locales peuvent être effacées par iOS.
