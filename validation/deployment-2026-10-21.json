@@ -13,10 +13,10 @@
     {
       "path": "styles.css",
       "status": 200,
-      "bytes": 11118,
+      "bytes": 14706,
       "matchesLocal": true,
       "contentType": "text/css; charset=utf-8",
-      "sha256": "46ce6db961d1b9baadaf712f4acc5293d86ef9b57da16b44598c65ab300177f6"
+      "sha256": "0cb6b8d7d275625770980fda49aecfd0759b7d22594540dd033be826ddc12de3"
     },
     {
       "path": "theme.js",
@@ -29,18 +29,18 @@
     {
       "path": "app.js",
       "status": 200,
-      "bytes": 19683,
+      "bytes": 21277,
       "matchesLocal": true,
       "contentType": "application/javascript; charset=utf-8",
-      "sha256": "d2ff028ae5e0154d2feb985352dc4e8be0efd9c07cc5be4c7cd62f6e49c2b5bd"
+      "sha256": "9c5f0558ae3ac9ac705f1b01d2b76b9d478d43b94b37669d01aa1694833e3b36"
     },
     {
       "path": "core.js",
       "status": 200,
-      "bytes": 1008,
+      "bytes": 1989,
       "matchesLocal": true,
       "contentType": "application/javascript; charset=utf-8",
-      "sha256": "3656b15b938ebac3441a4be42830aab21a5d4e2a51bd1500e60374a1e38ee33d"
+      "sha256": "4ade811c04de790f40020b750e7cc43a464a28194f9847f330d6ead32f2d182e"
     },
     {
       "path": "data/gases.json",
@@ -48,7 +48,7 @@
       "bytes": 155634,
       "matchesLocal": true,
       "contentType": "application/json; charset=utf-8",
-      "sha256": "d4f94e93f5d2e657c1c12e301f8c832283b3e581ddfa6a6ef7d903ef8172224a"
+      "sha256": "1db7fe2f408f20a029dc85243c6a7d43dfb46ea07bc5e64c687e39c569bd7ee3"
     },
     {
       "path": "manifest.webmanifest",
@@ -64,7 +64,7 @@
       "bytes": 1822,
       "matchesLocal": true,
       "contentType": "application/javascript; charset=utf-8",
-      "sha256": "f4e015b2b692ce55cfe3696175a7a75dca74bd929022d5ac420165ce798f6605"
+      "sha256": "be5d254012cb34279dd9fb6ded6e166b692b81631261640a9c8720c60f8aee2e"
     },
     {
       "path": "icons/icon.svg",
