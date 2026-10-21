@@ -2,6 +2,12 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 1.1
+
+Accueil **Essentiels** avec 12 gaz usuels sélectionnés : oxygène, azote, argon, dioxyde de carbone, hydrogène, hélium, acétylène, air, méthane, propane, ammoniac et monoxyde de carbone. Cette sélection éditoriale n’est pas une statistique de consommation.
+
+L’onglet **Tous** affiche ces 12 fiches en premier, puis les 52 autres entrées par ordre alphabétique français. La saisie d’une recherche parcourt toujours les 64 fiches, y compris depuis les favoris ; choisir un onglet efface la recherche. Interface plus aérée et thèmes harmonisés.
+
 ## Utilisation
 
 - Recherche par nom, synonyme, formule avec/sans indices, numéro CAS et abréviations LOX/LIN/LAR.

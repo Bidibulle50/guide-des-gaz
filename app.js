@@ -1,4 +1,4 @@
-import { searchGases, readFavorites, escapeHtml as esc } from './core.js';
+import { ESSENTIAL_IDS, catalogueSelection, readFavorites, escapeHtml as esc } from './core.js';
 const $ = s => document.querySelector(s);
 const paths = {
   book:'<path d="M12 5C9 3 5 3 2 4v15c4-1 7-1 10 1 3-2 6-2 10-1V4c-3-1-7-1-10 1Zm0 0v15"/>',
@@ -14,7 +14,7 @@ const paths = {
 };
 const icon = (key, cls='') => `<svg class="icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[key] || ''}</svg>`;
 const brand = '<svg class="brand" viewBox="0 0 36 36" aria-hidden="true"><path d="m18 8-10 19h20Z" fill="none" stroke="currentColor" stroke-opacity=".22" stroke-width="3"/><circle cx="18" cy="8" r="5.5"/><circle cx="8" cy="27" r="5.5"/><circle cx="28" cy="27" r="5.5"/></svg>';
-let data, favorites = new Set(), query = '', mode = 'all', catalogueScroll = 0, toastTimer, offlineReady = false, waitingWorker;
+let data, favorites = new Set(), query = '', mode = 'essentials', catalogueScroll = 0, toastTimer, offlineReady = false, waitingWorker;
 const fmt = n => new Intl.NumberFormat('fr-FR', {maximumFractionDigits:4}).format(n).replace('-', '−');
 const themeNames = {system:'Automatique',light:'Clair',dark:'Sombre'};
 function theme() { return document.documentElement.dataset.theme || 'system'; }
@@ -37,20 +37,31 @@ function bookmark(g) { return `<button class="icon-button favorite ${favorites.h
 function nav(active) { $('.bottom-nav').innerHTML = `<a href="#catalogue" ${active==='catalogue'?'aria-current="page"':''}>${icon('book')}<span>Catalogue</span></a><a href="#reperes" ${active==='reperes'?'aria-current="page"':''}>${icon('compass')}<span>Repères</span></a>`; }
 function intro(title, subtitle) { return `<div class="topbar">${brand}${themeButton()}</div><header class="page-title"><h1 tabindex="-1">${title}</h1><p>${subtitle}</p></header>`; }
 function catalogue() {
-  $('#main').innerHTML = `${intro('Guide des gaz','Les gaz industriels, simplement.')}<div class="search-wrap">${icon('search')}<label class="sr-only" for="search">Rechercher un gaz</label><input id="search" type="search" placeholder="Nom, formule, abréviation" value="${esc(query)}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="search-help"><button id="clear-search" class="icon-button" aria-label="Effacer la recherche" ${query?'':'hidden'}>${icon('close')}</button></div><div class="segmented" role="group" aria-label="Afficher les gaz"><button data-mode="all" aria-pressed="${mode==='all'}">Tous les gaz</button><button data-mode="favorites" aria-pressed="${mode==='favorites'}">${icon('bookmark')} Favoris</button></div><div class="list-heading"><p id="result-count" role="status"></p><span>Édition 2026</span></div><p id="search-help" class="search-help" hidden></p><ul id="gas-list" class="gas-list"></ul><div id="empty" class="empty" hidden></div><p class="catalogue-note">Guide indépendant · Sources publiques vérifiées.<br>Pour intervenir, consultez la FDS du produit.</p>`;
+  $('#main').innerHTML = `${intro('Guide des gaz','Les essentiels d’abord.')}<div class="catalogue-controls"><div class="search-wrap">${icon('search')}<label class="sr-only" for="search">Rechercher parmi les 64 fiches</label><input id="search" type="search" placeholder="Nom, formule, abréviation" value="${esc(query)}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="search-help list-caption"><button id="clear-search" class="icon-button" aria-label="Effacer la recherche" ${query?'':'hidden'}>${icon('close')}</button></div><div class="segmented" role="group" aria-label="Afficher les gaz"><button data-mode="essentials" aria-pressed="${mode==='essentials'}">Essentiels</button><button data-mode="all" aria-pressed="${mode==='all'}">Tous <span class="segment-count">· ${data.gases.length}</span></button><button data-mode="favorites" aria-pressed="${mode==='favorites'}">Favoris</button></div></div><div class="list-heading"><h2 id="list-title" tabindex="-1"></h2><p id="result-count" role="status"></p></div><p id="list-caption" class="list-caption"></p><p id="search-help" class="search-help" hidden></p><ul id="gas-list" class="gas-list"></ul><section id="other-gases" class="other-gases" hidden><div class="list-heading"><h2>Autres gaz & substances</h2><p>${data.gases.length-ESSENTIAL_IDS.length} fiches</p></div><p class="list-caption">Par ordre alphabétique.</p><ul id="other-gas-list" class="gas-list"></ul></section><div id="empty" class="empty" hidden></div><button id="show-all" class="catalogue-more" data-mode="all"><span><strong>Explorer les ${data.gases.length} fiches</strong><small>Gaz rares, gaz techniques et autres substances</small></span>${icon('chevron')}</button><p class="catalogue-note">Guide indépendant · Sources publiques vérifiées.<br>Pour intervenir, consultez la FDS du produit.</p>`;
   nav('catalogue'); renderList();
   $('#search').addEventListener('input', e=>{query=e.target.value;renderList();});
   $('#clear-search').addEventListener('click',()=>{query='';$('#search').value='';renderList();$('#search').focus();});
 }
+function gasRows(gases) {
+  return gases.map(g=>`<li><a class="gas-row" href="#gaz/${g.id}"><span class="${formulaClass(g)}" aria-label="${g.formula ? `Formule ${esc(g.formula)}` : 'Air, mélange'}">${g.displayFormula}</span><span class="gas-text"><strong>${esc(g.name)}</strong><span>${esc(g.family)}</span></span>${favorites.has(g.id)?icon('bookmark','saved-indicator'):''}${icon('chevron','chevron')}</a></li>`).join('');
+}
 function renderList() {
-  const result=searchGases(data.gases,query,mode==='favorites'?favorites:null);
-  $('#result-count').textContent=query?`${result.length} résultat${result.length!==1?'s':''}`:mode==='favorites'?`${result.length} favori${result.length!==1?'s':''}`:`${result.length} fiches à explorer`;
+  const searching=!!query.trim();
+  const result=catalogueSelection(data.gases,query,mode,favorites);
+  const grouped=mode==='all'&&!searching;
+  const primary=grouped?result.filter(g=>ESSENTIAL_IDS.includes(g.id)):result;
+  const other=grouped?result.filter(g=>!ESSENTIAL_IDS.includes(g.id)):[];
+  $('#list-title').textContent=searching?'Résultats':mode==='favorites'?'Vos favoris':'Les principaux gaz';
+  $('#result-count').textContent=searching?`${result.length} résultat${result.length!==1?'s':''}`:mode==='favorites'?`${result.length} fiche${result.length!==1?'s':''}`:`${primary.length} fiches`;
+  $('#list-caption').textContent=searching?`Recherche dans les ${data.gases.length} fiches du catalogue.`:mode==='favorites'?'Les fiches que vous avez enregistrées.':'Une sélection pour l’industrie.';
   $('#clear-search').hidden=!query;
   const atomic={O:'O désigne l’élément oxygène. Le gaz de cette fiche est O₂ (saisir O2).',N:'N désigne l’élément azote. Le gaz de cette fiche est N₂ (saisir N2).',H:'H désigne l’élément hydrogène. Le gaz de cette fiche est H₂ (saisir H2).',Co:'Co est le symbole du cobalt. Pour le monoxyde de carbone, saisir CO (deux majuscules).'};
   $('#search-help').textContent=atomic[query.trim()] || '';$('#search-help').hidden=!atomic[query.trim()];
-  $('#gas-list').innerHTML=result.map(g=>`<li><a class="gas-row" href="#gaz/${g.id}"><span class="${formulaClass(g)}" aria-label="${g.formula ? `Formule ${esc(g.formula)}` : 'Air, mélange'}">${g.displayFormula}</span><span class="gas-text"><strong>${g.name}</strong><span>${g.family}</span></span>${favorites.has(g.id)?icon('bookmark','saved-indicator'):''}${icon('chevron','chevron')}</a></li>`).join('');
+  $('#gas-list').innerHTML=gasRows(primary);$('#gas-list').hidden=!primary.length;
+  $('#other-gas-list').innerHTML=gasRows(other);$('#other-gases').hidden=!other.length;
+  $('#show-all').hidden=searching||mode!=='essentials';
   $('#empty').hidden=!!result.length;
-  $('#empty').innerHTML=mode==='favorites'&&!query?`${icon('bookmark')}<h2>Vos essentiels, ici.</h2><p>Ouvrez une fiche et touchez le marque-page pour la retrouver rapidement.</p><button class="text-button" data-mode="all">Explorer les gaz</button>`:`${icon('search')}<h2>Aucun gaz trouvé</h2><p>Essayez un nom, O2, CO₂, LOX ou un numéro CAS. Le catalogue contient ${data.gases.length} fiches.</p><button class="text-button" data-clear>Effacer la recherche</button>`;
+  $('#empty').innerHTML=mode==='favorites'&&!searching?`${icon('bookmark')}<h2>Vos essentiels, ici.</h2><p>Ouvrez une fiche et touchez le marque-page pour la retrouver rapidement.</p><button class="text-button" data-mode="essentials">Explorer les essentiels</button>`:`${icon('search')}<h2>Aucun gaz trouvé</h2><p>Essayez un nom, O2, CO₂, LOX ou un numéro CAS. La recherche couvre les ${data.gases.length} fiches.</p><button class="text-button" data-clear>Effacer la recherche</button>`;
 }
 function sourceLinks(sources) { return sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${icon('external')}<span><strong>${esc(s.title)}</strong><small>${esc(s.scope)}</small></span>${icon('chevron','chevron')}</a></li>`).join(''); }
 function detail(g) {
@@ -79,7 +90,7 @@ function render() {
 document.addEventListener('click', e=> {
   const t=e.target.closest('button,a');if(!t)return;
   if(t.matches('[data-theme-cycle]')) {const options=['system','light','dark'];applyTheme(options[(options.indexOf(theme())+1)%3]);toast(`Thème : ${themeNames[theme()]}`);}
-  if(t.dataset.mode) {mode=t.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));renderList();}
+  if(t.dataset.mode) {mode=t.dataset.mode;query='';$('#search').value='';document.querySelectorAll('.segmented [data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));renderList();}
   if(t.hasAttribute('data-clear')) {query='';$('#search').value='';renderList();$('#search').focus();}
   if(t.dataset.favorite) {
     const id=t.dataset.favorite;favorites.has(id)?favorites.delete(id):favorites.add(id);

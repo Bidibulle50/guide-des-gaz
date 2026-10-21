@@ -1,10 +1,20 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { normalize, searchGases, readFavorites, escapeHtml } from '../core.js';
+import { ESSENTIAL_IDS, orderGases, catalogueSelection, normalize, searchGases, readFavorites, escapeHtml } from '../core.js';
 const data = JSON.parse(readFileSync(new URL('../data/gases.json', import.meta.url)));
 const gases = data.gases;
 const ids = new Set(gases.map(g=>g.id));
+test('Priorité aux essentiels, reste alphabétique, sans mutation du catalogue',()=>{
+  const before=gases.map(g=>g.id);const ordered=orderGases(gases);
+  assert.deepEqual(ordered.slice(0,12).map(g=>g.id),ESSENTIAL_IDS);assert.equal(new Set(ESSENTIAL_IDS).size,12);
+  assert.deepEqual(gases.map(g=>g.id),before);
+  const rest=ordered.slice(12);for(let i=1;i<rest.length;i++)assert.ok(rest[i-1].name.localeCompare(rest[i].name,'fr',{numeric:true,sensitivity:'base'})<=0);
+  assert.equal(catalogueSelection(gases,'','essentials',new Set()).length,12);
+  assert.equal(catalogueSelection(gases,'','all',new Set()).length,64);
+  assert.deepEqual(catalogueSelection(gases,'','favorites',new Set(['krypton'])).map(g=>g.id),['krypton']);
+  for(const mode of ['essentials','all','favorites'])assert.equal(catalogueSelection(gases,'krypton',mode,new Set())[0].id,'krypton');
+});
 test('Recherche accents, indices Unicode, formule, CAS et abréviations liquides',()=>{
   for(const [query,id] of [['hélium','helium'],['ACETYLENE','acetylene'],['co₂','dioxyde-carbone'],['N ₂','azote'],['LOX','oxygene'],['LIN','azote'],['LAR','argon'],['7782-44-7','oxygene']]) assert.equal(searchGases(gases,query)[0]?.id,id);
   assert.equal(normalize('C₂H₂'),'c2h2');
