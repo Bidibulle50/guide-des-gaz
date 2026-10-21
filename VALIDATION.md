@@ -1,56 +1,44 @@
-# Vérification — édition 1.2.0 en cours de publication — 21 octobre 2026
+# Vérification — édition 1.2.0 — 21 octobre 2026
 
-- 15 tests Node réussis : 64 fiches encyclopédiques et 45 produits commerciaux, recherche, favoris, gammes, gabarits et cache isolé.
-- Les fiches commerciales séparent composition, applications, sources et constituants ; aucune propriété physique de mélange calculée.
-- FDS : 4 références ARCAL avec document individuel vérifié (2 URL distinctes) ; autres fiches : portail fournisseur clairement identifié. Les liens externes exigent une connexion.
-- Les références ONU et couleurs sont limitées aux informations sourcées ; les absences sont affichées. Pas de validation du transport d’un produit livré.
-- Catalogue commercial partiel : 45 références et 10 gammes répertoriées. Six gammes restent sans fiche de composition dans cette édition.
-- La publication et la recette navigateur de cette édition sont en cours. Le rapport ci-dessous concerne la version antérieure.
+## Résultat
 
----
+- 15 tests Node réussis : recherche, favoris, intégrité des 64 fiches encyclopédiques, gabarits des 45 produits commerciaux et navigation des gammes.
+- Cache testé dans un environnement isolé : préchargement, lecture sans réseau simulée, installation incomplète refusée, caches étrangers préservés, sources externes exclues, activation sur demande. Ce test ne constitue pas une coupure réseau dans Safari.
+- Commit applicatif : `1c8930af3614d88536d8b7861fd2e26444600297`.
+- GitHub Pages : `built`, branche `main`, racine `/`, site public https://bidibulle50.github.io/guide-des-gaz/.
+- Les 18 fichiers texte de l’arbre préparé ont été comparés par empreinte Git avant activation de la branche ; les 3 PNG sont conservés depuis la version précédente.
+- Accueil et 12 ressources applicatives servis en HTTPS : réponses 200 et octets identiques à la copie testée. TLS vérifié, aucun contrôle de certificat désactivé.
+- Rapport : [validation/deployment-2026-10-21.json](validation/deployment-2026-10-21.json).
 
-# Vérification — version 1.1.0 — 21 octobre 2026
+## Parcours vérifiés sur le site public
 
-## Contrôles réalisés
+- Proposition « Actualiser », activation de l’édition de 109 fiches et affichage « Hors ligne disponible ».
+- Essentiels : 12 fiches prioritaires. Recherche ARCAL : 15 résultats ; ALIGAL : 12 résultats, depuis la sélection Essentiels.
+- Navigation Gammes : 10 gammes ; ARCAL : 15 références et ouverture d’ARCAL Prime.
+- Fiche Prime : composition, application, lien FDS individuel, références ONU avec états, couleur d’ogive RAL et lien fabricant, constituant séparé.
+- Ajout du favori Prime, rechargement : favori conservé ; retrait du favori de test effectué.
+- Recherche en focus : contour interne `none`, conteneur arrondi à 15 pixels avec repère de focus. Capture visuelle contrôlée.
+- Thèmes clair et sombre contrôlés visuellement ; préférence automatique restaurée. Aucune erreur ou alerte dans la console applicative après ces interactions.
 
-- 13 tests Node réussis : recherche par accents, indices, CAS et abréviations ; favoris ; couverture de 64 fiches et champs de provenance ; cas scientifiques sensibles ; échappement HTML ; génération du contenu des 64 fiches.
-- Cache testé dans un environnement isolé : préchargement, lecture sans réseau simulée, installation incomplète rejetée, détection de ressources manquantes, suppression limitée aux anciennes versions de la même application et de sa portée, sources externes exclues, activation de mise à jour sur demande.
-- Manifest et fichiers PNG vérifiés, dont dimensions 192 et 512 pixels. Chemins relatifs adaptés à `/guide-des-gaz/`.
-- Données physiques transcrites des références publiques avec les conditions associées. Les valeurs ambiguës et les données absentes sont signalées ; voir `SOURCES.md`.
+## Données et limites
 
-## Publication vérifiée
+- Catalogue commercial partiel : 45 références, réparties entre ARCAL, ALIGAL, ALPHAGAZ et LASAL. Six autres gammes sont répertoriées sans composition documentée dans cette édition. Ce n’est pas l’ensemble des produits, variantes ou conditionnements Air Liquide.
+- Composition, applications et constituants commerciaux séparés. Aucune propriété de mélange calculée ou classification déduite des constituants.
+- FDS : 4 références ARCAL avec document individuel vérifié (2 URL distinctes). Pour les autres, accès au portail fournisseur explicitement nommé. Certains liens externes peuvent demander une sélection ou refuser un téléchargement ; ils ne sont pas disponibles hors ligne.
+- Numéros ONU : références de sources publiques ; état et conditionnement doivent être confirmés dans la rubrique 14 de la FDS du produit livré. Aucune validation d’un transport réel.
+- Couleurs : ogives argon/ARCAL Prime et oxygène documentées ; autres couleurs laissées non documentées. La teinte écran est indicative et ne remplace pas l’étiquette.
+- La date de consultation n’est pas la date de révision d’une FDS. Pas de surveillance ou synchronisation automatique des sites sources.
 
-- Dépôt public : https://github.com/Bidibulle50/guide-des-gaz
-- Site : https://bidibulle50.github.io/guide-des-gaz/
-- Commit applicatif : `0a9b598cede870964abe44c766f7065818809305`.
-- GitHub Pages : état `built`, branche `main`, racine `/`, HTTPS imposé.
-- Les 21 fichiers déposés ont été relus par leurs empreintes Git et comparés à la copie locale.
-- Accueil et 12 fichiers applicatifs servis en HTTPS : réponses 200, types de contenu appropriés et octets identiques à la copie testée. Certificat TLS vérifié avec le magasin système macOS ; aucun contrôle TLS désactivé.
-- Preuve détaillée : [validation/deployment-2026-10-21.json](validation/deployment-2026-10-21.json). Ces contrôles vérifient la livraison statique, pas l’exécution dans un navigateur.
+## Vérifications non réalisées
 
-## Contrôles du site public dans le navigateur intégré
+L’aperçu local est refusé par le contrôle de sécurité du navigateur ; les essais ont porté sur le site public, sans contournement. Le viewport réellement fourni mesure 1218 pixels de largeur ; la demande de dimensions mobiles n’a pas été appliquée par l’outil. Aucun essai de ce navigateur n’est présenté comme une recette iPhone.
 
-- Accueil avec 12 essentiels, commençant par oxygène, azote, argon, CO₂, hydrogène et hélium.
-- Onglet Tous : 12 essentiels suivis de 52 autres entrées ; recherche « krypton » depuis Essentiels : 1 résultat et portée de 64 fiches affichée.
-- Ouverture de la fiche Oxygène, ajout d’un favori, rechargement et présence confirmée dans Favoris ; retrait et état vide vérifiés. Le favori créé pour le test a été retiré.
-- Thèmes clair et sombre contrôlés visuellement ; aucune erreur ou alerte applicative dans la console après ces interactions.
-- Mise à jour du service worker : proposition « Actualiser », activation de la version 1.1, affichage de la nouvelle interface et état « Hors ligne disponible ».
-- Rendu vérifié sur le viewport réellement fourni par le navigateur : largeur 1218 pixels. Hiérarchie, textes, liste groupée, tuiles de formule, espacements et navigation comparés à la maquette. Le libellé « Asphyxiant » du CO₂ est conservé pour sa pertinence de prévention, plutôt que le « Non inflammable » de la maquette.
+Restent à vérifier sur un appareil : Safari iOS, installation à l’écran d’accueil, rendu avec clavier ouvert, accessibilité complète et rechargement après coupure réseau réelle. L’état de cache confirmé ne remplace pas ce dernier test. iOS peut effacer le stockage local et les favoris.
 
-## Vérifications non réalisées et limites des outils
+## Recette iPhone
 
-L’accès à l’aperçu local est toujours refusé par le contrôle de sécurité. La validation ci-dessus porte sur le site public publié, sans contourner ce refus.
-
-L’outil a accepté une demande de viewport 390 × 844 mais n’a pas appliqué ces dimensions : la largeur réelle est restée 1218 pixels dans l’onglet existant, et 1265 pixels dans un nouvel onglet. Ce test n’est donc **pas** présenté comme une validation mobile. La surcharge de viewport a été réinitialisée.
-
-Restent à vérifier : rendu sur un iPhone physique et dans Safari iOS, installation sur l’écran d’accueil, rechargement hors ligne réel et accessibilité complète. L’état de cache confirmé dans le navigateur ne remplace pas une coupure réseau effective.
-
-## Recette sur un appareil
-
-1. Ouvrir le site dans Safari ; vérifier noms longs, formules et thèmes.
-2. Chercher O2, CO₂, Co, D2, C4H8 et R-142b ; vérifier la distinction des substances.
-3. Ajouter deux favoris, recharger et vérifier leur présence ; retirer un favori.
-4. Attendre « Hors ligne disponible », installer depuis le menu de partage, couper les réseaux et rouvrir l’application.
-5. Ouvrir plusieurs fiches, dont une non consultée avant la coupure, puis rétablir les réseaux. Les liens sources exigent une connexion.
-
-Les données locales peuvent être effacées par iOS ou le navigateur. Les informations de sécurité sont indicatives : elles ne remplacent pas la FDS du produit et les procédures du site.
+1. Ouvrir le site dans Safari ; chercher O2, CO₂, Co, ARCAL et ALIGAL ; vérifier les distinctions.
+2. Ajouter deux favoris, recharger et vérifier leur conservation.
+3. Attendre « Hors ligne disponible », installer sur l’écran d’accueil et couper les réseaux.
+4. Rouvrir plusieurs fiches, dont une encore non consultée, puis rétablir le réseau. Les FDS et sources externes nécessitent Internet.
+5. À la prochaine édition, appliquer « Actualiser » et vérifier la conservation des favoris.

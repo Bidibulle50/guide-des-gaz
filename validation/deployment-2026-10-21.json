@@ -13,10 +13,10 @@
     {
       "path": "styles.css",
       "status": 200,
-      "bytes": 14706,
+      "bytes": 16286,
       "matchesLocal": true,
       "contentType": "text/css; charset=utf-8",
-      "sha256": "0cb6b8d7d275625770980fda49aecfd0759b7d22594540dd033be826ddc12de3"
+      "sha256": "b6aa4aee1eacf14a97ada1ef76448013cfa6f463a48cd1b3ab746036b3fb7dfb"
     },
     {
       "path": "theme.js",
@@ -29,10 +29,10 @@
     {
       "path": "app.js",
       "status": 200,
-      "bytes": 21277,
+      "bytes": 27128,
       "matchesLocal": true,
       "contentType": "application/javascript; charset=utf-8",
-      "sha256": "9c5f0558ae3ac9ac705f1b01d2b76b9d478d43b94b37669d01aa1694833e3b36"
+      "sha256": "d022848442488504e4c9a2e70a03723dbc880bdb99f68d9b15361d3887489957"
     },
     {
       "path": "core.js",
@@ -45,10 +45,10 @@
     {
       "path": "data/gases.json",
       "status": 200,
-      "bytes": 155634,
+      "bytes": 258036,
       "matchesLocal": true,
       "contentType": "application/json; charset=utf-8",
-      "sha256": "1db7fe2f408f20a029dc85243c6a7d43dfb46ea07bc5e64c687e39c569bd7ee3"
+      "sha256": "0c41fa4a87f50b2fec7d5df7dc7d9607d53a32d1c92af99db07fb5df935d84c0"
     },
     {
       "path": "manifest.webmanifest",
@@ -64,7 +64,7 @@
       "bytes": 1822,
       "matchesLocal": true,
       "contentType": "application/javascript; charset=utf-8",
-      "sha256": "be5d254012cb34279dd9fb6ded6e166b692b81631261640a9c8720c60f8aee2e"
+      "sha256": "d7e2f8d6a31468a91c9648c57d314de522679038c3612599d373a6a3bb449b58"
     },
     {
       "path": "icons/icon.svg",
@@ -100,5 +100,22 @@
     }
   ],
   "indexRoute": true,
-  "scope": "HTTPS static delivery only; no real browser or iPhone test"
+  "scope": "HTTPS static delivery only; no real browser or iPhone test",
+  "applicationVersion": "1.2.0",
+  "applicationCommit": "1c8930af3614d88536d8b7861fd2e26444600297",
+  "pagesStatus": "built",
+  "browserChecks": {
+    "updateActivated": true,
+    "arcalResults": 15,
+    "aligalResults": 12,
+    "rangeCount": 10,
+    "productFavoriteSurvivesReload": true,
+    "testFavoriteRemoved": true,
+    "searchInputOutline": "none",
+    "searchWrapperRadius": "15px",
+    "consoleErrorsAndWarnings": [],
+    "actualViewportWidth": 1218,
+    "iPhoneVerified": false,
+    "realOfflineReloadVerified": false
+  }
 }
