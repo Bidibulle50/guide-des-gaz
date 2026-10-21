@@ -36,17 +36,8 @@ Source INRS outil30 : https://www.inrs.fr/media.html?refINRS=outil30. Utilisatio
 
 Les fichiers ADR2.2 et ADR5.1 proviennent exactement du HTML de référence fourni par l’utilisateur ; géométrie conservée et xmlns SVG ajouté. Ils servent d’illustrations dans le guide et ne sont pas fournis comme fichiers d’étiquetage réglementaire. Aucune qualité officielle ni licence publique générale de ces dessins n’est revendiquée.
 
-## Masque de soudage — IconOven Stroke
+## Torche de soudage — Noun Project
 
-Icône `welding-mask`, SVG officiel intact : https://iconoven.com/icons/welding-mask . Source et licence : https://iconoven.com/licence/icons . Le style Stroke est fourni sous MIT ; notice complète ci-dessous.
+Icône « welding », Image# 147374, par Pablo Barros da Silveira, publiée le 29 avril 2015. La page primaire indique **Public Domain Icon** : https://thenounproject.com/icon/welding-147374/ . Vérifiée le 22 octobre 2026.
 
-MIT License
-
-Copyright (c) 2026 Appic Marketing LLC (IconOven)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
+`icons/welding-torch.png` provient du PNG transparent 512 px de cette page. Seules les marges transparentes sont retirées pour la lisibilité à 25 px ; dessin conservé. Un masque CSS l’affiche dans la couleur de navigation, sans service distant et sans photographie de fabricant.

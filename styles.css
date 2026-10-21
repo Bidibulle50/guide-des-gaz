@@ -91,6 +91,23 @@ main{max-width:730px;padding-left:max(22px,env(safe-area-inset-left));padding-ri
 .reference-all-catalogue>span{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}.reference-all-catalogue strong{font-size:16px;font-weight:650}.reference-all-catalogue small{font-size:13px;color:var(--muted)}
 .reference-all-catalogue>.icon{color:var(--blue);width:22px;height:22px}.reference-all-catalogue>.icon:last-child{width:18px;height:18px}
 .reference-catalogue-footer{font-size:12px;line-height:1.5;color:var(--muted);text-align:center;margin:40px 0 12px}
+/* Accueil : mesures du HTML fourni, avec un footer accessible au-dessus de la navigation fixe. */
+main:has(#catalogue-home:not([hidden])){padding-bottom:calc(104px + env(safe-area-inset-bottom))}
+.reference-masthead{margin-bottom:24px}
+.reference-wordmark p{font-weight:700}
+.reference-wordmark small{margin-top:2px;line-height:1.2}
+.reference-catalogue:has(#catalogue-home:not([hidden])) .reference-search-hero{margin-bottom:24px}
+.reference-catalogue:has(#catalogue-home:not([hidden])) .reference-search-hero h1{margin-bottom:14px}
+.reference-quick-grid a{min-height:104px;padding:10px 8px}
+.reference-quick-grid strong{line-height:1}
+.reference-quick-grid a>span,.reference-quick-grid small{line-height:1.2}
+.reference-range-list a{padding:10px 16px}
+.reference-range-list small{line-height:1.2}
+.reference-all-catalogue{padding:12px 16px}
+.reference-all-catalogue strong,.reference-all-catalogue small{line-height:1.2}
+.reference-catalogue:has(#catalogue-home:not([hidden])) .reference-catalogue-footer{margin:24px 0 16px}
+.icon-welding{display:inline-block;background:currentColor;-webkit-mask:url('./icons/welding-torch.png') center/contain no-repeat;mask:url('./icons/welding-torch.png') center/contain no-repeat}
+.bottom-nav .icon-welding{width:30px;height:25px}
 .reference-catalogue-header{display:flex;align-items:center;gap:8px;margin-bottom:20px}
 .reference-catalogue-header>a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex:0 0 44px;margin-left:-12px;color:var(--blue)}
 .reference-catalogue-header h1{flex:1;font-size:28px;letter-spacing:-.6px;font-weight:800;line-height:1.15;margin:0}
