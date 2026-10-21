@@ -100,8 +100,8 @@ function render() {
 document.addEventListener('click', e=> {
   const t=e.target.closest('button,a');if(!t)return;
   if(t.matches('[data-theme-cycle]')) {const options=['system','light','dark'];applyTheme(options[(options.indexOf(theme())+1)%3]);toast(`Thème : ${themeNames[theme()]}`);}
-  if(t.hasAttribute('data-home')) {catalogueOverview=true;mode='essentials';query='';if(location.hash==='#catalogue'||!location.hash){catalogue();syncTheme();window.scrollTo(0,0);}}
-  if(t.dataset.mode) {catalogueOverview=false;mode=t.dataset.mode;query='';$('#search').value='';document.querySelectorAll('.segmented [data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));renderList();}
+  if(t.hasAttribute('data-home')) {catalogueOverview=true;catalogueScroll=0;mode='essentials';query='';if(location.hash==='#catalogue'||!location.hash){catalogue();syncTheme();window.scrollTo(0,0);}}
+  if(t.dataset.mode) {catalogueOverview=false;mode=t.dataset.mode;query='';$('#search').value='';document.querySelectorAll('.segmented [data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));renderList();window.scrollTo(0,0);}
   if(t.hasAttribute('data-clear')) {query='';$('#search').value='';renderList();$('#search').focus();}
   if(t.dataset.favorite) {
     const id=t.dataset.favorite;favorites.has(id)?favorites.delete(id):favorites.add(id);
