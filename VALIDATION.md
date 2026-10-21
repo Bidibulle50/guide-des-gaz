@@ -1,4 +1,17 @@
-# Vérification — édition 1.4.1 — 21 octobre 2026
+# Vérification — édition 1.5.1 — 21 octobre 2026
+
+## Ajouts 1.5 / correctif 1.5.1
+
+- Onglet Soudage : matériau → procédé → besoin → pistes ARCAL. Dix familles de matériaux, règles documentées pour 21 produits ; conditions de fil et de mode automatique visibles puis confirmables.
+- **30 tests uniques réussis** en 1.5.0 ; après le correctif CSS/version 1.5.1, les **12 tests ciblés cache et gabarits** sont de nouveau réussis. Aucune modification des règles de sélection entre ces versions.
+- Commit applicatif final : `acf63ffb67f8c3f804a6b8344d7e850e64879c65`. Workflow Pages `39671710034` terminé avec succès ; accueil et **15 fichiers** applicatifs identiques aux octets locaux.
+- Formules : avant correction, 16 dépassements dans une colonne de 48 px. Après correction : **64 formules mesurées, aucun rognage** ; colonne 72 px, largeur maximale du texte 60,85 px au viewport contrôlé. Taille normale 26 px, formules longues 16 px ; indices et texte scientifique inchangés.
+- Navigateur public : aluminium → MIG → usages courants affiche Prime, 31, He20 et He70 conditionnel. Confirmation du mode automatique contrôlée. Acier carbone → MAG → cadence : Speed conserve la condition fil plein ; confirmation, puis ouverture de Speed et de ses 11 conditionnements réussies.
+- Cas matériau inconnu : questions de qualification, aucune proposition. Navigation, état actif Soudage et absence de débordement horizontal contrôlés. Console sans erreur / alerte. Thème automatique conservé.
+- Captures réelles inspectées : `Guide-des-gaz-1.5-soudage.jpg`, `Guide-des-gaz-1.5-aluminium-mig.jpg` (1218 × 1219 pixels), `Guide-des-gaz-1.5.1-formules.jpg` (1233 × 1234 pixels), dans les outputs du workspace. Fenêtre 1233 × 1234 CSS px, densité 1 ; viewport bureau uniquement. La différence de capture native ne constitue pas un viewport mobile.
+- Les vérifications Safari iPhone et coupure réseau réelle restent à faire. Aucun document interne ajouté ; aucun changement de visibilité : dépôt et application toujours publics.
+
+Les résultats 1.4 ci-dessous détaillent la vérification initiale des fiches et ses limites, toujours applicables.
 
 ## Résultat
 
@@ -35,8 +48,8 @@ Le cache complet est confirmé par l’application et son cycle est testé dans 
 
 ## Recette iPhone restant à effectuer
 
-1. Appliquer « Actualiser » si proposé et vérifier l’édition 1.4.1 dans Repères.
-2. Ouvrir ARCAL, Chrome et R1-5 ; consulter utilisations, formats et FDS. Rechercher un gaz avec le clavier ouvert.
+1. Appliquer « Actualiser » si proposé et vérifier l’édition 1.5.1 dans Repères.
+2. Vérifier C₂H₆ et les formules longues dans le catalogue, puis ouvrir Soudage, ARCAL, Chrome et R1-5 ; consulter utilisations, formats et FDS. Rechercher un gaz avec le clavier ouvert.
 3. Ajouter un favori, recharger, vérifier les thèmes.
 4. Attendre « Hors ligne disponible », installer sur l’écran d’accueil, couper les réseaux et rouvrir plusieurs fiches.
 5. Rétablir Internet pour ouvrir FDS et sources.

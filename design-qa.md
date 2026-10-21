@@ -1,3 +1,19 @@
+# Revue ciblée — Soudage et formules 1.5.1
+
+Le parcours prolonge le design existant : titre, une question à la fois, listes ouvertes, bleu d’action, quatre onglets. Aucun nouvel asset média ; icône Feather « tool » sous la licence existante.
+
+- Copie : matériaux, procédés et besoins cohérents avec les règles ; conditions client explicites. Aucun classement « meilleur gaz » ou réglage inventé.
+- Structure : séquence matériau / procédé / besoin, puis résultats sourcés et accès aux fiches. Confirmation fil plein / automatique et demande inconnue exercées.
+- Typographie : formules normales 26 px dans 72 px ; formules longues 16 px. Le constat de rognage à 48 px a été corrigé sur le composant de liste.
+- Espacement et conteneurs : listes et séparateurs conformes à l’interface existante. Résultats lisibles ; navigation à quatre entrées sans débordement au viewport disponible.
+- Couleurs / assets : palette et symboles existants, pas d’illustration de bouteille. Référence commerciale et formule restent distinctes.
+
+Captures inspectées dans les outputs : `Guide-des-gaz-1.5-soudage.jpg`, `Guide-des-gaz-1.5-aluminium-mig.jpg`, `Guide-des-gaz-1.5.1-formules.jpg`. Contrôle navigateur public ; aucun overlay d’erreur, aucun écran vide, aucune erreur ou alerte console. Les 64 formules ont été mesurées dans le DOM après correction, sans dépassement. Le navigateur ne fournit toujours pas de viewport iPhone effectif : aucun passage de recette Safari iOS n’est revendiqué.
+
+Résultat : revue bureau passée ; recette iPhone et coupure réseau réelle en attente. Les revues précédentes restent un historique.
+
+---
+
 # Revue ciblée — fiches ARCAL 1.4.1
 
 Extension de la présentation existante, sans nouvelle maquette ni photo : procédés et matériaux, accès directs, utilisations, conditionnements par référence, composition et documents.
