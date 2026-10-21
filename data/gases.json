@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "verifiedAt": "2026-10-21",
   "gases": [
     {
@@ -59,7 +59,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1012",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "cis-2-butene",
@@ -118,7 +130,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1012",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "trans-2-butene",
@@ -177,7 +201,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1012",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "acetylene",
@@ -258,7 +294,13 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      }
     },
     {
       "id": "air",
@@ -310,7 +352,19 @@
       ],
       "verifiedAt": "2026-10-21",
       "transitionNote": "Mélange : pas de température d’ébullition unique retenue.",
-      "formulaNote": "L’air est un mélange, principalement de N₂ et O₂ : il n’a pas de formule moléculaire unique."
+      "formulaNote": "L’air est un mélange, principalement de N₂ et O₂ : il n’a pas de formule moléculaire unique.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1002",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "ammoniac",
@@ -391,7 +445,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1005",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "argon",
@@ -463,7 +529,29 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1006",
+          "state": "Argon comprimé"
+        },
+        {
+          "number": "1951",
+          "state": "Argon liquide réfrigéré"
+        }
+      ],
+      "shoulder": {
+        "name": "Vert foncé",
+        "ral": "6001",
+        "css": "#366735",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/7/c/3/8/7c38cc61abf1b9b1f9033a3d222e76e837cabb45_ARCAL%E2%84%A2_Prime_fr_FR_v1.4.pdf"
+      }
     },
     {
       "id": "azote",
@@ -537,7 +625,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1066",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "bromochlorodifluoromethane",
@@ -609,7 +709,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1974",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "bromure-methyle",
@@ -677,7 +789,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1062",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "chlorure-methyle",
@@ -734,7 +858,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur non retenue : la page publie la même masse volumique à trois températures différentes."
+      "densityNote": "Valeur non retenue : la page publie la même masse volumique à trois températures différentes.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1063",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "chlorure-hydrogene",
@@ -796,7 +932,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1050",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "cyclopropane",
@@ -851,7 +999,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition."
+      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1027",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "deuterium",
@@ -911,7 +1071,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "formulaNote": "D₂ est la molécule de deutérium. D (ou ²H) désigne un isotope de l’hydrogène, pas un nouvel élément."
+      "formulaNote": "D₂ est la molécule de deutérium. D (ou ²H) désigne un isotope de l’hydrogène, pas un nouvel élément.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1957",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "dimethylether",
@@ -972,7 +1144,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1033",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "dioxyde-carbone",
@@ -1039,7 +1223,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1013",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "dioxyde-soufre",
@@ -1098,7 +1294,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1079",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "dioxyde-azote",
@@ -1156,7 +1364,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1067",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "eau",
@@ -1223,7 +1443,13 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      }
     },
     {
       "id": "ethylene",
@@ -1283,7 +1509,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1962",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "fluor",
@@ -1348,7 +1586,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1045",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "hexafluorure-soufre",
@@ -1410,7 +1660,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "transitionNote": "L’INRS indique une sublimation à −63,8 °C, sans pression explicitée dans son tableau ; valeur non utilisée comme mesure à 1,013 bar."
+      "transitionNote": "L’INRS indique une sublimation à −63,8 °C, sans pression explicitée dans son tableau ; valeur non utilisée comme mesure à 1,013 bar.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1080",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "hydrogene",
@@ -1476,7 +1738,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1049",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "helium",
@@ -1541,7 +1815,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1046",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "isobutane",
@@ -1601,7 +1887,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1969",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "isobutene",
@@ -1660,7 +1958,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1012",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "isohexane",
@@ -1716,7 +2026,19 @@
       ],
       "verifiedAt": "2026-10-21",
       "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
-      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition."
+      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1208",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "isopentane",
@@ -1779,7 +2101,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1265",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "krypton",
@@ -1833,7 +2167,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1056",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "monoxyde-azote",
@@ -1892,7 +2238,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1660",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "monoxyde-carbone",
@@ -1972,7 +2330,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1016",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "methane",
@@ -2038,7 +2408,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1971",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "methanol",
@@ -2098,7 +2480,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1230",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "n-butane",
@@ -2158,7 +2552,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1011",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "n-heptane",
@@ -2222,7 +2628,13 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      }
     },
     {
       "id": "n-hexane",
@@ -2292,7 +2704,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1208",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "n-pentane",
@@ -2356,7 +2780,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1265",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "neon",
@@ -2421,7 +2857,13 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      }
     },
     {
       "id": "neopentane",
@@ -2479,7 +2921,13 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition."
+      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      }
     },
     {
       "id": "oxygene",
@@ -2553,7 +3001,29 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1072",
+          "state": "Oxygène comprimé"
+        },
+        {
+          "number": "1073",
+          "state": "Oxygène liquide réfrigéré"
+        }
+      ],
+      "shoulder": {
+        "name": "Blanc",
+        "ral": "9010",
+        "css": "#eeeeea",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/b/e/2/5/be2530e635daa516fc031f02e6ab12331d9f7e93_OXYGENE_fr_FR_v1.8.pdf"
+      }
     },
     {
       "id": "ozone",
@@ -2611,7 +3081,13 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      }
     },
     {
       "id": "para-hydrogene",
@@ -2678,7 +3154,13 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "formulaNote": "H₂, forme para : une configuration de spin de la molécule d’hydrogène. « p » n’est pas un symbole d’élément."
+      "formulaNote": "H₂, forme para : une configuration de spin de la molécule d’hydrogène. « p » n’est pas un symbole d’élément.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      }
     },
     {
       "id": "propane",
@@ -2742,7 +3224,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "phaseAtReference": "gaz"
+      "phaseAtReference": "gaz",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1978",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "propyne",
@@ -2800,7 +3294,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1954",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "propene",
@@ -2860,7 +3366,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1077",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "protoxyde-azote",
@@ -2920,7 +3438,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1070",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "r11",
@@ -2983,7 +3513,13 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      }
     },
     {
       "id": "r113",
@@ -3046,7 +3582,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "3082",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "r114",
@@ -3120,7 +3668,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1958",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "r115",
@@ -3194,7 +3754,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1020",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "r12",
@@ -3268,7 +3840,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1028",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "r13",
@@ -3342,7 +3926,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1022",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "r133a",
@@ -3399,7 +3995,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1928",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "r13b1",
@@ -3472,7 +4080,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1009",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "r142b",
@@ -3535,7 +4155,19 @@
       ],
       "verifiedAt": "2026-10-21",
       "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
-      "transitionNote": "Transition non renseignée dans le tableau de la source."
+      "transitionNote": "Transition non renseignée dans le tableau de la source.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "2517",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "r21",
@@ -3602,7 +4234,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition."
+      "applicationsNote": "Aucune application industrielle précise vérifiée dans les sources retenues pour cette édition.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1029",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "r22",
@@ -3670,7 +4314,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1018",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "silane",
@@ -3735,7 +4391,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "2203",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "sulfure-hydrogene",
@@ -3798,7 +4466,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1053",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "toluene",
@@ -3862,7 +4542,19 @@
         }
       ],
       "verifiedAt": "2026-10-21",
-      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation."
+      "densityNote": "Valeur gazeuse à 15 °C et 1,013 bar non publiée ou non retenue : aucune extrapolation.",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1294",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "trifluoroiodomethane",
@@ -3919,7 +4611,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "1956",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "trifluorure-azote",
@@ -3978,7 +4682,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "2451",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "xenon",
@@ -4034,7 +4750,19 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      },
+      "transport": [
+        {
+          "number": "2036",
+          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+        }
+      ]
     },
     {
       "id": "ethane",
@@ -4090,7 +4818,13 @@
           "checked": "2026-10-21"
         }
       ],
-      "verifiedAt": "2026-10-21"
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+      }
     }
   ],
   "coverage": {
@@ -4098,5 +4832,1967 @@
     "count": 64,
     "checked": "2026-10-21",
     "description": "Toutes les entrées de l’index public consulté, dont air, substances liquides, isomères et formes isotopiques. Ce périmètre ne représente pas tous les produits ou mélanges commercialisés."
+  },
+  "ranges": [
+    {
+      "id": "arcal",
+      "name": "ARCAL™",
+      "description": "Soudage à l’arc : TIG, MIG, MAG et plasma.",
+      "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm"
+    },
+    {
+      "id": "aligal",
+      "name": "ALIGAL™",
+      "description": "Gaz et mélanges de qualité alimentaire.",
+      "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm"
+    },
+    {
+      "id": "alphagaz",
+      "name": "ALPHAGAZ™",
+      "description": "Gaz purs et mélanges pour l’analyse et les laboratoires.",
+      "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz"
+    },
+    {
+      "id": "lasal",
+      "name": "LASAL™",
+      "description": "Gaz pour la découpe et le soudage laser.",
+      "url": "https://fr.airliquide.com/gaz/gaz-de-decoupe-et-soudage-laser-lasaltm"
+    },
+    {
+      "id": "phargalis",
+      "name": "PHARGALIS™",
+      "description": "Gaz pour les procédés pharmaceutiques.",
+      "url": "https://fr.airliquide.com/approvisionnements-gaz/bouteilles-de-gaz-et-cadres"
+    },
+    {
+      "id": "alnat",
+      "name": "ALNAT™",
+      "description": "Gaz pour le traitement thermique.",
+      "url": "https://fr.airliquide.com/approvisionnements-gaz/bouteilles-de-gaz-et-cadres"
+    },
+    {
+      "id": "flamal",
+      "name": "FLAMAL™",
+      "description": "Gaz combustibles pour les procédés à la flamme.",
+      "url": "https://fr.airliquide.com/approvisionnements-gaz/bouteilles-de-gaz-et-cadres"
+    },
+    {
+      "id": "albee",
+      "name": "ALbee™",
+      "description": "Gamme présente au catalogue du fournisseur.",
+      "url": "https://fr.airliquide.com/gaz"
+    },
+    {
+      "id": "blue",
+      "name": "BLUE",
+      "description": "Gamme présente au catalogue du fournisseur.",
+      "url": "https://fr.airliquide.com/gaz"
+    },
+    {
+      "id": "crystal",
+      "name": "CRYSTAL",
+      "description": "Gamme présente au catalogue du fournisseur.",
+      "url": "https://fr.airliquide.com/gaz"
+    }
+  ],
+  "products": [
+    {
+      "id": "arcal-prime",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ Prime",
+      "subtitle": "Ar ≥ 99,998 %",
+      "formula": "",
+      "displayFormula": "Ar",
+      "cas": "",
+      "family": "Soudage TIG et plasma ; MIG aluminium/cuivre.",
+      "aliases": [
+        "ARCAL",
+        "Prime",
+        "Ar ≥ 99,998 %",
+        "Soudage TIG et plasma ; MIG aluminium/cuivre."
+      ],
+      "composition": "Ar ≥ 99,998 %",
+      "applications": [
+        "Soudage TIG et plasma ; MIG aluminium/cuivre."
+      ],
+      "components": [
+        "argon"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-prime/I2013",
+      "sourceLabel": "Fiche produit",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "individual",
+        "url": "https://www.quickfds.com/fds/7126522-11172-24850-019245",
+        "label": "Ouvrir la FDS — gaz comprimé",
+        "note": "Lien fourni par la page produit ARCAL Prime ; vérifier la révision et le conditionnement avant utilisation."
+      },
+      "transport": [
+        {
+          "number": "1006",
+          "state": "Argon comprimé"
+        },
+        {
+          "number": "1951",
+          "state": "Argon liquide réfrigéré"
+        }
+      ],
+      "shoulder": {
+        "name": "Vert foncé",
+        "ral": "6001",
+        "css": "#366735",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/7/c/3/8/7c38cc61abf1b9b1f9033a3d222e76e837cabb45_ARCAL%E2%84%A2_Prime_fr_FR_v1.4.pdf"
+      }
+    },
+    {
+      "id": "arcal-chrome",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ Chrome",
+      "subtitle": "Ar + 2 % CO₂",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Soudage MAG des aciers inoxydables.",
+      "aliases": [
+        "ARCAL",
+        "Chrome",
+        "Ar + 2 % CO₂",
+        "Soudage MAG des aciers inoxydables."
+      ],
+      "composition": "Ar + 2 % CO₂",
+      "applications": [
+        "Soudage MAG des aciers inoxydables."
+      ],
+      "components": [
+        "argon",
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-chrome/I2531",
+      "sourceLabel": "Fiche produit",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "individual",
+        "url": "https://www.quickfds.com/fds/7126522-11172-24850-011291",
+        "label": "Ouvrir la FDS du mélange",
+        "note": "FDS française 30015L02 partagée par ARCAL Force, Chrome et Speed. Révision affichée : 20 décembre 2022. Lien et titre vérifiés le 21 octobre 2026 ; vérifier la version applicable au produit livré."
+      }
+    },
+    {
+      "id": "arcal-speed",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ Speed",
+      "subtitle": "Ar + 8 % CO₂",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Soudage MAG rapide des aciers carbone.",
+      "aliases": [
+        "ARCAL",
+        "Speed",
+        "Ar + 8 % CO₂",
+        "Soudage MAG rapide des aciers carbone."
+      ],
+      "composition": "Ar + 8 % CO₂",
+      "applications": [
+        "Soudage MAG rapide des aciers carbone."
+      ],
+      "components": [
+        "argon",
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-speed/I2561",
+      "sourceLabel": "Fiche produit",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "individual",
+        "url": "https://www.quickfds.com/fds/7126522-11172-24850-011291",
+        "label": "Ouvrir la FDS du mélange",
+        "note": "FDS française 30015L02 partagée par ARCAL Force, Chrome et Speed. Révision affichée : 20 décembre 2022. Lien et titre vérifiés le 21 octobre 2026 ; vérifier la version applicable au produit livré."
+      }
+    },
+    {
+      "id": "arcal-force",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ Force",
+      "subtitle": "18 % CO₂ / Ar",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Soudage MAG des aciers carbone.",
+      "aliases": [
+        "ARCAL",
+        "Force",
+        "18 % CO₂ / Ar",
+        "Soudage MAG des aciers carbone."
+      ],
+      "composition": "18 % CO₂ / Ar",
+      "applications": [
+        "Soudage MAG des aciers carbone."
+      ],
+      "components": [
+        "argon",
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/arcaltm-force/I2506",
+      "sourceLabel": "Fiche produit",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "individual",
+        "url": "https://www.quickfds.com/fds/7126522-11172-24850-011291",
+        "label": "Ouvrir la FDS du mélange",
+        "note": "FDS française 30015L02 partagée par ARCAL Force, Chrome et Speed. Révision affichée : 20 décembre 2022. Lien et titre vérifiés le 21 octobre 2026 ; vérifier la version applicable au produit livré."
+      }
+    },
+    {
+      "id": "arcal-m14",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ M14",
+      "subtitle": "3 % CO₂ + 1 % O₂ / Ar",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Soudage MAG de tôles fines.",
+      "aliases": [
+        "ARCAL",
+        "M14",
+        "3 % CO₂ + 1 % O₂ / Ar",
+        "Soudage MAG de tôles fines."
+      ],
+      "composition": "3 % CO₂ + 1 % O₂ / Ar",
+      "applications": [
+        "Soudage MAG de tôles fines."
+      ],
+      "components": [
+        "argon",
+        "dioxyde-carbone",
+        "oxygene"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "arcal-m22",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ M22",
+      "subtitle": "5 % O₂ / Ar",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Protection gazeuse pour le soudage à l’arc.",
+      "aliases": [
+        "ARCAL",
+        "M22",
+        "5 % O₂ / Ar",
+        "Protection gazeuse pour le soudage à l’arc."
+      ],
+      "composition": "5 % O₂ / Ar",
+      "applications": [
+        "Protection gazeuse pour le soudage à l’arc."
+      ],
+      "components": [
+        "argon",
+        "oxygene"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "arcal-m23",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ M23",
+      "subtitle": "4 % O₂ + 5 % CO₂ / Ar",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Protection gazeuse pour le soudage à l’arc.",
+      "aliases": [
+        "ARCAL",
+        "M23",
+        "4 % O₂ + 5 % CO₂ / Ar",
+        "Protection gazeuse pour le soudage à l’arc."
+      ],
+      "composition": "4 % O₂ + 5 % CO₂ / Ar",
+      "applications": [
+        "Protection gazeuse pour le soudage à l’arc."
+      ],
+      "components": [
+        "argon",
+        "oxygene",
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "arcal-m24-7",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ M24-7",
+      "subtitle": "2 ± 0,5 % O₂ + 6,5 ± 0,65 % CO₂ / Ar",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Protection gazeuse pour le soudage à l’arc.",
+      "aliases": [
+        "ARCAL",
+        "M24-7",
+        "2 ± 0,5 % O₂ + 6,5 ± 0,65 % CO₂ / Ar",
+        "Protection gazeuse pour le soudage à l’arc."
+      ],
+      "composition": "2 ± 0,5 % O₂ + 6,5 ± 0,65 % CO₂ / Ar",
+      "applications": [
+        "Protection gazeuse pour le soudage à l’arc."
+      ],
+      "components": [
+        "argon",
+        "oxygene",
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "arcal-31",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ 31",
+      "subtitle": "5 ± 0,5 % He / Ar",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Soudage TIG/MIG et gaz annulaire.",
+      "aliases": [
+        "ARCAL",
+        "31",
+        "5 ± 0,5 % He / Ar",
+        "Soudage TIG/MIG et gaz annulaire."
+      ],
+      "composition": "5 ± 0,5 % He / Ar",
+      "applications": [
+        "Soudage TIG/MIG et gaz annulaire."
+      ],
+      "components": [
+        "argon",
+        "helium"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "arcal-39",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ 39",
+      "subtitle": "Ar + 10 % He + 2 % N₂",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Soudage TIG/plasma des inox.",
+      "aliases": [
+        "ARCAL",
+        "39",
+        "Ar + 10 % He + 2 % N₂",
+        "Soudage TIG/plasma des inox."
+      ],
+      "composition": "Ar + 10 % He + 2 % N₂",
+      "applications": [
+        "Soudage TIG/plasma des inox."
+      ],
+      "components": [
+        "argon",
+        "helium",
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "arcal-he20",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ He20",
+      "subtitle": "20 % He / Ar",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Soudage TIG/MIG et gaz annulaire.",
+      "aliases": [
+        "ARCAL",
+        "He20",
+        "20 % He / Ar",
+        "Soudage TIG/MIG et gaz annulaire."
+      ],
+      "composition": "20 % He / Ar",
+      "applications": [
+        "Soudage TIG/MIG et gaz annulaire."
+      ],
+      "components": [
+        "argon",
+        "helium"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "arcal-he20microc",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ He20µC",
+      "subtitle": "20 % He + 1 100 ppm CO₂ / Ar",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Soudage MIG.",
+      "aliases": [
+        "ARCAL",
+        "He20µC",
+        "20 % He + 1 100 ppm CO₂ / Ar",
+        "Soudage MIG."
+      ],
+      "composition": "20 % He + 1 100 ppm CO₂ / Ar",
+      "applications": [
+        "Soudage MIG."
+      ],
+      "components": [
+        "argon",
+        "helium",
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "arcal-he70",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ He70",
+      "subtitle": "30 % Ar / He",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Soudage TIG/MIG et gaz annulaire.",
+      "aliases": [
+        "ARCAL",
+        "He70",
+        "30 % Ar / He",
+        "Soudage TIG/MIG et gaz annulaire."
+      ],
+      "composition": "30 % Ar / He",
+      "applications": [
+        "Soudage TIG/MIG et gaz annulaire."
+      ],
+      "components": [
+        "argon",
+        "helium"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "arcal-m11",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ M11",
+      "subtitle": "1 % H₂ + 3 % CO₂ / Ar",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Soudage MAG de tôles fines en inox.",
+      "aliases": [
+        "ARCAL",
+        "M11",
+        "1 % H₂ + 3 % CO₂ / Ar",
+        "Soudage MAG de tôles fines en inox."
+      ],
+      "composition": "1 % H₂ + 3 % CO₂ / Ar",
+      "applications": [
+        "Soudage MAG de tôles fines en inox."
+      ],
+      "components": [
+        "argon",
+        "hydrogene",
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "arcal-m12-he18",
+      "kind": "product",
+      "range": "arcal",
+      "name": "ARCAL™ M12 He18",
+      "subtitle": "18 % He + 1 % CO₂ / Ar",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Protection gazeuse pour le soudage à l’arc.",
+      "aliases": [
+        "ARCAL",
+        "M12 He18",
+        "18 % He + 1 % CO₂ / Ar",
+        "Protection gazeuse pour le soudage à l’arc."
+      ],
+      "composition": "18 % He + 1 % CO₂ / Ar",
+      "applications": [
+        "Protection gazeuse pour le soudage à l’arc."
+      ],
+      "components": [
+        "argon",
+        "helium",
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm",
+          "title": "Air Liquide · ARCAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-1",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ 1",
+      "subtitle": "N₂ ≥ 99,995 %",
+      "formula": "",
+      "displayFormula": "N₂",
+      "cas": "",
+      "family": "Inertage et atmosphère protectrice alimentaire.",
+      "aliases": [
+        "ALIGAL",
+        "1",
+        "N₂ ≥ 99,995 %",
+        "Inertage et atmosphère protectrice alimentaire."
+      ],
+      "composition": "N₂ ≥ 99,995 %",
+      "applications": [
+        "Inertage et atmosphère protectrice alimentaire."
+      ],
+      "components": [
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-2",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ 2",
+      "subtitle": "CO₂ ≥ 99,9 % vol.",
+      "formula": "",
+      "displayFormula": "CO₂",
+      "cas": "",
+      "family": "Carbonatation et atmosphère modifiée.",
+      "aliases": [
+        "ALIGAL",
+        "2",
+        "CO₂ ≥ 99,9 % vol.",
+        "Carbonatation et atmosphère modifiée."
+      ],
+      "composition": "CO₂ ≥ 99,9 % vol.",
+      "applications": [
+        "Carbonatation et atmosphère modifiée."
+      ],
+      "components": [
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-3",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ 3",
+      "subtitle": "O₂ ≥ 99,5 %",
+      "formula": "",
+      "displayFormula": "O₂",
+      "cas": "",
+      "family": "Conditionnement alimentaire et fermentation.",
+      "aliases": [
+        "ALIGAL",
+        "3",
+        "O₂ ≥ 99,5 %",
+        "Conditionnement alimentaire et fermentation."
+      ],
+      "composition": "O₂ ≥ 99,5 %",
+      "applications": [
+        "Conditionnement alimentaire et fermentation."
+      ],
+      "components": [
+        "oxygene"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-aqua",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ Aqua",
+      "subtitle": "CO₂ ≥ 99,9 %",
+      "formula": "",
+      "displayFormula": "CO₂",
+      "cas": "",
+      "family": "Traitement de l’eau.",
+      "aliases": [
+        "ALIGAL",
+        "Aqua",
+        "CO₂ ≥ 99,9 %",
+        "Traitement de l’eau."
+      ],
+      "composition": "CO₂ ≥ 99,9 %",
+      "applications": [
+        "Traitement de l’eau."
+      ],
+      "components": [
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-12",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ 12",
+      "subtitle": "20 ± 2 % vol. CO₂ / N₂",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Atmosphère protectrice alimentaire.",
+      "aliases": [
+        "ALIGAL",
+        "12",
+        "20 ± 2 % vol. CO₂ / N₂",
+        "Atmosphère protectrice alimentaire."
+      ],
+      "composition": "20 ± 2 % vol. CO₂ / N₂",
+      "applications": [
+        "Atmosphère protectrice alimentaire."
+      ],
+      "components": [
+        "dioxyde-carbone",
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-13",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ 13",
+      "subtitle": "30 ± 3 % vol. CO₂ / N₂",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Atmosphère protectrice alimentaire.",
+      "aliases": [
+        "ALIGAL",
+        "13",
+        "30 ± 3 % vol. CO₂ / N₂",
+        "Atmosphère protectrice alimentaire."
+      ],
+      "composition": "30 ± 3 % vol. CO₂ / N₂",
+      "applications": [
+        "Atmosphère protectrice alimentaire."
+      ],
+      "components": [
+        "dioxyde-carbone",
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-15",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ 15",
+      "subtitle": "N₂ + 50 % CO₂",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Atmosphère protectrice alimentaire.",
+      "aliases": [
+        "ALIGAL",
+        "15",
+        "N₂ + 50 % CO₂",
+        "Atmosphère protectrice alimentaire."
+      ],
+      "composition": "N₂ + 50 % CO₂",
+      "applications": [
+        "Atmosphère protectrice alimentaire."
+      ],
+      "components": [
+        "azote",
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-27",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ 27",
+      "subtitle": "O₂ + 30 % CO₂",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Atmosphère protectrice alimentaire.",
+      "aliases": [
+        "ALIGAL",
+        "27",
+        "O₂ + 30 % CO₂",
+        "Atmosphère protectrice alimentaire."
+      ],
+      "composition": "O₂ + 30 % CO₂",
+      "applications": [
+        "Atmosphère protectrice alimentaire."
+      ],
+      "components": [
+        "oxygene",
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-62",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ 62",
+      "subtitle": "20 % CO₂ / Ar",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Atmosphère protectrice alimentaire.",
+      "aliases": [
+        "ALIGAL",
+        "62",
+        "20 % CO₂ / Ar",
+        "Atmosphère protectrice alimentaire."
+      ],
+      "composition": "20 % CO₂ / Ar",
+      "applications": [
+        "Atmosphère protectrice alimentaire."
+      ],
+      "components": [
+        "dioxyde-carbone",
+        "argon"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-drink-2-liquide",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ Drink 2 LIQUIDE",
+      "subtitle": "CO₂ ≥ 99,9 %, liquide",
+      "formula": "",
+      "displayFormula": "CO₂",
+      "cas": "",
+      "family": "Carbonatation des boissons.",
+      "aliases": [
+        "ALIGAL",
+        "Drink 2 LIQUIDE",
+        "CO₂ ≥ 99,9 %, liquide",
+        "Carbonatation des boissons."
+      ],
+      "composition": "CO₂ ≥ 99,9 %, liquide",
+      "applications": [
+        "Carbonatation des boissons."
+      ],
+      "components": [
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-freeze-1-liquide",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ FREEZE 1 LIQUIDE",
+      "subtitle": "N₂ ≥ 99 %, liquide",
+      "formula": "",
+      "displayFormula": "N₂",
+      "cas": "",
+      "family": "Surgélation et refroidissement alimentaire.",
+      "aliases": [
+        "ALIGAL",
+        "FREEZE 1 LIQUIDE",
+        "N₂ ≥ 99 %, liquide",
+        "Surgélation et refroidissement alimentaire."
+      ],
+      "composition": "N₂ ≥ 99 %, liquide",
+      "applications": [
+        "Surgélation et refroidissement alimentaire."
+      ],
+      "components": [
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "aligal-freeze-2-liquide",
+      "kind": "product",
+      "range": "aligal",
+      "name": "ALIGAL™ FREEZE 2 LIQUIDE",
+      "subtitle": "CO₂ ≥ 99 %, liquide",
+      "formula": "",
+      "displayFormula": "CO₂",
+      "cas": "",
+      "family": "Surgélation et refroidissement alimentaire.",
+      "aliases": [
+        "ALIGAL",
+        "FREEZE 2 LIQUIDE",
+        "CO₂ ≥ 99 %, liquide",
+        "Surgélation et refroidissement alimentaire."
+      ],
+      "composition": "CO₂ ≥ 99 %, liquide",
+      "applications": [
+        "Surgélation et refroidissement alimentaire."
+      ],
+      "components": [
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm",
+          "title": "Air Liquide · ALIGAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-1-air",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 1 AIR",
+      "subtitle": "20 % O₂ / N₂",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "1 AIR",
+        "20 % O₂ / N₂",
+        "Applications analytiques."
+      ],
+      "composition": "20 % O₂ / N₂",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "oxygene",
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-2-air",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 2 AIR",
+      "subtitle": "Air — composition exacte à vérifier dans la fiche fournisseur.",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "2 AIR",
+        "Applications analytiques."
+      ],
+      "composition": "Air — composition exacte à vérifier dans la fiche fournisseur.",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "oxygene",
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-1-argon",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 1 ARGON",
+      "subtitle": "Ar ≥ 99,999 %",
+      "formula": "",
+      "displayFormula": "Ar",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "1 ARGON",
+        "Ar ≥ 99,999 %",
+        "Applications analytiques."
+      ],
+      "composition": "Ar ≥ 99,999 %",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "argon"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-2-argon",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 2 ARGON",
+      "subtitle": "Ar ≥ 99,9999 %",
+      "formula": "",
+      "displayFormula": "Ar",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "2 ARGON",
+        "Ar ≥ 99,9999 %",
+        "Applications analytiques."
+      ],
+      "composition": "Ar ≥ 99,9999 %",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "argon"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-1-azote",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 1 AZOTE",
+      "subtitle": "N₂ ≥ 99,999 %",
+      "formula": "",
+      "displayFormula": "N₂",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "1 AZOTE",
+        "N₂ ≥ 99,999 %",
+        "Applications analytiques."
+      ],
+      "composition": "N₂ ≥ 99,999 %",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-2-azote",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 2 AZOTE",
+      "subtitle": "N₂ + gaz rares ≥ 99,9999 %",
+      "formula": "",
+      "displayFormula": "N₂",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "2 AZOTE",
+        "N₂ + gaz rares ≥ 99,9999 %",
+        "Applications analytiques."
+      ],
+      "composition": "N₂ + gaz rares ≥ 99,9999 %",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-1-co2",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 1 CO2",
+      "subtitle": "CO₂ ≥ 99,9 %",
+      "formula": "",
+      "displayFormula": "CO₂",
+      "cas": "",
+      "family": "Culture cellulaire.",
+      "aliases": [
+        "ALPHAGAZ",
+        "1 CO2",
+        "CO₂ ≥ 99,9 %",
+        "Culture cellulaire."
+      ],
+      "composition": "CO₂ ≥ 99,9 %",
+      "applications": [
+        "Culture cellulaire."
+      ],
+      "components": [
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-1-helium",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 1 HELIUM",
+      "subtitle": "He ≥ 99,999 %",
+      "formula": "",
+      "displayFormula": "He",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "1 HELIUM",
+        "He ≥ 99,999 %",
+        "Applications analytiques."
+      ],
+      "composition": "He ≥ 99,999 %",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "helium"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-2-helium",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 2 HELIUM",
+      "subtitle": "He ≥ 99,9999 %",
+      "formula": "",
+      "displayFormula": "He",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "2 HELIUM",
+        "He ≥ 99,9999 %",
+        "Applications analytiques."
+      ],
+      "composition": "He ≥ 99,9999 %",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "helium"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-1-hydrogene",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 1 HYDROGENE",
+      "subtitle": "H₂ ≥ 99,999 % mol.",
+      "formula": "",
+      "displayFormula": "H₂",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "1 HYDROGENE",
+        "H₂ ≥ 99,999 % mol.",
+        "Applications analytiques."
+      ],
+      "composition": "H₂ ≥ 99,999 % mol.",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "hydrogene"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-2-hydrogene",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 2 HYDROGENE",
+      "subtitle": "H₂ ≥ 99,9999 % mol.",
+      "formula": "",
+      "displayFormula": "H₂",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "2 HYDROGENE",
+        "H₂ ≥ 99,9999 % mol.",
+        "Applications analytiques."
+      ],
+      "composition": "H₂ ≥ 99,9999 % mol.",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "hydrogene"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-1-oxygene",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 1 OXYGENE",
+      "subtitle": "O₂ ≥ 99,995 % mol.",
+      "formula": "",
+      "displayFormula": "O₂",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "1 OXYGENE",
+        "O₂ ≥ 99,995 % mol.",
+        "Applications analytiques."
+      ],
+      "composition": "O₂ ≥ 99,995 % mol.",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "oxygene"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-2-oxygene",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ 2 OXYGENE",
+      "subtitle": "O₂ ≥ 99,9995 %",
+      "formula": "",
+      "displayFormula": "O₂",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "2 OXYGENE",
+        "O₂ ≥ 99,9995 %",
+        "Applications analytiques."
+      ],
+      "composition": "O₂ ≥ 99,9995 %",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "oxygene"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-mix-2-qcl-nh3-1800-ppm",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ Mix 2 QCL NH3 1800 ppm",
+      "subtitle": "NH₃ 1 800 ppm / N₂",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "Mix 2 QCL NH3 1800 ppm",
+        "NH₃ 1 800 ppm / N₂",
+        "Applications analytiques."
+      ],
+      "composition": "NH₃ 1 800 ppm / N₂",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "ammoniac",
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "alphagaz-mix-2-qcl-nh3-45-ppm",
+      "kind": "product",
+      "range": "alphagaz",
+      "name": "ALPHAGAZ™ Mix 2 QCL NH3 45 ppm",
+      "subtitle": "NH₃ 45 ppm / N₂",
+      "formula": "",
+      "displayFormula": "Mix",
+      "cas": "",
+      "family": "Applications analytiques.",
+      "aliases": [
+        "ALPHAGAZ",
+        "Mix 2 QCL NH3 45 ppm",
+        "NH₃ 45 ppm / N₂",
+        "Applications analytiques."
+      ],
+      "composition": "NH₃ 45 ppm / N₂",
+      "applications": [
+        "Applications analytiques."
+      ],
+      "components": [
+        "ammoniac",
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+      "sourceLabel": "Page officielle de la gamme",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz",
+          "title": "Air Liquide · ALPHAGAZ™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "lasal-1",
+      "kind": "product",
+      "range": "lasal",
+      "name": "LASAL™ 1",
+      "subtitle": "N₂",
+      "formula": "",
+      "displayFormula": "N₂",
+      "cas": "",
+      "family": "Gaz pour les sources laser.",
+      "aliases": [
+        "LASAL",
+        "1",
+        "N₂",
+        "Gaz pour les sources laser."
+      ],
+      "composition": "N₂",
+      "applications": [
+        "Gaz pour les sources laser."
+      ],
+      "components": [
+        "azote"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/helium-he",
+      "sourceLabel": "Source fournisseur sur les gaz laser",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/helium-he",
+          "title": "Air Liquide · LASAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "lasal-2",
+      "kind": "product",
+      "range": "lasal",
+      "name": "LASAL™ 2",
+      "subtitle": "CO₂",
+      "formula": "",
+      "displayFormula": "CO₂",
+      "cas": "",
+      "family": "Gaz pour les sources laser.",
+      "aliases": [
+        "LASAL",
+        "2",
+        "CO₂",
+        "Gaz pour les sources laser."
+      ],
+      "composition": "CO₂",
+      "applications": [
+        "Gaz pour les sources laser."
+      ],
+      "components": [
+        "dioxyde-carbone"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/helium-he",
+      "sourceLabel": "Source fournisseur sur les gaz laser",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/helium-he",
+          "title": "Air Liquide · LASAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    },
+    {
+      "id": "lasal-4",
+      "kind": "product",
+      "range": "lasal",
+      "name": "LASAL™ 4",
+      "subtitle": "He",
+      "formula": "",
+      "displayFormula": "He",
+      "cas": "",
+      "family": "Gaz pour les sources laser.",
+      "aliases": [
+        "LASAL",
+        "4",
+        "He",
+        "Gaz pour les sources laser."
+      ],
+      "composition": "He",
+      "applications": [
+        "Gaz pour les sources laser."
+      ],
+      "components": [
+        "helium"
+      ],
+      "sourceUrl": "https://fr.airliquide.com/gaz/helium-he",
+      "sourceLabel": "Source fournisseur sur les gaz laser",
+      "sources": [
+        {
+          "url": "https://fr.airliquide.com/gaz/helium-he",
+          "title": "Air Liquide · LASAL™",
+          "scope": "Identité, composition publiée et applications ; catalogue France.",
+          "checked": "2026-10-21"
+        }
+      ],
+      "verifiedAt": "2026-10-21",
+      "fds": {
+        "kind": "portal",
+        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
+        "label": "Rechercher la FDS du produit",
+        "note": "Portail officiel Air Liquide France : sélectionner la référence, le pays et le conditionnement. Ce lien ne constitue pas une FDS individuelle."
+      }
+    }
+  ],
+  "commercialCoverage": {
+    "checked": "2026-10-21",
+    "country": "France",
+    "documentedProducts": 45,
+    "rangeCount": 10,
+    "complete": false,
+    "note": "Références publiques documentées, pas un inventaire exhaustif. Les catalogues dynamiques et mélanges sur mesure peuvent contenir d’autres produits. Certaines pages sont consultables via l’index public mais leur téléchargement direct est refusé par le serveur."
   }
 }

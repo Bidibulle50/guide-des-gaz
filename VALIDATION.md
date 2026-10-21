@@ -1,3 +1,14 @@
+# Vérification — édition 1.2.0 en cours de publication — 21 octobre 2026
+
+- 15 tests Node réussis : 64 fiches encyclopédiques et 45 produits commerciaux, recherche, favoris, gammes, gabarits et cache isolé.
+- Les fiches commerciales séparent composition, applications, sources et constituants ; aucune propriété physique de mélange calculée.
+- FDS : 4 références ARCAL avec document individuel vérifié (2 URL distinctes) ; autres fiches : portail fournisseur clairement identifié. Les liens externes exigent une connexion.
+- Les références ONU et couleurs sont limitées aux informations sourcées ; les absences sont affichées. Pas de validation du transport d’un produit livré.
+- Catalogue commercial partiel : 45 références et 10 gammes répertoriées. Six gammes restent sans fiche de composition dans cette édition.
+- La publication et la recette navigateur de cette édition sont en cours. Le rapport ci-dessous concerne la version antérieure.
+
+---
+
 # Vérification — version 1.1.0 — 21 octobre 2026
 
 ## Contrôles réalisés

@@ -86,3 +86,17 @@ Les valeurs transcrites ne sont pas des caractéristiques garanties d’un produ
 | Trifluorure d'azote | NF₃ | 7783-54-2 | [Encyclopédie](https://encyclopedia.airliquide.com/fr/trifluorure-azote) |
 | Xénon | Xe | 7440-63-3 | [Encyclopédie](https://encyclopedia.airliquide.com/fr/xenon) |
 | Éthane | C₂H₆ | 74-84-0 | [Encyclopédie](https://encyclopedia.airliquide.com/ethane) |
+
+## Gammes commerciales — extension 1.2
+
+Les 45 références sont documentées dans `data/gases.json`, avec leur source. Inventaire partiel du catalogue France, pas de couverture exhaustive des variantes, emballages et mélanges sur mesure. Les liens documentaires externes ne sont pas mis en cache.
+
+- [ARCAL](https://fr.airliquide.com/gaz/gaz-de-soudage-larc-arcaltm) : 15 références documentées. Les quatre Référents ont une page produit individuelle vérifiée.
+- [ALIGAL](https://fr.airliquide.com/gaz/gaz-de-qualite-alimentaire-aligaltm) : 12 références documentées.
+- [ALPHAGAZ](https://fr.airliquide.com/gaz/gaz-speciaux-melanges-calibration-alphagaz) : 15 références documentées. Le pourcentage de pureté ambigu de la carte ALPHAGAZ 2 AIR n’est pas transposé en composition.
+- [LASAL / article fournisseur sur l’hélium](https://fr.airliquide.com/gaz/helium-he) : LASAL 1, 2 et 4 identifiés ; aucune pureté inventée. La page principale LASAL refuse certains accès.
+- [Catalogue fournisseur](https://fr.airliquide.com/gaz) et [modes de fourniture](https://fr.airliquide.com/approvisionnements-gaz/bouteilles-de-gaz-et-cadres) : existence et périmètre des autres gammes. Les compositions non vérifiées ne sont pas inventées.
+- [FDS Air Liquide France](https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds) : portail officiel ; un lien vers ce portail n’est pas présenté comme une FDS individuelle.
+- FDS individuelles : ARCAL Prime (argon comprimé), ainsi que le document français commun ARCAL Chrome/Speed/Force (30015L02, révision du 20 décembre 2022). Liens observés sur les pages officielles, titre et PDF consultés le 21 octobre 2026 ; cette consultation ne garantit pas l’absence d’une révision ultérieure.
+- Numéros ONU de molécules : références de l’encyclopédie, avec avertissement sur le conditionnement et la rubrique 14. Argon et oxygène : gaz comprimé et liquide réfrigéré distingués.
+- Couleurs : ogives argon/ARCAL Prime vert foncé RAL 6001 et oxygène blanc RAL 9010 recoupées dans les fiches fournisseur. Les autres couleurs restent non documentées dans cette édition ; aucune couleur générique attribuée à une gamme commerciale. Certains PDF fournisseur sont indexés mais leur téléchargement direct peut être refusé ou leur lien évoluer.

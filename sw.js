@@ -1,5 +1,5 @@
 /* Change VERSION for every edition; the complete app shell is cached atomically. */
-const VERSION = '1.1.1';
+const VERSION = '1.2.0';
 const PREFIX = `guide-des-gaz:${self.registration.scope}:`;
 const CACHE = PREFIX + VERSION;
 const ASSETS = ['./','./index.html','./styles.css','./theme.js','./app.js','./core.js','./data/gases.json','./manifest.webmanifest','./icons/icon.svg','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png'];

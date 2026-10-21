@@ -2,6 +2,16 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 1.2
+
+- **109 fiches** : 64 entrées de molécules/substances et 45 références commerciales documentées (15 ARCAL, 12 ALIGAL, 15 ALPHAGAZ, 3 LASAL).
+- Navigation **Gammes** : ARCAL, ALIGAL, ALPHAGAZ, LASAL, PHARGALIS, ALNAT, FLAMAL, ALbee, BLUE et CRYSTAL. Six gammes sont répertoriées sans composition de produit documentée dans cette édition. Le catalogue commercial reste partiel.
+- Composition et applications commerciales séparées des propriétés des molécules. Aucun calcul de propriété ou classification d’un mélange par transposition des constituants.
+- Recherche globale, favoris et cache couvrent les 109 fiches.
+- Liens FDS : document individuel quand le lien est vérifié ; sinon accès explicitement nommé au portail officiel Air Liquide France. La FDS du produit livré, de son état et de son pays reste à sélectionner.
+- Références ONU et couleurs d’ogive publiées lorsqu’une source est identifiée ; absence ou portée limitée affichées. La couleur ne désigne pas une marque ; l’étiquette identifie le contenu. La teinte écran est indicative. Les références ne constituent pas une validation transport.
+- Cadre rectangulaire interne de recherche supprimé ; focus arrondi sur le conteneur complet et maintien du repère clavier.
+
 ## Nouveautés 1.1
 
 Accueil **Essentiels** avec 12 gaz usuels sélectionnés : oxygène, azote, argon, dioxyde de carbone, hydrogène, hélium, acétylène, air, méthane, propane, ammoniac et monoxyde de carbone. Cette sélection éditoriale n’est pas une statistique de consommation.
@@ -21,13 +31,13 @@ L’onglet **Tous** affiche ces 12 fiches en premier, puis les 52 autres entrée
 
 Les propriétés proviennent des pages publiques de l’Encyclopédie des gaz Air Liquide, consultées le **21 octobre 2026**. Chaque fiche cite ses sources ; les précautions générales sont complétées par le support de prévention Air Liquide et INRS ED 6369. Des fiches toxicologiques INRS complètent les substances concernées. Les applications manquantes sont recoupées avec des publications de fabricants, organismes publics ou chercheurs ; chaque ajout est référencé.
 
-Les textes sont des synthèses originales et courtes ; les données chiffrées sont transcrites, sans interpolation. Aucune image, logo, FDS complète ou page source n’est redistribué. Les références à Air Liquide identifient la source et ne signifient ni partenariat ni certification.
+Les textes sont des synthèses originales et courtes ; les données chiffrées sont transcrites, sans interpolation. Aucune image, logo, FDS complète ou page source n’est redistribué. Les références à Air Liquide et aux noms commerciaux identifient les produits et les sources et ne signifient ni partenariat ni certification. Les marques appartiennent à leur titulaire.
 
 - Masse volumique **du gaz à 15 °C et 1,013 bar absolu**, lorsqu’une valeur exploitable est publiée (44 fiches sur 64) ; masse molaire en g/mol. L’air est un mélange, les autres fiches identifient une substance ou une forme particulière.
 - Transitions à 1,013 bar absolu quand cette référence est publiée. CO₂ et C₂H₂ : **sublimation** ; pas d’ébullition à cette pression. Les exceptions (air, SF₆, R-142b) sont expliquées. Une valeur inconnue ou incohérente n’est ni estimée ni remplacée par zéro.
 - O₂/N₂/H₂ sont des formules ; O/N/H sont les symboles d’éléments. Ar/He/Ne désignent des gaz monoatomiques. CO n’est pas Co (cobalt).
 - LOX/LIN/LAR désignent des formes liquides et sont uniquement des aides de recherche : elles ne changent pas les conditions des valeurs affichées.
-- Couverture exhaustive de l’index public de 64 entrées consulté, pas de tous les gaz existants ni de tous les produits Air Liquide. Les grades commerciaux et mélanges sur mesure ne sont pas représentés. L’air est la seule fiche de mélange. Les usages historiques des halons/CFC/HCFC ne constituent pas une autorisation d’emploi actuelle.
+- Couverture exhaustive de l’index public de 64 entrées consulté, pas de tous les gaz existants ni de tous les produits Air Liquide. Les propriétés physiques des grades commerciaux et mélanges sur mesure ne sont pas calculées. Les références commerciales documentées sont présentées séparément. L’air figure dans la partie encyclopédique ; les produits commerciaux et mélanges disposent de fiches distinctes. Les usages historiques des halons/CFC/HCFC ne constituent pas une autorisation d’emploi actuelle.
 - Applications documentées pour 60 fiches ; pour cyclopropane, isohexane, néopentane et R-21, l’absence d’application précise vérifiée est affichée. Les propriétés des isomères ne sont pas interchangeables. D est un isotope de H ; para-H₂ est une configuration de spin de H₂.
 - La date de consultation n’est pas la date de révision d’une FDS ni une validation par un fournisseur. Pour intervenir, consulter la **FDS à jour du produit livré** et les consignes du site. Ce guide ne constitue pas une procédure d’urgence, un outil de calcul ou une prescription médicale.
 
