@@ -53,3 +53,9 @@ test('L’accueil ouvre la recherche, quatre raccourcis et les gammes sans masqu
   vm.runInContext("query='arcal';renderList()",context);assert.equal(element('#catalogue-home').hidden,true);assert.equal(element('#catalogue-results').hidden,false);assert.equal((element('#gas-list').innerHTML.match(/href="#gaz\//g)||[]).length,15);
   vm.runInContext("query='';catalogueOverview=false;mode='essentials';renderList()",context);assert.equal(element('#catalogue-results').hidden,false);assert.equal((element('#gas-list').innerHTML.match(/href="#gaz\//g)||[]).length,12);
 });
+
+test('Les icônes de navigation ont une classe de présentation et sont exclues du nom accessible',()=>{
+ const {context,element}=renderContext();vm.runInContext('catalogue()',context);
+ assert.match(element('.bottom-nav').innerHTML,/<svg aria-hidden="true" focusable="false" class="icon /);
+ assert.ok(!element('.bottom-nav').innerHTML.includes('<svg xmlns='));
+});

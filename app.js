@@ -1,7 +1,7 @@
 import { iconMarkup } from './ui-icons.js';
 import { ESSENTIAL_IDS, catalogueSelection, readFavorites, escapeHtml as esc } from './core.js';
 const $ = s => document.querySelector(s);
-const icon = (key, cls='') => (iconMarkup[key] || '').replace('class="feather ', `aria-hidden="true" class="icon ${cls} feather `);
+const icon = (key, cls='') => (iconMarkup[key] || '').replace('<svg ', `<svg aria-hidden="true" focusable="false" class="icon ${cls}" `);
 const brand = '<img class="brand" src="./icons/brand.svg" alt="" width="36" height="36">';
 const allEntries = () => [...data.gases, ...(data.products || [])];
 let data, favorites = new Set(), query = '', mode = 'essentials', catalogueScroll = 0, catalogueOverview = true, toastTimer, offlineReady = false, waitingWorker;
