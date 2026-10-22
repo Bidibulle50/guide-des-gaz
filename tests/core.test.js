@@ -37,7 +37,7 @@ test('Catalogue complet : 64 entrées, références et conditions explicites',()
     assert.ok(g.molarMass>0);assert.match(g.cas,/^\d{2,7}-\d{2}-\d$/);
     if(g.transition)assert.equal(g.transition.pressureBar,1.013);else assert.ok(g.transitionNote);
     assert.ok(g.applications.length||g.applicationsNote);assert.ok(g.risks.length&&g.precautions.length);
-    assert.ok(g.sources.every(s=>s.url.startsWith('https://')&&s.checked===data.verifiedAt));
+    assert.ok(g.sources.every(s=>s.url.startsWith('https://')&&/^2026-10-(21|22)$/.test(s.checked)));
     for(const s of g.sources)assert.ok(new URL(s.url).hostname);
   }
 });

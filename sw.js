@@ -1,8 +1,8 @@
 /* Change VERSION for every edition; the complete app shell is cached atomically. */
-const VERSION = '1.7.4';
+const VERSION = '2.0.0';
 const PREFIX = `guide-des-gaz:${self.registration.scope}:`;
 const CACHE = PREFIX + VERSION;
-const ASSETS = ['./','./index.html','./styles.css','./theme.js','./app.js','./core.js','./welding.js','./ui-icons.js','./icons/brand-cobalt-128.png','./icons/welding-torch.png','./icons/navigation-reference-1.7.4.png','./data/gases.json','./manifest.webmanifest','./icons/favicon-cobalt-32.png','./icons/icon-cobalt-192.png','./icons/icon-cobalt-512.png','./icons/apple-touch-cobalt-180.png','./fonts/InterVariable.woff2','./icons/hazards/ghs03.png','./icons/hazards/ghs04.png','./icons/hazards/adr-2-2.svg','./icons/hazards/adr-5-1.svg'];
+const ASSETS = ['./','./index.html','./styles.css','./theme.js','./app.js','./core.js','./fiche.js','./welding.js','./ui-icons.js','./icons/brand-cobalt-128.png','./icons/welding-torch.png','./icons/navigation-reference-1.7.4.png','./data/gases.json','./manifest.webmanifest','./icons/favicon-cobalt-32.png','./icons/icon-cobalt-192.png','./icons/icon-cobalt-512.png','./icons/apple-touch-cobalt-180.png','./fonts/InterVariable.woff2','./icons/hazards/ghs02.png','./icons/hazards/ghs05.png','./icons/hazards/ghs03.png','./icons/hazards/ghs04.png','./icons/hazards/adr-2-2.svg','./icons/hazards/adr-5-1.svg'];
 const urls = ASSETS.map(path => new URL(path, self.registration.scope).href);
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(urls.map(url => new Request(url,{cache:'reload'})))));

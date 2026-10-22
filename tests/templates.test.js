@@ -3,6 +3,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
+import {ficheMarkup,sheetStates} from '../fiche.js';
 import {iconMarkup} from '../ui-icons.js';
 import {MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection} from '../welding.js';
 import {ESSENTIAL_IDS,catalogueSelection,readFavorites,escapeHtml} from '../core.js';
@@ -12,14 +13,14 @@ function renderContext(documentOverrides={}){
     const classes=new Set();elements.set(key,{innerHTML:'',textContent:'',hidden:false,value:'',addEventListener(){},focus(){},classList:{toggle(name,force){const active=force??!classes.has(name);active?classes.add(name):classes.delete(name);return active;},contains:name=>classes.has(name)}});
   }return elements.get(key);};
   const handlers={};
-  const context=vm.createContext({MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection,iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,location:{hash:'#catalogue'},matchMedia:()=>({addEventListener(){}}),document:{documentElement:{dataset:{}},querySelector:element,querySelectorAll:()=>[],addEventListener:(type,handler)=>{const previous=handlers[type];handlers[type]=previous?event=>{previous(event);handler(event);}:handler;},...documentOverrides},window:{addEventListener(){},scrollTo(){}}});
+  const context=vm.createContext({MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection,ficheMarkup,sheetStates,iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,location:{hash:'#catalogue'},matchMedia:()=>({addEventListener(){}}),document:{documentElement:{dataset:{}},querySelector:element,querySelectorAll:()=>[],addEventListener:(type,handler)=>{const previous=handlers[type];handlers[type]=previous?event=>{previous(event);handler(event);}:handler;},...documentOverrides},window:{addEventListener(){},scrollTo(){}}});
   const script=readFileSync(new URL('../app.js',import.meta.url),'utf8').replace(/^import.*\n/gm,'').replace(/start\(\);\s*$/,'');
   vm.runInContext(script,context);context.payload=data;vm.runInContext('data=payload;',context);return {context,element,handlers};
 }
 test('Les 64 fiches produisent les propriétés, risques, sources et notes sans valeur factice',()=>{
   const {context,element}=renderContext();
   for(const g of data.gases){context.gas=g;vm.runInContext('detail(gas)',context);const html=element('#main').innerHTML;
-    assert.ok(html.includes(g.cas));assert.ok(html.includes('Risques & précautions'));assert.ok(html.includes('Applications industrielles'));assert.ok(html.includes(g.sources[0].url));assert.doesNotMatch(html,/undefined|NaN|\[object Object\]/);
+    assert.ok(html.includes(g.cas));assert.ok(html.includes('Risques principaux'));assert.ok(html.includes('Applications industrielles'));assert.ok(html.includes(g.sources[0].url));assert.doesNotMatch(html,/undefined|NaN|\[object Object\]/);
     if(g.density===null)assert.ok(html.includes('Non retenue¹'));if(g.formulaNote)assert.ok(html.includes(escapeHtml(g.formulaNote)));
   }
 });
@@ -90,12 +91,12 @@ test('Chaque fiche ARCAL affiche ses utilisations et toutes ses références, sa
   for(const g of data.products){
     context.product=g;vm.runInContext('detail(product)',context);const html=element('#main').innerHTML;
     if(g.range==='arcal'){
-      assert.match(html,/Utilisations en détail/);assert.match(html,/Formats, pression & chapeau/);
+      assert.match(html,/<h2>Utilisations<\/h2>/);assert.match(html,/Formats et remplissage/);
       assert.match(html,/data-jump="product-supply"/);assert.match(html,/ne remplace pas une validation technique/);
       for(const v of g.welding.variants)assert.ok(html.includes(v.reference));
       for(const u of g.welding.uses)assert.ok(html.includes(escapeHtml(u.detail)));
       assert.ok(html.includes(g.welding.sheet.url));
-    } else {assert.match(html,/Applications principales/);assert.doesNotMatch(html,/Formats, pression & chapeau/);}
+    } else {assert.match(html,/<h2>Utilisations<\/h2>/);assert.doesNotMatch(html,/Formats et remplissage/);}
   }
 });
 test('Onglet Soudage : parcours guidé, conditions client et fiche source accessibles',()=>{
@@ -143,30 +144,21 @@ test('Les 115 fiches relient quatre onglets et panneaux ARIA avec Essentiel seul
     assert.equal(new Set(elementIds).size,elementIds.length,`${entry.id} : identifiants uniques`);
   }
 });
-test('Oxygène sépare risques, transport et technique avec applications et conditions explicites',()=>{
+test('Oxygène reprend les quatre vues validées et sépare les états physiques',()=>{
   const {context,element}=renderContext();const oxygen=data.gases.find(g=>g.id==='oxygene');
   context.entry=oxygen;vm.runInContext('detail(entry)',context);const html=element('#main').innerHTML;
   const essential=fichePanel(html,'essential'),technical=fichePanel(html,'technical'),safety=fichePanel(html,'safety'),transport=fichePanel(html,'transport');
-  assert.ok(oxygen.applicationDetails.length>=3);
-  for(const application of oxygen.applicationDetails){
-    assert.ok(technical.includes(escapeHtml(application.title)));
-    assert.ok(technical.includes(escapeHtml(application.detail)));
-    assert.ok(oxygen.sources.some(source=>source.id===application.sourceId));
-  }
-  assert.match(essential,/UN 1072/);assert.match(essential,/Gaz comprimé/);
-  assert.match(essential,/UN 1073/);assert.match(essential,/Liquide \(LOX\)/);
-  assert.match(essential,/Repères atmosphère/);assert.match(essential,/SGH03/);assert.match(essential,/SGH04/);
-  assert.match(transport,/Oxygène comprimé/);assert.match(transport,/Oxygène liquide réfrigéré/);
-  assert.match(transport,/1O/);assert.match(transport,/3O/);
-  assert.ok(transport.includes(escapeHtml(oxygen.referenceSheet.scopeLimit)));
-  assert.ok(safety.includes(escapeHtml(oxygen.referenceSheet.scopeLimit)));
-  for(const hazard of oxygen.referenceSheet.hazards){assert.ok(safety.includes(hazard.code));assert.ok(safety.includes(escapeHtml(hazard.scope)));}
-  assert.doesNotMatch(essential,/19,5/);
-  assert.match(technical,/15 °C · 1,013 bar abs\./);assert.match(technical,/1,354/);
-  assert.match(technical,/31,999/);assert.match(technical,/−182,96/);
-  assert.match(technical,/À l’ébullition · 1,013 bar abs\./);assert.match(technical,/1[\s\u202f]141,2/);
-  assert.match(technical,/1 L liquide à l’ébullition → gaz à 15 °C · 1,013 bar abs\./);assert.match(technical,/843,57/);
-  assert.match(technical,/À 1,013 bar absolu/);assert.ok(technical.includes(escapeHtml(oxygen.note)));
+  for(const application of oxygen.consultation.states[0].applications){assert.ok(essential.includes(escapeHtml(application.title)));assert.ok(essential.includes(escapeHtml(application.detail)));}
+  assert.match(essential,/ghs03/);assert.match(essential,/ghs04/);assert.match(essential,/RAL 9010/);
+  assert.doesNotMatch(essential,/Repères atmosphère|19,5/);
+  assert.match(transport,/UN 1072/);assert.doesNotMatch(transport,/UN 1073/);assert.match(transport,/1O/);
+  assert.match(safety,/H270/);assert.match(safety,/H280/);assert.doesNotMatch(safety,/H281/);
+  assert.match(technical,/15 °C · 1,013 bar absolu/);assert.match(technical,/1,354/);assert.match(technical,/31,999/);
+  vm.runInContext("ficheStateSelection.set('oxygene','liquide');detail(entry)",context);
+  const liquid=element('#main').innerHTML;assert.match(fichePanel(liquid,'transport'),/UN 1073/);assert.match(fichePanel(liquid,'transport'),/3O/);
+  assert.match(fichePanel(liquid,'safety'),/H281/);assert.doesNotMatch(fichePanel(liquid,'safety'),/H280/);
+  assert.match(fichePanel(liquid,'technical'),/−182,96/);assert.match(fichePanel(liquid,'technical'),/1[\s\u202f]141,2/);
+  assert.match(fichePanel(liquid,'technical'),/Au point d’ébullition/);
 });
 test('Les sections ARCAL restent dans les bons panneaux et gardent leurs références après découpage',()=>{
   const {context,element}=renderContext();
@@ -176,14 +168,13 @@ test('Les sections ARCAL restent dans les bons panneaux et gardent leurs référ
     assert.deepEqual(Object.keys(parts).sort(),['checklist','overview','safety','technical','uses']);
     assert.ok(Object.values(parts).every(value=>typeof value==='string'&&!/undefined|\[object Object\]/.test(value)));
     vm.runInContext('detail(product)',context);const html=element('#main').innerHTML;
-    const kicker=html.match(/<p class="fiche-kicker">([^<]*)<\/p>/)?.[1];
-    assert.ok(kicker?.endsWith(' · '+escapeHtml(product.welding.manufacturerCode)),`${product.id} : code fabricant visible dans l’en-tête`);
+    assert.ok(html.includes('Réf. '+escapeHtml(product.welding.manufacturerCode)),`${product.id} : code fabricant visible dans l’en-tête`);
     const essential=fichePanel(html,'essential'),technical=fichePanel(html,'technical'),safety=fichePanel(html,'safety');
     for(const use of product.welding.uses)assert.ok(essential.includes(escapeHtml(use.detail)),product.id);
     for(const variant of product.welding.variants)assert.ok(technical.includes(variant.reference),product.id);
     assert.ok(technical.includes(escapeHtml(product.welding.sheet.url)),product.id);
-    assert.ok(technical.includes(escapeHtml(product.composition)),product.id);
-    assert.ok(safety.includes(escapeHtml(product.welding.safety.flammability)),product.id);
+    for(const spec of product.welding.specifications){assert.ok(technical.includes(escapeHtml(spec.component)),product.id);assert.ok(technical.includes(escapeHtml(spec.value)),product.id);}
+    assert.match(safety,/Risques principaux/);
     assert.match(essential,/data-jump="product-supply"/);assert.match(technical,/id="product-supply"/);
     assert.match(essential,/ne remplace pas une validation technique/);
   }

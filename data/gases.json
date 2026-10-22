@@ -1,5 +1,5 @@
 {
-  "version": "1.7.4",
+  "version": "2.0.0",
   "verifiedAt": "2026-10-21",
   "gases": [
     {
@@ -622,22 +622,269 @@
           "url": "https://my.airliquide.com/products-services/our-supply-modes",
           "scope": "Abréviations LOX, LIN et LAR des formes liquides.",
           "checked": "2026-10-21"
+        },
+        {
+          "id": "n2_fr_sds",
+          "title": "Air Liquide France Industrie — Azote I/C/U/N50/N60…",
+          "url": "https://www.quickfds.com/fds/5116621-11188-24125-015315",
+          "scope": "Vérifier la correspondance avec la référence et la version du produit livré. Révision 2024-06-05 · v2.62",
+          "checked": "2026-10-22"
+        },
+        {
+          "id": "lin_be_sds",
+          "title": "Air Liquide Benelux — Azote liquide réfrigéré",
+          "url": "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/azote-liquide-refrigere7727-37-9.pdf",
+          "scope": "Référence documentaire Benelux. FDS France du produit livré à confirmer. Révision 2024-06-14 · v4.2",
+          "checked": "2026-10-22"
+        },
+        {
+          "id": "n2_fr_product",
+          "title": "Air Liquide France — AZOTE U / N2",
+          "url": "https://fr.airliquide.com/product-assets/a/c/9/1/ac91ea5d370906272ed1d44df1762b16c16da399_AZOTE_U_fr_FR_v1.9.pdf",
+          "scope": "Couleur de l’ogive de la bouteille AZOTE U documentée.",
+          "checked": "2026-10-22"
+        },
+        {
+          "id": "bam1977",
+          "title": "BAM DGG-Info — UN 1977, ADR",
+          "url": "https://www.dgg.bam.de/dgginfo/shortinfo/adr/adadf749",
+          "scope": "Données ADR BAM consultées le 22/10/2026 ; édition non affichée dans l’extraction.",
+          "checked": "2026-10-22"
         }
       ],
       "verifiedAt": "2026-10-21",
       "phaseAtReference": "gaz",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+        "kind": "individual",
+        "url": "https://www.quickfds.com/fds/5116621-11188-24125-015315",
+        "label": "Ouvrir la FDS de cet état",
+        "country": "FR",
+        "reference": "089AGIS",
+        "version": "2.62",
+        "revision": "2024-06-05",
+        "note": "Vérifier la correspondance avec la référence et la version du produit livré."
       },
       "transport": [
         {
           "number": "1066",
-          "state": "Référence de la page molécule ; conditionnement à confirmer dans la FDS, rubrique 14."
+          "state": "AZOTE COMPRIMÉ",
+          "sourceUrl": "https://www.quickfds.com/fds/5116621-11188-24125-015315"
+        },
+        {
+          "number": "1977",
+          "state": "AZOTE LIQUIDE RÉFRIGÉRÉ",
+          "sourceUrl": "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/azote-liquide-refrigere7727-37-9.pdf"
         }
-      ]
+      ],
+      "consultation": {
+        "type": "Inerte · non inflammable",
+        "states": [
+          {
+            "id": "gaz",
+            "phase": "gaz",
+            "label": "Gaz comprimé",
+            "appearance": "Gaz incolore",
+            "fds": {
+              "kind": "individual",
+              "url": "https://www.quickfds.com/fds/5116621-11188-24125-015315",
+              "label": "Ouvrir la FDS de cet état",
+              "country": "FR",
+              "reference": "089AGIS",
+              "version": "2.62",
+              "revision": "2024-06-05",
+              "note": "Vérifier la correspondance avec la référence et la version du produit livré."
+            },
+            "transport": {
+              "number": "1066",
+              "designation": "AZOTE COMPRIMÉ",
+              "adrClass": "2",
+              "labels": [
+                "2.2"
+              ],
+              "classificationCode": "1A",
+              "hazardIdentificationNumber": "20",
+              "tunnel": "E",
+              "category": null,
+              "packingGroup": "Non déterminé (FDS)",
+              "packingInstruction": "P200",
+              "sourceUrl": "https://www.quickfds.com/fds/5116621-11188-24125-015315"
+            },
+            "hazards": {
+              "signal": "Attention",
+              "items": [
+                {
+                  "code": "04",
+                  "label": "Sous pression",
+                  "secondary": "Risque d’asphyxie"
+                }
+              ],
+              "summary": "Peut appauvrir l’air en oxygène.",
+              "h": [
+                {
+                  "code": "H280",
+                  "summary": "Explosion sous l’effet de la chaleur."
+                }
+              ]
+            },
+            "safety": {
+              "do": "Ventiler. Contrôler l’oxygène si une accumulation est possible.",
+              "avoid": "Ne pas respirer le gaz ni entrer sans moyens adaptés dans une atmosphère dangereuse.",
+              "storage": "Récipients arrimés dans un lieu ventilé."
+            },
+            "applications": [
+              {
+                "title": "Inerter et purger",
+                "detail": "Protection des installations et produits contre le contact avec l’oxygène."
+              },
+              {
+                "title": "Traiter les métaux",
+                "detail": "Atmosphères de traitement thermique."
+              },
+              {
+                "title": "Couper au laser",
+                "detail": "Gaz employé pour la découpe des métaux ; paramètres selon le procédé."
+              }
+            ]
+          },
+          {
+            "id": "liquide",
+            "phase": "liquide",
+            "label": "Liquide · LIN",
+            "appearance": "Liquide incolore",
+            "fds": {
+              "kind": "individual",
+              "url": "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/azote-liquide-refrigere7727-37-9.pdf",
+              "label": "Ouvrir la FDS de cet état",
+              "country": "BE",
+              "reference": "EIGA089B",
+              "version": "4.2",
+              "revision": "2024-06-14",
+              "note": "Référence documentaire Benelux. FDS France du produit livré à confirmer."
+            },
+            "transport": {
+              "number": "1977",
+              "designation": "AZOTE LIQUIDE RÉFRIGÉRÉ",
+              "adrClass": "2",
+              "labels": [
+                "2.2"
+              ],
+              "classificationCode": "3A",
+              "hazardIdentificationNumber": "22",
+              "tunnel": "C/E",
+              "category": 3,
+              "packingGroup": "Non applicable",
+              "packingInstruction": "P203",
+              "sourceUrl": "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/azote-liquide-refrigere7727-37-9.pdf"
+            },
+            "hazards": {
+              "signal": "Attention",
+              "items": [
+                {
+                  "code": "04",
+                  "label": "Froid extrême",
+                  "secondary": "Risque d’asphyxie"
+                }
+              ],
+              "summary": "Brûlures cryogéniques et manque d’oxygène possibles.",
+              "h": [
+                {
+                  "code": "H281",
+                  "summary": "Brûlures par le froid."
+                }
+              ]
+            },
+            "safety": {
+              "do": "Ventiler. Contrôler l’oxygène si une accumulation est possible. Gants isolants contre le froid et protection du visage ou des yeux.",
+              "avoid": "Ne pas respirer le gaz ni entrer sans moyens adaptés dans une atmosphère dangereuse. Éviter tout contact avec le liquide et les surfaces froides.",
+              "storage": "Récipients arrimés dans un lieu ventilé."
+            },
+            "applications": [
+              {
+                "title": "Refroidir et congeler",
+                "detail": "Procédés cryogéniques et maîtrise de température."
+              },
+              {
+                "title": "Conserver à basse température",
+                "detail": "Cryoconservation ; grade et installation adaptés à l’usage."
+              },
+              {
+                "title": "Broyer à froid",
+                "detail": "Cryobroyage de matières dans un procédé qualifié."
+              }
+            ]
+          }
+        ],
+        "physical": {
+          "id": "technique",
+          "label": "Technique",
+          "sourceIds": [
+            "encyclopedia_n2"
+          ],
+          "conditionNote": "Pressions absolues. Propriétés de la substance de référence ; ne décrivent pas une bouteille particulière.",
+          "gas": [
+            {
+              "label": "Masse volumique",
+              "value": 1.1848,
+              "unit": "kg/m³",
+              "conditions": "Gaz à 15 °C et 1,013 bar"
+            },
+            {
+              "label": "Densité par rapport à l’air",
+              "value": 0.97,
+              "unit": "air = 1",
+              "conditions": "Gaz à 15 °C et 1,013 bar"
+            }
+          ],
+          "liquid": [
+            {
+              "label": "Ébullition",
+              "value": -195.8,
+              "unit": "°C",
+              "conditions": "À 1,013 bar"
+            },
+            {
+              "label": "Masse volumique",
+              "value": 806.11,
+              "unit": "kg/m³",
+              "conditions": "Au point d’ébullition à 1,013 bar"
+            },
+            {
+              "label": "Équivalent liquide → gaz",
+              "value": 680.38,
+              "unit": "L de gaz / L de liquide",
+              "conditions": "Liquide au point d’ébullition à 1,013 bar → gaz à 15 °C et 1,013 bar",
+              "display": "1 L de liquide ≈ 680 L de gaz"
+            }
+          ],
+          "points": [
+            {
+              "label": "Point critique",
+              "temperatureC": -146.95,
+              "pressureBar": 34
+            },
+            {
+              "label": "Point triple",
+              "temperatureC": -210,
+              "pressureBar": 0.1252
+            }
+          ],
+          "supply": {
+            "title": "Pression, format, chapeau",
+            "text": "À vérifier sur la fiche du produit livré. Ces informations dépendent du grade, du récipient et de son équipement."
+          },
+          "molarMass": {
+            "label": "Masse molaire",
+            "value": 28.013,
+            "unit": "g/mol"
+          }
+        },
+        "sourceNote": "Certaines sources sont des copies datées : la dernière révision disponible n’est pas garantie. Catégories ADR non confirmées laissées sans valeur. Tableau A ADR 2025 non lu directement."
+      },
+      "shoulder": {
+        "name": "Noir",
+        "ral": "9005",
+        "sourceUrl": "https://fr.airliquide.com/product-assets/a/c/9/1/ac91ea5d370906272ed1d44df1762b16c16da399_AZOTE_U_fr_FR_v1.9.pdf"
+      }
     },
     {
       "id": "bromochlorodifluoromethane",
@@ -3019,15 +3266,47 @@
           "url": "https://lannuaire.service-public.gouv.fr/centres-contact/R12069",
           "scope": "Numéro 112 ; pas de déclenchement d’appel par le guide.",
           "checked": "2026-10-21"
+        },
+        {
+          "id": "o2_fr_product",
+          "title": "Air Liquide France — ALPHAGAZ 1 OXYGENE",
+          "url": "https://fr.airliquide.com/product-assets/d/7/f/c/d7fc18a0cccb356c77f8986936dc7aa04cc3929f_ALPHAGAZ%E2%84%A2_1_OXYGENE_fr_FR_v1.5.pdf",
+          "scope": "Couleur de l’ogive de la bouteille ALPHAGAZ 1 OXYGENE documentée.",
+          "checked": "2026-10-22"
+        },
+        {
+          "id": "bam1072",
+          "title": "BAM DGG-Info — UN 1072, ADR",
+          "url": "https://www.dgg.bam.de/dgginfo/detailinfo/adr/yg51cf3l",
+          "scope": "Données ADR BAM consultées le 22/10/2026 ; édition non affichée dans l’extraction.",
+          "checked": "2026-10-22"
+        },
+        {
+          "id": "bam1073",
+          "title": "BAM DGG-Info — UN 1073, ADR",
+          "url": "https://www.dgg.bam.de/dgginfo/shortinfo/adr/kwawsrgswzup?lang=en",
+          "scope": "Données ADR BAM consultées le 22/10/2026 ; édition non affichée dans l’extraction.",
+          "checked": "2026-10-22"
+        },
+        {
+          "id": "lox-vaporisation",
+          "title": "Préfecture de Seine-et-Marne · installation Air Liquide de Bagneaux-sur-Loing",
+          "url": "https://www.seine-et-marne.gouv.fr/content/download/24717/196351/file/30%2012%2016%20Rapport%20et%20Conclusions.pdf",
+          "scope": "Principe de fourniture après vaporisation ; aucune pression de cette installation généralisée.",
+          "checked": "2026-10-22"
         }
       ],
       "verifiedAt": "2026-10-21",
       "phaseAtReference": "gaz",
       "fds": {
-        "kind": "portal",
-        "url": "https://fr.airliquide.com/documentation/fiches-de-donnees-securite-gaz-fds",
-        "label": "Rechercher la FDS du produit",
-        "note": "Choisir le produit réellement livré, son conditionnement et le pays. La disponibilité d’une FDS individuelle n’est pas confirmée pour chaque entrée."
+        "kind": "individual",
+        "url": "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+        "label": "Ouvrir la FDS de cet état",
+        "country": "BE",
+        "reference": "EIGA097A",
+        "version": "5.1",
+        "revision": "2024-06-14",
+        "note": "Référence documentaire Benelux. FDS France du produit livré à confirmer."
       },
       "transport": [
         {
@@ -3408,6 +3687,222 @@
             ]
           }
         ]
+      },
+      "consultation": {
+        "type": "Comburant",
+        "states": [
+          {
+            "id": "gaz",
+            "phase": "gaz",
+            "label": "Gaz comprimé",
+            "appearance": "Gaz incolore",
+            "fds": {
+              "kind": "individual",
+              "url": "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf",
+              "label": "Ouvrir la FDS de cet état",
+              "country": "BE",
+              "reference": "EIGA097A",
+              "version": "5.1",
+              "revision": "2024-06-14",
+              "note": "Référence documentaire Benelux. FDS France du produit livré à confirmer."
+            },
+            "transport": {
+              "number": "1072",
+              "designation": "OXYGÈNE COMPRIMÉ",
+              "adrClass": "2",
+              "labels": [
+                "2.2",
+                "5.1"
+              ],
+              "classificationCode": "1O",
+              "hazardIdentificationNumber": "25",
+              "tunnel": "E",
+              "category": 3,
+              "packingGroup": "Non applicable",
+              "packingInstruction": null,
+              "sourceUrl": "https://be.healthcare.airliquide.com/sites/alh_be/files/2022-09/oxygene7782-44-7.pdf"
+            },
+            "hazards": {
+              "signal": "Danger",
+              "items": [
+                {
+                  "code": "03",
+                  "label": "Comburant"
+                },
+                {
+                  "code": "04",
+                  "label": "Sous pression"
+                }
+              ],
+              "summary": "Favorise l’incendie. Écarter huiles et graisses.",
+              "h": [
+                {
+                  "code": "H270",
+                  "summary": "Favorise la combustion."
+                },
+                {
+                  "code": "H280",
+                  "summary": "Explosion sous l’effet de la chaleur."
+                }
+              ]
+            },
+            "safety": {
+              "do": "Matériel compatible oxygène et dégraissé. Ouvrir les robinets lentement.",
+              "avoid": "Huiles, graisses et matériaux combustibles à écarter.",
+              "storage": "Zone ventilée ; prévenir l’enrichissement de l’air en oxygène."
+            },
+            "applications": [
+              {
+                "title": "Couper l’acier",
+                "detail": "Oxycoupage avec un gaz combustible."
+              },
+              {
+                "title": "Chauffer et fondre",
+                "detail": "Fours et verrerie : combustion enrichie en oxygène."
+              },
+              {
+                "title": "Traiter les eaux usées",
+                "detail": "Apport d’oxygène au traitement biologique."
+              }
+            ]
+          },
+          {
+            "id": "liquide",
+            "phase": "liquide",
+            "label": "Liquide · LOX",
+            "appearance": "Liquide bleuté",
+            "fds": {
+              "kind": "individual",
+              "url": "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf",
+              "label": "Ouvrir la FDS de cet état",
+              "country": "BE",
+              "reference": "EIGA097B",
+              "version": "4.2",
+              "revision": "2024-06-14",
+              "note": "Référence documentaire Benelux. FDS France du produit livré à confirmer."
+            },
+            "transport": {
+              "number": "1073",
+              "designation": "OXYGÈNE LIQUIDE RÉFRIGÉRÉ",
+              "adrClass": "2",
+              "labels": [
+                "2.2",
+                "5.1"
+              ],
+              "classificationCode": "3O",
+              "hazardIdentificationNumber": "225",
+              "tunnel": "C/E",
+              "category": 3,
+              "packingGroup": "Non applicable",
+              "packingInstruction": null,
+              "sourceUrl": "https://be.healthcare.airliquide.com/sites/alh_be/files/2023-03/oxygene-liquide-refrigere7782-44-7.pdf"
+            },
+            "hazards": {
+              "signal": "Danger",
+              "items": [
+                {
+                  "code": "03",
+                  "label": "Comburant"
+                },
+                {
+                  "code": "04",
+                  "label": "Froid extrême"
+                }
+              ],
+              "summary": "Favorise l’incendie. Écarter huiles et graisses. Risque de brûlures cryogéniques.",
+              "h": [
+                {
+                  "code": "H270",
+                  "summary": "Favorise la combustion."
+                },
+                {
+                  "code": "H281",
+                  "summary": "Brûlures par le froid."
+                }
+              ]
+            },
+            "safety": {
+              "do": "Matériel compatible oxygène et dégraissé. Ouvrir les robinets lentement. Gants isolants contre le froid et protection du visage ou des yeux.",
+              "avoid": "Huiles, graisses et matériaux combustibles à écarter. Éviter tout contact avec le liquide et les surfaces froides.",
+              "storage": "Zone ventilée ; prévenir l’enrichissement de l’air en oxygène."
+            },
+            "applications": [
+              {
+                "title": "Alimenter un procédé en oxygène",
+                "detail": "Après vaporisation : combustion, métallurgie ou traitement de l’eau."
+              },
+              {
+                "title": "Propulsion spatiale",
+                "detail": "Oxygène liquide utilisé comme ergol comburant."
+              }
+            ]
+          }
+        ],
+        "physical": {
+          "id": "technique",
+          "label": "Technique",
+          "sourceIds": [
+            "encyclopedia_o2"
+          ],
+          "conditionNote": "Pressions absolues. Propriétés de la substance de référence ; ne décrivent pas une bouteille particulière.",
+          "gas": [
+            {
+              "label": "Masse volumique",
+              "value": 1.354,
+              "unit": "kg/m³",
+              "conditions": "Gaz à 15 °C et 1,013 bar"
+            },
+            {
+              "label": "Densité par rapport à l’air",
+              "value": 1.11,
+              "unit": "air = 1",
+              "conditions": "Gaz à 15 °C et 1,013 bar"
+            }
+          ],
+          "liquid": [
+            {
+              "label": "Ébullition",
+              "value": -182.96,
+              "unit": "°C",
+              "conditions": "À 1,013 bar"
+            },
+            {
+              "label": "Masse volumique",
+              "value": 1141.2,
+              "unit": "kg/m³",
+              "conditions": "Au point d’ébullition à 1,013 bar"
+            },
+            {
+              "label": "Équivalent liquide → gaz",
+              "value": 843.57,
+              "unit": "L de gaz / L de liquide",
+              "conditions": "Liquide au point d’ébullition à 1,013 bar → gaz à 15 °C et 1,013 bar",
+              "display": "1 L de liquide ≈ 844 L de gaz"
+            }
+          ],
+          "points": [
+            {
+              "label": "Point critique",
+              "temperatureC": -118.57,
+              "pressureBar": 50.43
+            },
+            {
+              "label": "Point triple",
+              "temperatureC": -218.79,
+              "pressureBar": 0.0015
+            }
+          ],
+          "supply": {
+            "title": "Pression, format, chapeau",
+            "text": "À vérifier sur la fiche du produit livré. Ces informations dépendent du grade, du récipient et de son équipement."
+          },
+          "molarMass": {
+            "label": "Masse molaire",
+            "value": 31.999,
+            "unit": "g/mol"
+          }
+        },
+        "sourceNote": "Certaines sources sont des copies datées : la dernière révision disponible n’est pas garantie. Catégories ADR non confirmées laissées sans valeur. Tableau A ADR 2025 non lu directement."
       }
     },
     {
@@ -5585,7 +6080,7 @@
         "I2531L50S2A001",
         "I2531V09R2A001"
       ],
-      "composition": "CO₂ 2 % + Ar Complément",
+      "composition": "CO₂ 2 % ± 0,5 % · Ar complément",
       "applications": [
         "MAG · assemblages inox : Soudage des inox en toutes positions, en manuel, semi-automatique, automatique ou robotisé.",
         "Aspect et corrosion : Pour les travaux inox où l’aspect du cordon et la conservation de la résistance à la corrosion comptent ; bénéfices mis en avant par Air Liquide.",
@@ -5609,14 +6104,25 @@
           "title": "Fiche technique fabricant · V1.4",
           "scope": "Révision du 04/08/2026 · composition, ogive et conditionnements (tableau p. 2).",
           "checked": "2026-10-21"
+        },
+        {
+          "id": "chrome",
+          "title": "Air Liquide France — FDS ARCAL Chrome, Force et Speed",
+          "url": "https://www.quickfds.com/fds/7126522-11172-24850-011291",
+          "scope": "Vérifier la correspondance avec la référence et la version du produit livré. Révision 2022-12-20 · v3.11",
+          "checked": "2026-10-22"
         }
       ],
       "verifiedAt": "2026-10-21",
       "fds": {
         "kind": "individual",
         "url": "https://www.quickfds.com/fds/7126522-11172-24850-011291",
-        "label": "Ouvrir la FDS du mélange",
-        "note": "FDS française 30015L02 partagée par ARCAL Force, Chrome et Speed. Révision affichée : 20 décembre 2022. Lien et titre vérifiés le 21 octobre 2026 ; vérifier la version applicable au produit livré."
+        "label": "Ouvrir la FDS de cet état",
+        "country": "FR",
+        "reference": "30015L02",
+        "version": "3.11",
+        "revision": "2022-12-20",
+        "note": "Vérifier la correspondance avec la référence et la version du produit livré."
       },
       "transport": [
         {
@@ -5759,6 +6265,80 @@
           "tablePage": 2,
           "checked": "2026-10-21"
         }
+      },
+      "consultation": {
+        "type": "Non inflammable",
+        "states": [
+          {
+            "id": "gaz",
+            "phase": "gaz",
+            "label": "Mélange comprimé · Ar / CO₂",
+            "appearance": "Gaz incolore",
+            "fds": {
+              "kind": "individual",
+              "url": "https://www.quickfds.com/fds/7126522-11172-24850-011291",
+              "label": "Ouvrir la FDS de cet état",
+              "country": "FR",
+              "reference": "30015L02",
+              "version": "3.11",
+              "revision": "2022-12-20",
+              "note": "Vérifier la correspondance avec la référence et la version du produit livré."
+            },
+            "transport": {
+              "number": "1956",
+              "designation": "GAZ COMPRIMÉ, N.S.A. (Argon, Dioxyde de carbone)",
+              "adrClass": "2",
+              "labels": [
+                "2.2"
+              ],
+              "classificationCode": "1A",
+              "hazardIdentificationNumber": "20",
+              "tunnel": "E",
+              "category": null,
+              "packingGroup": "Non déterminé (FDS)",
+              "packingInstruction": "P200",
+              "sourceUrl": "https://www.quickfds.com/fds/7126522-11172-24850-011291"
+            },
+            "hazards": {
+              "signal": "Attention",
+              "items": [
+                {
+                  "code": "04",
+                  "label": "Sous pression",
+                  "secondary": "Risque d’asphyxie"
+                }
+              ],
+              "summary": "Peut appauvrir l’air en oxygène.",
+              "h": [
+                {
+                  "code": "H280",
+                  "summary": "Explosion sous l’effet de la chaleur."
+                }
+              ]
+            },
+            "safety": {
+              "do": "Ventiler et employer du matériel compatible avec le mélange et sa pression.",
+              "avoid": "Ne pas se fier au seul taux d’oxygène : le CO₂ peut aussi être dangereux à forte concentration.",
+              "storage": "Bouteilles arrimées, protections maintenues et étanchéité contrôlée."
+            },
+            "applications": [
+              {
+                "title": "Assembler les inox",
+                "detail": "MAG des inox austénitiques et ferritiques, toutes positions."
+              },
+              {
+                "title": "Braser au MAG",
+                "detail": "Fils CuSi ou CuAl ; support et procédé à qualifier."
+              },
+              {
+                "title": "Limiter les reprises",
+                "detail": "Peu de projections : bénéfice annoncé par le fabricant."
+              }
+            ]
+          }
+        ],
+        "physical": null,
+        "sourceNote": "Certaines sources sont des copies datées : la dernière révision disponible n’est pas garantie. Catégories ADR non confirmées laissées sans valeur. Tableau A ADR 2025 non lu directement."
       }
     },
     {
