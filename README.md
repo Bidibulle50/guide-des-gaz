@@ -2,6 +2,10 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Correctif 2.0.7 — icônes de navigation
+
+Suppression des petits fonds rectangulaires autour des quatre pictogrammes. Un filtre de transparence remplace les fonds et modes de fusion ; le visuel d’origine, les cadrages, les dimensions et les liens sont conservés. Aucun changement des fiches, données, outils ou parcours Soudage. Le cache est renouvelé : utiliser « Actualiser » si proposé.
+
 ## Nouveautés 2.0.6 — utilisations, glossaire et conversions
 
 - Les **64 entrées de substances** disposent d’utilisations concrètes développées et sourcées : **52 en ont au moins quatre**. Les douze autres gardent une couverture limitée, expliquée dans les sources. Les usages historiques restent identifiés. Azote et oxygène ont des utilisations propres à chaque état, sans présenter l’alimentation après vaporisation comme un emploi direct du liquide.

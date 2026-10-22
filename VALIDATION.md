@@ -1,3 +1,13 @@
+# Vérification 2.0.7 — fond des icônes
+
+- Correctif limité aux quatre pictogrammes de navigation : suppression des rectangles colorés et des modes de fusion ; conversion du fond en alpha transparent par filtre SVG. Le PNG d’origine, les quatre cadrages, dimensions, liens, libellés, cibles et états actifs sont conservés.
+- `npm test` : **92 tests réussis**, zéro échec. Comparaison avec 2.0.6 : données identiques hors édition ; modules applicatifs, fiches et image d’origine identiques ; CSS identique hors bloc des pictogrammes. La seule addition HTML est la définition invisible du filtre, sans contrôle ni élément focalisable.
+- Navigateur intégré Chromium : quatre onglets parcourus en clair à390×844 et en sombre à320×740. Quatre icônes visibles sans fond rectangulaire, état actif cohérent, absence de débordement horizontal et d’erreur/alerte console applicative. Les dessins et emplacements d’origine sont conservés.
+- Hors ligne : serveur local arrêté (connexion refusée confirmée), rechargement et navigation Catalogue/Soudage réalisés depuis le cache ; filtre et image disponibles sans serveur.
+- La recette native Safari sur Mac n’a pas pu être réalisée : session macOS verrouillée. Aucune validation physique iPhone/Safari n’est déduite des contrôles Chromium. Réserves documentaires FDS/ADR inchangées.
+
+---
+
 # Vérification 2.0.6 — utilisations et Outils
 
 Validation locale du 22 octobre 2026, avant publication :
