@@ -2,6 +2,14 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 2.0.6 — utilisations, glossaire et conversions
+
+- Les **64 entrées de substances** disposent d’utilisations concrètes développées et sourcées : **52 en ont au moins quatre**. Les douze autres gardent une couverture limitée, expliquée dans les sources. Les usages historiques restent identifiés. Azote et oxygène ont des utilisations propres à chaque état, sans présenter l’alimentation après vaporisation comme un emploi direct du liquide.
+- **Outils** remplace le libellé Repères : glossaire de 16 termes, convertisseur et informations existantes du guide. Recherche, filtres et sources datées accompagnent les définitions.
+- Le convertisseur demande la molécule ou la référence. Masse ↔ volume utilise uniquement la masse volumique documentée et ses conditions fixes ; les données liquides et équivalences liquide ↔ gaz concernent uniquement N₂/O₂. Les produits commerciaux sans donnée propre sont bloqués. Pression, débit, volume, masse et température restent des conversions d’unités simples, indépendantes du gaz. Saisie française et commande ± pour les grandeurs signées.
+- Aucun calcul du contenu ou de l’autonomie d’une bouteille, aucun changement de conditions thermodynamiques ni équivalence en Nm³. Les calculs et le glossaire fonctionnent depuis le cache ; les documents externes nécessitent Internet.
+- Design V2.1 des **115 fiches**, données physiques/sécurité/transport, 51 produits et onglet Soudage 2.0.5 conservés. Réserves FDS/ADR et recette physique iPhone toujours ouvertes. Vérifications dans [VALIDATION.md](VALIDATION.md).
+
 ## Nouveautés 2.0.5 — réponse claire et accompagnement ARCAL
 
 - Soudage reprend une entrée courte par métal, procédé et besoin. L’acier carbone ouvre directement le choix du procédé ; les inox et autres métaux restent explicitement qualifiés. Un accès « Je connais le gaz » retrouve les 21 argumentaires sans présumer leur compatibilité avec une application.

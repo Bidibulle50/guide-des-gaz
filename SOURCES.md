@@ -1,4 +1,20 @@
-# Sources et couverture — édition du 21 octobre 2026
+# Sources et couverture — édition 2.0.6 du 22 octobre 2026
+
+## Édition 2.0.6 — utilisations et outils
+
+**Utilisations.** Les 64 entrées de substances ont été revues à partir des pages Air Liquide et de compléments primaires identifiés individuellement dans `data/gases.json`. 52 présentent au moins quatre utilisations distinctes, sans multiplier artificiellement des variantes du même rôle. La couverture reste inférieure à quatre pour le halon 1211, le bromure de méthyle, le cyclopropane, le deutérium, l’isohexane, l’isopentane, le n-pentane, le néopentane, le para-hydrogène, le R-115, le R-13 et le R-133a. Ces limites sont explicitées dans la portée des sources. Les lacunes générales signalées auparavant pour cyclopropane, isohexane, néopentane et R-21 sont ainsi partiellement ou totalement levées pour les seuls usages décrits.
+
+Chaque synthèse possède un `sourceId` résolu dans la fiche. Les sources d’origine sont conservées ; les compléments portent leur date de consultation, pays/édition lorsqu’utile et périmètre. Certains documents plus anciens ou uniquement accessibles par extraction indexée restent identifiés comme tels. Une consultation le 22 octobre 2026 ne transforme pas une publication historique en preuve de pratique ou d’autorisation actuelle. Aucun conseil réglementaire ni recommandation médicale ne résulte de ces listes. Les 51 produits commerciaux et les argumentaires ARCAL sont inchangés.
+
+N₂ et O₂ : les utilisations sont séparées par état. Les usages cryogéniques de l’azote restent dans le liquide. Pour l’oxygène stocké liquide, les procédés alimentés après vaporisation le précisent ; la propulsion liquide est distinguée. Les usages médicaux mentionnent la qualité médicinale ; aucune qualité industrielle n’est assimilée à un gaz médicinal.
+
+**Glossaire.** Résumés pédagogiques originaux de 16 termes, sans nouvelle attribution de classe CLP : [INRS ED 6369](https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-6369.pdf), [silane Air Liquide](https://encyclopedia.airliquide.com/fr/silane), [azote Air Liquide](https://encyclopedia.airliquide.com/fr/azote), [WIKA — références de pression](https://www.wika.com/fr-fr/lp_pression_differentielle.WIKA), [catalogue Air Liquide Tunisie 2017](https://www.airliquide.com/sites/airliquide.com/files/2017/02/27/brochure_al_gpm_2017_0.pdf) pour les principes de gaz purs et mélanges. Ce dernier ne décrit pas une offre France actuelle. INRS ED 6369 a été relu via les extraits indexés officiels, le téléchargement direct ayant expiré. Les propriétés peuvent se cumuler ; l’état physique ne remplace pas l’étiquette et la FDS.
+
+**Convertisseur.** Facteurs d’unités issus du [NIST SP 811, annexe B](https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors), notamment [B8](https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8). Les calculs masse ↔ volume réutilisent uniquement les masses volumiques déjà retenues avec température, pression et source. Les valeurs gazeuses sont à 15 °C et 1,013 bar absolu. Les deux jeux liquides N₂/O₂ se rapportent à l’ébullition à 1,013 bar absolu. Aucun coefficient du gaz parfait, facteur de compressibilité ou propriété de constituant n’est ajouté.
+
+L’équivalence liquide ↔ gaz utilise directement les facteurs publiés déjà présents : N₂ **680,38** et O₂ **843,57 L de gaz / L de liquide**, avec leurs conditions. Elle ne les recalcule pas à partir du rapport des masses volumiques, qui constitue un jeu de valeurs distinct. Une donnée, sa source ou ses conditions manquantes rendent le calcul indisponible. Les changements d’unités de débit/volume supposent les mêmes conditions ; bar ↔ psi conserve la référence absolue ou relative. Aucun Nm³, contenu réel, débit de réglage ou autonomie de bouteille n’est déduit.
+
+Les propriétés, dangers, FDS, ADR, dates de vérification d’origine et réserves des éditions précédentes restent inchangés. Cette édition ne constitue pas une revalidation générale des données scientifiques.
 
 ## Édition 1.5 — règles de l’aide Soudage
 
@@ -73,7 +89,7 @@ Les valeurs transcrites ne sont pas des caractéristiques garanties d’un produ
 - R-133a : la confusion avec l’halothane dans le texte source n’est pas reprise.
 - Krypton : la phrase sur le xénon et les lasers présente dans ses applications n’est pas reprise.
 - Les liquides à 15 °C ne reçoivent pas artificiellement une masse volumique de gaz à cette température.
-- Applications précises non vérifiées pour cyclopropane, isohexane, néopentane et R-21 : lacune visible dans les fiches.
+- Lacune initiale sur les applications de cyclopropane, isohexane, néopentane et R-21 : complétée dans la seule mesure des sources ajoutées en 2.0.6, sans compléter artificiellement les listes.
 - Anciennes applications de CFC, HCFC, halons et bromure de méthyle : description historique, pas conseil d’emploi ni analyse juridique.
 
 ## Les 64 entrées

@@ -7,6 +7,7 @@ import {ficheMarkup,sheetStates} from '../fiche.js';
 import {iconMarkup} from '../ui-icons.js';
 import {MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection} from '../welding.js';
 import {weldingAdvice} from '../welding-advice.js';
+import {toolsHomeMarkup,glossaryMarkup,glossaryListMarkup,converterMarkup,converterOutputMarkup,converterGasListMarkup,CONVERTER_DEFAULTS} from '../tools-ui.js';
 import {ESSENTIAL_IDS,catalogueSelection,readFavorites,escapeHtml} from '../core.js';
 const data=JSON.parse(readFileSync(new URL('../data/gases.json',import.meta.url)));
 function renderContext(documentOverrides={}){
@@ -14,7 +15,7 @@ function renderContext(documentOverrides={}){
     const classes=new Set();elements.set(key,{innerHTML:'',textContent:'',hidden:false,value:'',addEventListener(){},focus(){},classList:{toggle(name,force){const active=force??!classes.has(name);active?classes.add(name):classes.delete(name);return active;},contains:name=>classes.has(name)}});
   }return elements.get(key);};
   const handlers={};
-  const context=vm.createContext({MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection,weldingAdvice,ficheMarkup,sheetStates,iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,location:{hash:'#catalogue'},matchMedia:()=>({addEventListener(){}}),document:{documentElement:{dataset:{}},querySelector:element,querySelectorAll:()=>[],addEventListener:(type,handler)=>{const previous=handlers[type];handlers[type]=previous?event=>{previous(event);handler(event);}:handler;},...documentOverrides},window:{addEventListener(){},scrollTo(){}}});
+  const context=vm.createContext({MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection,weldingAdvice,ficheMarkup,sheetStates,iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,toolsHomeMarkup,glossaryMarkup,glossaryListMarkup,converterMarkup,converterOutputMarkup,converterGasListMarkup,CONVERTER_DEFAULTS,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,location:{hash:'#catalogue'},matchMedia:()=>({addEventListener(){}}),document:{documentElement:{dataset:{}},querySelector:element,querySelectorAll:()=>[],addEventListener:(type,handler)=>{const previous=handlers[type];handlers[type]=previous?event=>{previous(event);handler(event);}:handler;},...documentOverrides},window:{addEventListener(){},scrollTo(){}}});
   const script=readFileSync(new URL('../app.js',import.meta.url),'utf8').replace(/^import.*\n/gm,'').replace(/start\(\);\s*$/,'');
   vm.runInContext(script,context);context.payload=data;vm.runInContext('data=payload;',context);return {context,element,handlers};
 }
@@ -31,7 +32,7 @@ test('Accueil de 12 essentiels, catalogue de 115 fiches, favoris vides et repèr
   assert.equal(element('#other-gases').hidden,true);
   vm.runInContext("catalogueOverview=false;mode='all';renderList()",context);assert.equal((element('#other-gas-list').innerHTML.match(/href="#gaz\//g)||[]).length,103);assert.equal(element('#other-gases').hidden,false);
   vm.runInContext("mode='favorites';renderList()",context);assert.match(element('#empty').innerHTML,/Vos essentiels/);
-  vm.runInContext('reperes()',context);assert.match(element('#main').innerHTML,/64 fiches/);
+  vm.runInContext('guideAbout()',context);assert.match(element('#main').innerHTML,/64 fiches/);
 });
 test('La recherche dépasse la sélection essentielle et masque les groupes non pertinents',()=>{
   const {context,element}=renderContext();vm.runInContext("mode='essentials';query='krypton';catalogue()",context);
@@ -65,7 +66,7 @@ test('L’accueil ouvre la recherche, quatre raccourcis et les gammes sans masqu
 
 test('Les icônes de navigation ont une classe de présentation et sont exclues du nom accessible',()=>{
  const {context,element}=renderContext();
- const routes=[['catalogue','Catalogue','catalogue'],['soudage','Soudage','welding'],['gammes','Gammes','ranges'],['reperes','Repères','references']];
+ const routes=[['catalogue','Catalogue','catalogue'],['soudage','Soudage','welding'],['gammes','Gammes','ranges'],['reperes','Outils','references']];
  const generic=Object.fromEntries(['book','layers','compass'].map(key=>[key,iconMarkup[key]]));
  for(const [active] of routes){
   context.active=active;vm.runInContext('nav(active)',context);
@@ -502,4 +503,30 @@ test('Le catalogue conserve les 12 essentiels avant 103 autres fiches réparties
   vm.runInContext("catalogueRisk='undocumented';renderList()",context);
   assert.equal(catalogueIds(element('#gas-list').innerHTML).length,0);
   assert.equal(catalogueIds(element('#other-gas-list').innerHTML).length,30);
+});
+
+test('Outils remplace Repères et donne accès aux trois rubriques sans perdre les informations du guide',()=>{
+  const {context,element}=renderContext();vm.runInContext('reperes()',context);
+  assert.match(element('#main').innerHTML,/#convertisseur/);assert.match(element('#main').innerHTML,/#glossaire/);
+  assert.match(element('.bottom-nav').innerHTML,/>Outils</);
+  vm.runInContext('guideAbout()',context);assert.match(element('#main').innerHTML,/64 fiches/);assert.match(element('#main').innerHTML,/theme-select/);
+});
+test('Changer le gaz efface la quantité et le résultat hérité tout en conservant les unités',()=>{
+  const render=renderContext();const {context,element}=render;
+  vm.runInContext("converterState={entryId:'azote',choosing:false,category:'gas',phase:'gaz',from:'m³',to:'kg',value:'1',search:'',direction:'liquide-gaz'};converter()",context);
+  assert.match(element('#main').innerHTML,/1,1848/);
+  weldingClick(render,{converterEntry:'oxygene'});
+  assert.equal(vm.runInContext('converterState.value',context),'');
+  assert.match(element('#main').innerHTML,/Oxygène/);assert.doesNotMatch(element('#main').innerHTML,/1,1848|<output/);
+});
+test('La commande ± change le signe sans perdre les décimales françaises ni les unités',()=>{
+  const render=renderContext();const {context,element}=render;
+  vm.runInContext("converterState={entryId:'azote',choosing:false,category:'temperature',from:'°C',to:'K',value:'196,5'};converter()",context);
+  weldingClick(render,{},['data-converter-sign']);
+  assert.equal(vm.runInContext('converterState.value',context),'-196,5');
+  assert.equal(element('#conversion-value').value,'-196,5');
+  assert.match(element('#conversion-output').innerHTML,/76,65/);
+  weldingClick(render,{},['data-converter-sign']);
+  assert.equal(vm.runInContext('converterState.value',context),'196,5');
+  assert.match(element('#conversion-output').innerHTML,/469,65/);
 });

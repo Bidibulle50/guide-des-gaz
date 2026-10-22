@@ -1,3 +1,18 @@
+# Vérification 2.0.6 — utilisations et Outils
+
+Validation locale du 22 octobre 2026, avant publication :
+
+- `npm test` : **92 tests réussis**, zéro échec. Sources des utilisations résolues, états N₂/O₂, usages historiques, conversions de référence, saisies invalides, zéro absolu, ±, mélange sans donnée propre, recherche et changement de gaz couverts.
+- Comparaison avec la version publiée 2.0.5 (`65d21c9`) : **29 fichiers applicatifs/ressources identiques**, 51 produits commerciaux inchangés, propriétés/dangers/FDS/ADR et anciennes sources des 64 substances conservés. Bloc d’interface et commandes Soudage identiques. CSS existant intégralement conservé, ajouts limités à Outils/Convertir.
+- **466 comparaisons de rendus de fiches** et **17 vues hors Outils** : aucune différence inattendue. Seuls les utilisations et compléments de sources des substances, le libellé de navigation Outils et le numéro d’édition sont neutralisés pour ces comparaisons. Le moteur de rendu V2.1 est inchangé.
+- Navigateur intégré Chromium : **29 observations de recette**, vues de 320 × 740, 390 × 844 et 1280 × 900, thèmes clair/sombre. Recherche et filtres du glossaire, accordéons au clavier, choix de molécule, changement de gaz/état, facteurs N₂/O₂, bar/psi, débit, température négative, erreurs et inversion des unités contrôlés. Sur les vues mesurées : pas de débordement horizontal, commandes Outils d’au moins 44 px de haut. Aucune erreur ou alerte console applicative relevée.
+- Hors ligne : serveur local arrêté, refus de connexion confirmé par `curl`, puis rechargement et nouveau calcul N₂ liquide → gaz, recherche/dépliage du glossaire et consultation des deux états de la fiche azote réalisés depuis le cache. Les trois nouveaux modules sont inclus dans le cache atomique 2.0.6. Ce contrôle ne constitue pas une coupure réelle des réseaux sur iPhone.
+- Revue complémentaire : bouton ± ajouté pour température/pression, afin de rendre le signe négatif accessible sans dépendre des touches proposées par un clavier décimal mobile. Les documents de sources externes restent accessibles en ligne seulement.
+
+À effectuer : recette physique iPhone/Safari, clavier, installation/mise à jour et réouverture après coupure réelle du réseau. Réserves FDS/ADR inchangées. Les listes d’usages ne qualifient ni un produit livré, ni une application client.
+
+---
+
 # Vérification 2.0.5 — Soudage
 
 Validation locale du 22 octobre 2026, avant publication :
