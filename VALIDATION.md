@@ -1,3 +1,18 @@
+# Vérification 2.0.5 — Soudage
+
+Validation locale du 22 octobre 2026, avant publication :
+
+- `npm test` : 68 tests réussis, zéro échec. Nouveau contenu commercial, guidage, confirmations/refus/retrait, résultat multiple, objectif non documenté, accès direct sans contexte hérité, panneaux et retour couverts.
+- Comparaison avec 2.0.4 : données identiques hors numéro d’édition ; 28 modules et ressources identiques ; ancien CSS intégralement conservé et nouveaux sélecteurs limités à Soudage. 466 rendus de fiches et 33 vues hors Soudage identiques (numéro d’édition exclu).
+- Navigateur intégré : vues 320 × 740, 390 × 844 et 1280 × 900 ; sombre/clair ; nom et statut du gaz visibles, commandes d’au moins 44 px sur les écrans contrôlés, pas de débordement horizontal. Parcours Speed, condition inconnue/refusée/confirmée, Duplex avec deux gaz, accès direct, objections, technique, préparation, source au clavier, fiche et retour contrôlés.
+- Hors ligne : serveur HTTP local arrêté, connexion au serveur impossible confirmée, puis rechargement et nouveau parcours acier → MAG → productivité → fil plein → objection prix réalisés depuis le cache. Ce test ne simule pas une coupure Wi-Fi sur iPhone. Aucune erreur applicative relevée dans la console du navigateur.
+- Contrôle visuel comparé à la maquette 1, avec les améliorations approuvées : en-tête compact, justification explicite, confirmations modifiables, accompagnement à la demande. Voir [design-qa.md](design-qa.md).
+- Pas de nouvelle validation exhaustive des sources métier : données et dates documentaires conservées. Les ouvertures de plusieurs pages Air Liquide ont expiré pendant cette vérification ; aucune fraîcheur supplémentaire n’en est déduite.
+
+À effectuer : recette physique sur iPhone/Safari, installation et mise à jour PWA sur cet appareil, consultation en clientèle. Réserves FDS/ADR inchangées. Aucun réglage ni résultat économique garanti.
+
+---
+
 # Vérification locale — édition 2.0.4 — Soudage en clientèle — 22 octobre 2026
 
 - Base : `d8ba82f2885f449c374ddb00d0bc156dbdb2be8a` (2.0.3). Nouvelle présentation de Soudage, argumentaires par produit et appui technique/commercial contextualisé. Les contrôles ci-dessous documentent la recette locale préalable à la publication.

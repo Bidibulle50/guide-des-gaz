@@ -6,6 +6,7 @@ import vm from 'node:vm';
 import {ficheMarkup,sheetStates} from '../fiche.js';
 import {iconMarkup} from '../ui-icons.js';
 import {MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection} from '../welding.js';
+import {weldingAdvice} from '../welding-advice.js';
 import {ESSENTIAL_IDS,catalogueSelection,readFavorites,escapeHtml} from '../core.js';
 const data=JSON.parse(readFileSync(new URL('../data/gases.json',import.meta.url)));
 function renderContext(documentOverrides={}){
@@ -13,7 +14,7 @@ function renderContext(documentOverrides={}){
     const classes=new Set();elements.set(key,{innerHTML:'',textContent:'',hidden:false,value:'',addEventListener(){},focus(){},classList:{toggle(name,force){const active=force??!classes.has(name);active?classes.add(name):classes.delete(name);return active;},contains:name=>classes.has(name)}});
   }return elements.get(key);};
   const handlers={};
-  const context=vm.createContext({MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection,ficheMarkup,sheetStates,iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,location:{hash:'#catalogue'},matchMedia:()=>({addEventListener(){}}),document:{documentElement:{dataset:{}},querySelector:element,querySelectorAll:()=>[],addEventListener:(type,handler)=>{const previous=handlers[type];handlers[type]=previous?event=>{previous(event);handler(event);}:handler;},...documentOverrides},window:{addEventListener(){},scrollTo(){}}});
+  const context=vm.createContext({MATERIALS,PROCESSES,NEEDS,availableProcesses,weldingSelection,weldingAdvice,ficheMarkup,sheetStates,iconMarkup,ESSENTIAL_IDS,catalogueSelection,readFavorites,esc:escapeHtml,Intl,Set,Map,clearTimeout,setTimeout,location:{hash:'#catalogue'},matchMedia:()=>({addEventListener(){}}),document:{documentElement:{dataset:{}},querySelector:element,querySelectorAll:()=>[],addEventListener:(type,handler)=>{const previous=handlers[type];handlers[type]=previous?event=>{previous(event);handler(event);}:handler;},...documentOverrides},window:{addEventListener(){},scrollTo(){}}});
   const script=readFileSync(new URL('../app.js',import.meta.url),'utf8').replace(/^import.*\n/gm,'').replace(/start\(\);\s*$/,'');
   vm.runInContext(script,context);context.payload=data;vm.runInContext('data=payload;',context);return {context,element,handlers};
 }
@@ -99,70 +100,253 @@ test('Chaque fiche ARCAL affiche ses utilisations et toutes ses références, sa
     } else {assert.match(html,/<h2>Utilisations<\/h2>/);assert.doesNotMatch(html,/Formats et remplissage/);}
   }
 });
-test('Onglet Soudage : parcours guidé, conditions client et fiche source accessibles',()=>{
-  const {context,element}=renderContext();vm.runInContext('weldingGuide()',context);
-  assert.match(element('.bottom-nav').innerHTML,/href="#soudage" aria-current="page"/);assert.match(element('#main').innerHTML,/Quel métal/);
-  vm.runInContext("weldingJourney={material:'aluminium',process:null,need:null,confirmed:[]};weldingGuide()",context);assert.match(element('#main').innerHTML,/Avec quel procédé/);
-  vm.runInContext("weldingJourney.process='mig';weldingGuide()",context);assert.match(element('#main').innerHTML,/besoin principal/);
-  vm.runInContext("weldingJourney.need='courant';weldingGuide()",context);const html=element('#main').innerHTML;
-  assert.match(html,/#gaz\/arcal-prime/);assert.match(html,/Le client confirme le mode automatique/);assert.match(html,/Source Air Liquide/);assert.doesNotMatch(html,/undefined|NaN/);
-  vm.runInContext("weldingJourney={material:'unknown',process:'unknown',need:'unknown',confirmed:[]};weldingGuide()",context);assert.match(element('#main').innerHTML,/Précisons la demande/);assert.doesNotMatch(element('#main').innerHTML,/class="welding-result"/);
-});
-
-function weldingClick(render,dataset,attributes=[]){
+function weldingClick(render,dataset={},attributes=[]){
   const target={dataset,hasAttribute:name=>attributes.includes(name),matches:()=>false};
   render.handlers.click({target:{closest:selector=>selector.includes('[data-risk]')?null:target}});
 }
-test('Le choix d’une famille de métal ne suppose pas une nuance et efface le contexte précédent',()=>{
-  const render=renderContext();const {context,element}=render;
-  vm.runInContext("weldingJourney={material:'carbone',process:'mag',need:'cadence',confirmed:['fil-plein']};weldingGuide()",context);
+function weldingState(render,journey){
+  render.context.journey=journey;
+  vm.runInContext('weldingJourney=journey;weldingGuide()',render.context);
+}
+const weldingHtml=render=>render.element('#main').innerHTML;
+const answerIds=html=>[...html.matchAll(/data-answer-for="([^"]+)"/g)].map(match=>match[1]);
+const candidateIds=html=>[...html.matchAll(/data-welding-product="([^"]+)"/g)].map(match=>match[1]);
+
+test('Soudage : parcours guidé court et accès explicite au résultat, à la source et à la fiche',()=>{
+  const render=renderContext();vm.runInContext('weldingGuide()',render.context);
+  assert.match(render.element('.bottom-nav').innerHTML,/href="#soudage" aria-current="page"/);
+  assert.match(weldingHtml(render),/Quel métal souder/);
+  assert.match(weldingHtml(render),/data-welding-direct/);
+  weldingClick(render,{weldingGroup:'aluminium'});
+  assert.match(weldingHtml(render),/Comment soude-t-il/);
+  weldingClick(render,{weldingField:'process',value:'mig'});
+  assert.match(weldingHtml(render),/Qu’est-ce qui compte pour lui/);
+  weldingClick(render,{weldingField:'need',value:'courant'});
+  assert.match(weldingHtml(render),/3 gaz à envisager/);
+  assert.deepEqual(answerIds(weldingHtml(render)),[]);
+  assert.deepEqual(candidateIds(weldingHtml(render)),['arcal-prime','arcal-31','arcal-he20','arcal-he70']);
+  weldingClick(render,{weldingProduct:'arcal-prime'});
+  const html=weldingHtml(render);
+  assert.deepEqual(answerIds(html),['arcal-prime']);
+  assert.match(html,/#gaz\/arcal-prime/);assert.match(html,/Source Air Liquide/);
+  assert.match(html,/À dire au client/);assert.match(html,/data-welding-results/);
+  assert.doesNotMatch(html,/undefined|NaN/);
+});
+
+test('Changer la famille remet les réponses et les confirmations à zéro sans supposer la nuance inox',()=>{
+  const render=renderContext();
+  weldingState(render,{material:'carbone',process:'mag',need:'cadence',confirmed:['fil-plein'],declined:['automatique']});
+  weldingClick(render,{weldingPanel:'sales',product:'arcal-speed'});
   weldingClick(render,{weldingGroup:'inox'});
-  assert.equal(vm.runInContext('weldingJourney.material',context),null);
-  assert.equal(vm.runInContext('weldingJourney.process',context),null);
-  assert.equal(vm.runInContext('weldingJourney.confirmed.length',context),0);
-  assert.match(element('#main').innerHTML,/data-value="duplex"/);
-  assert.match(element('#main').innerHTML,/data-value="inox"/);
-  assert.doesNotMatch(element('#main').innerHTML,/class="welding-result"/);
+  assert.equal(vm.runInContext('weldingJourney.material',render.context),null);
+  assert.equal(vm.runInContext('weldingJourney.process',render.context),null);
+  assert.equal(vm.runInContext('weldingJourney.need',render.context),null);
+  assert.equal(vm.runInContext('weldingJourney.confirmed.length+weldingJourney.declined.length',render.context),0);
+  assert.equal(vm.runInContext('weldingUI.selected',render.context),null);
+  assert.equal(vm.runInContext('weldingUI.panel',render.context),null);
+  assert.match(weldingHtml(render),/data-value="duplex"/);assert.match(weldingHtml(render),/data-value="inox"/);
+  assert.deepEqual(answerIds(weldingHtml(render)),[]);
   weldingClick(render,{weldingField:'material',value:'inox'});
   weldingClick(render,{weldingField:'process',value:'tig'});
   weldingClick(render,{weldingField:'need',value:'courant'});
-  assert.doesNotMatch(element('#main').innerHTML,/#gaz\/arcal-r1-2|#gaz\/arcal-r1-5|#gaz\/arcal-m11/);
+  assert.match(weldingHtml(render),/Nuance inox à préciser/);
+  assert.deepEqual(candidateIds(weldingHtml(render)),['arcal-prime','arcal-31','arcal-he20']);
+  assert.doesNotMatch(weldingHtml(render),/data-welding-product="arcal-(?:r1-2|r1-5|m11|m12-he5-n)"/);
+  weldingClick(render,{weldingProduct:'arcal-prime'});
+  assert.match(weldingHtml(render),/nuance inox à préciser/);
 });
-test('L’argumentaire relie le bénéfice à sa source et garde une condition non confirmée visible',()=>{
-  const {context,element}=renderContext();
-  vm.runInContext("weldingJourney={material:'carbone',process:'mag',need:'cadence',confirmed:[]};weldingGuide()",context);
-  const html=element('#main').innerHTML;
-  assert.match(html,/data-argument-for="arcal-speed"/);
+
+test('Speed : condition visible, confirmation retirable, réponse non et réexamen effectifs',()=>{
+  const render=renderContext();
+  weldingState(render,{material:'carbone',process:'mag',need:'cadence',confirmed:[],declined:[]});
+  let html=weldingHtml(render);
+  assert.deepEqual(answerIds(html),['arcal-speed']);
+  assert.match(html,/Condition à confirmer/);assert.match(html,/data-welding-confirm="fil-plein"/);
   assert.match(html,/moins de fumées, projections et silicates/);
   assert.match(html,/https:\/\/fr.airliquide.com\/gaz\/arcaltm-speed\/I2561/);
-  assert.match(html,/data-welding-confirm="fil-plein"/);
-  assert.match(html,/fil plein/);
+  assert.ok(html.indexOf('data-welding-confirm="fil-plein"')<html.indexOf('À dire au client'));
   assert.doesNotMatch(html,/économie garantie|gain garanti|meilleur gaz/i);
+  weldingClick(render,{weldingConfirm:'fil-plein'});
+  html=weldingHtml(render);
+  assert.deepEqual(answerIds(html),['arcal-speed']);
+  assert.match(html,/Fil plein confirmé par le client/);assert.match(html,/data-welding-unconfirm="fil-plein"/);
+  assert.doesNotMatch(html,/data-welding-confirm="fil-plein"/);
+  weldingClick(render,{weldingUnconfirm:'fil-plein'});
+  assert.match(weldingHtml(render),/data-welding-confirm="fil-plein"/);
+  assert.equal(vm.runInContext('weldingJourney.confirmed.length',render.context),0);
+  weldingClick(render,{weldingDecline:'fil-plein'});
+  html=weldingHtml(render);
+  assert.deepEqual(answerIds(html),[]);assert.ok(!candidateIds(html).includes('arcal-speed'));
+  assert.match(html,/condition a été déclarée non remplie/);assert.match(html,/data-welding-review-conditions/);
+  weldingClick(render,{},['data-welding-review-conditions']);
+  assert.deepEqual(answerIds(weldingHtml(render)),['arcal-speed']);
+  assert.match(weldingHtml(render),/data-welding-confirm="fil-plein"/);
 });
-test('Un produit sans bénéfice publié donne une question commerciale, sans reprendre le bénéfice d’un autre gaz',()=>{
-  const {context}=renderContext();
-  const html=vm.runInContext("weldingCards(weldingSelection(data.products,{material:'aluminium',process:'mig'}).focused.filter(m=>m.product.id==='arcal-31'))",context);
+
+test('Une condition inconnue ouvre l’appui technique sans la confirmer',()=>{
+  const render=renderContext();
+  weldingState(render,{material:'carbone',process:'mag',need:'cadence',confirmed:[]});
+  weldingClick(render,{weldingPanel:'technical',product:'arcal-speed'});
+  assert.match(weldingHtml(render),/Appui ingénieur/);
+  assert.match(weldingHtml(render),/À confirmer avant de retenir ARCAL/);
+  assert.match(weldingHtml(render),/data-welding-confirm="fil-plein"/);
+  assert.equal(vm.runInContext('weldingJourney.confirmed.length',render.context),0);
+  weldingClick(render,{},['data-welding-close-panel']);
+  assert.deepEqual(answerIds(weldingHtml(render)),['arcal-speed']);
+  assert.match(weldingHtml(render),/Condition à confirmer/);
+});
+
+test('Sans bénéfice publié, l’argumentaire n’emprunte pas celui d’un autre gaz',()=>{
+  const render=renderContext();
+  weldingState(render,{material:'aluminium',process:'mig',need:'courant',confirmed:[]});
+  weldingClick(render,{weldingProduct:'arcal-31'});
+  const html=weldingHtml(render);
   assert.match(html,/data-argument-for="arcal-31"/);
-  assert.match(html,/bénéfice comparatif.*documenté/i);
-  assert.match(html,/consommation/);
-  assert.doesNotMatch(html,/moins de fumées|réduction des opérations de finition|garanti/i);
+  assert.match(html,/Aucun bénéfice comparatif n’est documenté/);
+  assert.doesNotMatch(html,/moins de fumées|réduction des opérations de finition/);
+  assert.match(html,/attentes du client/);
 });
-test('Une réponse inconnue conserve le métal connu et ne produit pas d’argumentaire de recommandation',()=>{
-  const render=renderContext();const {context,element}=render;
-  vm.runInContext("weldingJourney={material:'duplex',process:null,need:null,confirmed:[]};weldingGuide()",context);
+
+test('Une réponse inconnue conserve le métal connu et remplace la sélection par les informations à recueillir',()=>{
+  const render=renderContext();
+  weldingState(render,{material:'duplex',process:null,need:null,confirmed:[]});
   weldingClick(render,{},['data-welding-unknown']);
-  assert.equal(vm.runInContext('weldingJourney.material',context),'duplex');
-  assert.doesNotMatch(element('#main').innerHTML,/data-argument-for=/);
-  assert.match(element('#main').innerHTML,/Précisons la demande/);
+  assert.equal(vm.runInContext('weldingJourney.material',render.context),'duplex');
+  assert.deepEqual(answerIds(weldingHtml(render)),[]);
+  assert.doesNotMatch(weldingHtml(render),/data-argument-for=/);
+  assert.match(weldingHtml(render),/Précisons la demande/);
+  assert.match(weldingHtml(render),/data-welding-edit="process"/);
+  weldingClick(render,{weldingEdit:'process'});
+  assert.match(weldingHtml(render),/Comment soude-t-il/);
 });
-test('Une nouvelle réponse replie l’appui sans masquer la prochaine question et actualise son contexte',()=>{
-  const render=renderContext();const {context,element}=render;
-  vm.runInContext('weldingSupportOpen=true;weldingGuide()',context);
-  weldingClick(render,{weldingGroup:'aluminium'});
-  assert.equal(vm.runInContext('weldingSupportOpen',context),false);
-  assert.match(element('#main').innerHTML,/Avec quel procédé/);
-  assert.match(element('#main').innerHTML,/support-context">Aluminium/);
-  assert.doesNotMatch(element('#main').innerHTML,/Points ouverts dans votre sélection/);
+
+test('Modifier métal, procédé ou besoin efface les conditions et le panneau précédents',()=>{
+  for(const field of ['material','process','need']){
+    const render=renderContext();
+    weldingState(render,{material:'carbone',process:'mag',need:'cadence',confirmed:['fil-plein'],declined:['automatique']});
+    weldingClick(render,{weldingPanel:'sales',product:'arcal-speed'});
+    weldingClick(render,{weldingEdit:field});
+    assert.equal(vm.runInContext('weldingJourney.confirmed.length+weldingJourney.declined.length',render.context),0,field);
+    assert.equal(vm.runInContext('weldingUI.selected',render.context),null,field);
+    assert.equal(vm.runInContext('weldingUI.panel',render.context),null,field);
+    assert.deepEqual(answerIds(weldingHtml(render)),[]);
+  }
+  const render=renderContext();
+  weldingState(render,{material:'carbone',process:'mag',need:'cadence',confirmed:['fil-plein'],declined:['automatique']});
+  weldingClick(render,{weldingField:'need',value:'courant'});
+  assert.equal(vm.runInContext('weldingJourney.confirmed.length+weldingJourney.declined.length',render.context),0);
+  assert.match(weldingHtml(render),/data-welding-product="arcal-speed"/);
+});
+
+test('Duplex TIG présente deux usages spécifiques sans élire automatiquement un gaz principal',()=>{
+  const render=renderContext();
+  weldingState(render,{material:'duplex',process:'tig',need:'courant',confirmed:[]});
+  const html=weldingHtml(render);
+  assert.match(html,/2 gaz à envisager/);assert.deepEqual(answerIds(html),[]);
+  assert.deepEqual(candidateIds(html).slice(0,2),['arcal-39','arcal-n2-2']);
+  assert.match(html,/L’ordre d’affichage ne classe pas les performances/);
+  assert.match(html,/Autres usages publiés \(3\)/);
+  assert.doesNotMatch(html,/data-welding-product="arcal-(?:r1-2|r1-5|m11)"/);
+});
+
+test('Un objectif sans correspondance ne promeut ni le premier autre gaz ni une condition non liée à cet objectif',()=>{
+  const render=renderContext();
+  weldingState(render,{material:'aluminium',process:'mig',need:'cadence',confirmed:[]});
+  const html=weldingHtml(render);
+  assert.deepEqual(answerIds(html),[]);
+  assert.match(html,/Aucun gaz ne peut être mis en avant pour cet objectif/);
+  assert.match(html,/Le respect d’une condition ne prouve pas un gain/);
+  assert.deepEqual(candidateIds(html),['arcal-he70','arcal-prime','arcal-31','arcal-he20']);
+  weldingClick(render,{weldingProduct:'arcal-he70'});
+  assert.match(weldingHtml(render),/L’intérêt pour votre objectif reste à établir/);
+});
+
+test('L’accès direct affiche les 21 ARCAL et n’hérite pas des réponses de la sélection guidée',()=>{
+  const render=renderContext();
+  weldingState(render,{material:'carbone',process:'mag',need:'cadence',confirmed:['fil-plein']});
+  weldingClick(render,{},['data-welding-direct']);
+  assert.match(weldingHtml(render),/Je connais le gaz/);
+  assert.equal(candidateIds(weldingHtml(render)).length,21);
+  weldingClick(render,{weldingProduct:'arcal-speed'});
+  let html=weldingHtml(render);
+  assert.deepEqual(answerIds(html),['arcal-speed']);
+  assert.match(html,/Application à vérifier/);assert.match(html,/Accès direct au produit/);
+  assert.match(html,/Vérifions d’abord son application à votre besoin/);
+  assert.doesNotMatch(html,/Fil plein confirmé|votre MAG acier avec fil plein|data-welding-unconfirm/);
+  weldingClick(render,{weldingPanel:'technical',product:'arcal-speed'});
+  html=weldingHtml(render);
+  assert.match(html,/Aucune compatibilité n’est confirmée par cet accès direct/);
+  assert.doesNotMatch(html,/Le client a déclaré utiliser un fil plein/);
+  weldingClick(render,{},['data-welding-close-panel']);
+  weldingClick(render,{},['data-welding-results']);
+  assert.equal(candidateIds(weldingHtml(render)).length,21);
+  weldingClick(render,{},['data-welding-guided']);
+  assert.deepEqual(answerIds(weldingHtml(render)),['arcal-speed']);
+  assert.match(weldingHtml(render),/Fil plein confirmé par le client/);
+});
+
+test('Les appuis commercial, technique et préparation restent reliés au produit et au retour',()=>{
+  const render=renderContext();
+  weldingState(render,{material:'carbone',process:'mag',need:'cadence',confirmed:['fil-plein']});
+  weldingClick(render,{weldingPanel:'sales',product:'arcal-speed'});
+  let html=weldingHtml(render);
+  assert.match(html,/Appui commercial/);assert.match(html,/Votre gaz est plus cher/);
+  assert.match(html,/Mon gaz actuel me convient/);assert.match(html,/Changer va perturber la production/);
+  assert.match(html,/coût d’une pièce conforme/);assert.match(html,/données manquantes/);
+  assert.equal((html.match(/class="welding-disclosure welding-objection"/g)||[]).length,4);
+  weldingClick(render,{},['data-welding-close-panel']);
+  assert.deepEqual(answerIds(weldingHtml(render)),['arcal-speed']);
+  weldingClick(render,{weldingPanel:'technical',product:'arcal-speed'});
+  html=weldingHtml(render);
+  assert.match(html,/Appui ingénieur/);assert.match(html,/Cette information ne qualifie pas l’application/);
+  assert.match(html,/Ne pas transposer automatiquement les réglages/);assert.match(html,/Source Air Liquide/);
+  weldingClick(render,{},['data-welding-close-panel']);
+  weldingClick(render,{weldingPanel:'next',product:'arcal-speed'});
+  html=weldingHtml(render);
+  assert.match(html,/Préparer une proposition/);assert.match(html,/Organiser une comparaison/);
+  assert.match(html,/Pour construire l’offre/);assert.match(html,/consommation réelle/);
+  assert.match(html,/prix et services à confirmer/);
+});
+
+test('Ouvrir une alternative ne la duplique pas dans les listes de résultats',()=>{
+  for(const [journey,id] of [
+    [{material:'duplex',process:'tig',need:'courant',confirmed:[]},'arcal-39'],
+    [{material:'carbone',process:'mag',need:'cadence',confirmed:['fil-plein']},'arcal-force']
+  ]){
+    const render=renderContext();weldingState(render,journey);
+    weldingClick(render,{weldingProduct:id});
+    const html=weldingHtml(render),candidates=candidateIds(html);
+    assert.deepEqual(answerIds(html),[id]);assert.ok(!candidates.includes(id));
+    assert.equal(new Set(candidates).size,candidates.length);
+    assert.match(html,/data-welding-results/);
+  }
+});
+
+test('Retirer la déclaration de mode automatique remet le besoin en question',()=>{
+  const render=renderContext();
+  weldingState(render,{material:'aluminium',process:'mig',need:'automatique',confirmed:[]});
+  assert.deepEqual(answerIds(weldingHtml(render)),['arcal-he70']);
+  assert.match(weldingHtml(render),/Mode automatique confirmé par le client/);
+  weldingClick(render,{weldingUnconfirm:'automatique'});
+  assert.equal(vm.runInContext('weldingJourney.need',render.context),null);
+  assert.deepEqual(answerIds(weldingHtml(render)),[]);
+  assert.match(weldingHtml(render),/Qu’est-ce qui compte pour lui/);
+});
+
+test('Nouvelle demande efface le contexte, les confirmations et les choix d’accès direct',()=>{
+  const render=renderContext();
+  weldingState(render,{material:'carbone',process:'mag',need:'cadence',confirmed:['fil-plein'],declined:['automatique']});
+  weldingClick(render,{},['data-welding-direct']);
+  weldingClick(render,{weldingProduct:'arcal-speed'});
+  weldingClick(render,{weldingPanel:'sales',product:'arcal-speed'});
+  weldingClick(render,{},['data-welding-reset']);
+  assert.equal(vm.runInContext('weldingUI.mode',render.context),'guide');
+  assert.equal(vm.runInContext('weldingUI.selected',render.context),null);
+  assert.equal(vm.runInContext('weldingUI.panel',render.context),null);
+  assert.equal(vm.runInContext('weldingJourney.material',render.context),null);
+  assert.equal(vm.runInContext('weldingJourney.confirmed.length+weldingJourney.declined.length',render.context),0);
+  assert.match(weldingHtml(render),/Quel métal souder/);
+  assert.deepEqual(answerIds(weldingHtml(render)),[]);
 });
 
 function tagAttributes(tag){

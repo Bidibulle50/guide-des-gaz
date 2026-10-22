@@ -2,6 +2,14 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 2.0.5 — réponse claire et accompagnement ARCAL
+
+- Soudage reprend une entrée courte par métal, procédé et besoin. L’acier carbone ouvre directement le choix du procédé ; les inox et autres métaux restent explicitement qualifiés. Un accès « Je connais le gaz » retrouve les 21 argumentaires sans présumer leur compatibilité avec une application.
+- Le résultat met le nom du gaz, son usage publié et son statut au premier plan. Une condition peut être confirmée, refusée, laissée inconnue ou corrigée. Plusieurs correspondances restent présentées sans classement de performance ; l’absence d’objectif documenté n’est pas transformée en recommandation.
+- Chaque gaz donne une formulation courte à dire au client. Les appuis « Répondre au client », « Vérifier la technique » et « Préparer la suite » développent les objections, les points à recueillir, l’offre et la comparaison. Les bénéfices proviennent uniquement du produit concerné ; les conseils d’entretien sont éditoriaux et restent identifiés comme tels.
+- L’application et ces conseils fonctionnent depuis le cache, y compris après rechargement sans serveur accessible. Les documents sources externes nécessitent Internet. Une édition antérieure demande « Actualiser ».
+- Données métier, moteur de sélection, 115 fiches V2.1 et autres onglets préservés. Version du catalogue et cache incrémentés pour distribuer le nouvel onglet. Tests et limites dans [VALIDATION.md](VALIDATION.md).
+
 ## Nouveautés 2.0.4 — Soudage en clientèle
 
 - Entrée par quatre familles de métaux, puis précision de la nuance, procédé et besoin en langage plus direct. Une réponse inconnue mène aux informations à recueillir. Les choix restent modifiables et les conditions techniques doivent toujours être confirmées.

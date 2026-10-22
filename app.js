@@ -1,6 +1,7 @@
 import {ficheMarkup, sheetStates} from './fiche.js';
 import { iconMarkup } from './ui-icons.js';
 import { ESSENTIAL_IDS, catalogueSelection, readFavorites, escapeHtml as esc } from './core.js';
+import { weldingAdvice } from './welding-advice.js';
 import { MATERIALS, PROCESSES, NEEDS, availableProcesses, weldingSelection } from './welding.js';
 const $ = s => document.querySelector(s);
 const icon = (key, cls='') => (iconMarkup[key] || '').replace('<svg ', `<svg aria-hidden="true" focusable="false" class="icon ${cls}" `);
@@ -8,7 +9,7 @@ const brand = '<img class="brand" src="./icons/brand-cobalt-128.png" alt="" widt
 const allEntries = () => [...data.gases, ...(data.products || [])];
 let data, favorites = new Set(), query = '', mode = 'essentials', catalogueScroll = 0, catalogueOverview = true, toastTimer, offlineReady = false, waitingWorker;
 let weldingJourney={group:null,material:null,process:null,need:null,confirmed:[]};
-let weldingSupportOpen=false;
+
 const fmt = n => new Intl.NumberFormat('fr-FR', {maximumFractionDigits:4}).format(n).replace('-', '−');
 const themeNames = {system:'Automatique',light:'Clair',dark:'Sombre'};
 function theme() { return document.documentElement.dataset.theme || 'system'; }
@@ -143,110 +144,155 @@ document.addEventListener('click',e=>{
 function sourceLinks(sources) { return sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${icon('external')}<span><strong>${esc(s.title)}</strong><small>${esc(s.scope)}${s.checked?' · Consultation : '+esc(s.checked):''}</small></span>${icon('chevron','chevron')}</a></li>`).join(''); }
 const selectionName=(options,id)=>options.find(x=>x.id===id)?.name||'';
 const weldingMaterialGroups=[
-  {id:'acier',name:'Acier',detail:'Courant, revêtu ou armatures',materials:['carbone','revetu','armatures']},
+  {id:'acier',name:'Acier carbone',detail:'Non ou faiblement allié',materials:['carbone']},
   {id:'inox',name:'Inox',detail:'Nuance connue ou à préciser',materials:['inox','austenitique','duplex','inox-azote']},
   {id:'aluminium',name:'Aluminium',detail:'Aluminium et ses alliages',materials:['aluminium']},
-  {id:'autre',name:'Autre métal',detail:'Cuivre, nickel…',materials:['cuivre','nickel']}
+  {id:'autre',name:'Autre métal',detail:'Acier revêtu, cuivre, nickel…',materials:['revetu','armatures','cuivre','nickel']}
 ];
 const weldingChoiceLabels={
-  carbone:{name:'Acier courant',detail:'Acier carbone, non ou faiblement allié'},
-  revetu:{name:'Acier galvanisé / revêtu',detail:'Le client indique un revêtement'},
-  armatures:{name:'Fer à béton / treillis',detail:'Barres ou treillis d’armature'},
-  cuivre:{name:'Cuivre et alliages cuivreux',detail:'Cuivre et ses alliages'},
-  nickel:{name:'Nickel et alliages',detail:'Nickel et ses alliages'},
-  inox:{name:'Je ne connais pas la nuance',detail:'Continuer avec un inox à préciser'},
-  austenitique:{name:'Inox austénitique',detail:'Nuance confirmée par le client'},
-  duplex:{name:'Duplex / Superduplex',detail:'Nuance confirmée par le client'},
-  'inox-azote':{name:'Inox enrichi en azote',detail:'Nuance confirmée par le client'},
-  courant:{name:'Trouver un gaz adapté',detail:'Partir du métal et du procédé'},
-  finition:{name:'Améliorer la finition',detail:'Aspect des soudures et travail de reprise'},
-  cadence:{name:'Gagner en productivité',detail:'Vitesse et organisation du soudage'},
-  fin:{name:'Travailler des tôles fines',detail:'Épaisseur exacte à relever'},
-  epais:{name:'Souder des pièces épaisses',detail:'Épaisseur exacte à relever'},
-  automatique:{name:'Souder en automatique ou avec un robot',detail:'Mode de travail confirmé par le client'}
+  inox:{name:'Nuance à préciser',detail:'Je ne connais pas encore le type d’inox'},
+  austenitique:{name:'Inox austénitique',detail:'Type confirmé par le client'},
+  duplex:{name:'Duplex / Superduplex',detail:'Type confirmé par le client'},
+  'inox-azote':{name:'Inox enrichi en azote',detail:'Type confirmé par le client'},
+  courant:{name:'Trouver un gaz adapté',detail:'Pour l’application du client'},
+  finition:{name:'Améliorer la finition',detail:'Aspect du cordon et reprises'},
+  cadence:{name:'Gagner en productivité',detail:'Temps de soudage et organisation'},
+  fin:{name:'Tôles fines',detail:'Épaisseur exacte à relever'},
+  epais:{name:'Pièces épaisses',detail:'Épaisseur exacte à relever'},
+  automatique:{name:'Automatique / robotisé',detail:'Mode de travail confirmé par le client'}
 };
+const weldingConfirmations={
+  'fil-plein':{question:'Le client utilise-t-il un fil plein ?',yes:'Oui, fil plein',known:'Fil plein confirmé par le client'},
+  'fil-fourre-inox':{question:'Le fil est-il un fil fourré inox adapté ?',yes:'Oui, fil fourré inox adapté',known:'Fil fourré inox confirmé par le client'},
+  'pulse-fil-plein':{question:'Le client travaille-t-il en MAG pulsé avec fil plein ?',yes:'Oui, MAG pulsé et fil plein',known:'MAG pulsé et fil plein confirmés par le client'},
+  automatique:{question:'Le soudage est-il automatique ?',yes:'Oui, mode automatique',known:'Mode automatique confirmé par le client'}
+};
+let weldingUI={mode:'guide',selected:null,panel:null,search:''};
 function weldingChoice(options,field){
   return `<ul class="choice-list">${options.map(original=>{const o={...original,...weldingChoiceLabels[original.id]};return `<li><button data-welding-field="${field}" data-value="${esc(o.id)}"><span><strong>${esc(o.name)}</strong><small>${esc(o.detail)}</small></span>${icon('chevron','chevron')}</button></li>`;}).join('')}</ul>`;
 }
-function weldingClientQuestion(){
-  const questions={
-    cadence:'Où perdez-vous le plus de temps aujourd’hui : soudage, reprises ou changements de bouteille ?',
-    finition:'Quelles reprises après soudage vous prennent le plus de temps ?',
-    fin:'Quelles épaisseurs travaillez-vous et quel résultat souhaitez-vous améliorer ?',
-    epais:'Quelles épaisseurs et quelles exigences d’assemblage faut-il prendre en compte ?',
-    automatique:'Quel point souhaitez-vous améliorer sur la ligne : cadence, régularité ou reprises ?'
-  };
-  return questions[weldingJourney.need]||'Quel gaz utilisez-vous aujourd’hui, et que souhaitez-vous conserver ou améliorer ?';
+function weldingContext(){
+  return [selectionName(MATERIALS,weldingJourney.material),selectionName(PROCESSES,weldingJourney.process)].filter(Boolean).join(' · ');
 }
-function weldingArguments(m,open=false){
-  const benefits=m.product.welding.benefits||[];
-  const source=m.product.sources.find(s=>s.url===m.product.sourceUrl);
-  return `<details class="welding-arguments" data-argument-for="${esc(m.product.id)}" ${open?'open':''}>
-    <summary><span><strong>Les bons arguments</strong><small>Technique & intérêt client</small></span>${icon('chevron')}</summary>
-    <div class="argument-content">
-      <div><h4>${benefits.length?'L’intérêt client':'L’intérêt à préciser'}</h4>${benefits.length?benefits.map(b=>`<p>${esc(b)}</p>`).join(''):'<p>Aucun bénéfice comparatif n’est documenté dans les sources consultées pour ce produit. Partir de l’usage publié, puis préciser les attentes du client.</p>'}</div>
-      <div class="argument-question"><h4>La question à poser</h4><p>« ${esc(benefits.length?weldingClientQuestion():'Quel conditionnement correspond à votre consommation et à votre fréquence d’utilisation ?')} »</p></div>
-      <a class="argument-source" href="${esc(m.product.sourceUrl)}" target="_blank" rel="noopener noreferrer">Source Air Liquide${source?.checked?' · '+esc(source.checked):''} ${icon('external')}</a>
-      <p class="argument-source-note">${benefits.length?'Bénéfices annoncés':'Usages publiés'} par le fabricant. Question d’entretien proposée par le guide.</p>
-    </div>
-  </details>`;
+function weldingSource(product){
+  const source=product.sources.find(s=>s.url===product.sourceUrl);
+  return `<a class="welding-source" href="${esc(product.sourceUrl)}" target="_blank" rel="noopener noreferrer">Source Air Liquide ${icon('external')}</a><span class="welding-source-date">Consultée le ${esc(source?.checked||'21 octobre 2026')} · document en ligne</span>`;
 }
-function weldingSupport(){
-  const s=weldingJourney;
-  const validMaterial=MATERIALS.some(m=>m.id===s.material),validProcess=PROCESSES.some(p=>p.id===s.process);
-  const context=[validMaterial?selectionName(MATERIALS,s.material):'',validProcess?selectionName(PROCESSES,s.process):''].filter(Boolean).join(' · ');
-  const technical=!validMaterial?'Quel métal et quelle nuance figurent sur le plan, la pièce ou le document du client ?':!validProcess?'Quel procédé le client utilise-t-il ? Relever le nom dans son mode opératoire, puis préciser le fil ou le métal d’apport.':'Quelle nuance exacte, quelle épaisseur, quel fil et quel régime de soudage faut-il confirmer ?';
-  const selection=validMaterial&&validProcess&&s.need?weldingSelection(data.products,s):null;
-  const conditions=selection?[...new Set(selection.conditional.map(m=>m.condition.text))]:[];
-  return `<details class="welding-support" id="welding-support" ${weldingSupportOpen?'open':''}>
-    <summary><span class="support-symbol">${icon('compass')}</span><span><strong>Appui en rendez-vous</strong><small>Technique & commercial</small></span>${icon('chevron')}</summary>
-    <div class="support-content">
-      <p class="support-context">${context?esc(context):'Pour préparer et approfondir l’échange'}</p>
-      <div class="support-grid">
-        <section><span class="support-label">Regard ingénieur</span><h3>Qualifier l’application</h3><p>${esc(technical)}</p>
-          ${conditions.length?`<p class="support-mini-title">Points ouverts dans votre sélection</p><ul>${conditions.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>`:''}
-          ${s.material==='inox'?'<p>La nuance inox reste inconnue. La présélection ne couvre pas les emplois réservés à une nuance précise.</p>':''}
-          <p class="support-next"><strong>Suite technique</strong> Faire confirmer la compatibilité avec le mode opératoire par le référent soudage avant un changement de gaz. Reprendre la FDS du produit livré.</p>
-        </section>
-        <section><span class="support-label">Regard commercial senior</span><h3>Faire avancer la proposition</h3><p>« ${esc(weldingClientQuestion())} »</p>
-          <details class="sales-objection"><summary>« Votre gaz est plus cher »</summary><p>« Que comparez-vous : le prix du gaz, la consommation ou le coût de l’opération complète ? »</p><p>Relever les volumes, les temps de reprise, le conditionnement et les tarifs réels. Proposer une comparaison mesurée ; aucun gain économique n’est calculé dans ce guide.</p></details>
-          <details class="sales-objection"><summary>« Mon gaz actuel me convient »</summary><p>« Qu’est-ce qui fonctionne bien et quel point mérite encore d’être amélioré ? »</p><p>Partir de l’usage actuel et de l’objectif exprimé. Un autre gaz ne devient une piste qu’après examen de ses conditions d’emploi.</p></details>
-          <p class="support-next"><strong>Suite commerciale</strong> Convenir d’une prochaine action : précision technique, essai encadré ou proposition selon la consommation, les conditionnements et la disponibilité confirmée.</p>
-        </section>
-      </div>
-      <p class="support-note">Conseils de préparation, disponibles hors ligne. Les arguments produit renvoient aux sources Air Liquide dans les résultats. Les documents externes nécessitent une connexion.</p>
-    </div>
-  </details>`;
+function weldingCondition(m){
+  if(!m)return '';
+  if(m.condition){
+    const c=weldingConfirmations[m.condition.key];
+    return `<div class="welding-condition"><strong>${c?esc(c.question):'Application à préciser'}</strong><p>${esc(m.condition.text)}</p>${c?`<div class="welding-confirm-actions"><button class="welding-primary" data-welding-confirm="${esc(m.condition.key)}">${esc(c.yes)}</button><button class="welding-text" data-welding-decline="${esc(m.condition.key)}">Non</button>${weldingUI.panel==='technical'?'':`<button class="welding-text" data-welding-panel="technical" data-product="${esc(m.product.id)}">Je ne sais pas</button>`}</div>`:'<p>Faire préciser ce point avec le référent soudage avant de retenir ce gaz.</p>'}</div>`;
+  }
+  if(m.confirmedCondition){
+    const c=weldingConfirmations[m.confirmedCondition.key];
+    return `<div class="welding-confirmed"><span>${esc(c?.known||m.confirmedCondition.text)}</span><button class="welding-text" data-welding-unconfirm="${esc(m.confirmedCondition.key)}">Modifier</button></div>`;
+  }
+  return '';
 }
-function weldingCards(matches,{openArguments=false}={}){
-  const confirmations={'automatique':'Le client confirme le mode automatique','fil-plein':'Le client confirme le fil plein','pulse-fil-plein':'Le client confirme : MAG pulsé et fil plein','fil-fourre-inox':'Le client confirme le fil fourré inox'};
-  return matches.map(m=>`<article class="welding-result"><div class="welding-result-heading"><h3>${esc(m.product.name)}</h3><span>${esc(m.product.welding.category==='Référents'?'Référent':'Technique')}</span></div><p>${esc(m.why)}</p>${m.needMatch?'<p class="need-evidence">Votre objectif est mentionné dans la source.</p>':''}${m.condition?`<div class="condition-note"><strong>Avant de retenir cette piste</strong><p>${esc(m.condition.text)}</p>${confirmations[m.condition.key]?`<button class="text-button" data-welding-confirm="${esc(m.condition.key)}">${esc(confirmations[m.condition.key])}</button>`:''}</div>`:''}${m.confirmedCondition?`<p class="footnote">Information client retenue : ${esc(m.confirmedCondition.text)}</p>`:''}${m.product.welding.safety.classificationCode==='1F'?'<p class="welding-risk">Produit déclaré extrêmement inflammable · voir sa FDS.</p>':''}${weldingArguments(m,openArguments)}<div class="result-links"><a href="#gaz/${esc(m.product.id)}">Fiche, formats & FDS ${icon('chevron','chevron')}</a></div></article>`).join('');
+function weldingRisk(product){return product.welding.safety.classificationCode==='1F'?'<p class="welding-risk">Extrêmement inflammable selon la fiche produit. Consulter la FDS.</p>':'';}
+function weldingMatchStatus(m){
+  if(!m)return 'Application à vérifier';
+  if(m.condition)return 'Condition à confirmer';
+  if(weldingJourney.material==='inox')return 'Nuance inox à préciser';
+  if(weldingJourney.need!=='courant'&&!m.needMatch)return 'Objectif à vérifier';
+  return m.specific?'Usage correspondant':'Usage général publié';
+}
+function weldingProductDetail(product,m,{back=false}={}){
+  const a=weldingAdvice(product,weldingJourney,m);
+  return `${back?`<button class="welding-back" data-welding-results>${icon('back')}${weldingUI.mode==='direct'?'Tous les ARCAL':'Tous les résultats'}</button>`:''}
+    <article class="welding-answer" data-answer-for="${esc(product.id)}">
+      <p class="welding-kicker">${esc(weldingMatchStatus(m))}</p><h2 id="welding-question" tabindex="-1">${esc(product.name)}</h2>
+      <p class="welding-why">${esc(m?.why||product.welding.uses[0]?.detail||'Consulter les utilisations documentées dans la fiche.')}</p>
+      ${weldingCondition(m)}${weldingRisk(product)}
+      ${!m?'<p class="welding-notice">Accès direct au produit : le métal, le procédé et les conditions d’emploi restent à vérifier.</p>':''}
+      <section class="welding-pitch"><h3>À dire au client</h3><p>« ${esc(a.pitch)} »</p></section>
+      <div class="welding-actions"><button data-welding-panel="sales" data-product="${esc(product.id)}"><span>Répondre au client<small>Prix, gaz actuel, qualité, changement</small></span>${icon('chevron')}</button><button data-welding-panel="technical" data-product="${esc(product.id)}"><span>Vérifier la technique<small>Points à confirmer avec le client</small></span>${icon('chevron')}</button></div>
+      <button class="welding-primary welding-next" data-welding-panel="next" data-product="${esc(product.id)}">Préparer la suite ${icon('chevron')}</button>
+      <a class="welding-sheet" href="#gaz/${esc(product.id)}">Fiche, formats & FDS ${icon('chevron')}</a>
+      <details class="welding-disclosure" data-argument-for="${esc(product.id)}"><summary><span>L’intérêt documenté<small>Bénéfices et source du produit</small></span>${icon('chevron')}</summary><div>${a.benefits.length?a.benefits.map(b=>`<p>${esc(b.text)}</p>`).join(''):'<p>Aucun bénéfice comparatif n’est documenté pour ce produit dans les sources consultées. Partir de l’usage publié et des attentes du client.</p>'}${weldingSource(product)}</div></details>
+      <p class="welding-note">Piste à valider avec le référent soudage et le mode opératoire. Les formulations commerciales sont proposées par le guide.</p>
+    </article>`;
+}
+function weldingCards(matches){
+  return `<ul class="welding-candidates">${matches.map(m=>`<li><button data-welding-product="${esc(m.product.id)}"><span><strong>${esc(m.product.name)}</strong><small>${esc(m.why)}</small><em>${esc(weldingMatchStatus(m))}</em></span>${icon('chevron')}</button></li>`).join('')}</ul>`;
+}
+function weldingSelectionForView(){
+  const result=weldingSelection(data.products,weldingJourney),declined=weldingJourney.declined||[];
+  return {...result,conditional:result.conditional.filter(m=>!declined.includes(m.condition.key))};
+}
+function weldingCurrentMatch(productId){
+  if(weldingUI.mode==='direct')return null;
+  const r=weldingSelectionForView();return [...r.focused,...r.conditional,...r.other].find(m=>m.product.id===productId)||null;
+}
+function weldingPanel(product){
+  const m=weldingCurrentMatch(product.id),a=weldingAdvice(product,weldingJourney,m),panel=weldingUI.panel;
+  const titles={sales:'Répondre au client',technical:'Vérifier la technique',next:'Préparer la suite'};
+  let body='';
+  if(panel==='sales')body=`<section class="welding-discovery"><h3>Pour comprendre son enjeu</h3><p>« ${esc(a.question)} »</p></section>${a.objections.map(o=>`<details class="welding-disclosure welding-objection"><summary>${esc(o.title)}${icon('chevron')}</summary><div><h3>Votre réponse</h3><p>« ${esc(o.response)} »</p><h3>Pour approfondir</h3><p>« ${esc(o.question)} »</p><h3>La suite à proposer</h3><p>${esc(o.next)}</p></div></details>`).join('')}<p class="welding-note">Conseils d’entretien du guide, à adapter au client. Les faits produit figurent dans « L’intérêt documenté ».</p>`;
+  if(panel==='technical')body=`${weldingCondition(m)}${weldingRisk(product)}<p class="welding-panel-intro">Les points à examiner avec le client et son référent soudage.</p><ul class="welding-checklist">${a.technical.map(t=>`<li>${esc(t)}</li>`).join('')}</ul><details class="welding-disclosure"><summary>Usages publiés pour ce produit ${icon('chevron')}</summary><div>${product.welding.uses.map(u=>`<h3>${esc(u.title)}</h3><p>${esc(u.detail)}</p>`).join('')}${weldingSource(product)}</div></details><p class="welding-notice">Le choix du gaz ne remplace pas la validation du mode opératoire. Aucun débit ni réglage n’est prescrit ici.</p>`;
+  if(panel==='next')body=`<p class="welding-panel-intro">Choisir la prochaine action selon ce qui est déjà confirmé.</p>${a.nextSteps.map(n=>`<details class="welding-disclosure"><summary>${esc(n.title)}${icon('chevron')}</summary><div><p>${esc(n.text)}</p></div></details>`).join('')}<section class="welding-offer"><h3>Pour construire l’offre</h3><ul class="welding-checklist">${a.offer.map(o=>`<li>${esc(o)}</li>`).join('')}</ul></section><p class="welding-note">Conditionnement, disponibilité, prix et services à confirmer dans l’offre réelle.</p>`;
+  return `<button class="welding-back" data-welding-close-panel>${icon('back')}Retour à ${esc(product.name)}</button><p class="welding-kicker">${panel==='technical'?'Appui ingénieur':'Appui commercial'} · ${esc(product.name)}</p><h2 id="welding-question" tabindex="-1">${titles[panel]}</h2>${body}<a class="welding-sheet" href="#gaz/${esc(product.id)}">Fiche, formats & FDS ${icon('chevron')}</a>`;
+}
+function weldingDirectList(){
+  const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const search=normalize(weldingUI.search.trim());
+  const products=data.products.filter(g=>g.range==='arcal'&&normalize(g.name+' '+g.welding.manufacturerCode).includes(search));
+  return products.length?['Référents','Techniques'].map(category=>{
+    const rows=products.filter(g=>g.welding.category===category);if(!rows.length)return '';
+    return `<h3 class="welding-list-label">${category==='Référents'?(search?'Référents':'Les 4 Référents'):'Les Techniques'}</h3><ul class="welding-direct-list">${rows.map(g=>`<li><button data-welding-product="${esc(g.id)}"><span><strong>${esc(g.name)}</strong><small>${esc(g.welding.uses[0]?.title||g.welding.manufacturerCode)}</small></span>${icon('chevron')}</button></li>`).join('')}</ul>`;
+  }).join(''):'<p class="welding-notice" role="status">Aucun ARCAL trouvé. Essayez son nom ou sa référence fabricant.</p>';
 }
 function weldingGuide(){
   const s=weldingJourney,step=!s.material?1:!s.process?2:!s.need?3:4;
-  const material=selectionName(MATERIALS,s.material),process=selectionName(PROCESSES,s.process),need=weldingChoiceLabels[s.need]?.name||selectionName(NEEDS,s.need);
-  let content='';
-  if(step===1){
+  let content='',context='';
+  const product=weldingUI.selected?data.products.find(g=>g.range==='arcal'&&g.id===weldingUI.selected):null;
+  if(weldingUI.panel&&product)content=weldingPanel(product);
+  else if(weldingUI.mode==='direct'){
+    content=product?weldingProductDetail(product,null,{back:true}):`<button class="welding-back" data-welding-guided>${icon('back')}Trouver un gaz adapté</button><h2 id="welding-question" tabindex="-1">Je connais le gaz</h2><p class="welding-panel-intro">Retrouvez son argumentaire et ses points techniques.</p><div class="search-wrap"><label class="sr-only" for="welding-search">Chercher un gaz ARCAL</label>${icon('search')}<input id="welding-search" type="search" placeholder="Nom ou référence ARCAL" value="${esc(weldingUI.search)}" autocomplete="off"><button class="icon-button" data-welding-clear-search aria-label="Effacer la recherche">${icon('close')}</button></div><div id="welding-products">${weldingDirectList()}</div>`;
+  } else if(step===1){
     const group=weldingMaterialGroups.find(g=>g.id===s.group);
-    content=group?`<button class="welding-back" data-welding-edit="material">${icon('back')}Tous les métaux</button><h2 id="welding-question" tabindex="-1">${group.id==='inox'?'La nuance de l’inox est-elle connue ?':group.id==='acier'?'De quel acier s’agit-il ?':'Quel métal travaille-t-il ?'}</h2><p class="list-caption">Reprendre l’information donnée par le client.</p>${weldingChoice(group.materials.map(id=>MATERIALS.find(m=>m.id===id)),'material')}${group.id==='inox'?'':'<button class="quiet-action" data-welding-unknown>Je ne sais pas encore '+icon('chevron')+'</button>'}`:
-      `<h2 id="welding-question" tabindex="-1">Quel métal travaille-t-il ?</h2><p class="list-caption">Choisir une famille de métaux.</p><ul class="welding-metal-grid">${weldingMaterialGroups.map(g=>`<li><button data-welding-group="${g.id}"><span><strong>${g.name}</strong><small>${g.detail}</small></span>${icon('chevron')}</button></li>`).join('')}</ul><button class="quiet-action" data-welding-unknown>Je ne sais pas encore ${icon('chevron')}</button>`;
-  }
-  else if(step===2){
+    content=group?`<button class="welding-back" data-welding-edit="material">${icon('back')}Tous les métaux</button><h2 id="welding-question" tabindex="-1">${group.id==='inox'?'Quel type d’inox ?':'Quel métal ?'}</h2><p class="welding-panel-intro">Reprendre l’information du client.</p>${weldingChoice(group.materials.map(id=>MATERIALS.find(m=>m.id===id)),'material')}${group.id==='inox'?'':'<button class="welding-text" data-welding-unknown>Je ne sais pas encore</button>'}`:
+    `<p class="welding-kicker">Trouver un gaz adapté</p><h2 id="welding-question" tabindex="-1">Quel métal souder ?</h2><p class="welding-panel-intro">Le métal, le procédé, puis le besoin du client.</p><ul class="welding-metal-grid">${weldingMaterialGroups.map(g=>`<li><button data-welding-group="${g.id}"><span><strong>${g.name}</strong><small>${g.detail}</small></span>${icon('chevron')}</button></li>`).join('')}</ul><button class="welding-text welding-unknown" data-welding-unknown>Je ne sais pas encore</button><button class="welding-entry" data-welding-direct><span><strong>Je connais le gaz</strong><small>Accès direct à l’argumentaire ARCAL</small></span>${icon('chevron')}</button>`;
+  } else if(step===2){
     const options=availableProcesses(s.material),common=options.filter(p=>['mig','mag','tig'].includes(p.id)),other=options.filter(p=>!['mig','mag','tig'].includes(p.id));
-    content=`<h2 id="welding-question" tabindex="-1">Avec quel procédé ?</h2><p class="list-caption">Reprendre le nom utilisé par le client. Un doute ? Choisir « Je ne sais pas ».</p>${weldingChoice(common.length?common:other,'process')}${common.length&&other.length?`<details class="welding-more"><summary>Autres procédés et protections ${icon('chevron')}</summary>${weldingChoice(other,'process')}</details>`:''}<button class="quiet-action" data-welding-unknown>Je ne sais pas ${icon('chevron')}</button>`;
+    content=`<p class="welding-kicker">Le procédé</p><h2 id="welding-question" tabindex="-1">Comment soude-t-il ?</h2><p class="welding-panel-intro">Le nom indiqué par le client ou son mode opératoire.</p>${weldingChoice(common.length?common:other,'process')}${common.length&&other.length?`<details class="welding-disclosure"><summary>Autres procédés et protections ${icon('chevron')}</summary>${weldingChoice(other,'process')}</details>`:''}<button class="welding-text" data-welding-unknown>Je ne sais pas</button>`;
+  } else if(step===3){
+    content=`<p class="welding-kicker">Le besoin</p><h2 id="welding-question" tabindex="-1">Qu’est-ce qui compte pour lui ?</h2>${weldingChoice(['courant','finition','cadence'].map(id=>NEEDS.find(n=>n.id===id)),'need')}<details class="welding-disclosure"><summary>Une application plus précise ${icon('chevron')}</summary>${weldingChoice(NEEDS.filter(n=>!['courant','finition','cadence'].includes(n.id)),'need')}</details>`;
+  } else if(s.process==='unknown'||s.material==='unknown'){
+    content=`<h2 id="welding-question" tabindex="-1">Précisons la demande</h2><p class="welding-panel-intro">Pour trouver un gaz adapté, il faut connaître le métal et le procédé.</p><ul class="welding-checklist"><li>Relever la nuance sur le plan ou le document matière.</li><li>Demander le procédé indiqué dans le mode opératoire.</li><li>Préciser le fil ou métal d’apport et l’épaisseur.</li></ul><button class="welding-primary" data-welding-edit="${s.material==='unknown'?'material':'process'}">Compléter les informations ${icon('chevron')}</button><button class="welding-entry" data-welding-direct><span>Consulter un gaz connu</span>${icon('chevron')}</button>`;
+  } else {
+    const result=weldingSelectionForView();
+    const pending=result.conditional.filter(m=>s.need==='courant'||m.needMatch),secondary=result.conditional.filter(m=>!pending.includes(m));
+    const selected=product?weldingCurrentMatch(product.id):null;
+    const only=result.focused.length===1?result.focused[0]:!result.focused.length&&pending.length===1?pending[0]:null;
+    const active=selected||only;
+    const warning=s.material==='inox'?'<p class="welding-notice">Nuance inox à préciser : ces usages ne suffisent pas à valider le gaz pour la pièce du client.</p>':'';
+    if(active){
+      content=warning+weldingProductDetail(active.product,active,{back:!!selected});
+      const alternatives=result.focused.filter(m=>m.product.id!==active?.product.id),conditions=result.conditional.filter(m=>m.product.id!==active?.product.id);
+      if(alternatives.length)content+=`<details class="welding-disclosure"><summary>Autres gaz correspondant à la recherche (${alternatives.length}) ${icon('chevron')}</summary>${weldingCards(alternatives)}</details>`;
+      if(conditions.length)content+=`<details class="welding-disclosure"><summary>Autres pistes sous conditions (${conditions.length}) ${icon('chevron')}</summary><p class="welding-note">Les conditions et le besoin doivent être vérifiés pour chaque gaz.</p>${weldingCards(conditions)}</details>`;
+    } else {
+      content=`<h2 id="welding-question" tabindex="-1">${result.focused.length?`${result.focused.length} gaz à envisager`:pending.length?'Des conditions à confirmer':'Le besoin reste à préciser'}</h2>${warning}`;
+      if(result.focused.length)content+=`<p class="welding-panel-intro">${s.need==='courant'?'Le métal et le procédé sont cités dans les usages publiés.':'L’objectif est cité dans les usages publiés.'} Ouvrez un gaz pour préparer votre réponse.</p>${weldingCards(result.focused)}<p class="welding-note">L’ordre d’affichage ne classe pas les performances. Le choix final dépend de l’application.</p>`;
+      else content+=`<p class="welding-panel-intro">${result.needsClarification?'Aucune correspondance documentée pour cette combinaison. Faire préciser l’application avec un référent soudage.':'Aucun gaz ne peut être mis en avant pour cet objectif avec les informations confirmées.'}</p>`;
+      if(pending.length)content+=`<h3 class="welding-list-label">À confirmer avec le client</h3>${weldingCards(pending)}`;
+      if(secondary.length)content+=`<details class="welding-disclosure"><summary>Autres usages sous conditions (${secondary.length}) ${icon('chevron')}</summary><p class="welding-note">Le respect d’une condition ne prouve pas un gain pour l’objectif choisi.</p>${weldingCards(secondary)}</details>`;
+    }
+    const others=result.other.filter(m=>m.product.id!==active?.product.id);
+    if(others.length)content+=`<details class="welding-disclosure"><summary>Autres usages publiés (${others.length}) ${icon('chevron')}</summary><p class="welding-note">Le métal et le procédé sont cités, mais l’objectif choisi ou la nuance précise ne sont pas détaillés pour ces gaz.</p>${weldingCards(others)}</details>`;
+    if(s.declined?.length)content+=`<p class="welding-notice">Une condition a été déclarée non remplie. Les pistes concernées sont écartées de cette vue.</p><button class="welding-text" data-welding-review-conditions>Revoir ces réponses</button>`;
   }
-  else if(step===3)content=`<h2 id="welding-question" tabindex="-1">Quel est son besoin principal ?</h2><p class="list-caption">Choisir ce qui compte le plus pour lui.</p>${weldingChoice(['courant','finition','cadence'].map(id=>NEEDS.find(n=>n.id===id)),'need')}<details class="welding-more"><summary>Une application plus précise ${icon('chevron')}</summary>${weldingChoice(NEEDS.filter(n=>!['courant','finition','cadence'].includes(n.id)),'need')}</details>`;
-  else if(s.process==='unknown'||s.material==='unknown')content=`<h2 id="welding-question" tabindex="-1">Précisons la demande</h2><div class="reading"><p>Le matériau et le procédé sont nécessaires pour établir une présélection documentée.</p><ul class="client-questions"><li>Quelle nuance ou référence matière ?</li><li>Quel poste et quel procédé le client utilise-t-il ?</li><li>Quel fil, quelle épaisseur et quelle position de soudage ?</li><li>Travail manuel, automatique ou robotisé ?</li></ul><p><a href="#gamme/arcal">Consulter les 21 fiches ARCAL</a></p></div>`;
-  else {
-    const result=weldingSelection(data.products,s),total=result.focused.length+result.other.length+result.conditional.length;
-    content=`<h2 id="welding-question" tabindex="-1">Les pistes ARCAL</h2><p class="list-caption">${total} référence${total>1?'s':''} avec un usage publié pour ce métal et ce procédé. L’ordre de présentation n’est pas un classement de performance.</p>${s.material==='inox'?'<p class="guide-callout">La nuance inox reste à identifier. Les produits spécifiques aux inox austénitiques ou Duplex ne sont pas proposés sur ce seul libellé.</p>':''}${result.needsClarification?'<p class="guide-callout">Aucune correspondance documentée dans cette édition. Faire préciser l’application avec un technicien soudage.</p>':''}${result.focused.length?`<section><h3 class="results-label">${s.need==='courant'?'Usages documentés':'Votre objectif est documenté'}</h3>${weldingCards(result.focused,{openArguments:result.focused.length===1})}</section>`:s.need!=='courant'&&!result.needsClarification?'<p class="guide-callout">Cet objectif nécessite encore une précision. Examiner les conditions ci-dessous avant de retenir une piste.</p>':''}${result.conditional.length?`<section><h3 class="results-label">À confirmer avec le client</h3>${weldingCards(result.conditional)}</section>`:''}${result.other.length?`<details class="welding-more other-welding-results"><summary>Autres usages publiés (${result.other.length}) ${icon('chevron')}</summary><p class="list-caption">Le métal et le procédé sont cités. L’objectif choisi ou la nuance précise ne sont pas détaillés pour tous ces produits.</p>${weldingCards(result.other)}</details>`:''}<button class="quiet-action" data-welding-edit="need">Modifier le besoin ${icon('chevron')}</button>`;
+  if(s.material&&weldingUI.mode==='guide'&&!weldingUI.panel){
+    const need=weldingChoiceLabels[s.need]?.name||'';
+    context=`<details class="welding-context"><summary><span>${esc(weldingContext()||'Informations à préciser')}${need?`<small>${esc(need)}</small>`:''}</span><span class="welding-context-edit">Modifier ${icon('chevron')}</span></summary><div><button data-welding-edit="material">Modifier le métal</button>${s.process?'<button data-welding-edit="process">Modifier le procédé</button>':''}${s.need&&s.need!=='unknown'?'<button data-welding-edit="need">Modifier le besoin</button>':''}</div></details>`;
   }
-  const summary=s.material?`<div class="journey-summary" aria-label="Informations client, toucher pour modifier"><button data-welding-edit="material">${esc(material||'Matériau à préciser')}${icon('chevron')}</button>${s.process?`<button data-welding-edit="process">${esc(process||'Procédé à préciser')}${icon('chevron')}</button>`:''}${s.need&&s.need!=='unknown'?`<button data-welding-edit="need">${esc(need)}${icon('chevron')}</button>`:''}</div>`:'';
-  $('#main').innerHTML=`<div class="welding-page">${intro('Soudage','Votre conseil ARCAL, en clientèle.')}${weldingSupport()}<div class="journey-progress"><p>${step<4?`Étape ${step} sur 3`:'Votre présélection'}</p>${s.material||s.group?'<button class="reset-journey" data-welding-reset>Nouvelle demande</button>':''}</div><ol class="welding-steps" aria-label="Parcours de sélection">${['Le métal','Le procédé','Le besoin'].map((name,i)=>`<li ${step===i+1?'aria-current="step"':''} class="${step>i+1?'is-complete':''}"><span>${i+1}</span>${name}</li>`).join('')}</ol>${summary}<section class="welding-guide">${content}</section><a class="home-link" href="#gamme/arcal">Je connais déjà le nom du gaz ${icon('chevron')}</a><p class="footnote guide-limit">Présélection issue des fiches publiques Air Liquide France consultées le 21 octobre 2026. Le choix final et les réglages nécessitent la validation du mode opératoire et la FDS du produit livré.</p><p class="catalogue-note">Guide indépendant · Aucun partenariat ni validation d’Air Liquide.</p></div>`;
-  $('#welding-support')?.addEventListener('toggle',event=>{weldingSupportOpen=event.currentTarget.open;});
+  $('#main').innerHTML=`<div class="welding-page welding-v205"><header class="welding-header"><div>${brand}<h1>Soudage</h1></div>${s.material||s.group||weldingUI.mode==='direct'?'<button class="welding-text welding-restart" data-welding-reset>Nouvelle demande</button>':''}${themeButton()}</header>${context}<section class="welding-guide">${content}</section><details class="welding-disclosure welding-limits"><summary>Sources et limites du conseil ${icon('chevron')}</summary><div><p>Présélection issue des fiches publiques Air Liquide France consultées le 21 octobre 2026. Les faits produit sont reliés à leur source. Les conseils d’entretien sont des propositions du guide.</p><p>Le choix final, les réglages et la sécurité nécessitent le mode opératoire validé et la FDS du produit livré. Aucun gain ni tarif n’est garanti.</p><p>Conseils disponibles hors ligne après mise en cache. Les documents externes nécessitent Internet. Guide indépendant, sans partenariat ni validation d’Air Liquide.</p></div></details></div>`;
+  $('#welding-search')?.addEventListener('input',e=>{weldingUI.search=e.target.value;$('#welding-products').innerHTML=weldingDirectList();});
   nav('soudage');
 }
-function refreshWeldingGuide(){weldingSupportOpen=false;weldingGuide();syncTheme();window.scrollTo(0,0);$('#welding-question')?.focus({preventScroll:true});}
+function refreshWeldingGuide(){weldingGuide();syncTheme();window.scrollTo(0,0);$('#welding-question')?.focus({preventScroll:true});}
 function ranges() {
   $('#main').innerHTML=`${intro('Gammes & mélanges','Les références commerciales, clairement.')}<p class="reading range-intro">${data.products.length} références documentées dans les gammes ARCAL™, ALIGAL™, ALPHAGAZ™ et LASAL™. D’autres gammes sont répertoriées avec un accès au catalogue fabricant. Cet inventaire reste partiel.</p><ul class="gas-list range-list">${data.ranges.map(r=>`<li><a class="gas-row" href="#gamme/${r.id}"><span class="gas-text"><strong>${esc(r.name)}</strong><span>${esc(r.description)}</span><small>${data.products.filter(g=>g.range===r.id).length ? data.products.filter(g=>g.range===r.id).length+' références documentées' : 'Compositions à documenter'}</small></span>${icon('chevron','chevron')}</a></li>`).join('')}</ul><p class="catalogue-note">Les marques appartiennent à leur titulaire. Guide indépendant, sans affiliation avec Air Liquide.</p>`;nav('gammes');
 }
@@ -293,12 +339,22 @@ function render() {
 }
 document.addEventListener('click', e=> {
   const t=e.target.closest('button,a');if(!t)return;
-  if(t.dataset.weldingGroup){const group=weldingMaterialGroups.find(g=>g.id===t.dataset.weldingGroup);if(group){weldingJourney={group:group.id,material:group.materials.length===1?group.materials[0]:null,process:null,need:null,confirmed:[]};refreshWeldingGuide();}}
-  if(t.dataset.weldingField){const field=t.dataset.weldingField;weldingJourney[field]=t.dataset.value;if(field==='material'){weldingJourney.process=null;weldingJourney.need=null;}if(field==='process')weldingJourney.need=null;weldingJourney.confirmed=[];refreshWeldingGuide();}
-  if(t.hasAttribute('data-welding-reset')){weldingJourney={group:null,material:null,process:null,need:null,confirmed:[]};refreshWeldingGuide();}
-  if(t.dataset.weldingEdit){const field=t.dataset.weldingEdit;weldingJourney[field]=null;if(field==='material'){weldingJourney.group=null;weldingJourney.process=null;}if(field!=='need')weldingJourney.need=null;weldingJourney.confirmed=[];refreshWeldingGuide();}
-  if(t.dataset.weldingConfirm){weldingJourney.confirmed=[...new Set([...weldingJourney.confirmed,t.dataset.weldingConfirm])];refreshWeldingGuide();}
-  if(t.hasAttribute('data-welding-unknown')){if(!weldingJourney.material)weldingJourney.material='unknown';weldingJourney.process='unknown';weldingJourney.need='unknown';refreshWeldingGuide();}
+  if(t.dataset.weldingGroup){const group=weldingMaterialGroups.find(g=>g.id===t.dataset.weldingGroup);if(group){weldingJourney={group:group.id,material:group.materials.length===1?group.materials[0]:null,process:null,need:null,confirmed:[],declined:[]};weldingUI.selected=null;weldingUI.panel=null;refreshWeldingGuide();}}
+  if(t.dataset.weldingField){const field=t.dataset.weldingField;if(['material','process','need'].includes(field)){weldingJourney[field]=t.dataset.value;if(field==='material'){weldingJourney.process=null;weldingJourney.need=null;}if(field==='process')weldingJourney.need=null;weldingJourney.confirmed=[];weldingJourney.declined=[];weldingUI.selected=null;weldingUI.panel=null;refreshWeldingGuide();}}
+  if(t.hasAttribute('data-welding-reset')){weldingJourney={group:null,material:null,process:null,need:null,confirmed:[],declined:[]};weldingUI={mode:'guide',selected:null,panel:null,search:''};refreshWeldingGuide();}
+  if(t.dataset.weldingEdit){const field=t.dataset.weldingEdit;weldingJourney[field]=null;if(field==='material'){weldingJourney.group=null;weldingJourney.process=null;}if(field!=='need')weldingJourney.need=null;weldingJourney.confirmed=[];weldingJourney.declined=[];weldingUI.selected=null;weldingUI.panel=null;refreshWeldingGuide();}
+  if(t.dataset.weldingConfirm){weldingJourney.confirmed=[...new Set([...weldingJourney.confirmed,t.dataset.weldingConfirm])];weldingJourney.declined=(weldingJourney.declined||[]).filter(k=>k!==t.dataset.weldingConfirm);weldingUI.panel=null;refreshWeldingGuide();}
+  if(t.dataset.weldingDecline){weldingJourney.declined=[...new Set([...(weldingJourney.declined||[]),t.dataset.weldingDecline])];weldingUI.selected=null;weldingUI.panel=null;refreshWeldingGuide();}
+  if(t.dataset.weldingUnconfirm){const key=t.dataset.weldingUnconfirm;weldingJourney.confirmed=weldingJourney.confirmed.filter(k=>k!==key);if(key==='automatique'&&weldingJourney.need==='automatique')weldingJourney.need=null;weldingUI.selected=null;weldingUI.panel=null;refreshWeldingGuide();}
+  if(t.hasAttribute('data-welding-review-conditions')){weldingJourney.declined=[];refreshWeldingGuide();}
+  if(t.hasAttribute('data-welding-unknown')){if(!weldingJourney.material)weldingJourney.material='unknown';weldingJourney.process='unknown';weldingJourney.need='unknown';weldingUI.selected=null;weldingUI.panel=null;refreshWeldingGuide();}
+  if(t.hasAttribute('data-welding-direct')){weldingUI={mode:'direct',selected:null,panel:null,search:''};refreshWeldingGuide();$('#welding-search')?.focus({preventScroll:true});}
+  if(t.hasAttribute('data-welding-guided')){weldingUI={mode:'guide',selected:null,panel:null,search:''};refreshWeldingGuide();}
+  if(t.dataset.weldingProduct){weldingUI.selected=t.dataset.weldingProduct;weldingUI.panel=null;refreshWeldingGuide();}
+  if(t.hasAttribute('data-welding-results')){weldingUI.selected=null;weldingUI.panel=null;refreshWeldingGuide();}
+  if(t.dataset.weldingPanel){weldingUI.selected=t.dataset.product;weldingUI.panel=t.dataset.weldingPanel;refreshWeldingGuide();}
+  if(t.hasAttribute('data-welding-close-panel')){weldingUI.panel=null;refreshWeldingGuide();}
+  if(t.hasAttribute('data-welding-clear-search')){weldingUI.search='';$('#welding-search').value='';$('#welding-products').innerHTML=weldingDirectList();$('#welding-search').focus();}
   if(t.hasAttribute('data-fiche-state')){
     const article=t.closest('[data-entry]'),g=allEntries().find(g=>g.id===article?.dataset.entry);
     if(g&&sheetStates(g).some(s=>s.id===t.dataset.ficheState)){

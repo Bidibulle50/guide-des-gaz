@@ -1,31 +1,38 @@
-# Vérification du format de consultation 2.0.3
+# Contrôle visuel Soudage 2.0.5
+
+Date : 22 octobre 2026. Périmètre : onglet Soudage uniquement.
+
+## Référence et état comparé
+
+- Référence sélectionnée : `../revue-soudage/concept-1.png` (853 × 1844 pixels). L’utilisateur a accepté la recommandation de partir de cette maquette, avec en-tête compact, résultat explicite et accompagnement commercial approfondi.
+- Implémentation : `http://127.0.0.1:8878/#soudage`, acier carbone → MAG → productivité → fil plein confirmé.
+- Capture finale : `../revue-soudage/v205-resultat-final-390.jpg` (375 × 812 pixels, capture redimensionnée par le navigateur intégré ; viewport CSS 390 × 844).
+- Densité normalisée pour l’appréciation : référence ≈ 2,187 pixels par pixel CSS, capture ≈ 0,962. Même ratio de vue, même état et même thème sombre. La barre de défilement du navigateur de bureau n’est pas un élément du design mobile.
+- Les deux images ont été ouvertes ensemble dans le même appel de comparaison. L’ensemble et les textes du résultat, de la confirmation et de l’argumentaire sont lisibles sans recadrage supplémentaire.
+
+## Historique de comparaison et corrections
+
+1. Première implémentation (`v205-speed-390.jpg`) : ligne « Nouvelle demande » séparée et placement de la source repoussaient les actions commerciales trop bas. Écart P2 d’accès rapide. Correction : commande dans l’en-tête, texte du pitch à 16 px, actions immédiatement après le pitch. Capture après correction : `v205-speed-final-390.jpg` puis `v205-resultat-final-390.jpg`.
+2. Vue 320 px (`v205-accueil-320.jpg`) : ponctuation isolée sur une ligne dans la question. Écart P2 de lisibilité. Question raccourcie en « Quel métal souder ? ». Capture après correction : `v205-accueil-final-320.jpg`.
+3. Recherche filtrée : intitulé « Les 4 Référents » conservé pour un seul résultat. Correction : « Référents » quand la recherche est active.
+4. Condition inconnue : suppression du bouton qui réouvrait le même panneau technique. Les actions Oui/Non et les informations à recueillir restent disponibles.
+
+## Surfaces vérifiées
+
+- Typographie : police locale existante conservée, nom du gaz dominant (34 px / 30 px sous 360 px), texte courant de l’onglet 14–17 px, annotations secondaires 12–13 px. Aucun texte produit tronqué.
+- Espacement : en-tête compact, contexte modifiable avant le résultat, justification avant les conseils. À 390 × 844, nom du gaz à y ≈ 220 CSS px et première action commerciale visible. À 320 × 740, les deux entrées restent accessibles avant la navigation fixe.
+- Couleurs : variables existantes, gris sombres et bleu d’action ; rendu clair également vérifié. Pas de couleur présentée comme une validation technique.
+- Images et icônes : logo, police et pictogrammes de navigation originaux conservés, aucune image générée injectée dans l’interface. Les différences avec les pictogrammes approximatifs de la maquette respectent la contrainte utilisateur.
+- Contenu : usage publié distinct du pitch éditorial ; condition explicite avant confirmation ; plusieurs gaz présentés au même niveau ; aucune recommandation inventée lorsque l’objectif n’est pas documenté. Source et limites accessibles.
+
+## Interactions et limites
+
+Parcours guidé, accès direct/recherche, inconnus, refus et réexamen, confirmations et retrait, résultat multiple Duplex, panneaux commercial/technique/préparation, ouverture au clavier de la source, fiche et retour vérifiés. Vues sombre 320/390 et claire bureau 1280 × 900. Pas de débordement horizontal sur les états contrôlés ; commandes visibles mesurées à au moins 44 px. Aucun écran vide ni erreur applicative/console constaté.
+
+Le serveur local a été arrêté et son inaccessibilité confirmée avant un rechargement puis un nouveau parcours jusqu’à l’objection prix : succès depuis le cache. Serveur relancé après le contrôle.
+
+Écarts intentionnels avec la maquette : titre plus compact ; justification métier ajoutée ; « Préparer la suite » ouvre des actions adaptées au lieu d’imposer un essai ; détails supplémentaires accessibles par ouverture ou défilement naturel. Ces différences répondent aux améliorations approuvées.
+
+Aucun P0/P1/P2 ouvert. Recette physique iPhone/Safari et expérience en clientèle restent à effectuer ; elles ne sont pas remplacées par le navigateur de bureau.
 
 final result: passed
-
-Référence : maquettes V2.1 Oxygène, Azote et ARCAL Chrome approuvées le 22 octobre 2026, conservées hors du dépôt. Vérification rendue sur le site GitHub Pages dans le navigateur intégré Chromium, avec documents à 390 et 320 pixels de largeur CSS, puis sur ordinateur. Le cadre de validation masque seulement la barre de défilement du document intégré pour conserver la largeur CSS annoncée ; il ne simule pas Safari iOS.
-
-## Comparaison et corrections
-
-- Typographie : Inter local, corps 14 px et annotations 12,5 px comme la référence ; titre 27 px, titre produit 25/21 px. Graisses et métriques conservées, rendu optique automatique désactivé pour correspondre à la maquette. Les différences d’anticrénelage entre PDF et navigateur ne constituent pas une identité de pixels.
-- Espacement : mêmes marges 20 px, identité 58 × 61 px, quatre onglets, cartes risque/ogive/usages/FDS/sources dans le même ordre. La première capture avait trop d’espace vertical : densité corrigée et comparée à nouveau. Sous 360 px, les onglets occupent deux colonnes. Les cibles restent au moins 44 px.
-- Couleurs : valeurs de la maquette sombre reprises, dont fond #111217, surfaces #1d1e26, bleu #a7bfff et cartes risque #2d1c23 / #202b3d. Le thème clair conserve la hiérarchie. Les RAL sont des repères d’ogive, pas l’aspect du gaz.
-- Images : mêmes SGH03/04 INRS et illustrations ADR, pictogrammes de navigation utilisateur conservés. SGH02/05 proviennent aussi des PDF INRS officiels. Aucun logo fournisseur ajouté. Les images rendues contrôlées sont chargées.
-- Contenu : usages validés des trois pilotes, état et pays de FDS explicites, notes longues dans Sources et limites. Les précisions antérieures du fabricant Chrome y restent accessibles. Aucune bande atmosphérique ni procédure de secours nouvelle.
-
-Différences attendues : défilement réel et barre de navigation fixe de l’application, absence du pied « maquette de validation », annotations supplémentaires dans le volet Sources. Aucune revendication d’identité pixel par pixel avec un PDF. Aucun défaut P0/P1/P2 restant identifié dans les écrans contrôlés.
-
-## Parcours vérifiés
-
-- Les 115 fiches et 118 états produisent les quatre panneaux, les usages, les sources, les notes et les FDS sans valeur fictive. Tests automatiques : 44 réussis.
-- Oxygène : sélection gaz/liquide dans Transport, onglet conservé, ONU 1072/1073, FDS correspondante, Sécurité H280/H281 et Technique propres à l’état.
-- Azote : ONU 1066/1977, FDS France/Benelux, H281 et froid extrême du liquide ; usages gaz et cryogéniques séparés.
-- Chrome : risques, couleur, ONU 1956, catégorie non confirmée, accès aux six références exactes de conditionnement. Les 76 références ARCAL sont conservées.
-- Recherche « méthanol » : une fiche trouvée ; liquide de référence sans pictogramme de pression ajouté ; donnée de masse volumique absente signalée.
-- Favori ajouté, retrouvé après rechargement, puis état initial rétabli. Thème clair contrôlé et choix Automatique initial rétabli.
-- Ancien cache : proposition Actualiser puis chargement de l’édition 2.0.3 observés. Mention Hors ligne disponible présente ; cycle de cache avec réseau simulé indisponible couvert par les tests Node.
-- Console du navigateur contrôlé : aucun avertissement ni erreur relevé.
-- Les 24 ressources du cache livrées par HTTPS sont identiques aux fichiers locaux vérifiés. Déploiement applicatif : commit 30949fa4a5c9ab73d581054c32f07d4e49b8a8de, workflow 39700539689 réussi.
-
-## Limites
-
-Pas de test physique sur iPhone/Safari ni de coupure réseau réelle du navigateur. Les 112 autres entrées conservent leurs données : l’évolution du gabarit ne constitue pas une nouvelle vérification documentaire de leurs valeurs. FDS France exactes O2/LOX/LIN et catégories ADR UN1066/1956 toujours à confirmer comme indiqué dans les fiches. Les documents externes nécessitent Internet.
