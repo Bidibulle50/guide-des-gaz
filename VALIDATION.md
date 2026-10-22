@@ -130,3 +130,11 @@ Le cache complet est confirmé par l’application et son cycle est testé dans 
 3. Ajouter un favori, recharger, vérifier les thèmes.
 4. Attendre « Hors ligne disponible », installer sur l’écran d’accueil, couper les réseaux et rouvrir plusieurs fiches.
 5. Rétablir Internet pour ouvrir FDS et sources.
+
+## Format validé généralisé — 2.0.3, 22 octobre 2026
+
+Les 115 fiches utilisent le gabarit approuvé sur Oxygène, Azote et ARCAL Chrome. Les 112 autres entrées restent identiques dans les données. Quatre onglets, état sélectionné cohérent, accès FDS haut/bas, risques et couleurs en tête, usages puis détails. 44 tests Node réussis, relecture indépendante et comparaison rendue avec les trois références. Détails : [design-qa.md](design-qa.md).
+
+Déploiement applicatif vérifié : commit `30949fa4a5c9ab73d581054c32f07d4e49b8a8de`, workflow Pages `39700539689` réussi. Les 24 ressources mises en cache ont été relues sur le site HTTPS et sont identiques à la copie testée. La mise à jour réelle d’une ancienne édition par Actualiser, la recherche, les favoris après rechargement et les thèmes ont été exercés dans le navigateur intégré. Favoris et thème de test ont été rétablis à leur état initial.
+
+La vérification responsive utilise de vraies largeurs CSS 390/320 px dans un document intégré sur ordinateur. Ce n’est pas une validation Safari iOS. Le cycle du service worker est testé dans un environnement Node isolé ; une coupure réseau réelle du navigateur et l’installation physique sur iPhone ne sont pas attestées. Les réserves documentaires des fiches restent visibles ; aucun numéro ADR manquant ou réglage métier n’a été inventé.
