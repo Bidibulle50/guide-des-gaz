@@ -1,3 +1,16 @@
+# Vérification locale — édition 2.0.4 — Soudage en clientèle — 22 octobre 2026
+
+- Base : `d8ba82f2885f449c374ddb00d0bc156dbdb2be8a` (2.0.3). Nouvelle présentation de Soudage, argumentaires par produit et appui technique/commercial contextualisé. Les contrôles ci-dessous documentent la recette locale préalable à la publication.
+- **49 tests Node réussis, zéro échec** : parcours, inconnues, confirmations, sources des arguments, absence de bénéfice inventé, contexte de l’appui, régressions catalogue/fiches/cache. Syntaxe JavaScript et `git diff --check` contrôlés.
+- Comparaison avec la base : données JSON identiques hors numéro de version ; `fiche.js`, `welding.js`, `core.js` et `ui-icons.js` inchangés. HTML des **115 fiches identique**, vérifié sur **233 rendus** comprenant les états physiques. CSS existant conservé ; nouveaux styles limités à Soudage.
+- **27 contrôles de parcours dans Chromium**, puis **7 contrôles complémentaires** : acier/MAG/cadence et fil plein, inox inconnu, Duplex, procédé inconnu, aluminium/MIG, argumentaire sans bénéfice publié, retour de fiche, appui et objection prix. Largeurs CSS 320/390/1280 px, thèmes sombre/clair ; pas de débordement horizontal ni erreur/alerte console. Revue visuelle, commandes d’accueil de 44 px minimum et réponse inconnue visible au-dessus de la navigation à 320 px. Ouverture au clavier et repli de l’appui au changement de question contrôlés.
+- Après chargement initial et activation du service worker, réseau désactivé dans le contexte Chromium puis rechargement : sélection, argumentaire et appui restent utilisables. Ce contrôle local ne valide ni Safari iOS, ni l’installation, ni une réouverture sur un iPhone physique.
+- Les réserves FDS/ADR et les dates propres aux sources sont conservées. Les bénéfices sont ceux déjà documentés dans 2.0.3 ; cette évolution ne constitue pas une revalidation générale du catalogue. Les suggestions d’entretien sont identifiées comme éditoriales. Prix, stock, réglages et gains économiques ne sont pas calculés.
+
+Recette restant à effectuer : sur iPhone, parcourir les questions avec texte agrandi, ouvrir une fiche et revenir, déplier les arguments et l’appui, puis fermer et rouvrir la PWA après coupure réelle des réseaux. Rétablir Internet pour vérifier les liens FDS et sources.
+
+## Historique 1.7.4
+
 # Vérification — édition 1.7.4 — icônes de navigation — 22 octobre 2026
 
 - Quatre pictogrammes du visuel choisi : molécule Catalogue, torche Soudage, cartes Gammes, information Repères. Le PNG original2172 ×724 est conservé intact ; cadrage et couleurs d’affichage gérés en CSS. Les deux essais de détourage généré n’ont pas été utilisés.

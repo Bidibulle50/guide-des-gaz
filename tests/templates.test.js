@@ -101,12 +101,68 @@ test('Chaque fiche ARCAL affiche ses utilisations et toutes ses références, sa
 });
 test('Onglet Soudage : parcours guidé, conditions client et fiche source accessibles',()=>{
   const {context,element}=renderContext();vm.runInContext('weldingGuide()',context);
-  assert.match(element('.bottom-nav').innerHTML,/href="#soudage" aria-current="page"/);assert.match(element('#main').innerHTML,/Quel matériau/);
+  assert.match(element('.bottom-nav').innerHTML,/href="#soudage" aria-current="page"/);assert.match(element('#main').innerHTML,/Quel métal/);
   vm.runInContext("weldingJourney={material:'aluminium',process:null,need:null,confirmed:[]};weldingGuide()",context);assert.match(element('#main').innerHTML,/Avec quel procédé/);
   vm.runInContext("weldingJourney.process='mig';weldingGuide()",context);assert.match(element('#main').innerHTML,/besoin principal/);
   vm.runInContext("weldingJourney.need='courant';weldingGuide()",context);const html=element('#main').innerHTML;
   assert.match(html,/#gaz\/arcal-prime/);assert.match(html,/Le client confirme le mode automatique/);assert.match(html,/Source Air Liquide/);assert.doesNotMatch(html,/undefined|NaN/);
   vm.runInContext("weldingJourney={material:'unknown',process:'unknown',need:'unknown',confirmed:[]};weldingGuide()",context);assert.match(element('#main').innerHTML,/Précisons la demande/);assert.doesNotMatch(element('#main').innerHTML,/class="welding-result"/);
+});
+
+function weldingClick(render,dataset,attributes=[]){
+  const target={dataset,hasAttribute:name=>attributes.includes(name),matches:()=>false};
+  render.handlers.click({target:{closest:selector=>selector.includes('[data-risk]')?null:target}});
+}
+test('Le choix d’une famille de métal ne suppose pas une nuance et efface le contexte précédent',()=>{
+  const render=renderContext();const {context,element}=render;
+  vm.runInContext("weldingJourney={material:'carbone',process:'mag',need:'cadence',confirmed:['fil-plein']};weldingGuide()",context);
+  weldingClick(render,{weldingGroup:'inox'});
+  assert.equal(vm.runInContext('weldingJourney.material',context),null);
+  assert.equal(vm.runInContext('weldingJourney.process',context),null);
+  assert.equal(vm.runInContext('weldingJourney.confirmed.length',context),0);
+  assert.match(element('#main').innerHTML,/data-value="duplex"/);
+  assert.match(element('#main').innerHTML,/data-value="inox"/);
+  assert.doesNotMatch(element('#main').innerHTML,/class="welding-result"/);
+  weldingClick(render,{weldingField:'material',value:'inox'});
+  weldingClick(render,{weldingField:'process',value:'tig'});
+  weldingClick(render,{weldingField:'need',value:'courant'});
+  assert.doesNotMatch(element('#main').innerHTML,/#gaz\/arcal-r1-2|#gaz\/arcal-r1-5|#gaz\/arcal-m11/);
+});
+test('L’argumentaire relie le bénéfice à sa source et garde une condition non confirmée visible',()=>{
+  const {context,element}=renderContext();
+  vm.runInContext("weldingJourney={material:'carbone',process:'mag',need:'cadence',confirmed:[]};weldingGuide()",context);
+  const html=element('#main').innerHTML;
+  assert.match(html,/data-argument-for="arcal-speed"/);
+  assert.match(html,/moins de fumées, projections et silicates/);
+  assert.match(html,/https:\/\/fr.airliquide.com\/gaz\/arcaltm-speed\/I2561/);
+  assert.match(html,/data-welding-confirm="fil-plein"/);
+  assert.match(html,/fil plein/);
+  assert.doesNotMatch(html,/économie garantie|gain garanti|meilleur gaz/i);
+});
+test('Un produit sans bénéfice publié donne une question commerciale, sans reprendre le bénéfice d’un autre gaz',()=>{
+  const {context}=renderContext();
+  const html=vm.runInContext("weldingCards(weldingSelection(data.products,{material:'aluminium',process:'mig'}).focused.filter(m=>m.product.id==='arcal-31'))",context);
+  assert.match(html,/data-argument-for="arcal-31"/);
+  assert.match(html,/bénéfice comparatif.*documenté/i);
+  assert.match(html,/consommation/);
+  assert.doesNotMatch(html,/moins de fumées|réduction des opérations de finition|garanti/i);
+});
+test('Une réponse inconnue conserve le métal connu et ne produit pas d’argumentaire de recommandation',()=>{
+  const render=renderContext();const {context,element}=render;
+  vm.runInContext("weldingJourney={material:'duplex',process:null,need:null,confirmed:[]};weldingGuide()",context);
+  weldingClick(render,{},['data-welding-unknown']);
+  assert.equal(vm.runInContext('weldingJourney.material',context),'duplex');
+  assert.doesNotMatch(element('#main').innerHTML,/data-argument-for=/);
+  assert.match(element('#main').innerHTML,/Précisons la demande/);
+});
+test('Une nouvelle réponse replie l’appui sans masquer la prochaine question et actualise son contexte',()=>{
+  const render=renderContext();const {context,element}=render;
+  vm.runInContext('weldingSupportOpen=true;weldingGuide()',context);
+  weldingClick(render,{weldingGroup:'aluminium'});
+  assert.equal(vm.runInContext('weldingSupportOpen',context),false);
+  assert.match(element('#main').innerHTML,/Avec quel procédé/);
+  assert.match(element('#main').innerHTML,/support-context">Aluminium/);
+  assert.doesNotMatch(element('#main').innerHTML,/Points ouverts dans votre sélection/);
 });
 
 function tagAttributes(tag){

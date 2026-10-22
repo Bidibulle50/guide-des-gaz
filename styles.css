@@ -309,3 +309,93 @@ main:has(.consultation-fiche){padding-top:max(10px,env(safe-area-inset-top))}
 .consultation-fiche .fiche-sources summary{min-height:48px;padding:14px 0}
 .consultation-fiche .fiche-sources+.footnote{font-size:12.5px;line-height:1.25}
 .bottom-nav a[aria-current] .nav-art{color:var(--muted)}
+.welding-page { --welding-tint: color-mix(in srgb,var(--blue) 7%,var(--bg)); }
+.welding-page .topbar { height:44px;margin-bottom:16px; }
+.welding-page .topbar .brand { width:36px;height:36px; }
+.welding-page .page-title { margin-bottom:20px; }
+.welding-page .page-title h1 { font-size:34px;letter-spacing:-1.2px; }
+.welding-page .page-title p { font-size:16px;line-height:1.5; }
+.welding-page .journey-progress { margin:16px 0 6px;min-height:30px; }
+.welding-page .journey-progress>p { font-size:13px; }
+.welding-steps { list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 22px;padding:0; }
+.welding-steps li { display:flex;align-items:center;gap:7px;border-top:2px solid var(--line);padding-top:10px;font-size:12px;color:var(--muted); }
+.welding-steps li>span { font-variant-numeric:tabular-nums; }
+.welding-steps li[aria-current] { border-color:var(--blue);color:var(--blue);font-weight:650; }
+.welding-steps li.is-complete { border-color:var(--ink);color:var(--ink); }
+.welding-page .welding-guide>h2 { font-size:25px;line-height:1.25;letter-spacing:-.7px;margin-bottom:10px; }
+.welding-page .list-caption { font-size:14px;line-height:1.6;margin:0 0 18px; }
+.welding-metal-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;margin:22px 0 4px;padding:0; }
+.welding-metal-grid button { display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;height:100%;min-height:96px;padding:14px;text-align:left;border:1px solid var(--line);border-radius:16px;color:var(--ink);background:var(--surface); }
+.welding-metal-grid strong { display:block;font-size:18px;letter-spacing:-.3px;font-weight:650; }
+.welding-metal-grid small { display:block;font-size:13px;line-height:1.5;color:var(--muted);margin-top:7px; }
+.welding-metal-grid .icon { width:16px;height:16px;flex:none;color:var(--muted); }
+.welding-metal-grid button:hover { border-color:var(--blue);background:var(--welding-tint); }
+.welding-page .quiet-action { font-size:14px;min-height:48px;margin-top:12px; }
+.welding-page .choice-list button { min-height:80px;padding:16px 0; }
+.welding-page .choice-list small { font-size:14px;line-height:1.5; }
+.welding-page .choice-list strong { font-size:17px; }
+.welding-back { display:inline-flex;align-items:center;gap:7px;min-height:44px;margin:-10px 0 12px;padding:0;border:0;background:none;color:var(--blue);font-size:14px; }
+.welding-back .icon { width:18px;height:18px; }
+.welding-page .journey-summary { gap:7px;margin:0 0 22px; }
+.welding-page .journey-summary button { display:flex;align-items:center;gap:7px;min-height:44px;font-size:13px;padding:9px 11px; }
+.welding-page .journey-summary .icon { height:12px;width:12px; }
+.welding-more { margin:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line); }
+.welding-more>summary,.welding-arguments>summary,.welding-support>summary { display:flex;align-items:center;gap:12px;list-style:none;cursor:pointer;min-height:48px; }
+.welding-more>summary::-webkit-details-marker,.welding-arguments>summary::-webkit-details-marker,.welding-support>summary::-webkit-details-marker { display:none; }
+.welding-more>summary { justify-content:space-between;padding:14px 0;font-size:14px;font-weight:550;color:var(--ink); }
+.welding-more>summary>.icon,.welding-arguments>summary>.icon,.welding-support>summary>.icon { width:16px;height:16px;margin-left:auto;flex:none;color:var(--muted);transition:transform .15s; }
+.welding-more[open]>summary>.icon,.welding-arguments[open]>summary>.icon,.welding-support[open]>summary>.icon { transform:rotate(90deg); }
+.welding-page .welding-result { padding:21px 18px;margin:12px 0 18px;border:1px solid var(--line);border-radius:18px;background:var(--surface); }
+.welding-page .welding-result-heading { gap:10px; }
+.welding-page .welding-result-heading>span { border:1px solid var(--line);border-radius:6px;padding:4px 7px;font-size:11px; }
+.welding-page .welding-result h3 { font-size:21px; }
+.welding-page .welding-result>p { font-size:15px;line-height:1.6; }
+.welding-page .welding-result .need-evidence { font-size:13px; }
+.welding-page .condition-note { padding:13px 14px;margin:17px 0;border-radius:0 10px 10px 0;background:var(--welding-tint); }
+.welding-page .condition-note>strong,.welding-page .condition-note>p { font-size:14px; }
+.welding-page .condition-note .text-button { background:var(--bg);border:1px solid var(--line);border-radius:9px;font-size:14px; }
+.welding-page .welding-risk { font-size:14px!important; }
+.welding-arguments { margin-top:18px;border-top:1px solid var(--line); }
+.welding-arguments>summary { padding:14px 0 10px;color:var(--ink); }
+.welding-arguments strong { display:block;font-size:15px;font-weight:600; }
+.welding-arguments summary small { display:block;font-size:12px;color:var(--muted);margin-top:4px; }
+.argument-content { padding:5px 0; }
+.argument-content>div { margin:12px 0 18px; }
+.argument-content h4 { font-size:13px;font-weight:650;color:var(--muted);margin:0 0 6px; }
+.argument-content p { font-size:14px;line-height:1.65;margin:0; }
+.argument-content .argument-question { padding:13px 14px;border-radius:10px;background:var(--welding-tint); }
+.argument-content .argument-question h4 { color:var(--blue); }
+.argument-source { display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:12px;color:var(--blue);text-decoration:none; }
+.argument-source .icon { width:14px;height:14px; }
+.argument-content .argument-source-note { font-size:12px;line-height:1.6;color:var(--muted); }
+.welding-page .result-links { border-top:1px solid var(--line);margin-top:12px;padding-top:8px; }
+.welding-page .result-links a { display:flex;justify-content:space-between;width:100%;font-size:14px;color:var(--blue); }
+.welding-support { border:1px solid var(--line);border-radius:14px;background:var(--surface); }
+.welding-support>summary { padding:14px; }
+.welding-support>summary strong { display:block;font-size:14px;font-weight:600; }
+.welding-support>summary small { display:block;font-size:12px;color:var(--muted);margin-top:4px; }
+.support-symbol { display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;color:var(--blue);background:var(--welding-tint);flex:none; }
+.support-symbol .icon { width:19px;height:19px; }
+.support-content { border-top:1px solid var(--line);padding:18px; }
+.support-context { color:var(--muted);font-size:13px;margin:0 0 20px; }
+.support-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px; }
+.support-grid>section { min-width:0; }
+.support-label { font-size:12px;color:var(--blue);font-weight:600; }
+.support-grid h3 { font-size:17px;letter-spacing:-.3px;margin:7px 0 12px; }
+.support-grid p,.support-grid li { font-size:14px;line-height:1.65; }
+.support-grid p { margin:10px 0; }
+.support-grid ul { padding-left:18px;margin:10px 0; }
+.support-grid li { margin-bottom:8px; }
+.support-grid .support-mini-title { font-weight:600;margin-top:18px; }
+.support-next { border-top:1px solid var(--line);padding-top:12px;margin-top:16px!important; }
+.support-next strong { display:block;font-size:13px;color:var(--muted);margin-bottom:6px; }
+.sales-objection { border-top:1px solid var(--line); }
+.sales-objection>summary { cursor:pointer;min-height:44px;padding:12px 0;font-size:14px;line-height:1.5;color:var(--ink); }
+.sales-objection>p { color:var(--muted); }
+.support-note { color:var(--muted);font-size:12px;line-height:1.6;border-top:1px solid var(--line);padding-top:16px;margin:18px 0 0; }
+.welding-page .home-link { margin-top:22px;min-height:44px;font-size:14px; }
+.welding-page .guide-limit { font-size:12px;line-height:1.7;margin-top:24px; }
+.welding-page button:focus-visible,.welding-page a:focus-visible,.welding-page summary:focus-visible { outline:2px solid var(--blue);outline-offset:4px; }
+@media(max-width:600px) { .support-grid { grid-template-columns:1fr;gap:24px; } .support-grid>section+section { border-top:1px solid var(--line);padding-top:22px; } }
+@media(max-width:360px) { .welding-page .topbar { height:40px;margin-bottom:8px; } .welding-page .page-title { margin-bottom:14px; } .welding-page .page-title h1 { font-size:30px; } .welding-page .page-title p { font-size:14px; } .welding-page .journey-progress { min-height:0;margin-top:12px; } .welding-page .journey-progress>p { position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%); } .welding-steps { margin-bottom:14px; } .welding-metal-grid { gap:9px;margin-top:16px; } .welding-metal-grid button { padding:12px 11px;min-height:96px; } .welding-metal-grid strong { font-size:16px; } .welding-metal-grid small { font-size:12px; } .welding-page .welding-guide>h2 { font-size:23px; } .welding-page .welding-result { padding:18px 14px; } .welding-page .welding-result h3 { font-size:19px; } }
+@media(prefers-reduced-motion:reduce) { .welding-page summary>.icon { transition:none; } }

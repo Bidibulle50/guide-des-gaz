@@ -2,6 +2,14 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
+## Nouveautés 2.0.4 — Soudage en clientèle
+
+- Entrée par quatre familles de métaux, puis précision de la nuance, procédé et besoin en langage plus direct. Une réponse inconnue mène aux informations à recueillir. Les choix restent modifiables et les conditions techniques doivent toujours être confirmées.
+- Chaque piste ARCAL conserve son usage publié et propose « Les bons arguments » : bénéfices propres au produit, source datée et question commerciale. L’absence de bénéfice comparatif documenté est explicite ; aucun gain ni tarif n’est inventé.
+- « Appui en rendez-vous » complète la sélection : regard ingénieur sur les précisions techniques, regard commercial senior sur la découverte, les objections et la prochaine action. Les conseils s’adaptent au contexte choisi et restent disponibles hors ligne après mise en cache. Les documents externes nécessitent Internet.
+- Les **115 fiches au format V2.1**, les règles de présélection et toutes les données métier de 2.0.3 sont conservées. Les ajouts visuels concernent Soudage uniquement. Réserves FDS/ADR inchangées.
+- Recette locale effectuée avant publication. Recette sur iPhone physique encore à effectuer ; détails dans [VALIDATION.md](VALIDATION.md).
+
 ## Nouveautés 2.0.3 — fiches de consultation validées
 
 Le format V2.1 approuvé sur Oxygène, Azote et ARCAL Chrome est appliqué aux **115 fiches** : même hiérarchie, palette sombre, typographie, cartes et quatre onglets. Le thème clair conserve la structure. Risques documentés et pictogrammes en tête, couleur d’ogive puis utilisations, accès FDS haut/bas, détails séparés en Sécurité, Transport et Technique.
