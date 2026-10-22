@@ -4,4 +4,8 @@
 <nav aria-label="Commandes de vérification"><a id="regular" href="#regular">390 px</a><a id="narrow" href="#narrow">320 px</a><a id="narrow-tall" href="#narrow-tall">320 × 2100</a><a id="home-size" href="#home-size">390 × 940</a><a id="catalogue-size" href="#catalogue-size">390 × 1000</a><a id="fiche-size" href="#fiche-size">390 × 2100</a><a href="../index.html#catalogue" target="app-preview">Accueil</a><a href="../index.html#gaz/oxygene" target="app-preview">Oxygène</a><a href="../index.html#gaz/arcal-chrome" target="app-preview">ARCAL Chrome</a></nav>
 <iframe name="app-preview" title="Application à largeur mobile" src="../index.html#catalogue" width="390" height="844"></iframe>
 <p>Surface de vérification : véritable viewport CSS du document intégré. Ce contrôle responsive sur ordinateur ne reproduit pas Safari iOS, le clavier natif ni les marges physiques d’un iPhone.</p>
+<script>
+const preview=document.querySelector('iframe');
+preview.addEventListener('load',()=>{try{preview.contentDocument.documentElement.style.scrollbarWidth='none';}catch{}});
+</script>
 </html>

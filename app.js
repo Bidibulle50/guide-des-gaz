@@ -202,7 +202,7 @@ function sheetPanels(panels) {
 }
 const ficheStateSelection=new Map();
 function sourcesDisclosure(g) {
-  return `<details class="fiche-sources"><summary><span><strong>Sources et limites</strong><small>${g.sources.length} sources · Documents externes</small></span>${icon('chevron')}</summary><ul class="sources">${sourceLinks(g.sources)}</ul><p class="footnote">Date et périmètre de consultation propres à chaque source. La FDS du produit livré et les consignes du site restent indispensables. Les documents externes ne sont pas enregistrés hors ligne.</p><p class="footnote">${g.kind==='product'?'Composition et conditionnements selon la référence publiée.':'Valeurs de la substance de référence, pas d’une bouteille donnée.'} L’étiquette identifie le contenu ; la teinte de l’ogive est indicative.</p></details>`;
+  return `<details class="fiche-sources"><summary><span><strong>Sources et limites</strong></span>${icon('chevron')}</summary><ul class="sources">${sourceLinks(g.sources)}</ul><p class="footnote">Date et périmètre de consultation propres à chaque source. La FDS du produit livré et les consignes du site restent indispensables. Les documents externes ne sont pas enregistrés hors ligne.</p><p class="footnote">${g.kind==='product'?'Composition et conditionnements selon la référence publiée.':'Valeurs de la substance de référence, pas d’une bouteille donnée.'} L’étiquette identifie le contenu ; la teinte de l’ogive est indicative.</p></details>`;
 }
 function detail(g) {
   const range=g.kind==='product'?data.ranges.find(r=>r.id===g.range):null;

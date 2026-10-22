@@ -138,7 +138,7 @@ test('Les 115 fiches relient quatre onglets et panneaux ARIA avec Essentiel seul
       assert.equal(panels[i].hidden,i!==0,entry.id);
     }
     assert.ok(fichePanel(html,'essential').includes(escapeHtml(entry.fds.url)),`${entry.id} : FDS visible dans Essentiel`);
-    assert.ok(fichePanel(html,'transport').includes(escapeHtml(entry.fds.note)),`${entry.id} : portée de la FDS conservée`);
+    assert.ok(html.includes(escapeHtml(entry.fds.note)),`${entry.id} : portée de la FDS conservée dans Sources et limites`);
     for(const source of entry.sources)assert.ok(html.includes(escapeHtml(source.url)),`${entry.id} : source conservée`);
     const elementIds=[...html.matchAll(/\sid="([^"]*)"/g)].map(([,id])=>id);
     assert.equal(new Set(elementIds).size,elementIds.length,`${entry.id} : identifiants uniques`);

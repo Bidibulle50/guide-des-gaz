@@ -2,7 +2,7 @@
 
 PWA indépendante en français, conçue pour l’iPhone et utilisable sur ordinateur. Interface sobre inspirée des conventions Apple, sans marque ou logo tiers. Aucune affiliation ni validation par Air Liquide ou l’INRS.
 
-## Nouveautés 2.0.0 — fiches de consultation validées
+## Nouveautés 2.0.1 — fiches de consultation validées
 
 Le format V2.1 approuvé sur Oxygène, Azote et ARCAL Chrome est appliqué aux **115 fiches** : même hiérarchie, palette sombre, typographie, cartes et quatre onglets. Le thème clair conserve la structure. Risques documentés et pictogrammes en tête, couleur d’ogive puis utilisations, accès FDS haut/bas, détails séparés en Sécurité, Transport et Technique.
 
@@ -11,7 +11,7 @@ Le format V2.1 approuvé sur Oxygène, Azote et ARCAL Chrome est appliqué aux *
 - Les pictogrammes sont des repères des risques déjà décrits ; les mentions CLP exactes sont reprises uniquement lorsqu’une FDS a été lue. Une toxicité non catégorisée utilise un repère d’alerte général, sans lui attribuer SGH06. Pas de SGH07 pour l’asphyxie.
 - Les deux catégories de transport UN 1066/1956 restent non confirmées. Certaines FDS documentaires sont Benelux : le pays et la version sont visibles. FDS France exactes O₂/LOX/LIN à associer au produit livré. Pas de code, de plaque orange ni de couleur inventés lorsqu’ils sont absents.
 - Les 112 autres entrées conservent leurs données ; leur format commun ne constitue pas une nouvelle vérification documentaire. Les dates de consultation restent propres aux sources.
-- Texte courant ≥ 14 px, commandes ≥ 44 px ; quatre onglets en deux colonnes sous 360 px. Le cache 2.0.0 inclut le nouveau rendu et les pictogrammes locaux. Utiliser « Actualiser » lorsqu’une ancienne édition est ouverte.
+- Texte courant ≥ 14 px, commandes ≥ 44 px ; quatre onglets en deux colonnes sous 360 px. Le cache 2.0.1 inclut le nouveau rendu et les pictogrammes locaux. Utiliser « Actualiser » lorsqu’une ancienne édition est ouverte.
 
 ## Nouveautés 1.7.4 — icônes de navigation
 

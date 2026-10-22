@@ -281,3 +281,31 @@ main:has(.consultation-fiche){padding-top:max(10px,env(safe-area-inset-top))}
 .consultation-fiche .fiche-fds-top .icon{width:15px;height:15px;margin-left:5px}
 @media(max-width:359px){.consultation-product .fiche-title h1{font-size:21px}}
 .consultation-risk-symbols strong>span{display:block;margin-top:4px;font-size:16px}
+/* Densité et métriques calées sur les trois vues validées, sans réduction de page. */
+.consultation-fiche{font-optical-sizing:none}
+.consultation-fiche .fiche-title{margin-bottom:12px;align-items:flex-start}
+.consultation-fiche .fiche-title>div{position:relative;top:-4px}
+.consultation-fiche .fiche-title h1{line-height:1.1}
+.consultation-fiche .fiche-title p{font-size:12.5px;line-height:1.25;margin-top:4px}
+.consultation-fiche .fiche-gas-type{line-height:1.25;margin-top:4px}
+.consultation-fiche .fiche-states,.consultation-fiche .fiche-tabs{padding:0 4px}
+.consultation-fiche .fiche-states button,.consultation-fiche .fiche-tabs button{position:relative;isolation:isolate;background:transparent!important}
+.consultation-fiche .fiche-states button[aria-pressed=true]::before,.consultation-fiche .fiche-tabs button[aria-selected=true]::before{content:'';position:absolute;z-index:-1;inset:4px 0;border-radius:9px;background:color-mix(in srgb,var(--muted) 25%,var(--surface))}
+:root[data-theme=dark] .consultation-fiche .fiche-states button[aria-pressed=true]::before{background:#363b50}
+:root[data-theme=dark] .consultation-fiche .fiche-tabs button[aria-selected=true]::before{background:#383b48}
+@media(prefers-color-scheme:dark){:root[data-theme=system] .consultation-fiche .fiche-states button[aria-pressed=true]::before{background:#363b50}:root[data-theme=system] .consultation-fiche .fiche-tabs button[aria-selected=true]::before{background:#383b48}}
+.consultation-risk{padding:12px 14px 15px;border-radius:16px}
+.consultation-risk .risk-signal{font-size:12.5px;line-height:1.25;margin-bottom:9px}
+.consultation-risk-symbols{margin-bottom:15px}
+.consultation-risk-symbols strong{line-height:1.25}
+.consultation-risk.risk-warm .consultation-risk-symbols img{width:44px;height:44px;flex-basis:44px}
+.consultation-risk>p:not(.risk-signal){line-height:1.25}
+.consultation-colour .footnote{font-size:12.5px;line-height:1.25}
+.consultation-applications>li{padding:13px 0}
+.consultation-applications h3{line-height:1.25}
+.consultation-applications p{line-height:1.25;margin-top:4px}
+.consultation-fiche .consultation-rows p{font-size:12.5px;line-height:1.25}
+.consultation-fiche .fiche-fds small{font-size:12.5px;line-height:1.25}
+.consultation-fiche .fiche-sources summary{min-height:48px;padding:14px 0}
+.consultation-fiche .fiche-sources+.footnote{font-size:12.5px;line-height:1.25}
+.bottom-nav a[aria-current] .nav-art{color:var(--muted)}
