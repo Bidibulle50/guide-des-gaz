@@ -56,14 +56,14 @@ function hazardCard(g,state){
 function colourCard(g,state){
   if(state.phase==='liquide')return `<section class="consultation-colour">${paragraph(state.appearance||'Aspect du liquide non documenté dans cette édition.')}${note('Ogive de bouteille non transposée au récipient cryogénique.')}</section>`;
   const shoulder=g.shoulder;
-  return `<section class="consultation-colour">${shoulder?`<p><span class="colour-swatch ral-${esc(shoulder.ral)}" aria-hidden="true"></span><strong>Ogive · ${esc(shoulder.name)} · RAL ${esc(shoulder.ral)}</strong></p>`:'<p><strong>Ogive · Non documentée</strong></p>'}${note((state.appearance?state.appearance+' · ':'')+'L’étiquette identifie le produit.')}</section>`;
+  return `<section class="consultation-colour">${shoulder?`<p><span class="colour-swatch ral-${esc(shoulder.ral)}" aria-hidden="true"></span><strong>Ogive · ${esc(shoulder.name)} · RAL ${esc(shoulder.ral)}</strong></p>`:'<p><strong>Ogive · Non documentée</strong></p>'}${note((state.appearance?state.appearance+' · ':'')+'l’étiquette identifie le produit.')}</section>`;
 }
 
 function applications(g,state){
   const cases=state.applications||g.applicationDetails||g.welding?.uses;
   const items=cases?.length?cases.map(a=>`<li><h3>${esc(a.title)}</h3>${paragraph(a.detail||a.text)}</li>`).join(''):(g.applications||[]).map(a=>`<li>${paragraph(a)}</li>`).join('');
-  const supplement=state.applications&&g.welding?`<details class="technical-details"><summary>Précisions d’utilisation du fabricant</summary><ul class="use-cases">${g.welding.uses.map(a=>`<li><h3>${esc(a.title)}</h3>${paragraph(a.detail)}</li>`).join('')}</ul>${g.welding.benefits.map(paragraph).join('')}${note('Bénéfices annoncés par le fabricant ; à qualifier pour l’application.')}</details>`:'';
-  return `<section class="fiche-applications" aria-label="Applications industrielles"><h2>Utilisations</h2><ul class="consultation-applications">${items||`<li>${paragraph(g.applicationsNote||'Application précise non documentée dans cette édition.')}</li>`}</ul>${!state.applications&&g.welding?.benefits.length?`<p class="vendor-benefits">${esc(g.welding.benefits.join(' '))}</p>`:''}</section>${supplement}`;
+
+  return `<section class="fiche-applications" aria-label="Applications industrielles"><h2>Utilisations</h2><ul class="consultation-applications">${items||`<li>${paragraph(g.applicationsNote||'Application précise non documentée dans cette édition.')}</li>`}</ul>${!state.applications&&g.welding?.benefits.length?`<p class="vendor-benefits">${esc(g.welding.benefits.join(' '))}</p>`:''}</section>`;
 }
 
 function safety(g,state){
@@ -150,14 +150,14 @@ export function ficheMarkup(g,options={}){
   const product=g.kind==='product',symbols=riskItems(g,state);
   const type=g.consultation?.type||(product?(g.welding?.safety?.flammability||'Dangers non détaillés'):g.family);
   const identity=product?(g.welding?.manufacturerCode||g.displayFormula):g.displayFormula;
-  const subtitle=product?(g.welding?g.welding.processes.join(' · ')+' · Réf. '+g.welding.manufacturerCode:'Produit commercial · '+g.composition):g.subtitle+' · CAS '+g.cas;
+  const subtitle=product?(g.welding?(g.id==='arcal-chrome'?'MAG des inox':g.welding.processes.join(' · '))+' · Réf. '+g.welding.manufacturerCode:'Produit commercial · '+g.composition):g.subtitle+' · CAS '+g.cas;
   const stateSelector=states.length>1?`<div class="fiche-states" role="group" aria-label="État du produit">${states.map(s=>`<button type="button" data-fiche-state="${esc(s.id)}" aria-pressed="${s.id===state.id}">${esc(s.label)}</button>`).join('')}</div>`:`<p class="fiche-state-label">${esc(state.label)}${state.phase==='reference'&&!product?' · '+esc(g.phaseAtReference)+' à 15 °C':''}</p>`;
   const heading=`<header class="fiche-title"><span class="formula large ${identity.length>4?'compact':''}" aria-label="${product?'Référence commerciale':'Formule'} ${esc(identity)}">${esc(identity)}</span><div><h1 tabindex="-1">${esc(g.name)}</h1><p>${esc(subtitle)}</p><strong class="fiche-gas-type ${symbols.some(r=>['02','03','05'].includes(r.code))?'type-hazard':''}">${esc(type)}</strong></div></header>`;
   const nav=`<div class="fiche-tabs" role="tablist" aria-label="Rubriques de la fiche">${tabs.map(([id,label],i)=>`<button type="button" role="tab" id="tab-${id}" data-sheet-tab="${id}" aria-controls="panel-${id}" aria-selected="${i===0}" tabindex="${i===0?0:-1}">${label}</button>`).join('')}</div>`;
   let essential=hazardCard(g,state)+colourCard(g,state);
   if(product)essential+=`<p class="consultation-composition">${esc(g.id==='arcal-chrome'?'CO₂ 2 % ± 0,5 % · Ar complément':g.composition)}</p>`;
   essential+=applications(g,state);
-  if(g.welding)essential+=`<button type="button" class="fiche-shortcut" data-jump="product-supply"><span><strong>Formats, pression et tête</strong><small>${g.welding.variants.length} références publiées</small></span>${icon('chevron')}</button><details class="technical-details client-checklist"><summary>Préparer l’échange client</summary><ul><li>Nuance, épaisseur et préparation des pièces.</li><li>Procédé, fil, mode de transfert et position.</li><li>Objectif, consommation, mobilité et raccord disponible.</li></ul>${paragraph('Ce guide ne remplace pas une validation technique de l’application ni un DMOS.')}</details>`;
+  if(g.welding)essential+=`<button type="button" class="fiche-shortcut" data-jump="product-supply"><span><strong>Formats, pression et tête</strong><small>${g.welding.variants.length} références publiées</small></span>${icon('chevron')}</button><p class="footnote">À préciser : nuance, fil et mode de soudage. Réglages à qualifier ; ce guide ne remplace pas une validation technique de l’application.</p>`;
   const panels={essential,safety:safety(g,state),transport:transport(g,state),technical:product?productTechnical(g,options.technicalProduct):physical(g,state)};
   return `<article class="fiche consultation-fiche ${product?'consultation-product':''}" data-entry="${esc(g.id)}" data-state="${esc(state.id)}"><div class="topbar detail-bar"><a href="${esc(options.back||'#catalogue')}" class="back">${icon('back')}${esc(options.backLabel||'Catalogue')}</a><div class="fiche-top-actions">${fdsLink(state,true)}${options.favorite||''}</div></div>${heading}${stateSelector}${nav}${tabs.map(([id],i)=>`<div class="fiche-panel" role="tabpanel" id="panel-${id}" data-panel="${id}" aria-labelledby="tab-${id}" tabindex="0" ${i===0?'':'hidden'}>${panels[id]}${fdsLink(state)}</div>`).join('')}${(options.sources||'').replace('</details>',note(state.fds?.note||'')+(g.consultation?.sourceNote?note(g.consultation.sourceNote):'')+note('Guide indépendant, sans affiliation ni validation par Air Liquide ou l’INRS. Teinte écran indicative.')+'</details>')}${state.fds?.country==='BE'?note('Référence Benelux. FDS France du produit livré à confirmer.'):''}</article>`;
 }
