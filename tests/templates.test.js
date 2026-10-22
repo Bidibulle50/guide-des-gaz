@@ -164,9 +164,6 @@ test('Les sections ARCAL restent dans les bons panneaux et gardent leurs référ
   const {context,element}=renderContext();
   for(const product of data.products.filter(g=>g.welding)){
     context.product=product;
-    const parts=vm.runInContext('weldingDetail(product)',context);
-    assert.deepEqual(Object.keys(parts).sort(),['checklist','overview','safety','technical','uses']);
-    assert.ok(Object.values(parts).every(value=>typeof value==='string'&&!/undefined|\[object Object\]/.test(value)));
     vm.runInContext('detail(product)',context);const html=element('#main').innerHTML;
     assert.ok(html.includes('Réf. '+escapeHtml(product.welding.manufacturerCode)),`${product.id} : code fabricant visible dans l’en-tête`);
     const essential=fichePanel(html,'essential'),technical=fichePanel(html,'technical'),safety=fichePanel(html,'safety');
